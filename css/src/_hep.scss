@@ -1,0 +1,40 @@
+
+
+.company-search {
+	position: relative;
+}
+
+.company-results {
+	display: none;
+	overflow: auto;
+	background: white;
+	border: 1px solid #eee;
+
+	ul {
+		padding: 2px;
+	}
+	
+	@include respond-to( 768px ) {
+		position: absolute;
+		top: 37px;
+		width: 70%;
+		max-height: 300px;
+		z-index: 100;
+		left: 29%;
+		margin-left: -5px;
+	}
+
+	li {
+		border: 1px solid #eee;
+		padding: 4px !important;
+		margin-bottom: 2px;
+		font-size: .9em;
+		background: #eee !important;
+
+		&:hover {
+			cursor: pointer;
+			background: #e5e5e5 !important;
+		}
+	}
+}
+

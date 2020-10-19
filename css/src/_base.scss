@@ -1,0 +1,353 @@
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+:focus {
+  outline: 0;
+}
+
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+
+blockquote {
+  &:before, &:after {
+    content: "";
+  }
+}
+
+q {
+  &:before, &:after {
+    content: "";
+  }
+}
+
+blockquote, q {
+  quotes: "" "";
+}
+
+*, :before, :after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+img, video, iframe {
+  max-width: 100%;
+}
+
+video, iframe {
+  display: block;
+}
+
+body {
+  @include font;
+  color: #474a54;
+  font-size: 14px;
+  line-height: 21px;
+  background: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+a {
+  color: #b30838;
+  -webkit-transition: opacity 400ms ease-in-out;
+  transition: opacity 400ms ease-in-out;
+  &:hover {
+    color: #e40a47;
+  }
+  &.meta {
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+body {
+  
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 9px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  p, h1, h2, h3, h4, h5, h6 {
+     padding: 11px 0;
+  }
+}
+
+p.center, h1.center, h2.center, h3.center, h4.center, h5.center, h6.center, p.text-center {
+  text-align: center;
+}
+
+p.right, h1.right, h2.right, h3.right, h4.right, h5.right, h6.right {
+  text-align: right;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: 700;
+}
+
+h1, h2, h3, h4 {
+  @include font-title;
+
+  span {
+    opacity: .6;
+  }
+}
+
+h1 a, h2 a, h3 a, h4 a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2.1em;
+  line-height: 1.3em;
+}
+
+h2 {
+  font-size: 1.6em;
+  line-height: 1.2em;
+}
+
+h3 {
+  font-size: 1.3em;
+  line-height: 1.2em;
+}
+
+h4 {
+  font-size: 1.2em;
+  line-height: 1.1em;
+}
+
+h5 {
+  @include font-medium;
+  font-size: 1.1em;
+  line-height: 1.1em;
+}
+
+h6 {
+  @include font-medium;
+  font-size: .9em;
+  line-height: 1.1em;
+}
+
+hr {
+  height: 0;
+  border: 0;
+  border-bottom: 1px solid #e5e5e8;
+  margin: 25px 0;
+  clear: both;
+}
+
+blockquote {
+  quotes: "" "";
+  font-size: 1.3em;
+  line-height: 1.5em;
+  font-style: italic;
+  color: lighten( $grey, 10% );
+  padding: 10px 30px;
+  position: relative;
+
+  @include respond-to( 768px ) {
+    padding: 20px 50px;
+
+    &:before {
+      content: '"';
+      position: absolute;
+      font-family: "Times New Roman", sans-serif;
+      left: 5px;
+      top: 37px;
+      font-size: 70px;
+      opacity: .2;
+    }
+  }
+}
+
+article {
+  ol, ul {
+    padding: 15px 0 15px 30px;
+  }
+  ol li, ul li {
+    padding: 0 0 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  article {
+    ol, ul {
+      padding-left: 45px;
+    }
+  }
+}
+
+ol {
+  list-style: decimal;
+}
+
+button, input[type=submit], input[type=reset], .btn {
+  padding: 6px 10px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 1em;
+  color: $red-dark;
+  text-decoration: none;
+  background: white;
+  border: 1px solid $red-dark;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 4px;
+
+  &:hover {
+    color: $red-dark;
+    opacity: .8;
+  }
+
+  &.teal {
+    background-color: $teal;
+    color: white;
+    border-color: $teal;
+  }
+
+  &.red-dark {
+    background-color: $red-dark;
+    color: white;
+    border-color: $red-dark;
+  }
+
+  &.red-light {
+    background-color: $red-light;
+    color: white;
+    border-color: $red-light;
+  }
+
+  &.blue {
+    background-color: $blue;
+    color: white;
+    border-color: $blue;
+  }
+
+  &.orange {
+    background-color: $orange;
+    color: black;
+    border-color: $orange;
+  }
+
+  &.grey {
+    background-color: $grey;
+    color: white;
+    border-color: $grey;
+  }
+}
+
+
+.button {
+  padding: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 1em;
+  color: #b30838;
+  text-decoration: none;
+  background: white;
+  border: 1px solid #b30838;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0 0 20px rgba(37, 37, 42, 0.3);
+  box-shadow: 0 0 20px rgba(37, 37, 42, 0.3);
+  cursor: pointer;
+}
+
+.quiet {
+  font-size: .9em;
+  color: #9295a2;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+.bg-teal {
+  background-color: $teal;
+  color: white;
+}
+
+.bg-red-dark {
+  background-color: $red-dark;
+  color: white;
+}
+
+.bg-red-light {
+  background-color: $red-light;
+  color: white;
+}
+
+.bg-blue {
+  background-color: $blue;
+  color: white;
+}
+
+.bg-orange {
+  background-color: $orange;
+  color: black;
+}
+
+.bg-grey {
+  background-color: $grey;
+  color: white;
+}
+
+
+.no-mobile {
+  display: none;
+
+  @include respond-to( 768px ) {
+    display: initial;
+  }
+}

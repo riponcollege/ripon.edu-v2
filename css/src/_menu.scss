@@ -1,0 +1,42 @@
+
+
+.main-menus {
+	position: absolute;
+	right: -300px;
+	top: 0;
+	bottom: 0;
+	width: 300px;
+	transition: all 400ms ease-in-out;
+	background: $grey;
+	z-index: 10000;
+
+	.admin-bar & {
+		top: 32px;
+	}
+
+	&.open {
+		right: 0;
+	}
+
+	.nav-menu {
+		padding: 8px;
+
+		a {
+			display: block;
+			color: white;
+			padding: 6px 9px;
+			text-decoration: none;
+			background: $grey;
+			transition: 400ms all ease-in-out;
+
+			&:hover {
+				background: lighten( $grey, 10% );
+			}
+
+			@include respond-to( 768px ) {
+				padding: 7px 10px;
+			}
+		}
+	}
+}
+

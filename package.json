@@ -1,0 +1,13 @@
+{
+    "name": "ripon",
+    "version": "0.0.1",
+    "devDependencies": {
+        "grunt": "latest",
+        "grunt-contrib-uglify": "*",
+        "grunt-contrib-watch": "*",
+        "grunt-autoprefixer": "*",
+        "grunt-sass": "*",
+        "node-sass": "*",
+        "matchdep": "*"
+    }
+}
