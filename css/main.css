@@ -325,6 +325,8 @@ body {
       @media only screen and (min-width: 768px) {
         .main-menus .nav-menu a {
           padding: 7px 10px; } }
+    .main-menus .nav-menu ul {
+      display: none; }
 
 .menu-photo {
   position: fixed;
@@ -369,6 +371,12 @@ footer {
 
 .elementor-column-gap-default > .elementor-row > .elementor-column > .elementor-element-populated {
   padding: 0; }
+
+.elementor-widget-heading, .elementor-widget-text-editor {
+  padding: 10px 20px; }
+
+.elementor-widget-slides {
+  margin-bottom: 20px; }
 
 .entry-content .job_listings li {
   background: none; }
