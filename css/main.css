@@ -275,33 +275,69 @@ button, input[type=submit], input[type=reset], .btn {
     .no-mobile {
       display: initial; } }
 
+body {
+  overflow-x: hidden; }
+
 .main-menus {
-  position: absolute;
-  right: -300px;
+  position: fixed;
+  right: -26%;
   top: 0;
   bottom: 0;
-  width: 300px;
-  transition: all 400ms ease-in-out;
-  background: #5f626f;
-  z-index: 10000; }
+  width: 26%;
+  transition: all 300ms ease-in-out;
+  background: white;
+  z-index: 10000;
+  min-width: 300px; }
+  .main-menus .menu-hide {
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin: 20px;
+    color: transparent;
+    background: url(../img/icon-close-black.png) center center no-repeat;
+    background-size: contain;
+    opacity: .5;
+    border: 0; }
+    .main-menus .menu-hide:hover {
+      opacity: .7; }
   .admin-bar .main-menus {
     top: 32px; }
   .main-menus.open {
-    right: 0; }
+    right: 0;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); }
   .main-menus .nav-menu {
-    padding: 8px; }
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    left: 20px;
+    bottom: 20px;
+    overflow-y: auto; }
     .main-menus .nav-menu a {
       display: block;
-      color: white;
+      color: #5f626f;
       padding: 6px 9px;
       text-decoration: none;
-      background: #5f626f;
-      transition: 400ms all ease-in-out; }
+      transition: 400ms all ease-in-out;
+      font-size: 20px;
+      line-height: 35px; }
       .main-menus .nav-menu a:hover {
-        background: #777a8a; }
+        color: #777a8a; }
       @media only screen and (min-width: 768px) {
         .main-menus .nav-menu a {
           padding: 7px 10px; } }
+
+.menu-photo {
+  position: fixed;
+  top: 0;
+  width: 80%;
+  left: -80%;
+  height: 100%;
+  background: url(../img/bg-menu-photo.jpg) center center no-repeat;
+  background-size: cover;
+  transition: all 300ms ease-in-out;
+  z-index: 9000; }
+  .menu-photo.open {
+    left: 0; }
 
 header {
   zoom: 1;
@@ -313,13 +349,16 @@ header {
     display: table; }
   header, header:before, header:after {
     clear: both; }
-  header .menu-toggle {
-    transition: 400ms all ease-in-out;
+  header .menu-show {
     position: absolute;
-    right: 20px;
-    bottom: 10px; }
-    .menu-open header .menu-toggle {
-      right: 320px; }
+    right: 30px;
+    bottom: 20px;
+    color: transparent;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    background: url(../img/icon-menu-white.png) center center no-repeat;
+    background-size: contain; }
 
 footer {
   padding: 20px; }
@@ -327,9 +366,6 @@ footer {
     padding: 20px 0; }
     footer .social img {
       max-width: 40px; }
-
-body {
-  overflow-x: hidden; }
 
 .elementor-column-gap-default > .elementor-row > .elementor-column > .elementor-element-populated {
   padding: 0; }

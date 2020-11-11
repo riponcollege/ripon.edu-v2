@@ -65,9 +65,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Q9X26"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
 <div class="main-menus">
+	<button class="menu-hide">hide menu</button>
 	<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'nav-menu' ) ); ?>
 </div>
+<div class="menu-photo"></div>
 <div class="container">
 	<header>
 
@@ -77,7 +80,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</a>
 		</div>
 
-		<button class="menu-toggle">show/hide menu</button>
+		<button class="menu-show">show menu</button>
 
 	</header>
 

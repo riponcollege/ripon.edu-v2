@@ -26,8 +26,13 @@ jQuery(document).ready(function($){
 
 	// select some things we'll use to make things responsive
 	var container = $( ".container" ),
+
 		menu = $( '.main-menus' ),
-		menu_toggle = $( 'header .menu-toggle' ),
+		menu_show = $( '.menu-show' ),
+		menu_hide = $( '.menu-hide' ),
+		menu_photo = $( '.menu-photo' ),
+
+
 		menu_ul = menu.find( 'ul' ),
 		fluid_images = $( '.content img' ),
 		left_menu = $( '.left-menu' ),
@@ -37,14 +42,16 @@ jQuery(document).ready(function($){
 	// remove height and width from images inside
 	fluid_images.removeAttr( 'width' ).removeAttr( 'height' );
 
-	menu_toggle.on("click",function(){
-		if ( menu.hasClass( 'open' ) ) {
-			menu.removeClass('open');
-			container.removeClass('menu-open')
-		} else {
-			menu.addClass('open');
-			container.addClass('menu-open')
-		}
+	menu_show.on("click",function(){
+		menu.addClass('open');
+		menu_photo.addClass('open');
+		container.addClass('menu-open');
+	});
+
+	menu_hide.on("click",function(){
+		menu.removeClass('open');
+		menu_photo.removeClass('open');
+		container.removeClass('menu-open');
 	});
 	
 });

@@ -6,15 +6,16 @@ header {
 	position: relative;
 	padding: 10px;
 
-	.menu-toggle {
-		transition: 400ms all ease-in-out;
+	.menu-show {
 		position: absolute;
-		right: 20px;
-		bottom: 10px;
-
-		.menu-open & {
-			right: 320px;
-		}
+		right: 30px;
+		bottom: 20px;
+		color: transparent;
+		width: 40px;
+		height: 40px;
+		border: 0;
+		background: url(../img/icon-menu-white.png) center center no-repeat;
+		background-size: contain;
 	}
 }
 

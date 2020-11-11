@@ -15,7 +15,7 @@ include( "library/post-type/year.php" );
 
 // include some theme-related things
 include( "library/menus.php" );
-include( "library/buttons.php" );
+//include( "library/buttons.php" );
 include( "library/widgets.php" );
 include( "library/scripts.php" );
 
