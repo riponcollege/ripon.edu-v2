@@ -32,8 +32,6 @@ jQuery(document).ready(function($){
 		menu_hide = $( '.menu-hide' ),
 		menu_photo = $( '.menu-photo' ),
 
-
-		menu_ul = menu.find( 'ul' ),
 		fluid_images = $( '.content img' ),
 		left_menu = $( '.left-menu' ),
 		quick_nav = $( 'select.quick-nav' );
@@ -52,6 +50,13 @@ jQuery(document).ready(function($){
 		menu.removeClass('open');
 		menu_photo.removeClass('open');
 		container.removeClass('menu-open');
+		$('.sub-menu').removeClass('open');
+	});
+
+	$('.main-menus .nav-menu li a').on( 'click', function(event){
+		event.preventDefault();
+		$('.sub-menu.open').removeClass('open');
+		$(this).next('.sub-menu').toggleClass('open');
 	});
 	
 });

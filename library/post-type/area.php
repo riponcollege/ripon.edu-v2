@@ -241,7 +241,7 @@ function do_area_tab_nav( $title, $key ) {
 
 
 function do_area_tabs_nav() {
-	$tabs = get_cmb2_value( "tab" );
+	$tabs = get_cmb_value( "tab" );
 	if ( !empty( $tabs ) ) {
 		foreach ( $tabs as $a_tab ) {
 			?>
@@ -254,7 +254,7 @@ function do_area_tabs_nav() {
 
 
 function do_area_tabs_content() {
-	$tabs = get_cmb2_value( "tab" );
+	$tabs = get_cmb_value( "tab" );
 	if ( !empty( $tabs ) ) {
 		foreach ( $tabs as $a_tab ) {
 			?>
