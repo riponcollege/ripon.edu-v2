@@ -30,7 +30,7 @@ header {
 			background-position: right center;
 			top: 50px;
 			height: 30px;
-			bottom: 0;
+			bottom: auto;
 			@include font;
 			font-size: 20px;
 		}
@@ -51,7 +51,7 @@ header {
 			display: block;
 			position: absolute;
 			right: 200px;
-			top: 48px;
+			top: 46px;
 
 			li {
 				display: inline;

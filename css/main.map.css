@@ -289,7 +289,7 @@ body {
   background: white;
   z-index: 10000;
   overflow-y: auto;
-  padding: 80px 20px 20px 20px; }
+  padding: 85px 20px 20px 20px; }
   .main-menus .menu-hide {
     position: absolute;
     top: 30px;
@@ -297,72 +297,73 @@ body {
     width: 40px;
     height: 40px;
     color: transparent;
-    background: url(../img/icon-close-black.png) center center no-repeat;
+    background: url(../img/icon-close-black.png) right center no-repeat;
     background-size: contain;
+    font-size: 20px;
     opacity: .5;
     border: 0;
-    transition: all 400ms ease-in-out; }
+    transition: color 400ms ease-in-out, padding-right 400ms ease-in-out, width 400ms ease-in-out;
+    text-align: right; }
     .main-menus .menu-hide:hover {
       opacity: .7; }
     @media only screen and (min-width: 768px) {
       .main-menus .menu-hide {
-        width: auto;
-        padding-right: 60px;
-        font-size: 20px;
-        color: transparent;
         font-family: "Open Sans", sans-serif;
-        font-weight: 300;
-        background-position: right center; }
+        font-weight: 300; }
         .main-menus .menu-hide:hover {
+          width: 130px;
+          padding-right: 50px;
           color: rgba(0, 0, 0, 0.8); } }
   .admin-bar .main-menus {
     top: 32px; }
   .main-menus.open {
     right: 0;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); }
-  .main-menus .main-menu a {
-    display: block;
-    color: #5f626f;
-    padding: 6px 9px;
-    text-decoration: none;
-    transition: 400ms all ease-in-out;
-    font-size: 20px;
-    line-height: 35px; }
-    .main-menus .main-menu a:hover {
-      color: #777a8a; }
-    @media only screen and (min-width: 768px) {
-      .main-menus .main-menu a {
-        padding: 7px 10px; } }
-  .main-menus .main-menu .sub-menu {
-    display: none;
-    border-top: 1px solid #e5e5e8; }
-    .main-menus .main-menu .sub-menu a {
-      border-bottom: 1px solid #e5e5e8;
-      font-size: 1em;
-      padding: 5px;
-      line-height: 1.5em; }
-    .main-menus .main-menu .sub-menu.open {
-      display: block; }
-    @media only screen and (min-width: 768px) {
-      .main-menus .main-menu .sub-menu {
-        opacity: 0;
-        position: fixed;
-        top: 115px;
-        right: 105%;
-        width: 400px;
-        transition: all 400ms ease-in-out;
-        display: block;
-        z-index: 11000;
-        border-top: 1px solid rgba(255, 255, 255, 0.2); }
-        .main-menus .main-menu .sub-menu a {
-          color: white;
-          text-align: right;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-          text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-          padding: 5px; }
-        .main-menus .main-menu .sub-menu.open {
-          opacity: 1;
-          right: 28%; } }
+  .main-menus .main-menu {
+    border-top: 1px dotted #c9cbd1; }
+    .main-menus .main-menu a {
+      display: block;
+      color: #5f626f;
+      padding: 6px 9px;
+      text-decoration: none;
+      transition: 400ms all ease-in-out;
+      font-size: 20px;
+      line-height: 35px; }
+      .main-menus .main-menu a:hover {
+        color: #777a8a; }
+      @media only screen and (min-width: 768px) {
+        .main-menus .main-menu a {
+          padding: 7px 10px; } }
+    .main-menus .main-menu .sub-menu {
+      display: none;
+      border-top: 1px solid #e5e5e8; }
+      .main-menus .main-menu .sub-menu a {
+        border-bottom: 1px solid #e5e5e8;
+        font-size: 1em;
+        padding: 5px;
+        line-height: 1.5em; }
+      .main-menus .main-menu .sub-menu.open {
+        display: block; }
+      @media only screen and (min-width: 768px) {
+        .main-menus .main-menu .sub-menu {
+          opacity: 0;
+          position: fixed;
+          top: 118px;
+          right: 105%;
+          width: 400px;
+          transition: all 400ms ease-in-out;
+          display: block;
+          z-index: 11000;
+          border-top: 1px solid rgba(255, 255, 255, 0.2); }
+          .main-menus .main-menu .sub-menu a {
+            color: white;
+            text-align: right;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+            padding: 5px; }
+          .main-menus .main-menu .sub-menu.open {
+            opacity: 1;
+            right: 28%; } }
   .main-menus .buttons {
     padding-top: 30px; }
     .main-menus .buttons li a {
@@ -380,6 +381,49 @@ body {
       .main-menus .buttons li a:hover {
         border: 2px solid rgba(0, 0, 0, 0.8);
         color: rgba(0, 0, 0, 0.8); }
+  .main-menus .search-show {
+    background: url(../img/icon-search.png) left center no-repeat;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 40px;
+    height: 40px;
+    color: transparent;
+    background-size: contain;
+    opacity: .5;
+    border: 0;
+    transition: color 400ms ease-in-out, padding-left 400ms ease-in-out, width 400ms ease-in-out;
+    text-align: left;
+    font-size: 20px; }
+    .main-menus .search-show:hover {
+      opacity: .7; }
+    @media only screen and (min-width: 768px) {
+      .main-menus .search-show {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300; }
+        .main-menus .search-show:hover {
+          width: 130px;
+          padding-left: 50px;
+          color: rgba(0, 0, 0, 0.8); } }
+  .main-menus .search {
+    position: absolute;
+    top: 23px;
+    left: 20px;
+    display: none; }
+    .main-menus .search ::placeholder {
+      text-transform: uppercase; }
+    .main-menus .search input[type=text] {
+      border: 1px solid #e5e5e8;
+      border-radius: 30px;
+      font-size: 20px;
+      line-height: 50px;
+      width: 200px;
+      padding: 0 20px;
+      text-align: left;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 300; }
+    .main-menus .search button[type=submit] {
+      display: none; }
 
 .menu-photo {
   position: fixed;
@@ -427,7 +471,7 @@ header {
         background-position: right center;
         top: 50px;
         height: 30px;
-        bottom: 0;
+        bottom: auto;
         font-family: "Open Sans", sans-serif;
         font-weight: 300;
         font-size: 20px; } }
@@ -443,7 +487,7 @@ header {
         display: block;
         position: absolute;
         right: 200px;
-        top: 48px; }
+        top: 46px; }
         header .buttons li {
           display: inline; }
           header .buttons li a {

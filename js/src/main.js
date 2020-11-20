@@ -25,40 +25,12 @@ jQuery.fn.wrapStart = function ( numWords, tag ) {
 jQuery(document).ready(function($){
 
 	// select some things we'll use to make things responsive
-	var container = $( ".container" ),
-
-		menu = $( '.main-menus' ),
-		menu_show = $( '.menu-show' ),
-		menu_hide = $( '.menu-hide' ),
-		menu_photo = $( '.menu-photo' ),
-
-		fluid_images = $( '.content img' ),
-		left_menu = $( '.left-menu' ),
-		quick_nav = $( 'select.quick-nav' );
+	var fluid_images = $( '.content img' );
 
 
 	// remove height and width from images inside
 	fluid_images.removeAttr( 'width' ).removeAttr( 'height' );
 
-	menu_show.on("click",function(){
-		menu.addClass('open');
-		menu_photo.addClass('open');
-		container.addClass('menu-open');
-	});
-
-	menu_hide.on("click",function(){
-		menu.removeClass('open');
-		menu_photo.removeClass('open');
-		container.removeClass('menu-open');
-		$('.sub-menu').removeClass('open');
-	});
-
-	$('.main-menus .nav-menu > li > a').on( 'click', function(event){
-		event.preventDefault();
-		$('.sub-menu.open').removeClass('open');
-		$(this).next('.sub-menu').toggleClass('open');
-	});
-	
 });
 
 

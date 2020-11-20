@@ -24,7 +24,7 @@ jQuery(document).ready(function($){
 		// cycle through the tabs
 		$.each( tabs, function( k, t ){
 
-			// get the tab object
+			// get the tab object and its corresponding nav
 			var the_tab = $( '.tab-content.' + t );
 			var the_tab_nav = $( '.tab-nav li.' + t );
 
@@ -60,6 +60,16 @@ jQuery(document).ready(function($){
 	// back to main areas list?
 	$( '.back-to-areas' ).click(function(){
 		location.href = "/areas-of-study";
+	});
+
+
+	// handle clicks on the tab-nav items
+	$( '.area .tab-nav li' ).on( 'click', function(){
+		var tab_class = $(this).attr( 'class' );
+		var tab_content = $( '.tab-content.'+tab_class );
+		$('html, body').animate({
+			scrollTop: tab_content.offset().top + 5
+		}, 1000 );
 	});
 
 

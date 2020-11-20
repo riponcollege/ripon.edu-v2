@@ -73,6 +73,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<div class="buttons">
 		<?php wp_nav_menu( array( 'theme_location' => 'buttons', 'menu_class' => 'nav-menu' ) ); ?>
 	</div>
+
+	<button class="search-show">search</button>
+	<div class="search">
+		<?php print get_search_form(); ?>
+	</div>
 </div>
 <div class="menu-photo"></div>
 <div class="container">
