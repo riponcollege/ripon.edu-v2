@@ -109,7 +109,7 @@ $sidebar_video_url = get_cmb_value( "area_sidebar_video" );
 							?>
 							<div class="faculty-entry">
 								<a href="<?php the_permalink(); ?>">
-								<div class="photo" style="background-image: url(<?php the_post_thumbnail_url( 'thumbnail' ); ?>);"></div>
+								<div class="photo" style="background-image: url(<?php the_post_thumbnail_url( array( 500, 500 ) ); ?>);"></div>
 								<div class="info">
 									<h4><?php the_title(); ?></h4>
 									<p class="faculty-title"><?php print get_cmb_value( "faculty_title" ); ?></p>
