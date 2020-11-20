@@ -77,7 +77,7 @@ function left_menu_display( $mode = 'both' ) {
 	$menu_primary_info = wp_get_nav_menu_object( $menu_primary );
 
 	// buttons menu
-	$menu_buttons = get_post_meta( get_the_ID(), CMB_PREFIX . "menu_buttons", 1 );
+	// $menu_buttons = get_post_meta( get_the_ID(), CMB_PREFIX . "menu_buttons", 1 );
 
 	print '<button class="toggle-sidebar-menu">Section Navigation</button>';
 	print '<div class="sidebar-menu-container">';
@@ -102,6 +102,7 @@ function left_menu_display( $mode = 'both' ) {
 		print '</div>';
 	}
 
+	/*
 	if ( !empty( $menu_buttons ) && ( $mode == 'both' || $mode == 'secondary' ) ) {
 		print '<div class="menu-buttons">';
 
@@ -113,7 +114,7 @@ function left_menu_display( $mode = 'both' ) {
 
 		print '</div>';
 	}
-
+	*/
 	print '</div>';
 
  }

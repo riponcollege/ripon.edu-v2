@@ -14,14 +14,12 @@ jQuery(document).ready(function($){
 	menu_show.on("click",function(){
 		menu.addClass('open');
 		menu_photo.addClass('open');
-		container.addClass('menu-open');
 	});
 
 	menu_hide.on("click",function(){
 		menu.removeClass('open');
 		menu_photo.removeClass('open');
-		container.removeClass('menu-open');
-		$('.sub-menu').removeClass('open');
+		$( '.main-menus' ).find( '.sub-menu' ).removeClass('open');
 	});
 
 	$('.main-menus .nav-menu > li > a').on( 'click', function(event){

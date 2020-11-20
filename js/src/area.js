@@ -1,7 +1,5 @@
 
 
-
-
 // area controls
 jQuery(document).ready(function($){
 
