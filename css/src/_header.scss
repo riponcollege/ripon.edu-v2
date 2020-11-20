@@ -11,11 +11,86 @@ header {
 		right: 30px;
 		bottom: 20px;
 		color: transparent;
-		width: 40px;
-		height: 40px;
+		width: 30px;
+		height: 30px;
 		border: 0;
 		background: url(../img/icon-menu-white.png) center center no-repeat;
 		background-size: contain;
+		transition: all 400ms ease-in-out;
+
+		@include respond-to( 375px ) {
+			width: 40px;
+			height: 40px;
+		}
+
+		@include respond-to( 768px ) {
+			width: auto;
+			color: rgba( white, .7 );
+			padding: 0 60px 0 0;
+			background-position: right center;
+			top: 50px;
+			height: 30px;
+			bottom: 0;
+			@include font;
+			font-size: 20px;
+		}
+
+		@include respond-to( 1220px ) {
+			letter-spacing: 2px;
+		}
+
+		&:hover {
+			color: rgba( white, 1 );
+		}
+	}
+
+	.buttons {
+		display: none;
+
+		@include respond-to( 768px ) {
+			display: block;
+			position: absolute;
+			right: 200px;
+			top: 48px;
+
+			li {
+				display: inline;
+
+				a {
+					display: inline-block;
+					border: 2px solid rgba( white, .2 );
+					color: white;
+					font-size: 20px;
+					text-transform: uppercase;
+					padding: 5px 10px;
+					text-decoration: none;
+					transition: all 400ms ease-in-out;
+					margin: 0 10px;
+
+					&:hover {
+						border: 2px solid rgba( white, .8 );
+					}
+				}
+			}
+		}
+
+		@include respond-to( 1220px ) {
+			right: 250px;
+
+			li a {
+				margin: 0 40px;
+				padding: 5px 30px;
+				letter-spacing: 2px;
+			}
+		}
+
+		@include respond-to( 1440px ) {
+			right: 350px;
+		}
+
+		@include respond-to( 1680px ) {
+			right: 450px;
+		}
 	}
 }
 

@@ -4,11 +4,7 @@
 // register a couple nav menus
 register_nav_menus( array(
 	'main-menu' => 'Main Menu',
-	'constituent' => 'Header - Constituent',
-	'links' => 'Header - Links',
-	'academics-primary' => 'Academics Menu',
-	'academics-buttons' => 'Academics Buttons',
-	'tour' => 'Virtual Tour'
+	'buttons' => 'Header Buttons',
 ) );
 
 

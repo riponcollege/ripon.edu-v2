@@ -67,8 +67,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <div class="main-menus">
-	<button class="menu-hide">hide menu</button>
-	<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'nav-menu' ) ); ?>
+	<button class="menu-hide">close</button>
+	<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'menu_class' => 'nav-menu main-menu' ) ); ?>
+
+	<div class="buttons">
+		<?php wp_nav_menu( array( 'theme_location' => 'buttons', 'menu_class' => 'nav-menu' ) ); ?>
+	</div>
 </div>
 <div class="menu-photo"></div>
 <div class="container">
@@ -80,7 +84,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</a>
 		</div>
 
-		<button class="menu-show">show menu</button>
+		<button class="menu-show">menu</button>
+
+		<div class="buttons">
+			<?php wp_nav_menu( array( 'theme_location' => 'buttons', 'menu_class' => 'nav-menu' ) ); ?>
+		</div>
 
 	</header>
 

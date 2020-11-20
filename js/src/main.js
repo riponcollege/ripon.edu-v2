@@ -53,7 +53,7 @@ jQuery(document).ready(function($){
 		$('.sub-menu').removeClass('open');
 	});
 
-	$('.main-menus .nav-menu li a').on( 'click', function(event){
+	$('.main-menus .nav-menu > li > a').on( 'click', function(event){
 		event.preventDefault();
 		$('.sub-menu.open').removeClass('open');
 		$(this).next('.sub-menu').toggleClass('open');
