@@ -291,17 +291,30 @@ body {
   overflow-y: auto;
   padding: 80px 20px 20px 20px; }
   .main-menus .menu-hide {
+    position: absolute;
+    top: 30px;
+    right: 30px;
     width: 40px;
     height: 40px;
-    float: right;
-    margin: 20px;
     color: transparent;
     background: url(../img/icon-close-black.png) center center no-repeat;
     background-size: contain;
     opacity: .5;
-    border: 0; }
+    border: 0;
+    transition: all 400ms ease-in-out; }
     .main-menus .menu-hide:hover {
       opacity: .7; }
+    @media only screen and (min-width: 768px) {
+      .main-menus .menu-hide {
+        width: auto;
+        padding-right: 60px;
+        font-size: 20px;
+        color: transparent;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        background-position: right center; }
+        .main-menus .menu-hide:hover {
+          color: rgba(0, 0, 0, 0.8); } }
   .admin-bar .main-menus {
     top: 32px; }
   .main-menus.open {
@@ -486,50 +499,47 @@ footer {
   padding: 4px 0; }
 
 .area {
+  position: relative;
   padding: 0 0 30px 0; }
+  @media only screen and (min-width: 768px) {
+    .area {
+      padding: 20px 20px 40px 28%; } }
+  @media only screen and (min-width: 1220px) {
+    .area {
+      padding: 30px 60px 60px 29%; } }
   .area .area-title {
     padding: 20px 20px 0; }
   .area .area-subtitle {
     padding: 0 20px 10px;
     opacity: .7; }
-  .area .advising {
-    padding-top: 20px; }
-  .area .video {
-    padding-left: 0;
-    padding-right: 20px; }
-  .area .back-to-areas {
-    display: block;
-    width: 100%;
-    padding: 15px 0 15px 45px;
+  @media only screen and (min-width: 768px) {
+    .area .tab-nav {
+      width: 25%;
+      position: absolute;
+      left: 20px;
+      top: 50px; } }
+  @media only screen and (min-width: 1220px) {
+    .area .tab-nav {
+      left: 40px; } }
+  .area .tab-nav.scrolled {
+    position: fixed; }
+  .area .tab-nav ul li {
+    padding: 20px 15px;
+    font-size: 20px;
+    line-height: 25px;
+    color: #9295a2;
+    cursor: pointer;
+    border-top: 1px solid #e5e5e8;
     position: relative; }
-  .area .tab-nav ul {
-    text-align: center; }
-    @media only screen and (min-width: 768px) {
-      .area .tab-nav ul {
-        border-bottom: 1px solid #e5e5e8; } }
-    .area .tab-nav ul li {
-      padding: 20px 15px;
-      font-size: 20px;
-      line-height: 25px;
-      color: #9295a2;
-      cursor: pointer;
-      border-bottom: 1px solid #e5e5e8;
-      position: relative; }
-      @media only screen and (min-width: 768px) {
-        .area .tab-nav ul li {
-          display: inline-block;
-          border-bottom: none; } }
-      .area .tab-nav ul li.active {
-        background: #e5e5e8;
+    .area .tab-nav ul li:first-child {
+      border-top: none; }
+    .area .tab-nav ul li.active {
+      color: #010101; }
+      .area .tab-nav ul li.active:hover {
         color: #18191d; }
-        .area .tab-nav ul li.active:hover {
-          color: #18191d; }
-      .area .tab-nav ul li:hover {
-        color: #6b6e7d; }
-        .area .tab-nav ul li:hover:before {
-          color: #6b6e7d; }
+    .area .tab-nav ul li:hover {
+      color: #6b6e7d; }
   .area .tab-content {
-    display: none;
     padding: 20px; }
     .area .tab-content.first {
       display: block; }
@@ -538,10 +548,6 @@ footer {
     font-size: .9em;
     text-align: center;
     margin: 20px; }
-  @media only screen and (min-width: 768px) {
-    .area .area-inner {
-      max-width: 900px;
-      margin: 0 auto; } }
 
 .area-listing {
   padding: 20px; }
