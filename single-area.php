@@ -101,20 +101,20 @@ $sidebar_video_url = get_cmb_value( "area_sidebar_video" );
 					if ( $faculty_query->have_posts() ) : 
 						?>
 
-					<div class="faculty-directory">
+					<div class="area-faculty">
 					<?php
 
 						// Start the Loop.
 						while ( $faculty_query->have_posts() ) : $faculty_query->the_post();
 							?>
 							<div class="faculty-entry">
-								<?php the_post_thumbnail(); ?>
+								<a href="<?php the_permalink(); ?>">
+								<div class="photo" style="background-image: url(<?php the_post_thumbnail_url( 'thumbnail' ); ?>);"></div>
 								<div class="info">
-									<a href="<?php the_permalink(); ?>" class="btn"><i class="fa fa-lg fa-search"></i></a>
-									<h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
+									<h4><?php the_title(); ?></h4>
 									<p class="faculty-title"><?php print get_cmb_value( "faculty_title" ); ?></p>
-									<a href="mailto:<?php print get_cmb_value( "faculty_email" ); ?>"><?php print get_cmb_value( "faculty_email" ); ?></a>
 								</div>
+								</a>
 							</div>
 							<?php
 

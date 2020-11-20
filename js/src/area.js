@@ -50,6 +50,13 @@ jQuery(document).ready(function($){
 
 	}
 
+
+	// set faculty photo height to same as width
+	var set_photo_height = function() {
+		$( '.area-faculty .photo' ).height( $( '.area-faculty .photo' ).width() );
+	}
+
+
 	// back to main areas list?
 	$( '.back-to-areas' ).click(function(){
 		location.href = "/areas-of-study";
@@ -62,7 +69,13 @@ jQuery(document).ready(function($){
 
 	// update values when the window resizes.
 	$( window ).on( 'resize', function(){
+
+		// get the area offset.top
 		area_top = $( '.area' ).offset();
+
+		// resize faculty photo div.
+		set_photo_height();
+		
 	});
 
 
@@ -97,6 +110,9 @@ jQuery(document).ready(function($){
 
 	// set the active tab on load
 	set_active_tab();
+
+	// set faculty photo height equal to width.
+	set_photo_height();
 
 });
 
