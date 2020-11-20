@@ -70,57 +70,59 @@ jQuery(document).ready(function($){
 		}, 1000 );
 	});
 
+	if ( $('.area').length > 0 ) {
 
-	// set some initial variables on load.
-	var area_top = $( '.area' ).offset();
-
-
-	// update values when the window resizes.
-	$( window ).on( 'resize', function(){
-
-		// get the area offset.top
-		area_top = $( '.area' ).offset();
-
-		// resize faculty photo div.
-		set_photo_height();
-		
-	});
+		// set some initial variables on load.
+		var area_top = $( '.area' ).offset();
 
 
-	// when the page scrolls
-	$( window ).on( 'scroll', function(){
+		// update values when the window resizes.
+		$( window ).on( 'resize', function(){
 
-		// get the scroll position
-		var scroll_position = $( window ).scrollTop();
+			// get the area offset.top
+			area_top = $( '.area' ).offset();
 
-		// if we're on the applicable screen size.
-		if ( $( window ).innerWidth() >= 768 ) {
+			// resize faculty photo div.
+			set_photo_height();
+			
+		});
 
-			// if we're scrolled past the top of the area div
-			if ( scroll_position > area_top.top ) {
 
-				// tell the nav we're scrolled
-				$( '.area .tab-nav' ).addClass( 'scrolled' );
+		// when the page scrolls
+		$( window ).on( 'scroll', function(){
 
-			} else {
+			// get the scroll position
+			var scroll_position = $( window ).scrollTop();
 
-				// otherwise remove the scrolled class
-				$( '.area .tab-nav' ).removeClass( 'scrolled' );
+			// if we're on the applicable screen size.
+			if ( $( window ).innerWidth() >= 768 ) {
+
+				// if we're scrolled past the top of the area div
+				if ( scroll_position > area_top.top ) {
+
+					// tell the nav we're scrolled
+					$( '.area .tab-nav' ).addClass( 'scrolled' );
+
+				} else {
+
+					// otherwise remove the scrolled class
+					$( '.area .tab-nav' ).removeClass( 'scrolled' );
+
+				}
+
+				// set the active item.
+				set_active_tab();
 
 			}
 
-			// set the active item.
-			set_active_tab();
+		});
 
-		}
+		// set the active tab on load
+		set_active_tab();
 
-	});
-
-	// set the active tab on load
-	set_active_tab();
-
-	// set faculty photo height equal to width.
-	set_photo_height();
-
+		// set faculty photo height equal to width.
+		set_photo_height();
+	}
+	
 });
 

@@ -297,6 +297,9 @@ button, input[type=submit], input[type=reset], .btn {
   .sidebar {
     left: 40px; } }
 
+.sidebar.scrolled {
+  position: fixed; }
+
 .sidebar .nav-menu li a {
   display: block;
   color: #5f626f;

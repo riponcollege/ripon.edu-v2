@@ -29,6 +29,10 @@
 		left: 40px;
 	}
 
+	&.scrolled {
+		position: fixed;
+	}
+
 	.nav-menu {
 		li {
 			a {

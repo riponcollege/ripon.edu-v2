@@ -9,7 +9,7 @@ get_header();
 ?>
 	
 
-	<div class="area-listing">
+	<div class="two-column area-listing">
 
 		<div class="sidebar">
 		<?php
