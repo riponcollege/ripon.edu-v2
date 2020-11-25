@@ -340,16 +340,17 @@ body {
     position: absolute;
     top: 30px;
     right: 30px;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     color: transparent;
     background: url(../img/icon-close-black.png) right center no-repeat;
     background-size: contain;
-    font-size: 20px;
     opacity: .5;
     border: 0;
     transition: color 400ms ease-in-out, padding-right 400ms ease-in-out, width 400ms ease-in-out;
-    text-align: right; }
+    text-align: right;
+    font-size: 20px;
+    line-height: 20px; }
     .main-menus .menu-hide:hover {
       opacity: .7; }
     @media only screen and (min-width: 768px) {
@@ -366,15 +367,16 @@ body {
     right: 0;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); }
   .main-menus .main-menu {
-    border-top: 1px dotted #c9cbd1; }
+    border-top: 1px dotted #c9cbd1;
+    padding-top: 15px; }
     .main-menus .main-menu a {
       display: block;
       color: #5f626f;
       padding: 6px 9px;
       text-decoration: none;
       transition: 400ms all ease-in-out;
-      font-size: 20px;
-      line-height: 35px; }
+      font-size: 1.1em;
+      line-height: 1.4em; }
       .main-menus .main-menu a:hover {
         color: #777a8a; }
       @media only screen and (min-width: 768px) {
@@ -394,7 +396,7 @@ body {
         .main-menus .main-menu .sub-menu {
           opacity: 0;
           position: fixed;
-          top: 118px;
+          top: 102px;
           right: 105%;
           width: 400px;
           transition: all 400ms ease-in-out;
@@ -432,15 +434,16 @@ body {
     position: absolute;
     top: 30px;
     left: 30px;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     color: transparent;
     background-size: contain;
     opacity: .5;
     border: 0;
     transition: color 400ms ease-in-out, padding-left 400ms ease-in-out, width 400ms ease-in-out;
     text-align: left;
-    font-size: 20px; }
+    font-size: 20px;
+    line-height: 20px; }
     .main-menus .search-show:hover {
       opacity: .7; }
     @media only screen and (min-width: 768px) {
@@ -453,7 +456,7 @@ body {
           color: rgba(0, 0, 0, 0.8); } }
   .main-menus .search {
     position: absolute;
-    top: 23px;
+    top: 18px;
     left: 20px;
     display: none; }
     .main-menus .search ::placeholder {
@@ -461,7 +464,7 @@ body {
     .main-menus .search input[type=text] {
       border: 1px solid #e5e5e8;
       border-radius: 30px;
-      font-size: 20px;
+      font-size: 16.5px;
       line-height: 50px;
       width: 200px;
       padding: 0 20px;
@@ -499,16 +502,12 @@ header {
     right: 30px;
     bottom: 20px;
     color: transparent;
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
     border: 0;
     background: url(../img/icon-menu-white.png) center center no-repeat;
     background-size: contain;
     transition: all 400ms ease-in-out; }
-    @media only screen and (min-width: 375px) {
-      header .menu-show {
-        width: 40px;
-        height: 40px; } }
     @media only screen and (min-width: 768px) {
       header .menu-show {
         width: auto;
@@ -516,7 +515,7 @@ header {
         padding: 0 60px 0 0;
         background-position: right center;
         top: 50px;
-        height: 30px;
+        height: 26px;
         bottom: auto;
         font-family: "Open Sans", sans-serif;
         font-weight: 300;
@@ -533,7 +532,7 @@ header {
         display: block;
         position: absolute;
         right: 200px;
-        top: 46px; }
+        top: 44px; }
         header .buttons li {
           display: inline; }
           header .buttons li a {
@@ -550,17 +549,17 @@ header {
               border: 2px solid rgba(255, 255, 255, 0.8); } }
     @media only screen and (min-width: 1220px) {
       header .buttons {
-        right: 250px; }
+        right: 230px; }
         header .buttons li a {
           margin: 0 40px;
           padding: 5px 30px;
           letter-spacing: 2px; } }
     @media only screen and (min-width: 1440px) {
       header .buttons {
-        right: 350px; } }
+        right: 330px; } }
     @media only screen and (min-width: 1680px) {
       header .buttons {
-        right: 450px; } }
+        right: 420px; } }
 
 footer {
   border-top: 1px solid #e5e5e8;
