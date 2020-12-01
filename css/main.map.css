@@ -343,7 +343,7 @@ body {
     width: 30px;
     height: 30px;
     color: transparent;
-    background: url(../img/icon-close-black.png) right center no-repeat;
+    background: url(../img/icon-close-black.webp) right center no-repeat;
     background-size: contain;
     opacity: .5;
     border: 0;
@@ -430,7 +430,7 @@ body {
         border: 2px solid rgba(0, 0, 0, 0.8);
         color: rgba(0, 0, 0, 0.8); }
   .main-menus .search-show {
-    background: url(../img/icon-search.png) left center no-repeat;
+    background: url(../img/icon-search.webp) left center no-repeat;
     position: absolute;
     top: 30px;
     left: 30px;
@@ -480,7 +480,7 @@ body {
   width: 80%;
   left: -80%;
   height: 100%;
-  background: url(../img/bg-menu-photo.jpg) center center no-repeat;
+  background: url(../img/bg-menu-photo.webp) center center no-repeat;
   background-size: cover;
   transition: all 300ms ease-in-out;
   z-index: 9000; }
@@ -491,12 +491,14 @@ header {
   zoom: 1;
   background: #6a0a1b;
   position: relative;
-  padding: 10px; }
+  padding: 10px 20px; }
   header:before, header:after {
     content: "";
     display: table; }
   header, header:before, header:after {
     clear: both; }
+  header .logo {
+    width: 140px; }
   header .menu-show {
     position: absolute;
     right: 30px;
@@ -505,7 +507,7 @@ header {
     width: 26px;
     height: 26px;
     border: 0;
-    background: url(../img/icon-menu-white.png) center center no-repeat;
+    background: url(../img/icon-menu-white.webp) center center no-repeat;
     background-size: contain;
     transition: all 400ms ease-in-out; }
     @media only screen and (min-width: 768px) {
@@ -514,17 +516,17 @@ header {
         color: rgba(255, 255, 255, 0.7);
         padding: 0 60px 0 0;
         background-position: right center;
-        top: 50px;
+        top: 30px;
         height: 26px;
         bottom: auto;
         font-family: "Open Sans", sans-serif;
         font-weight: 300;
-        font-size: 16.5px; } }
+        font-size: 16.5px; }
+        header .menu-show:hover {
+          color: white; } }
     @media only screen and (min-width: 1220px) {
       header .menu-show {
         letter-spacing: 2px; } }
-    header .menu-show:hover {
-      color: white; }
   header .buttons {
     display: none; }
     @media only screen and (min-width: 768px) {
@@ -532,7 +534,7 @@ header {
         display: block;
         position: absolute;
         right: 200px;
-        top: 44px; }
+        top: 24px; }
         header .buttons li {
           display: inline; }
           header .buttons li a {
@@ -563,12 +565,51 @@ header {
         right: 420px; } }
 
 footer {
-  border-top: 1px solid #e5e5e8;
-  padding: 20px; }
+  zoom: 1;
+  background: #6a0a1b;
+  border-top: 20px solid #e5e5e8;
+  padding: 20px;
+  color: white; }
+  footer:before, footer:after {
+    content: "";
+    display: table; }
+  footer, footer:before, footer:after {
+    clear: both; }
+  footer a {
+    color: rgba(255, 255, 255, 0.9);
+    transition: opacity 400ms ease-in-out; }
+    footer a:hover {
+      color: white;
+      opacity: .8; }
+  @media only screen and (min-width: 768px) {
+    footer .address {
+      float: left; } }
   footer .social {
-    padding: 20px 0; }
+    margin: 20px 0;
+    display: block; }
     footer .social img {
-      max-width: 40px; }
+      float: left;
+      max-width: 12%;
+      margin: 0 1.1%; }
+      @media only screen and (min-width: 450px) {
+        footer .social img {
+          max-width: 40px;
+          margin: 0 5px; } }
+    @media only screen and (min-width: 768px) {
+      footer .social {
+        float: right;
+        margin: 0; }
+        footer .social:after {
+          clear: none; } }
+  footer .colophon {
+    font-size: .8em;
+    opacity: .5;
+    clear: both; }
+    @media only screen and (min-width: 768px) {
+      footer .colophon {
+        float: right;
+        clear: right;
+        padding-top: 10px; } }
 
 .elementor-column-gap-default > .elementor-row > .elementor-column > .elementor-element-populated {
   padding: 0; }

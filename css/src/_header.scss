@@ -4,7 +4,11 @@ header {
 	@include clearfix;
 	background: $red-dark;
 	position: relative;
-	padding: 10px;
+	padding: 10px 20px;
+
+	.logo {
+		width: 140px;
+	}
 
 	.menu-show {
 		position: absolute;
@@ -14,33 +18,30 @@ header {
 		width: 26px;
 		height: 26px;
 		border: 0;
-		background: url(../img/icon-menu-white.png) center center no-repeat;
+		background: url(../img/icon-menu-white.webp) center center no-repeat;
 		background-size: contain;
 		transition: all 400ms ease-in-out;
-
-		@include respond-to( 375px ) {
-
-		}
 
 		@include respond-to( 768px ) {
 			width: auto;
 			color: rgba( white, .7 );
 			padding: 0 60px 0 0;
 			background-position: right center;
-			top: 50px;
+			top: 30px;
 			height: 26px;
 			bottom: auto;
 			@include font;
 			font-size: 16.5px;
+
+			&:hover {
+				color: rgba( white, 1 );
+			}
 		}
 
 		@include respond-to( 1220px ) {
 			letter-spacing: 2px;
 		}
 
-		&:hover {
-			color: rgba( white, 1 );
-		}
 	}
 
 	.buttons {
@@ -50,7 +51,7 @@ header {
 			display: block;
 			position: absolute;
 			right: 200px;
-			top: 44px;
+			top: 24px;
 
 			li {
 				display: inline;
