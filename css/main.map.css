@@ -631,7 +631,8 @@ footer {
 
 .area {
   position: relative;
-  padding: 0 0 30px 0; }
+  padding: 0 0 30px 0;
+  min-height: 900px; }
   @media only screen and (min-width: 768px) {
     .area {
       padding: 20px 20px 40px 28%; } }
@@ -671,8 +672,9 @@ footer {
     .area .tab-nav ul li:hover {
       color: #6b6e7d; }
   .area .tab-content {
-    padding: 20px; }
-    .area .tab-content.first {
+    padding: 20px;
+    display: none; }
+    .area .tab-content.active {
       display: block; }
   .area .sample-schedule {
     float: right;

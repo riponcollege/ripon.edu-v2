@@ -62,7 +62,7 @@ $sidebar_video_url = get_cmb_value( "area_sidebar_video" );
 				// print_r( $terms_array );
 				print implode( ', ', $terms_array );
 				?></h3>
-				<div class="tab-content first area-overview">
+				<div class="tab-content active area-overview">
 					<h2>Overview</h2>
 					<?php the_content(); ?>
 					<hr />
