@@ -168,7 +168,7 @@ $featured_image_url = get_the_post_thumbnail_url( null, 'full' );
 
 				</div>
 
-				<div class="tab-content area-offcampus">
+				<div class="tab-content area-advising">
 					<h2>Advising</h2>
 					<?php print do_shortcode( '[snippet slug="areas-advising" /]' ); ?>
 				</div>
