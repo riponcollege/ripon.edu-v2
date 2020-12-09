@@ -48,6 +48,7 @@ $featured_image_url = get_the_post_thumbnail_url( null, 'full' );
 					<?php do_area_tab_nav( "Clinical Supervisors", "supervisors" ) ?>
 					<?php do_area_tab_nav( "Be a Teacher", "teacher" ) ?>
 					<?php do_area_tabs_nav(); ?>
+					<li class="area-advising">Advising</li>
 					<li class="area-offcampus">Off-Campus</li>
 				</ul>
 			</div>
@@ -166,6 +167,11 @@ $featured_image_url = get_the_post_thumbnail_url( null, 'full' );
 					
 					?>
 
+				</div>
+
+				<div class="tab-content area-offcampus">
+					<h2>Advising</h2>
+					<?php print do_shortcode( '[snippet slug="areas-advising" /]' ); ?>
 				</div>
 
 				<div class="tab-content area-offcampus">
