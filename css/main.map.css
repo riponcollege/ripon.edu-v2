@@ -775,9 +775,14 @@ footer {
           color: #5f626f;
           padding: 3px 0; }
   .area .area-news .entry {
-    clear: left;
+    zoom: 1;
     padding: 20px 0;
     border-top: 1px dotted rgba(95, 98, 111, 0.2); }
+    .area .area-news .entry:before, .area .area-news .entry:after {
+      content: "";
+      display: table; }
+    .area .area-news .entry, .area .area-news .entry:before, .area .area-news .entry:after {
+      clear: both; }
     .area .area-news .entry .wp-post-image {
       float: left;
       margin: 0 15px 20px 0;
