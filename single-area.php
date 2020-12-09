@@ -78,7 +78,7 @@ $featured_image_url = get_the_post_thumbnail_url( null, 'full' );
 					<?php the_content(); ?>
 					<hr />
 					
-					<div class="half video">
+					<div class="area-video">
 						<h3>Program Spotlight</h3>
 						<?php
 						if ( !empty( $sidebar_video_url ) ) {
@@ -87,10 +87,36 @@ $featured_image_url = get_the_post_thumbnail_url( null, 'full' );
 						?>
 					</div>
 					<?php if ( !empty( get_cmb_value( 'area_post_tag' ) ) ) { ?>
-					<div class="half">
-						<h3>Featured Articles</h3>
+					<hr>
+					<div class="area-news">
+						<h2>Latest News</h2>						  
 						<?php
-						print do_shortcode( '[display-posts tag="' . get_cmb_value( 'area_post_tag' ) . '" posts_per_page="5"]' );
+						$args = array(
+						    'tag' => get_cmb_value( 'area_post_tag' ),
+						    'posts_per_page' => 3
+						);
+						$query = new WP_Query( $args );
+
+
+						// Check that we have query results.
+						if ( $query->have_posts() ) {
+						  
+						    // Start looping over the query results.
+						    while ( $query->have_posts() ) {
+						        $query->the_post(); ?>
+						        <div class="entry">
+						        	<?php the_post_thumbnail(); ?>
+						        	<h3><?php the_title(); ?></h3>
+						        	<?php the_excerpt(); ?>
+						        </div>
+						  		<?php
+						    }
+						  
+						}
+						  
+						// Restore original post data.
+						wp_reset_postdata();
+						  
 						?>
 					</div>
 					<?php } ?>
