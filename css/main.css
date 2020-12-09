@@ -775,6 +775,7 @@ footer {
           color: #5f626f;
           padding: 3px 0; }
   .area .area-news .entry {
+    clear: left;
     padding: 20px 0;
     border-top: 1px dotted rgba(95, 98, 111, 0.2); }
     .area .area-news .entry .wp-post-image {
