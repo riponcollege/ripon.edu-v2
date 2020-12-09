@@ -175,14 +175,6 @@ function cmb2_sample_metaboxes() {
         'show_names' => true, // Show field names on the left
     ) );
     $area_box->add_field( array(
-        'name' => 'Advising',
-        'id' => CMB_PREFIX . 'area_advising',
-        'type' => 'wysiwyg',
-        'options' => array (
-        	'textarea_rows' => 10
-        )
-    ) );
-    $area_box->add_field( array(
         'name' => 'Faculty',
         'desc' => 'Select the faculty related to this area of interest.',
         'id' => CMB_PREFIX . 'area_faculty_list',
@@ -249,14 +241,6 @@ function cmb2_sample_metaboxes() {
         )
     ) );
     $area_box->add_field( array(
-        'name' => 'Off-Campus Study',
-        'id' => CMB_PREFIX . 'area_off_campus',
-        'type' => 'wysiwyg',
-        'options' => array (
-        	'textarea_rows' => 7
-        )
-    ) );
-    $area_box->add_field( array(
         'name' => 'Unique Opportunities',
         'id' => CMB_PREFIX . 'area_opportunities',
         'type' => 'wysiwyg',
@@ -267,14 +251,6 @@ function cmb2_sample_metaboxes() {
     $area_box->add_field( array(
         'name' => 'Ensembles',
         'id' => CMB_PREFIX . 'area_ensembles',
-        'type' => 'wysiwyg',
-        'options' => array (
-        	'textarea_rows' => 7
-        )
-    ) );
-    $area_box->add_field( array(
-        'name' => 'Facilities',
-        'id' => CMB_PREFIX . 'area_facilities',
         'type' => 'wysiwyg',
         'options' => array (
         	'textarea_rows' => 7
@@ -330,7 +306,6 @@ function cmb2_sample_metaboxes() {
     ) );
 
     
-    /*
     // accordion metabox
     $tab_metabox = new_cmb2_box( array(
         'id' => 'tab_metabox',
@@ -370,6 +345,7 @@ function cmb2_sample_metaboxes() {
     ) );
 
 
+    /*
     // area of interest information
     $tour_info_box = new_cmb2_box( array(
         'id' => 'tour_info',
