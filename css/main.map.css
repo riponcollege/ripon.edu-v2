@@ -611,6 +611,15 @@ footer {
         clear: right;
         padding-top: 10px; } }
 
+.content-style ol, .area .tab-content ol, .content-style ul, .area .tab-content ul {
+  padding: 7px 0 7px 30px; }
+
+.content-style ul, .area .tab-content ul {
+  list-style-type: disc; }
+
+.content-style ol, .area .tab-content ol {
+  list-style-type: decimal; }
+
 .elementor-column-gap-default > .elementor-row > .elementor-column > .elementor-element-populated {
   padding: 0; }
 
@@ -628,6 +637,40 @@ footer {
 .single_job_listing ul.meta li {
   background: none;
   padding: 4px 0; }
+
+.area-header {
+  background: url(../img/bg-menu-photo.webp) center center no-repeat;
+  background-size: cover;
+  min-height: 250px;
+  position: relative; }
+  @media only screen and (min-width: 1220px) {
+    .area-header {
+      min-height: 350px; } }
+  .area-header .breadcrumbs {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: .85em;
+    text-align: right; }
+    .area-header .breadcrumbs a {
+      color: white;
+      text-decoration: none;
+      margin: 0 5px; }
+      .area-header .breadcrumbs a:hover {
+        border-bottom: 1px dotted rgba(255, 255, 255, 0.5); }
+    .area-header .breadcrumbs .page-title {
+      font-family: "Open Sans", sans-serif;
+      font-weight: 800;
+      font-size: 2em;
+      line-height: 1.4em; }
+    @media only screen and (min-width: 1220px) {
+      .area-header .breadcrumbs {
+        right: 40px;
+        bottom: 40px; }
+        .area-header .breadcrumbs .page-title {
+          font-size: 2.4em; } }
 
 .area {
   position: relative;

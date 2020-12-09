@@ -14,8 +14,15 @@ $overview_url = get_cmb_value( "area_facebook" );
 // get video URL
 $sidebar_video_url = get_cmb_value( "area_sidebar_video" );
 
+// get featured image.
+$featured_image_url = get_the_post_thumbnail_url( null, 'full' );
 
 ?>
+	<div class="page-header area-header"<?php print ( !empty( $featured_image_url ) ? ' style="background-image: url(' . $featured_image_url . ')"' : '' ); ?>>
+		<div class="breadcrumbs">
+			<div class="crumbs"><a href="/academics">Academics</a> &raquo; <a href="/areas-of-study">Areas of Study</a> &raquo;</div>
+			<div class="page-title"><?php the_title(); ?></div></div>
+	</div>
 	<div id="primary" class="area group" role="main">
 
 		<?php 
@@ -47,11 +54,13 @@ $sidebar_video_url = get_cmb_value( "area_sidebar_video" );
 			
 			<div class="area-inner">
 
+				<!--
 				<?php
 				if ( has_cmb_value( 'area_facebook' ) ) {
 					?><a href="<?php show_cmb_value( 'area_facebook' ); ?>" class="btn sample-schedule">View Sample<br> Course Schedule</a><?php
 				}
 				?>
+				
 				<h1 class="area-title"><?php the_title(); ?></h1>
 				<h3 class="area-subtitle"><?php 
 				$terms = wp_get_post_terms( get_the_ID(), 'area_cat' );
@@ -62,6 +71,8 @@ $sidebar_video_url = get_cmb_value( "area_sidebar_video" );
 				// print_r( $terms_array );
 				print implode( ', ', $terms_array );
 				?></h3>
+				-->
+
 				<div class="tab-content active area-overview">
 					<h2>Overview</h2>
 					<?php the_content(); ?>
@@ -132,6 +143,7 @@ $sidebar_video_url = get_cmb_value( "area_sidebar_video" );
 				</div>
 
 				<div class="tab-content area-offcampus">
+					<h2>Off-Campus Study</h2>
 					<?php print do_shortcode( '[snippet slug="areas-off-campus" /]' ); ?>
 				</div>
 
