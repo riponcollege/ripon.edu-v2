@@ -190,14 +190,6 @@ function cmb2_sample_metaboxes() {
         )
     ) );
     $area_box->add_field( array(
-        'name' => 'Sample Schedule',
-        'id' => CMB_PREFIX . 'area_schedule',
-        'type' => 'wysiwyg',
-        'options' => array (
-        	'textarea_rows' => 10
-        )
-    ) );
-    $area_box->add_field( array(
         'name' => 'Sidebar Video',
         'id' => CMB_PREFIX . 'area_sidebar_video',
         'type' => 'text_url'
@@ -223,14 +215,6 @@ function cmb2_sample_metaboxes() {
         'name' => 'Overview Document URL',
         'id' => CMB_PREFIX . 'area_facebook',
         'type' => 'file'
-    ) );
-    $area_box->add_field( array(
-        'name' => 'Faculty',
-        'id' => CMB_PREFIX . 'area_faculty',
-        'type' => 'wysiwyg',
-        'options' => array (
-        	'textarea_rows' => 7
-        )
     ) );
     $area_box->add_field( array(
         'name' => 'Career Tracks',

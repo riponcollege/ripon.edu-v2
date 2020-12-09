@@ -35,7 +35,6 @@ $featured_image_url = get_the_post_thumbnail_url( null, 'full' );
 					<li class="area-overview active">Overview</li>
 					<li class="area-faculty">Faculty</li>
 					<?php do_area_tab_nav( "Requirements", "requirements" ) ?>
-					<?php do_area_tab_nav( "Sample Schedule", "schedule" ) ?>
 					<?php do_area_tab_nav( "Career Tracks", "tracks" ) ?>
 					<?php do_area_tab_nav( "Unique Opportunities", "opportunities" ) ?>
 					<?php do_area_tab_nav( "Ensembles", "ensembles" ) ?>
@@ -178,7 +177,6 @@ $featured_image_url = get_the_post_thumbnail_url( null, 'full' );
 				</div>
 
 				<?php do_area_tab_content( "Requirements", "requirements" ) ?>
-				<?php do_area_tab_content( "Sample Schedule", "schedule" ) ?>
 				<?php do_area_tab_content( "Career Tracks", "tracks" ) ?>
 				<?php do_area_tab_content( "Unique Opportunities", "opportunities" ) ?>
 				<?php do_area_tab_content( "Ensembles", "ensembles" ) ?>
