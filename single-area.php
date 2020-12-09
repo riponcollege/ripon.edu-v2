@@ -39,7 +39,6 @@ $featured_image_url = get_the_post_thumbnail_url( null, 'full' );
 					<?php do_area_tab_nav( "Career Tracks", "tracks" ) ?>
 					<?php do_area_tab_nav( "Unique Opportunities", "opportunities" ) ?>
 					<?php do_area_tab_nav( "Ensembles", "ensembles" ) ?>
-					<?php do_area_tab_nav( "Facilities", "facilities" ) ?>
 					<?php do_area_tab_nav( "Events Schedule", "events" ) ?>
 					<?php do_area_tab_nav( "Past Productions", "productions" ) ?>
 					<?php do_area_tab_nav( "Alumni Profiles", "alumni" ) ?>
@@ -183,7 +182,6 @@ $featured_image_url = get_the_post_thumbnail_url( null, 'full' );
 				<?php do_area_tab_content( "Career Tracks", "tracks" ) ?>
 				<?php do_area_tab_content( "Unique Opportunities", "opportunities" ) ?>
 				<?php do_area_tab_content( "Ensembles", "ensembles" ) ?>
-				<?php do_area_tab_content( "Facilities", "facilities" ) ?>
 				<?php do_area_tab_content( "Events Schedule", "events" ) ?>
 				<?php do_area_tab_content( "Past Productions", "productions" ) ?>
 				<?php do_area_tab_content( "Alumni Profiles", "alumni" ) ?>
