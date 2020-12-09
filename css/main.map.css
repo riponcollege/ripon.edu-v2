@@ -780,8 +780,9 @@ footer {
     border-top: 1px dotted rgba(95, 98, 111, 0.2); }
     .area .area-news .entry .wp-post-image {
       float: left;
-      margin: 0 15px 0 0;
-      width: 25%; }
+      margin: 0 15px 20px 0;
+      width: 25%;
+      max-width: 140px; }
 
 .area-listing {
   padding: 20px; }
