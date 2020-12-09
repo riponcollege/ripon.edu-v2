@@ -1,7 +1,7 @@
 <?php
 
 /*
-Template Name: Generic 2-column
+Template Name: Two-Column
 */
 
 get_header();
@@ -13,11 +13,6 @@ get_header();
 			<?php
 			// show the sidebar menus.
 			left_menu_display();
-
-			// only show the widget area of they haven't populated the box.
-			if ( !has_cmb2_value('left_content') ) {
-				if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-generic') ) : ?><!-- no sidebar --><?php endif;
-			}
 			?>			
 		</div>
 

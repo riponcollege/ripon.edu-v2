@@ -31,7 +31,6 @@ $sidebar_video_url = get_cmb_value( "area_sidebar_video" );
 					<?php do_area_tab_nav( "Sample Schedule", "schedule" ) ?>
 					<?php do_area_tab_nav( "Advising", "advising" ) ?>
 					<?php do_area_tab_nav( "Career Tracks", "tracks" ) ?>
-					<?php do_area_tab_nav( "Off-Campus Study", "off_campus" ) ?>
 					<?php do_area_tab_nav( "Unique Opportunities", "opportunities" ) ?>
 					<?php do_area_tab_nav( "Ensembles", "ensembles" ) ?>
 					<?php do_area_tab_nav( "Facilities", "facilities" ) ?>
@@ -42,6 +41,7 @@ $sidebar_video_url = get_cmb_value( "area_sidebar_video" );
 					<?php do_area_tab_nav( "Clinical Supervisors", "supervisors" ) ?>
 					<?php do_area_tab_nav( "Be a Teacher", "teacher" ) ?>
 					<?php do_area_tabs_nav(); ?>
+					<li class="area-offcampus">Off-Campus</li>
 				</ul>
 			</div>
 			
@@ -131,11 +131,14 @@ $sidebar_video_url = get_cmb_value( "area_sidebar_video" );
 
 				</div>
 
+				<div class="tab-content area-offcampus">
+					<?php print do_shortcode( '[snippet slug="areas-off-campus" /]' ); ?>
+				</div>
+
 				<?php do_area_tab_content( "Requirements", "requirements" ) ?>
 				<?php do_area_tab_content( "Sample Schedule", "schedule" ) ?>
 				<?php do_area_tab_content( "Advising", "advising" ) ?>
 				<?php do_area_tab_content( "Career Tracks", "tracks" ) ?>
-				<?php do_area_tab_content( "Off-Campus Study", "off_campus" ) ?>
 				<?php do_area_tab_content( "Unique Opportunities", "opportunities" ) ?>
 				<?php do_area_tab_content( "Ensembles", "ensembles" ) ?>
 				<?php do_area_tab_content( "Facilities", "facilities" ) ?>
