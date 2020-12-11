@@ -21,51 +21,6 @@ function get_all_menus(){
 }
 
 
-/*
-if ( function_exists('register_sidebar') ) {
-	register_sidebar(array(
-		'name'=> 'General Sidebar',
-		'id' => 'sidebar-generic',
-		'before_widget' => '<div class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4>',
-		'after_title' => '</h4>',
-	));
-	register_sidebar(array(
-		'name'=> 'Blog Sidebar',
-		'id' => 'sidebar-blog',
-		'before_widget' => '<div class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4>',
-		'after_title' => '</h4>',
-	));
-	register_sidebar(array(
-		'name'=> 'Home Spotlight',
-		'id' => 'spotlight',
-		'before_widget' => '<div class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4>',
-		'after_title' => '</h4>',
-	));
-	register_sidebar(array(
-		'name'=> 'Home Events',
-		'id' => 'home-events',
-		'before_widget' => '<div class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4>',
-		'after_title' => '</h4>',
-	));
-	register_sidebar(array(
-		'name'=> 'Home Social',
-		'id' => 'social',
-		'before_widget' => '',
-		'after_widget' => '',
-		'before_title' => '',
-		'after_title' => '',
-	));
-}
-*/
-
 
 function left_menu_display( $mode = 'both' ) {
 

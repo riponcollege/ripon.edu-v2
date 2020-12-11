@@ -96,10 +96,6 @@ function cmb2_metaboxes() {
         'id' => 'menu_box',
         'title' => 'Page Menus',
         'object_types' => array( 'page' ), // Post type
-        'show_on' => array( 
-            'key' => 'page-template', 
-            'value' => 'page-2-column.php'
-        ),
         'context' => 'normal',
         'priority' => 'default',
         'show_names' => true // Show field names on the left

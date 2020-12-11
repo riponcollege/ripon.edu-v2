@@ -1,15 +1,7 @@
 <?php
 
-/*
-Template Name: Two-Column
-*/
-
-get_header();
-
 // get featured image.
 $featured_image_url = get_the_post_thumbnail_url( null, 'full' );
-
-print "this is a two-column layout";
 
 ?>
 	
@@ -38,5 +30,3 @@ print "this is a two-column layout";
 
 		</div>
 	</div>
-
-<?php get_footer(); ?>
