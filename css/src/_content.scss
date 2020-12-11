@@ -12,4 +12,14 @@
 	ol {
 		list-style-type: decimal;
 	}
+
+	img {
+		@include respond-to( 600px ) {	
+			&.alignleft {
+				float: left;
+				margin: 0 15px 15px 0;
+			}
+		}
+	}
 }
+

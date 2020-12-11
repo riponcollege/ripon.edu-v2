@@ -278,45 +278,39 @@ button, input[type=submit], input[type=reset], .btn {
 .content {
   position: relative; }
 
-@media only screen and (min-width: 768px) {
-  .sidebar .toggle-sidebar-menu {
-    display: none; } }
-
-.sidebar .menu-title {
-  font-size: 22px;
-  padding: 10px; }
-
-@media only screen and (min-width: 768px) {
-  .sidebar {
-    position: absolute;
-    left: 20px;
-    top: 60px;
-    width: 25%; } }
-
-@media only screen and (min-width: 1220px) {
-  .sidebar {
-    left: 40px; } }
-
-.sidebar.scrolled {
-  position: fixed; }
-
-.sidebar .nav-menu li a {
-  display: block;
-  color: #5f626f;
-  font-size: 18px;
-  text-decoration: none;
-  padding: 5px 10px; }
-
-.sidebar .nav-menu li .sub-menu {
-  display: none; }
-
-@media only screen and (min-width: 768px) {
-  .right-column {
-    padding: 20px 20px 40px 27%; } }
-
-@media only screen and (min-width: 1220px) {
-  .right-column {
-    padding: 20px 40px 60px 27%; } }
+.two-column {
+  position: relative; }
+  @media only screen and (min-width: 768px) {
+    .two-column .sidebar .toggle-sidebar-menu {
+      display: none; } }
+  .two-column .sidebar .menu-title {
+    font-size: 22px;
+    padding: 10px; }
+  @media only screen and (min-width: 768px) {
+    .two-column .sidebar {
+      position: absolute;
+      left: 20px;
+      top: 60px;
+      width: 25%; } }
+  @media only screen and (min-width: 1220px) {
+    .two-column .sidebar {
+      left: 40px; } }
+  .two-column .sidebar.scrolled {
+    position: fixed; }
+  .two-column .sidebar .nav-menu li a {
+    display: block;
+    color: #5f626f;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 5px 10px; }
+  .two-column .sidebar .nav-menu li .sub-menu {
+    display: none; }
+  @media only screen and (min-width: 768px) {
+    .two-column .right-column {
+      padding: 20px 20px 40px 27%; } }
+  @media only screen and (min-width: 1220px) {
+    .two-column .right-column {
+      padding: 20px 40px 60px 27%; } }
 
 /****************************
        MAIN MENU STYLES
@@ -564,6 +558,40 @@ header {
       header .buttons {
         right: 420px; } }
 
+.page-header {
+  background: url(../img/bg-menu-photo.webp) center center no-repeat;
+  background-size: cover;
+  min-height: 250px;
+  position: relative; }
+  @media only screen and (min-width: 1220px) {
+    .page-header {
+      min-height: 350px; } }
+  .page-header .breadcrumbs {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: .85em;
+    text-align: right; }
+    .page-header .breadcrumbs a {
+      color: white;
+      text-decoration: none;
+      margin: 0 5px; }
+      .page-header .breadcrumbs a:hover {
+        border-bottom: 1px dotted rgba(255, 255, 255, 0.5); }
+    .page-header .breadcrumbs .page-title {
+      font-family: "Open Sans", sans-serif;
+      font-weight: 800;
+      font-size: 2em;
+      line-height: 1.4em; }
+    @media only screen and (min-width: 1220px) {
+      .page-header .breadcrumbs {
+        right: 40px;
+        bottom: 40px; }
+        .page-header .breadcrumbs .page-title {
+          font-size: 2.4em; } }
+
 footer {
   zoom: 1;
   background: #6a0a1b;
@@ -620,6 +648,11 @@ footer {
 .content-style ol, .area .tab-content ol {
   list-style-type: decimal; }
 
+@media only screen and (min-width: 600px) {
+  .content-style img.alignleft, .area .tab-content img.alignleft {
+    float: left;
+    margin: 0 15px 15px 0; } }
+
 .elementor-column-gap-default > .elementor-row > .elementor-column > .elementor-element-populated {
   padding: 0; }
 
@@ -639,38 +672,7 @@ footer {
   padding: 4px 0; }
 
 .area-header {
-  background: url(../img/bg-menu-photo.webp) center center no-repeat;
-  background-size: cover;
-  min-height: 250px;
-  position: relative; }
-  @media only screen and (min-width: 1220px) {
-    .area-header {
-      min-height: 350px; } }
-  .area-header .breadcrumbs {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-    color: white;
-    font-size: .85em;
-    text-align: right; }
-    .area-header .breadcrumbs a {
-      color: white;
-      text-decoration: none;
-      margin: 0 5px; }
-      .area-header .breadcrumbs a:hover {
-        border-bottom: 1px dotted rgba(255, 255, 255, 0.5); }
-    .area-header .breadcrumbs .page-title {
-      font-family: "Open Sans", sans-serif;
-      font-weight: 800;
-      font-size: 2em;
-      line-height: 1.4em; }
-    @media only screen and (min-width: 1220px) {
-      .area-header .breadcrumbs {
-        right: 40px;
-        bottom: 40px; }
-        .area-header .breadcrumbs .page-title {
-          font-size: 2.4em; } }
+  background: url(../img/bg-menu-photo.webp) center center no-repeat; }
 
 .area {
   position: relative;

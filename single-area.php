@@ -21,7 +21,8 @@ $featured_image_url = get_the_post_thumbnail_url( null, 'full' );
 	<div class="page-header area-header"<?php print ( !empty( $featured_image_url ) ? ' style="background-image: url(' . $featured_image_url . ')"' : '' ); ?>>
 		<div class="breadcrumbs">
 			<div class="crumbs"><a href="/academics">Academics</a> &raquo; <a href="/areas-of-study">Areas of Study</a> &raquo;</div>
-			<div class="page-title"><?php the_title(); ?></div></div>
+			<div class="page-title"><?php the_title(); ?></div>
+		</div>
 	</div>
 	<div id="primary" class="area group" role="main">
 

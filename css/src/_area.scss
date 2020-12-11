@@ -2,48 +2,6 @@
 
 .area-header {
 	background: url(../img/bg-menu-photo.webp) center center no-repeat;
-	background-size: cover;
-	min-height: 250px;
-	position: relative;
-
-	@include respond-to( 1220px ) {
-		min-height: 350px;
-	}
-
-	.breadcrumbs {
-		position: absolute;
-		bottom: 20px;
-		right: 20px;
-		text-shadow: 0 0 10px rgba( black, .6 );
-		color: white;
-		font-size: .85em;
-		text-align: right;
-
-		a {
-			color: white;
-			text-decoration: none;
-			margin: 0 5px;
-
-			&:hover {
-				border-bottom: 1px dotted rgba( white, .5 );
-			}
-		}
-
-		.page-title {
-			@include font-bold;
-			font-size: 2em;
-			line-height: 1.4em;
-		}
-
-		@include respond-to( 1220px ) {
-			right: 40px;
-			bottom: 40px;
-
-			.page-title {
-				font-size: 2.4em;
-			}
-		}
-	}
 }
 
 

@@ -6,8 +6,17 @@ Template Name: Two-Column
 
 get_header();
 
+// get featured image.
+$featured_image_url = get_the_post_thumbnail_url( null, 'full' );
+
 ?>
 	
+	<div class="page-header"<?php print ( !empty( $featured_image_url ) ? ' style="background-image: url(' . $featured_image_url . ')"' : '' ); ?>>
+		<div class="breadcrumbs">
+			<!--<div class="crumbs"><a href="/academics">Academics</a> &raquo; <a href="/areas-of-study">Areas of Study</a> &raquo;</div>-->
+			<div class="page-title"><?php the_title(); ?></div>
+		</div>
+	</div>
 	<div class="two-column">
 		<div class="sidebar">
 			<?php
@@ -18,24 +27,10 @@ get_header();
 
 		<div class="right-column">
 
-			<div class="page-title group">
-				<h1><?php the_title() ?></h1>
-			</div>
-
 			<?php 
-			while ( have_posts() ) : the_post(); ?>
-			
-			<div class="entry-content">
-				<?php if ( has_cmb2_value('left_content') ) { ?>
-				<div class="aux-box">
-					<?php show_cmb2_wysiwyg_value('left_content'); ?>
-				</div>
-				<?php } ?>
-
-	 			<?php the_content(); ?>
-			</div>
-
-				<?php
+			while ( have_posts() ) : 
+				the_post();
+				the_content();
 			endwhile; 
 			?>
 

@@ -4,59 +4,62 @@
 	position: relative;
 }
 
-.sidebar {
-	.toggle-sidebar-menu {
 
+.two-column {
+	position: relative;
 
-		@include respond-to( 768px ) {
-			display: none;
-		}
-	}
+	.sidebar {
+		.toggle-sidebar-menu {
 
-	.menu-title {
-		font-size: 22px;
-		padding: 10px;
-	}
-
-	@include respond-to( 768px ) {
-		position: absolute;
-		left: 20px;
-		top: 60px;
-		width: 25%;
-	}
-
-	@include respond-to( 1220px ) {
-		left: 40px;
-	}
-
-	&.scrolled {
-		position: fixed;
-	}
-
-	.nav-menu {
-		li {
-			a {
-				display: block;
-				color: $grey;
-				font-size: 18px;
-				text-decoration: none;
-				padding: 5px 10px;
-			}
-
-			.sub-menu {
+			@include respond-to( 768px ) {
 				display: none;
 			}
 		}
+
+		.menu-title {
+			font-size: 22px;
+			padding: 10px;
+		}
+
+		@include respond-to( 768px ) {
+			position: absolute;
+			left: 20px;
+			top: 60px;
+			width: 25%;
+		}
+
+		@include respond-to( 1220px ) {
+			left: 40px;
+		}
+
+		&.scrolled {
+			position: fixed;
+		}
+
+		.nav-menu {
+			li {
+				a {
+					display: block;
+					color: $grey;
+					font-size: 18px;
+					text-decoration: none;
+					padding: 5px 10px;
+				}
+
+				.sub-menu {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.right-column {
+		@include respond-to( 768px ) {
+			padding: 20px 20px 40px 27%;
+		}
+
+		@include respond-to( 1220px ) {
+			padding: 20px 40px 60px 27%;
+		}
 	}
 }
-
-.right-column {
-	@include respond-to( 768px ) {
-		padding: 20px 20px 40px 27%;
-	}
-
-	@include respond-to( 1220px ) {
-		padding: 20px 40px 60px 27%;
-	}
-}
-
