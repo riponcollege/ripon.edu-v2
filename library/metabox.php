@@ -79,14 +79,42 @@ if ( file_exists( __DIR__ . '/cmb2/init.php' ) ) {
 }
 
 
-add_action( 'cmb2_admin_init', 'cmb2_sample_metaboxes' );
+add_action( 'cmb2_admin_init', 'cmb2_metaboxes' );
 /**
  * Define the metabox and field configurations.
  */
-function cmb2_sample_metaboxes() {
+function cmb2_metaboxes() {
 
 	// Start with an underscore to hide fields from custom fields list
 	$prefix = '_p_';
+
+
+    $all_menus = get_all_menus();
+
+    // menu metabox
+    $menu_box = new_cmb2_box( array(
+        'id' => 'menu_box',
+        'title' => 'Page Menus',
+        'object_types' => array( 'page' ), // Post type
+        'show_on' => array( 
+            'key' => 'page-template', 
+            'value' => 'page-2-column.php'
+        ),
+        'context' => 'normal',
+        'priority' => 'default',
+        'show_names' => true // Show field names on the left
+    ) );
+    $menu_box->add_field( array(
+        'name' => 'Title',
+        'id'   => CMB_PREFIX . 'menu_title',
+        'type' => 'text'
+    ) );
+    $menu_box->add_field( array(
+        'name'    => 'Sidebar Menu',
+        'id'      => CMB_PREFIX . 'menu_primary',
+        'type'    => 'select',
+        'options' => $all_menus,
+    ) );
 
     /*
 	$cmb = new_cmb2_box( array(
