@@ -28,6 +28,10 @@ include( "library/images.php" );
 include( "library/metabox.php" );
 
 
+// include the elementor library
+include( "library/elementor.php" );
+
+
 // include quote metaboxes/functions
 /*
 include( "library/showcase.php" );

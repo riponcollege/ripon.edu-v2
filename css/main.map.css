@@ -312,6 +312,9 @@ button, input[type=submit], input[type=reset], .btn {
     .two-column .right-column {
       padding: 20px 40px 60px 27%; } }
 
+.two-column-content {
+  min-height: 900px; }
+
 /****************************
        MAIN MENU STYLES
  ****************************/
@@ -558,40 +561,53 @@ header {
       header .buttons {
         right: 420px; } }
 
+/*
 .page-header {
-  background: url(../img/bg-menu-photo.webp) center center no-repeat;
-  background-size: cover;
-  min-height: 250px;
-  position: relative; }
-  @media only screen and (min-width: 1220px) {
-    .page-header {
-      min-height: 350px; } }
-  .page-header .breadcrumbs {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-    color: white;
-    font-size: .85em;
-    text-align: right; }
-    .page-header .breadcrumbs a {
-      color: white;
-      text-decoration: none;
-      margin: 0 5px; }
-      .page-header .breadcrumbs a:hover {
-        border-bottom: 1px dotted rgba(255, 255, 255, 0.5); }
-    .page-header .breadcrumbs .page-title {
-      font-family: "Open Sans", sans-serif;
-      font-weight: 800;
-      font-size: 2em;
-      line-height: 1.4em; }
-    @media only screen and (min-width: 1220px) {
-      .page-header .breadcrumbs {
-        right: 40px;
-        bottom: 40px; }
-        .page-header .breadcrumbs .page-title {
-          font-size: 2.4em; } }
+	background: url(../img/bg-menu-photo.webp) center center no-repeat;
+	background-size: cover;
+	min-height: 250px;
+	position: relative;
 
+	@include respond-to( 1220px ) {
+		min-height: 350px;
+	}
+
+	.breadcrumbs {
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+		text-shadow: 0 0 10px rgba( black, .6 );
+		color: white;
+		font-size: .85em;
+		text-align: right;
+
+		a {
+			color: white;
+			text-decoration: none;
+			margin: 0 5px;
+
+			&:hover {
+				border-bottom: 1px dotted rgba( white, .5 );
+			}
+		}
+
+		.page-title {
+			@include font-bold;
+			font-size: 2em;
+			line-height: 1.4em;
+		}
+
+		@include respond-to( 1220px ) {
+			right: 40px;
+			bottom: 40px;
+
+			.page-title {
+				font-size: 2.4em;
+			}
+		}
+	}
+}
+*/
 footer {
   zoom: 1;
   background: #6a0a1b;
