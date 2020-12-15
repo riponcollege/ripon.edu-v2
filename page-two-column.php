@@ -27,7 +27,7 @@ $featured_image_url = get_the_post_thumbnail_url( null, 'full' );
 	<div class="right-column">
 
 		<?php
-		if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'single' ) ) {
+		if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'main-content' ) ) {
 			get_template_part( 'parts/single' );
 		}
 		?>

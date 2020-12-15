@@ -1,13 +1,17 @@
 <?php
 
 
-function theme_prefix_register_elementor_locations( $elementor_theme_manager ) {
+function ripon_register_elementor_locations( $elementor_theme_manager ) {
 
-	// $elementor_theme_manager->register_location( 'header' );
-	// $elementor_theme_manager->register_location( 'footer' );
-	$elementor_theme_manager->register_location( 'single' );
-	// $elementor_theme_manager->register_location( 'archive' );
+	// register a new elementor location for the content of the page.
+	$elementor_theme_manager->register_location( 'main-content',
+		[
+			'label' => __( 'Main Content', 'ripon' ),
+			'multiple' => true,
+			'edit_in_content' => false,
+		]
+	);
 
 }
-add_action( 'elementor/theme/register_locations', 'theme_prefix_register_elementor_locations' );
+add_action( 'elementor/theme/register_locations', 'ripon_register_elementor_locations' );
 
