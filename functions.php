@@ -15,8 +15,6 @@ include( "library/post-type/year.php" );
 
 // include some theme-related things
 include( "library/menus.php" );
-//include( "library/buttons.php" );
-include( "library/widgets.php" );
 include( "library/scripts.php" );
 
 
@@ -28,22 +26,9 @@ include( "library/images.php" );
 include( "library/metabox.php" );
 
 
-// include the elementor library
-include( "library/elementor.php" );
-
-
 // include quote metaboxes/functions
-/*
-include( "library/showcase.php" );
-include( "library/phototiles.php" );
-include( "library/content.php" );
-include( "library/social.php" );
-include( "library/photo-grid.php" );
-include( "library/emergency.php" );
-include( "library/tabs.php" );
-include( "library/accordions.php" );
-*/
 include( "library/search.php" );
+
 
 // include HEPdata stuff
 include( "library/hep/send-donation.php" );
@@ -54,5 +39,4 @@ function ripon_excerpt_length( $length ) {
 	return 25;
 }
 add_filter( 'excerpt_length', 'ripon_excerpt_length', 999 );
-
 
