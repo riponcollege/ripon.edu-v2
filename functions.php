@@ -5,6 +5,10 @@
 define( "CMB_PREFIX", "_p_" );
 
 
+// include site functions
+include( "library/site.php" );
+
+
 // include the faculty content type
 include( "library/post-type/area.php" );
 include( "library/post-type/faculty.php" );

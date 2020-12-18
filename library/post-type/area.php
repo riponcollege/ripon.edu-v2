@@ -281,6 +281,3 @@ function do_area_tab_content( $title, $key ) {
 	} 
 }
 
-
-
-?>
