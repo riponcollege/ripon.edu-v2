@@ -272,37 +272,50 @@ button, input[type=submit], input[type=reset], .btn {
 
 .two-column {
   position: relative; }
-  @media only screen and (min-width: 768px) {
-    .two-column .sidebar .toggle-sidebar-menu {
-      display: none; } }
-  .two-column .sidebar .menu-title {
-    font-size: 22px;
-    padding: 10px; }
-  @media only screen and (min-width: 768px) {
-    .two-column .sidebar {
-      position: absolute;
-      left: 20px;
-      top: 60px;
-      width: 25%; } }
-  @media only screen and (min-width: 1220px) {
-    .two-column .sidebar {
-      left: 40px; } }
-  .two-column .sidebar.scrolled {
-    position: fixed; }
-  .two-column .sidebar .nav-menu li a {
-    display: block;
-    color: #434039;
-    font-size: 18px;
-    text-decoration: none;
-    padding: 5px 10px; }
-  .two-column .sidebar .nav-menu li .sub-menu {
-    display: none; }
-  @media only screen and (min-width: 768px) {
-    .two-column .right-column {
-      padding: 20px 20px 40px 27%; } }
-  @media only screen and (min-width: 1220px) {
-    .two-column .right-column {
-      padding: 20px 40px 60px 27%; } }
+  .two-column .sidebar {
+    border-bottom: 1px solid rgba(67, 64, 57, 0.2);
+    padding: 20px; }
+    @media only screen and (min-width: 768px) {
+      .two-column .sidebar .toggle-sidebar-menu {
+        display: none; } }
+    .two-column .sidebar .menu-title {
+      font-size: 22px;
+      padding: 10px 0; }
+      @media only screen and (min-width: 768px) {
+        .two-column .sidebar .menu-title {
+          padding: 10px; } }
+    @media only screen and (min-width: 768px) {
+      .two-column .sidebar {
+        position: absolute;
+        left: 20px;
+        top: 60px;
+        width: 25%;
+        border-bottom: 0;
+        padding: 0; } }
+    @media only screen and (min-width: 1220px) {
+      .two-column .sidebar {
+        left: 40px; } }
+    .two-column .sidebar.scrolled {
+      position: fixed; }
+    .two-column .sidebar .nav-menu li a {
+      display: block;
+      color: #434039;
+      font-size: 18px;
+      text-decoration: none;
+      padding: 5px 0; }
+      @media only screen and (min-width: 768px) {
+        .two-column .sidebar .nav-menu li a {
+          padding: 5px 10px; } }
+    .two-column .sidebar .nav-menu li .sub-menu {
+      display: none; }
+  .two-column .right-column {
+    padding: 20px; }
+    @media only screen and (min-width: 768px) {
+      .two-column .right-column {
+        padding: 20px 20px 40px 27%; } }
+    @media only screen and (min-width: 1220px) {
+      .two-column .right-column {
+        padding: 20px 40px 60px 27%; } }
 
 .two-column {
   min-height: 900px; }
@@ -710,12 +723,27 @@ footer {
 @media only screen and (min-width: 1220px) {
   .academics .column, .area-header .column {
     float: left;
-    width: 50%; } }
+    width: 48%;
+    margin: 0 2% 0 0; } }
 
 .academics .column li, .area-header .column li {
-  padding: 5px 0; }
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 7px 0; }
   .academics .column li a, .area-header .column li a {
-    text-decoration: none; }
+    text-decoration: none;
+    width: 75%;
+    display: inline-block;
+    color: #434039; }
+    @media only screen and (min-width: 768px) {
+      .academics .column li a, .area-header .column li a {
+        width: 85%; } }
+  .academics .column li span, .area-header .column li span {
+    float: right;
+    margin: -4px 0 0 5px; }
+    @media only screen and (min-width: 768px) {
+      .academics .column li span, .area-header .column li span {
+        margin: -3px 0 0 5px; } }
 
 .academics .area-legend, .area-header .area-legend {
   padding: 20px 0 30px; }
@@ -836,9 +864,6 @@ footer {
       margin: 0 15px 0 0;
       width: 25%;
       max-width: 140px; }
-
-.area-listing {
-  padding: 20px; }
 
 .crowd-funding {
   padding-top: 20px; }

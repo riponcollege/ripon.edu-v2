@@ -51,14 +51,33 @@
 	.column {
 		@include respond-to( 1220px ) {
 			float: left;
-			width: 50%;
+			width: 48%;
+			margin: 0 2% 0 0;
 		}
 
 		li {
-			padding: 5px 0;
+			padding: 10px;
+			box-shadow: 0 0 10px rgba( black, .1 );
+			margin: 7px 0;
 
 			a {
 				text-decoration: none;
+				width: 75%;
+				display: inline-block;
+				color: $grey;
+
+				@include respond-to( 768px ) {
+					width: 85%;
+				}
+			}
+
+			span {
+				float: right;
+				margin: -4px 0 0 5px;
+
+				@include respond-to( 768px ) {
+					margin: -3px 0 0 5px;
+				}
 			}
 		}
 	}
@@ -233,7 +252,3 @@
 	}
 }
 
-
-.area-listing {
-	padding: 20px;
-}
