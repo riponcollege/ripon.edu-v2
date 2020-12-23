@@ -149,7 +149,7 @@ blockquote {
   font-size: 1.3em;
   line-height: 1.5em;
   font-style: italic;
-  color: #777a8a;
+  color: #5f5a50;
   padding: 10px 30px;
   position: relative; }
   @media only screen and (min-width: 768px) {
@@ -182,41 +182,37 @@ button, input[type=submit], input[type=reset], .btn {
   font-family: "Open Sans", sans-serif;
   font-weight: 800;
   font-size: 1em;
-  color: #6a0a1b;
+  color: #6A0A1B;
   text-decoration: none;
   background: white;
-  border: 1px solid #6a0a1b;
+  border: 1px solid #6A0A1B;
   text-transform: uppercase;
   cursor: pointer;
   display: inline-block;
   margin-bottom: 4px; }
   button:hover, input[type=submit]:hover, input[type=reset]:hover, .btn:hover {
-    color: #6a0a1b;
+    color: #6A0A1B;
     opacity: .8; }
-  button.teal, input[type=submit].teal, input[type=reset].teal, .btn.teal {
-    background-color: #00a0df;
-    color: white;
-    border-color: #00a0df; }
   button.red-dark, input[type=submit].red-dark, input[type=reset].red-dark, .btn.red-dark {
-    background-color: #6a0a1b;
+    background-color: #6A0A1B;
     color: white;
-    border-color: #6a0a1b; }
+    border-color: #6A0A1B; }
   button.red-light, input[type=submit].red-light, input[type=reset].red-light, .btn.red-light {
-    background-color: #a91c3a;
+    background-color: #A91C3A;
     color: white;
-    border-color: #a91c3a; }
-  button.blue, input[type=submit].blue, input[type=reset].blue, .btn.blue {
-    background-color: #015e83;
-    color: white;
-    border-color: #015e83; }
+    border-color: #A91C3A; }
   button.orange, input[type=submit].orange, input[type=reset].orange, .btn.orange {
-    background-color: #fecb00;
+    background-color: #EA4D3D;
     color: black;
-    border-color: #fecb00; }
-  button.grey, input[type=submit].grey, input[type=reset].grey, .btn.grey {
-    background-color: #5f626f;
+    border-color: #EA4D3D; }
+  button.teal, input[type=submit].teal, input[type=reset].teal, .btn.teal {
+    background-color: #0094E3;
     color: white;
-    border-color: #5f626f; }
+    border-color: #0094E3; }
+  button.grey, input[type=submit].grey, input[type=reset].grey, .btn.grey {
+    background-color: #434039;
+    color: white;
+    border-color: #434039; }
 
 .button {
   padding: 10px;
@@ -246,27 +242,23 @@ button, input[type=submit], input[type=reset], .btn {
   text-align: center; }
 
 .bg-teal {
-  background-color: #00a0df;
+  background-color: #0094E3;
   color: white; }
 
 .bg-red-dark {
-  background-color: #6a0a1b;
+  background-color: #6A0A1B;
   color: white; }
 
 .bg-red-light {
-  background-color: #a91c3a;
-  color: white; }
-
-.bg-blue {
-  background-color: #015e83;
+  background-color: #A91C3A;
   color: white; }
 
 .bg-orange {
-  background-color: #fecb00;
+  background-color: #EA4D3D;
   color: black; }
 
 .bg-grey {
-  background-color: #5f626f;
+  background-color: #434039;
   color: white; }
 
 .no-mobile {
@@ -299,7 +291,7 @@ button, input[type=submit], input[type=reset], .btn {
     position: fixed; }
   .two-column .sidebar .nav-menu li a {
     display: block;
-    color: #5f626f;
+    color: #434039;
     font-size: 18px;
     text-decoration: none;
     padding: 5px 10px; }
@@ -364,26 +356,26 @@ body {
     right: 0;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); }
   .main-menus .main-menu {
-    border-top: 1px dotted #c9cbd1;
+    border-top: 1px dotted #aba79d;
     padding-top: 15px; }
     .main-menus .main-menu a {
       display: block;
-      color: #5f626f;
+      color: #434039;
       padding: 6px 9px;
       text-decoration: none;
       transition: 400ms all ease-in-out;
       font-size: 1.1em;
       line-height: 1.4em; }
       .main-menus .main-menu a:hover {
-        color: #777a8a; }
+        color: #5f5a50; }
       @media only screen and (min-width: 768px) {
         .main-menus .main-menu a {
           padding: 7px 10px; } }
     .main-menus .main-menu .sub-menu {
       display: none;
-      border-top: 1px solid #e5e5e8; }
+      border-top: 1px solid #c3c0b8; }
       .main-menus .main-menu .sub-menu a {
-        border-bottom: 1px solid #e5e5e8;
+        border-bottom: 1px solid #c3c0b8;
         font-size: 1em;
         padding: 5px;
         line-height: 1.5em; }
@@ -459,7 +451,7 @@ body {
     .main-menus .search ::placeholder {
       text-transform: uppercase; }
     .main-menus .search input[type=text] {
-      border: 1px solid #e5e5e8;
+      border: 1px solid #c3c0b8;
       border-radius: 30px;
       font-size: 16.5px;
       line-height: 50px;
@@ -486,7 +478,7 @@ body {
 
 header {
   zoom: 1;
-  background: #6a0a1b;
+  background: #6A0A1B;
   position: relative;
   padding: 10px 20px; }
   header:before, header:after {
@@ -597,8 +589,8 @@ header {
 
 footer {
   zoom: 1;
-  background: #6a0a1b;
-  border-top: 20px solid #e5e5e8;
+  background: #6A0A1B;
+  border-top: 20px solid #c3c0b8;
   padding: 20px;
   color: white; }
   footer:before, footer:after {
@@ -691,27 +683,29 @@ footer {
   width: 30px;
   height: 30px;
   line-height: 30px;
-  display: inline-block; }
+  display: inline-block;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800; }
 
 .academics span.ma, .area-header span.ma {
-  background-color: #f7afbb;
-  color: #6a0a1b; }
+  background-color: #6A0A1B;
+  color: white; }
 
 .academics span.mi, .area-header span.mi {
-  background-color: #f7cdd6;
-  color: #510e1c; }
+  background-color: #A91C3A;
+  color: white; }
 
 .academics span.pa, .area-header span.pa {
-  background-color: #ace8ff;
-  color: #003246; }
+  background-color: #EA4D3D;
+  color: white; }
 
 .academics span.tc, .area-header span.tc {
-  background-color: #ffd632;
-  color: #655100; }
+  background-color: #F6B44D;
+  color: white; }
 
 .academics span.dd, .area-header span.dd {
-  background-color: #52cdfe;
-  color: black; }
+  background-color: #0094E3;
+  color: white; }
 
 @media only screen and (min-width: 1220px) {
   .academics .column, .area-header .column {
@@ -756,18 +750,18 @@ footer {
     padding: 20px 15px;
     font-size: 20px;
     line-height: 25px;
-    color: #9295a2;
+    color: #7a7568;
     cursor: pointer;
-    border-top: 1px solid #e5e5e8;
+    border-top: 1px solid #c3c0b8;
     position: relative; }
     .area .tab-nav ul li:first-child {
       border-top: none; }
     .area .tab-nav ul li.active {
-      color: #010101; }
+      color: black; }
       .area .tab-nav ul li.active:hover {
-        color: #18191d; }
+        color: black; }
     .area .tab-nav ul li:hover {
-      color: #6b6e7d; }
+      color: #514d45; }
   .area .tab-content {
     padding: 20px;
     display: none; }
@@ -790,7 +784,7 @@ footer {
         margin-right: -3%; } }
     .area .area-faculty .faculty-entry {
       position: relative;
-      border: 1px solid #e5e5e8; }
+      border: 1px solid #c3c0b8; }
       @media only screen and (min-width: 768px) {
         .area .area-faculty .faculty-entry {
           width: 47%;
@@ -821,17 +815,17 @@ footer {
         .area .area-faculty .faculty-entry .info h4 {
           font-family: "Open Sans", sans-serif;
           font-weight: 800;
-          color: #6a0a1b;
+          color: #6A0A1B;
           padding: 0;
           font-size: .9em; }
         .area .area-faculty .faculty-entry .info .faculty-title {
           font-size: .9em;
-          color: #5f626f;
+          color: #434039;
           padding: 3px 0; }
   .area .area-news .entry {
     zoom: 1;
     padding: 20px 0;
-    border-top: 1px dotted rgba(95, 98, 111, 0.2); }
+    border-top: 1px dotted rgba(67, 64, 57, 0.2); }
     .area .area-news .entry:before, .area .area-news .entry:after {
       content: "";
       display: table; }
@@ -867,17 +861,17 @@ footer {
         right: 0;
         left: 0;
         background: rgba(255, 255, 255, 0.8);
-        color: #5f626f;
+        color: #434039;
         padding: 10px;
         text-align: center; }
     .crowd-funding .fund .info {
       background: #f7f7f6;
       padding: 6px 12px; }
       .crowd-funding .fund .info h4 {
-        color: #5f626f;
+        color: #434039;
         padding: 10px 0 0; }
       .crowd-funding .fund .info p {
-        color: #9295a2;
+        color: #7a7568;
         font-size: .9em; }
       @media only screen and (min-width: 600px) {
         .crowd-funding .fund .info {
@@ -937,7 +931,7 @@ footer {
     .alum .info h5 {
       line-height: 1.4em;
       font-weight: 700;
-      color: #6a0a1b;
+      color: #6A0A1B;
       padding: 0; }
     .alum .info .quiet {
       padding: 6px 0; }
@@ -960,13 +954,13 @@ footer {
     left: 0;
     right: 0;
     background: #f7f7f6;
-    color: #5f626f;
+    color: #434039;
     padding: 10px 0 10px 35px;
     font-weight: 700;
     margin-top: 5px;
     opacity: .7;
     transition: opacity 400ms ease-in-out;
-    border-top: 1px solid #5f626f; }
+    border-top: 1px solid #434039; }
 
 .alum-details {
   position: relative;
@@ -1068,7 +1062,7 @@ footer {
   display: none; }
 
 .class-title {
-  color: #6a0a1b;
+  color: #6A0A1B;
   font-weight: 700;
   opacity: 1; }
 
@@ -1105,7 +1099,7 @@ footer {
       .class-information .reunion-photo, .class-information .class-photo {
         margin: 25px 0; } }
     .class-information .reunion-photo a, .class-information .class-photo a {
-      color: #6a0a1b;
+      color: #6A0A1B;
       text-decoration: none; }
   .class-information .class-facebook {
     float: left;
@@ -1119,7 +1113,7 @@ footer {
       .class-information .class-facebook {
         margin: 25px 0; } }
     .class-information .class-facebook a {
-      color: #6a0a1b;
+      color: #6A0A1B;
       text-decoration: none; }
   .class-information .class-memory-book {
     float: left;
@@ -1133,11 +1127,11 @@ footer {
       .class-information .class-memory-book {
         margin: 25px 0; } }
     .class-information .class-memory-book a {
-      color: #6a0a1b;
+      color: #6A0A1B;
       text-decoration: none; }
     .class-information .class-memory-book span {
       display: block;
-      color: #777a8a;
+      color: #5f5a50;
       font-size: .8em;
       line-height: 1em; }
   .class-information .class-green-list {
@@ -1152,11 +1146,11 @@ footer {
       .class-information .class-green-list {
         margin: 25px 0; } }
     .class-information .class-green-list a {
-      color: #6a0a1b;
+      color: #6A0A1B;
       text-decoration: none; }
     .class-information .class-green-list span {
       display: block;
-      color: #777a8a;
+      color: #5f5a50;
       font-size: .8em;
       line-height: 1em; }
 
@@ -1229,7 +1223,7 @@ footer {
       .alum-banner-container .alum-banner-button {
         font-size: 22px; } }
   .alum-banner-container a:hover .alum-banner-button {
-    background: #00a0df; }
+    background: #0094E3; }
 
 /* Magnific Popup CSS */
 .mfp-bg {

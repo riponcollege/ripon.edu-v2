@@ -242,12 +242,6 @@ button, input[type=submit], input[type=reset], .btn {
     opacity: .8;
   }
 
-  &.teal {
-    background-color: $teal;
-    color: white;
-    border-color: $teal;
-  }
-
   &.red-dark {
     background-color: $red-dark;
     color: white;
@@ -260,16 +254,16 @@ button, input[type=submit], input[type=reset], .btn {
     border-color: $red-light;
   }
 
-  &.blue {
-    background-color: $blue;
-    color: white;
-    border-color: $blue;
-  }
-
   &.orange {
     background-color: $orange;
     color: black;
     border-color: $orange;
+  }
+
+  &.teal {
+    background-color: $teal;
+    color: white;
+    border-color: $teal;
   }
 
   &.grey {
@@ -325,11 +319,6 @@ button, input[type=submit], input[type=reset], .btn {
 
 .bg-red-light {
   background-color: $red-light;
-  color: white;
-}
-
-.bg-blue {
-  background-color: $blue;
   color: white;
 }
 

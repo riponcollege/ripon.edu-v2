@@ -25,26 +25,27 @@
 		height: 30px;
 		line-height: 30px;
 		display: inline-block;
+		@include font-bold;
 	}
 	span.ma {
-		background-color: lighten( $red-dark, 60% );
-		color: $red-dark;
+		background-color: $red-dark;
+		color: white;
 	}
 	span.mi {
-		background-color: lighten( $red-light, 50% );
-		color: darken( $red-light, 20% );
+		background-color: $red-light;
+		color: white;
 	}
 	span.pa {
-		background-color: lighten( $teal, 40% );
-		color: darken( $teal, 30% );
+		background-color: $orange;
+		color: white;
 	}
 	span.tc {
-		background-color: lighten( $orange, 10% );
-		color: darken( $orange, 30% );
+		background-color: $yellow;
+		color: white;
 	}
 	span.dd {
-		background-color: lighten( $blue, 40% );
-		color: darken( $blue, 30% );
+		background-color: $teal;
+		color: white;
 	}
 
 	.column {
