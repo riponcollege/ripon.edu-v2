@@ -675,7 +675,56 @@ footer {
   padding: 4px 0; }
 
 .area-header {
-  background: url(../img/bg-menu-photo.webp) center center no-repeat; }
+  background: url(../img/bg-menu-photo.webp) center center no-repeat;
+  background-size: cover; }
+  .area-header .breadcrumbs span.ma, .area-header .breadcrumbs span.mi, .area-header .breadcrumbs span.tc, .area-header .breadcrumbs span.dd, .area-header .breadcrumbs span.pa {
+    font-size: 1.2em;
+    width: 40px;
+    height: 40px;
+    line-height: 40px; }
+
+.academics span.ma, .academics span.mi, .academics span.tc, .academics span.dd, .academics span.pa, .area-header span.ma, .area-header span.mi, .area-header span.tc, .area-header span.dd, .area-header span.pa {
+  border-radius: 50%;
+  font-size: .7em;
+  text-align: center;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: inline-block; }
+
+.academics span.ma, .area-header span.ma {
+  background-color: #f7afbb;
+  color: #6a0a1b; }
+
+.academics span.mi, .area-header span.mi {
+  background-color: #f7cdd6;
+  color: #510e1c; }
+
+.academics span.pa, .area-header span.pa {
+  background-color: #ace8ff;
+  color: #003246; }
+
+.academics span.tc, .area-header span.tc {
+  background-color: #ffd632;
+  color: #655100; }
+
+.academics span.dd, .area-header span.dd {
+  background-color: #52cdfe;
+  color: black; }
+
+@media only screen and (min-width: 1220px) {
+  .academics .column, .area-header .column {
+    float: left;
+    width: 50%; } }
+
+.academics .column li, .area-header .column li {
+  padding: 5px 0; }
+  .academics .column li a, .area-header .column li a {
+    text-decoration: none; }
+
+.academics .area-legend, .area-header .area-legend {
+  padding: 20px 0 30px; }
 
 .area {
   position: relative;

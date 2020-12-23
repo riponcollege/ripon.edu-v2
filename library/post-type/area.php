@@ -158,26 +158,29 @@ if ( is_ripon() ) {
 			?>
 			<li><a href="/area/<?php print $area->post_name ?>"><?php print $area->post_title; ?></a> <?php
 			if ( !empty( $categories ) ) {
-				?>(<?php
+				?><?php
 				$cats = array();
 				foreach ( $categories as $cat ) {
 		 			switch ( $cat->slug ) {
 		 				case "major":
-		 					$cats[] = 'MA';
+		 					$cats[] = '<span class="ma">MA</span>';
 		 				break;
 		 				case "minor":
-		 					$cats[] = 'MI';
+		 					$cats[] = '<span class="mi">MI</span>';
 		 				break;
 		 				case "pre-professional-advising":
-		 					$cats[] = 'PA';
+		 					$cats[] = '<span class="pa">PA</span>';
 		 				break;
 		 				case "teaching-certification":
-		 					$cats[] = 'T';
+		 					$cats[] = '<span class="tc">TC</span>';
+		 				break;
+		 				case "dual-degree":
+		 					$cats[] = '<span class="dd">DD</span>';
 		 				break;
 		 			}
 				}
-				print implode( ', ', $cats );
-				?>)<?php
+				print implode( ' ', $cats );
+				?><?php
 			}
 			?></li>
 			<?php 

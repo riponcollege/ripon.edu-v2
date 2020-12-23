@@ -17,11 +17,43 @@ $sidebar_video_url = get_cmb_value( "area_sidebar_video" );
 // get featured image.
 $featured_image_url = get_the_post_thumbnail_url( null, 'full' );
 
+// get area categories
+$categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
+
 ?>
 	<div class="page-header area-header"<?php print ( !empty( $featured_image_url ) ? ' style="background-image: url(' . $featured_image_url . ')"' : '' ); ?>>
 		<div class="breadcrumbs">
 			<div class="crumbs"><a href="/academics">Academics</a> &raquo; <a href="/areas-of-study">Areas of Study</a> &raquo;</div>
 			<div class="page-title"><?php the_title(); ?></div>
+			<div class="area-categories">
+			<?php
+			if ( !empty( $categories ) ) {
+				?><?php
+				$cats = array();
+				foreach ( $categories as $cat ) {
+		 			switch ( $cat->slug ) {
+		 				case "major":
+		 					$cats[] = '<span class="ma">MA</span>';
+		 				break;
+		 				case "minor":
+		 					$cats[] = '<span class="mi">MI</span>';
+		 				break;
+		 				case "pre-professional-advising":
+		 					$cats[] = '<span class="pa">PA</span>';
+		 				break;
+		 				case "teaching-certification":
+		 					$cats[] = '<span class="tc">TC</span>';
+		 				break;
+		 				case "dual-degree":
+		 					$cats[] = '<span class="dd">DD</span>';
+		 				break;
+		 			}
+				}
+				print implode( ' ', $cats );
+				?><?php
+			}
+			?>
+			</div>
 		</div>
 	</div>
 	<div id="primary" class="area group" role="main">

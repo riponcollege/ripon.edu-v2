@@ -34,13 +34,11 @@ get_header();
 			?>
 			<div class="wrap group two-column academics">
 			
-				<div>
-					
-					<div class="bg-grey-light" style="padding: 5px 10px; border: 1px solid #888; margin: 10px 0;">MA = Major &nbsp; &nbsp; MI = Minor &nbsp; &nbsp; PA = Pre-Professional Advising &nbsp; &nbsp; T = Teaching Certification</div>
-					<div class="group area-tabs">
-						<?php list_area_category() ?>
-					</div>
-
+				<div class="area-legend">
+					<span class="ma">MA</span> = Major &nbsp; &nbsp; <span class="mi">MI</span> = Minor &nbsp; &nbsp; <span class="pa">PA</span> = Pre-Professional Advising &nbsp; &nbsp; <span class="tc">TC</span> = Teaching Certification &nbsp; &nbsp; <span class="dd">DD</span> = Dual Degree
+				</div>
+				<div class="group area-tabs">
+					<?php list_area_category() ?>
 				</div>
 
 			</div>
