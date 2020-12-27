@@ -5,10 +5,6 @@
 define( "CMB_PREFIX", "_p_" );
 
 
-// increment to break cache on css+js
-define( "ASSET_VERSION", "181" );
-
-
 // require multiple - a little helper function to require multiple files from the library directory in a one 
 function require_multi( $files ) {
     $files = func_get_args();
