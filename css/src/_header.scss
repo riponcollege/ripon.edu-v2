@@ -97,13 +97,22 @@ header {
 
 
 .page-header {
-	background: url(../img/bg-menu-photo.webp) center center no-repeat;
+	background: url(../img/bg-area-header.webp) center center no-repeat;
 	background-size: cover;
 	min-height: 250px;
 	position: relative;
 
 	@include respond-to( 1220px ) {
 		min-height: 350px;
+	}
+
+	.page-header-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba( black, .4 );
 	}
 
 	.breadcrumbs {

@@ -567,13 +567,20 @@ header {
         right: 420px; } }
 
 .page-header {
-  background: url(../img/bg-menu-photo.webp) center center no-repeat;
+  background: url(../img/bg-area-header.webp) center center no-repeat;
   background-size: cover;
   min-height: 250px;
   position: relative; }
   @media only screen and (min-width: 1220px) {
     .page-header {
       min-height: 350px; } }
+  .page-header .page-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); }
   .page-header .breadcrumbs {
     position: absolute;
     bottom: 20px;
@@ -686,7 +693,7 @@ footer {
   padding: 4px 0; }
 
 .area-header {
-  background: url(../img/bg-menu-photo.webp) center center no-repeat;
+  background: url(../img/bg-area-header.webp) center center no-repeat;
   background-size: cover; }
   .area-header .breadcrumbs span.ma, .area-header .breadcrumbs span.mi, .area-header .breadcrumbs span.tc, .area-header .breadcrumbs span.dd, .area-header .breadcrumbs span.pa {
     font-size: 1.2em;

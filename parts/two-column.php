@@ -33,6 +33,7 @@ if ( !empty( $crumbs ) ) {
 ?>
 	
 	<div class="page-header"<?php print ( !empty( $featured_image_url ) ? ' style="background-image: url(' . $featured_image_url . ')"' : '' ); ?>>
+		<div class="page-header-overlay"></div>
 		<div class="breadcrumbs">
 			<div class="crumbs">
 				<?php print_r( $crumb_code ); ?>

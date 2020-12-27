@@ -22,6 +22,7 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 
 ?>
 	<div class="page-header area-header"<?php print ( !empty( $featured_image_url ) ? ' style="background-image: url(' . $featured_image_url . ')"' : '' ); ?>>
+		<div class="page-header-overlay"></div>
 		<div class="breadcrumbs">
 			<div class="crumbs"><a href="/academics">Academics</a> &raquo; <a href="/areas-of-study">Areas of Study</a> &raquo;</div>
 			<div class="page-title"><?php the_title(); ?></div>
