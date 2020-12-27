@@ -5,6 +5,9 @@
 define( "CMB_PREFIX", "_p_" );
 
 
+define( "ASSET_VERSION", "180" );
+
+
 // require multiple - a little helper function to require multiple files from the library directory in a one 
 function require_multi( $files ) {
     $files = func_get_args();
