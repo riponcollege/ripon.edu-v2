@@ -14,3 +14,9 @@
 .elementor-background-overlay {
 	background-color: rgba( black, .4 ) !important;
 }
+
+.elementor-editor-active {
+	.elementor-background-overlay {
+		display: none;
+	}
+}

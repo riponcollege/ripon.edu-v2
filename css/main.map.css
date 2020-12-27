@@ -683,6 +683,9 @@ footer {
 .elementor-background-overlay {
   background-color: rgba(0, 0, 0, 0.4) !important; }
 
+.elementor-editor-active .elementor-background-overlay {
+  display: none; }
+
 .entry-content .job_listings li {
   background: none; }
   .entry-content .job_listings li .meta li {
