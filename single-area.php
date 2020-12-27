@@ -60,7 +60,7 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 
 		<?php 
 		if ( have_posts() ) :
-			while ( have_posts() ) : the_post(); 
+			while ( have_posts() ) : the_post();
 				?>
 			<!--<button class="back-to-areas">Back to All Areas</button>-->
 			<div class="tab-nav">
@@ -109,11 +109,10 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 					<?php the_content(); ?>
 					<hr />
 					
-					<div class="area-video">
-						<h3>Program Spotlight</h3>
+					<div class="area-buttons">
 						<?php
 						if ( !empty( $sidebar_video_url ) ) {
-							print apply_filters( 'the_content', $sidebar_video_url );
+							print do_shortcode( '[button url="' . $sidebar_video_url . '" class="lightbox-iframe"]Program Spotlight[/button]' );
 						}
 						?>
 					</div>

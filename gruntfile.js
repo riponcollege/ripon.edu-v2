@@ -31,6 +31,7 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     'js/main.js': [
+                        'js/lib/magnific/dist/jquery.magnific-popup.min.js',
                         'js/src/*.js',
                     ]
                 }

@@ -5,37 +5,17 @@
 define( "CMB_PREFIX", "_p_" );
 
 
-// include site functions
-include( "library/site.php" );
+// require multiple - a little helper function to require multiple files from the library directory in a one 
+function require_multi( $files ) {
+    $files = func_get_args();
+    foreach ( $files as $file )
+        require_once 'library/' . $file . '.php';
+}
 
 
-// include the faculty content type
-include( "library/post-type/area.php" );
-include( "library/post-type/faculty.php" );
-include( "library/post-type/fund.php" );
-include( "library/post-type/alum.php" );
-include( "library/post-type/year.php" );
+// include utility functions
+require_multi( 'site', 'post-type/area', 'post-type/faculty', 'post-type/fund', 'post-type/alum', 'post-type/year', 'menus', 'scripts', 'images', 'metabox', 'search', 'button', 'hep/send-donation' );
 
-
-// include some theme-related things
-include( "library/menus.php" );
-include( "library/scripts.php" );
-
-
-// an extra image manipulation function
-include( "library/images.php" );
-
-
-// include our metaboxes library
-include( "library/metabox.php" );
-
-
-// include quote metaboxes/functions
-include( "library/search.php" );
-
-
-// include HEPdata stuff
-include( "library/hep/send-donation.php" );
 
 
 // make excerpts shorter

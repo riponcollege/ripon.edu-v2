@@ -729,7 +729,7 @@ footer {
 .academics .column li, .area-header .column li {
   padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: 7px 0; }
+  margin: 10px 0; }
   .academics .column li a, .area-header .column li a {
     text-decoration: none;
     width: 75%;

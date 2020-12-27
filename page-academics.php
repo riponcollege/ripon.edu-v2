@@ -35,7 +35,7 @@ get_header();
 			<div class="wrap group two-column academics">
 			
 				<div class="area-legend">
-					<span class="ma">MA</span> = Major &nbsp; &nbsp; <span class="mi">MI</span> = Minor &nbsp; &nbsp; <span class="pa">PA</span> = Pre-Professional Advising &nbsp; &nbsp; <span class="tc">TC</span> = Teaching Certification &nbsp; &nbsp; <span class="dd">DD</span> = Dual Degree
+					<span class="ma">MA</span> Major &nbsp; &nbsp; <span class="mi">MI</span> Minor &nbsp; &nbsp; <span class="pa">PA</span> Pre-Professional Advising &nbsp; &nbsp; <span class="tc">TC</span> Teaching Certification &nbsp; &nbsp; <span class="dd">DD</span> Dual Degree
 				</div>
 				<div class="group area-tabs">
 					<?php list_area_category() ?>
