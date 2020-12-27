@@ -674,7 +674,7 @@ footer {
   margin-bottom: 20px; }
 
 .elementor-background-overlay {
-  background-color: rgba(0, 0, 0, 0.75) !important; }
+  background-color: rgba(0, 0, 0, 0.4) !important; }
 
 .entry-content .job_listings li {
   background: none; }
