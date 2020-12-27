@@ -114,6 +114,9 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 						if ( !empty( $sidebar_video_url ) ) {
 							print do_shortcode( '[button url="' . $sidebar_video_url . '" class="lightbox-iframe"]Program Spotlight[/button]' );
 						}
+						if ( has_cmb_value( 'area_facebook' ) ) {
+							print do_shortcode( '[button url="' . get_cmb_value( 'area_facebook' ) . '" class="lightbox-iframe"]Download Info Sheet[/button]' );
+						}
 						?>
 					</div>
 					<?php if ( !empty( get_cmb_value( 'area_post_tag' ) ) ) { ?>
