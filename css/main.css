@@ -661,7 +661,7 @@ footer {
     float: left;
     margin: 0 15px 15px 0; } }
 
-.buttons {
+.content-style .buttons, .area .tab-content .buttons {
   padding: 20px 0; }
 
 .elementor-column-gap-default > .elementor-row > .elementor-column > .elementor-element-populated {
@@ -672,6 +672,9 @@ footer {
 
 .elementor-widget-slides {
   margin-bottom: 20px; }
+
+.elementor-background-overlay {
+  background-color: rgba(0, 0, 0, 0.75) !important; }
 
 .entry-content .job_listings li {
   background: none; }
