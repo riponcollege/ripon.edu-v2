@@ -39,5 +39,9 @@ jQuery(document).ready(function($){
 		})
 	});
 
+	$('select.quick-nav').on('change',function(){
+		location.href = $(this).val();
+	});
+
 });
 
