@@ -28,23 +28,23 @@
 		@include font-bold;
 	}
 	span.ma {
-		background-color: $red-dark;
+		background-color: lighten( $red-dark, 40% );
 		color: white;
 	}
 	span.mi {
-		background-color: $red-light;
+		background-color: lighten( $red-light, 30% );
 		color: white;
 	}
 	span.pa {
-		background-color: $orange;
-		color: white;
+		background-color: lighten( $orange, 30% );
+		color: darken( $orange, 20% );
 	}
 	span.tc {
-		background-color: $yellow;
-		color: white;
+		background-color: lighten( $yellow, 20% );
+		color: darken( $yellow, 30% );
 	}
 	span.dd {
-		background-color: $teal;
+		background-color: lighten( $teal, 30% );
 		color: white;
 	}
 
@@ -259,6 +259,20 @@
 			.btn {
 				margin: 0 30px;
 			}
+		}
+	}
+}
+
+.area-legend {
+	td {
+		padding: 5px;
+	}
+
+	.term-description {
+		font-size: .85em;
+
+		p {
+			padding: 0 0 5px 0;
 		}
 	}
 }

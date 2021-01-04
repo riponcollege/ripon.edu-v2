@@ -718,23 +718,23 @@ footer {
   font-weight: 800; }
 
 .academics span.ma, .area-header span.ma {
-  background-color: #6A0A1B;
+  background-color: #ef516d;
   color: white; }
 
 .academics span.mi, .area-header span.mi {
-  background-color: #A91C3A;
+  background-color: #e8768e;
   color: white; }
 
 .academics span.pa, .area-header span.pa {
-  background-color: #EA4D3D;
-  color: white; }
+  background-color: #f9ccc7;
+  color: #ae2113; }
 
 .academics span.tc, .area-header span.tc {
-  background-color: #F6B44D;
-  color: white; }
+  background-color: #fbddae;
+  color: #a26608; }
 
 .academics span.dd, .area-header span.dd {
-  background-color: #0094E3;
+  background-color: #7dd2ff;
   color: white; }
 
 @media only screen and (min-width: 1220px) {
@@ -887,6 +887,14 @@ footer {
     @media only screen and (min-width: 768px) {
       .area .area-buttons .btn {
         margin: 0 30px; } }
+
+.area-legend td {
+  padding: 5px; }
+
+.area-legend .term-description {
+  font-size: .85em; }
+  .area-legend .term-description p {
+    padding: 0 0 5px 0; }
 
 .crowd-funding {
   padding-top: 20px; }

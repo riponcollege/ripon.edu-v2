@@ -8,7 +8,8 @@ get_header();
 
 ?>
 	
-
+	<?php page_header(); ?>
+	
 	<div class="two-column area-listing">
 
 		<div class="sidebar">
@@ -19,9 +20,6 @@ get_header();
 		</div>
 
 		<div class="right-column">
-			<div class="page-title group">
-				<h1><?php the_title() ?></h1>
-			</div>
 			<?php 
 			while ( have_posts() ) : the_post(); ?>
 			
@@ -35,7 +33,43 @@ get_header();
 			<div class="wrap group two-column academics">
 			
 				<div class="area-legend">
-					<span class="ma">MA</span> Major &nbsp; &nbsp; <span class="mi">MI</span> Minor &nbsp; &nbsp; <span class="pa">PA</span> Pre-Professional Advising &nbsp; &nbsp; <span class="tc">TC</span> Teaching Certification &nbsp; &nbsp; <span class="dd">DD</span> Dual Degree
+					<table cellspacing=0 cellpadding=3>
+						<tr>
+							<td><span class="ma">MA</span></td>
+							<td>
+								Major
+								<span class="term-description"><?php echo term_description( 502, "area_cat" ); ?></span>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="mi">MI</span></td>
+							<td>
+								Minor
+								<span class="term-description"><?php echo term_description( 503, "area_cat" ); ?></span>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="pa">PA</span></td>
+							<td>
+								Pre-Professional Advising
+								<span class="term-description"><?php echo term_description( 5297, "area_cat" ); ?></span>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="tc">TC</span></td>
+							<td>
+								Teaching Certification
+								<span class="term-description"><?php echo term_description( 5316, "area_cat" ); ?></span>
+							</td>
+						</tr>
+						<tr>
+							<td><span class="dd">DD</span></td>
+							<td>
+								Dual Degree<br>
+								<span class="term-description"><?php echo term_description( 5552, "area_cat" ); ?></span>
+							</td>
+						</tr>
+					</table>
 				</div>
 				<div class="group area-tabs">
 					<?php list_area_category() ?>
