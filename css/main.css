@@ -681,7 +681,7 @@ footer {
 .elementor-widget-slides {
   margin-bottom: 20px; }
 
-.elementor-background-overlay {
+.elementor-widget-slides .elementor-background-overlay {
   background-color: rgba(0, 0, 0, 0.4) !important; }
 
 .elementor-editor-active .elementor-background-overlay {
