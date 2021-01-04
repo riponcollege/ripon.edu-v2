@@ -5,6 +5,8 @@
 register_nav_menus( array(
 	'main-menu' => 'Main Menu',
 	'buttons' => 'Header Buttons',
+	'library-databases' => 'Library - Databases',
+	'library-guides' => 'Library - Guides',
 ) );
 
 
@@ -58,6 +60,23 @@ function left_menu_display( $mode = 'both' ) {
 	}
 	print '</div>';
 
- }
+}
+
+
+
+// a simple function to output a nav menu as a select list
+function quick_nav_menu( $theme_location, $first_item ) {
+	$menu_items = wp_get_nav_menu_items( $theme_location );
+	if ( !empty( $menu_items ) ) {	
+		print "<select class='quick-nav'>";
+		if ( !empty( $first_item ) ) print "<option value='none'>" . $first_item . "</option>";
+		foreach ( $menu_items as $item ) {
+			print "<option value='" . $item->url . "'>" . $item->title . "</option>";
+		}
+		print "</select>";
+	}
+}
+
+
 
 
