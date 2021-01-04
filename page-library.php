@@ -45,7 +45,7 @@ get_header();
 					</div>
 
 					<div class="guides">
-						Search Guides
+						Research Guides
 						<?php quick_nav_menu( 'library-guides', '- select a guide -' ); ?>
 					</div>
 
