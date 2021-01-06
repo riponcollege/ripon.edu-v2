@@ -829,7 +829,7 @@ footer {
         margin-right: -3%; } }
     .area .area-faculty .faculty-entry {
       position: relative;
-      border: 1px solid #c3c0b8; }
+      margin-bottom: 20px; }
       @media only screen and (min-width: 768px) {
         .area .area-faculty .faculty-entry {
           width: 47%;
@@ -837,26 +837,24 @@ footer {
           float: left; } }
       @media only screen and (min-width: 1220px) {
         .area .area-faculty .faculty-entry {
-          width: 32%;
-          margin: 0 1% 10px 0; } }
+          width: 30%;
+          margin: 0 3% 20px 0; } }
       .area .area-faculty .faculty-entry a {
         display: block;
         width: 100%;
-        text-decoration: none; }
-        .area .area-faculty .faculty-entry a:hover .info {
+        text-decoration: none;
+        transition: all 400ms ease-in-out; }
+        .area .area-faculty .faculty-entry a:hover {
           opacity: .9; }
       .area .area-faculty .faculty-entry .photo {
         background-position: center center;
-        background-size: cover; }
+        background-size: cover;
+        border: 1px solid #434039; }
       .area .area-faculty .faculty-entry .info {
-        padding: 10px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: rgba(255, 255, 255, 0.9);
-        opacity: 0;
-        transition: all 400ms ease-in-out; }
+        padding: 10px; }
+        @media only screen and (min-width: 768px) {
+          .area .area-faculty .faculty-entry .info {
+            min-height: 81px; } }
         .area .area-faculty .faculty-entry .info h4 {
           font-family: "Open Sans", sans-serif;
           font-weight: 800;
