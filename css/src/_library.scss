@@ -63,10 +63,12 @@
 
 		@include respond-to( 900px ) {
 			width: 65%;
+			padding: 35px;
 		}
 
 		@include respond-to( 1024px ) {
 			width: 70%;
+			padding: 40px;
 		}
 
 		@include respond-to( 1440px ) {
