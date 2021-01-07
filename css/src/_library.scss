@@ -68,10 +68,11 @@
 			input[type=text] {
 				@include font;
 				float: left;
-				width: 80%;
+				width: 77%;
 				padding: 6px 10px;
 				font-size: 16px;
 				line-height: 16px;
+				margin-right: 3%;
 				border: 1px solid #ccc;
 				border-right: 0;
 				color: $grey;
