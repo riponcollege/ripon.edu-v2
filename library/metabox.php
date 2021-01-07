@@ -359,6 +359,10 @@ function cmb2_metaboxes() {
         'id' => 'libhrs_info',
         'title' => 'Library Hours',
         'object_types' => array( 'page' ), // post type
+        'show_on' => array( 
+            'key' => 'page-template', 
+            'value' => 'page-library.php'
+        ),
         'context' => 'normal',
         'priority' => 'high',
         'show_names' => true, // Show field names on the left
