@@ -14,7 +14,7 @@ function require_multi( $files ) {
 
 
 // include utility functions
-require_multi( 'site', 'post-type/area', 'post-type/faculty', 'post-type/fund', 'post-type/alum', 'post-type/year', 'menus', 'scripts', 'images', 'metabox', 'search', 'button', 'page-header', 'hep/send-donation' );
+require_multi( 'site', 'post-type/area', 'post-type/faculty', 'post-type/fund', 'post-type/alum', 'post-type/year', 'menus', 'scripts', 'images', 'metabox', 'search', 'button', 'page-header', 'accordion', 'hep/send-donation' );
 
 
 
