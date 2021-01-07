@@ -46,6 +46,7 @@ get_header();
 							<?php quick_nav_menu( 'library-guides', '- select a guide -' ); ?>
 						</div>
 
+						<div class="group"></div>
 					</div>
 
 					<div class="hours-inner">
