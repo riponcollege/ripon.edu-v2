@@ -7,16 +7,24 @@
 
 .hours {
 	@include clearfix;
-	background: url(../img/bg-hours.webp) center center no-repeat;
-	background-size: cover;
-	padding: 20px;
-	color: white;
-	text-align: center;
+
+	@include respond-to( 768px ) {
+		display: flex;
+	}
 
 	.hours-inner {
+		background: url(../img/bg-hours.webp) center center no-repeat;
+		background-size: cover;
+		color: white;
+		text-align: center;
+		padding: 20px;
+
 		@include respond-to( 768px ) {
-			float: right;
 			width: 30%;
+		}
+
+		@include respond-to( 1024px ) {
+			width: 20%;
 		}
 
 		.day {
@@ -45,12 +53,13 @@
 		background-color: #eee;
 		color: $grey;
 		padding: 20px;
-		margin-top: 20px;
 
 		@include respond-to( 768px ) {
 			width: 70%;
-			float: right;
-			margin-top: 0;
+		}
+
+		@include respond-to( 1024px ) {
+			width: 80%;
 		}
 
 		.everything {

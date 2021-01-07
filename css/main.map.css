@@ -1280,45 +1280,51 @@ footer {
     background: #0094E3; }
 
 .hours {
-  zoom: 1;
-  background: url(../img/bg-hours.webp) center center no-repeat;
-  background-size: cover;
-  padding: 20px;
-  color: white;
-  text-align: center; }
+  zoom: 1; }
   .hours:before, .hours:after {
     content: "";
     display: table; }
   .hours, .hours:before, .hours:after {
     clear: both; }
   @media only screen and (min-width: 768px) {
-    .hours .hours-inner {
-      float: right;
-      width: 30%; } }
-  .hours .hours-inner .day {
-    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    font-size: .85em;
-    line-height: 1.5em; }
-    .hours .hours-inner .day span {
-      opacity: .9;
-      padding-left: 20px; }
-  .hours .hours-inner .status {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 800;
-    font-size: 2.5em;
-    line-height: 1.2em;
-    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5); }
+    .hours {
+      display: flex; } }
+  .hours .hours-inner {
+    background: url(../img/bg-hours.webp) center center no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 20px; }
+    @media only screen and (min-width: 768px) {
+      .hours .hours-inner {
+        width: 30%; } }
+    @media only screen and (min-width: 1024px) {
+      .hours .hours-inner {
+        width: 20%; } }
+    .hours .hours-inner .day {
+      text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      font-size: .85em;
+      line-height: 1.5em; }
+      .hours .hours-inner .day span {
+        opacity: .9;
+        padding-left: 20px; }
+    .hours .hours-inner .status {
+      font-family: "Open Sans", sans-serif;
+      font-weight: 800;
+      font-size: 2.5em;
+      line-height: 1.2em;
+      text-shadow: 0 0 15px rgba(0, 0, 0, 0.5); }
   .hours .library-search {
     opacity: .85;
     background-color: #eee;
     color: #434039;
-    padding: 20px;
-    margin-top: 20px; }
+    padding: 20px; }
     @media only screen and (min-width: 768px) {
       .hours .library-search {
-        width: 70%;
-        float: right;
-        margin-top: 0; } }
+        width: 70%; } }
+    @media only screen and (min-width: 1024px) {
+      .hours .library-search {
+        width: 80%; } }
     .hours .library-search .everything {
       padding-bottom: 20px; }
       .hours .library-search .everything input[type=text] {
