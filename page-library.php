@@ -6,6 +6,11 @@ Template Name: Library
 
 get_header();
 
+
+// get today's date
+
+
+
 ?>
 	
 	
@@ -20,17 +25,19 @@ get_header();
 		</div>
 
 		<div class="right-column">
-			<?php 
-			while ( have_posts() ) : the_post(); ?>
-			
-			<div class="entry-content">
-				<?php the_content(); ?>
-			</div>
 
-			<?php
-			endwhile; 
-			?>
-			<div class="wrap group library">
+			<div class="group library">
+
+				<div class="hours">
+					<div class="status">OPEN</div>
+					<div class="day monday">Monday <span>8am - 5pm</span></div>
+					<div class="day tuesday">Tuesday <span>8am - 5pm</span></div>
+					<div class="day wednesday">Wednesday <span>8am - 5pm</span></div>
+					<div class="day thursday">Thursday <span>8am - 5pm</span></div>
+					<div class="day friday">Friday <span>8am - 5pm</span></div>
+					<div class="day saturday">Saturday <span>8am - 5pm</span></div>
+					<div class="day sunday">Sunday <span>8am - 5pm</span></div>
+				</div>
 
 				<div class="library-search">
 			
@@ -52,6 +59,17 @@ get_header();
 				</div>
 
 			</div>
+
+			<?php 
+			while ( have_posts() ) : the_post(); ?>
+			
+			<div class="entry-content">
+				<?php the_content(); ?>
+			</div>
+
+			<?php
+			endwhile; 
+			?>
 		</div>
 	</div>
 

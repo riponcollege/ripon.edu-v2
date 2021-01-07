@@ -70,11 +70,11 @@
 		padding: 20px;
 
 		@include respond-to( 768px ) {
-			padding: 20px 20px 40px 27%;
+			padding: 30px 20px 40px 27%;
 		}
 
 		@include respond-to( 1220px ) {
-			padding: 20px 40px 60px 27%;
+			padding: 40px 40px 60px 27%;
 		}
 	}
 }
