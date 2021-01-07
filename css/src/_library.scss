@@ -29,8 +29,6 @@
 
 		.day {
 			text-shadow: 0 0 15px rgba( black, .5 );
-			font-size: .85em;
-			line-height: 1.5em;
 
 			span {
 				opacity: .9;
@@ -68,23 +66,31 @@
 			input[type=text] {
 				@include font;
 				float: left;
-				width: 77%;
+				width: 60%;
 				padding: 6px 10px;
 				font-size: 16px;
 				line-height: 16px;
-				margin-right: 3%;
 				border: 1px solid #ccc;
 				border-right: 0;
 				color: $grey;
+
+				@include respond-to( 768px ) {
+					width: 77%;
+					margin-right: 3%;
+				}
 			}
 
 			input[type=submit] {
 				@include font-bold;
 				float: left;
-				width: 20%;
 				padding: 9px 10px;
 				font-size: 16px;
 				line-height: 16px;
+				width: 40%;
+
+				@include respond-to( 768px ) {
+					width: 20%;
+				}
 			}
 		}
 
