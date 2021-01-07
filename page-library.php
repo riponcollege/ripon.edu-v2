@@ -29,34 +29,37 @@ get_header();
 			<div class="group library">
 
 				<div class="hours">
-					<div class="status">OPEN</div>
-					<div class="day monday">Monday <span>8am - 5pm</span></div>
-					<div class="day tuesday">Tuesday <span>8am - 5pm</span></div>
-					<div class="day wednesday">Wednesday <span>8am - 5pm</span></div>
-					<div class="day thursday">Thursday <span>8am - 5pm</span></div>
-					<div class="day friday">Friday <span>8am - 5pm</span></div>
-					<div class="day saturday">Saturday <span>8am - 5pm</span></div>
-					<div class="day sunday">Sunday <span>8am - 5pm</span></div>
+					<div class="hours-inner">
+						<div class="status">OPEN</div>
+						<div class="day monday">Monday <span>8am - 5pm</span></div>
+						<div class="day tuesday">Tuesday <span>8am - 5pm</span></div>
+						<div class="day wednesday">Wednesday <span>8am - 5pm</span></div>
+						<div class="day thursday">Thursday <span>8am - 5pm</span></div>
+						<div class="day friday">Friday <span>8am - 5pm</span></div>
+						<div class="day saturday">Saturday <span>8am - 5pm</span></div>
+						<div class="day sunday">Sunday <span>8am - 5pm</span></div>
+					</div>
+
+					<div class="library-search">
+				
+						<div class="everything">
+							Search Everything:
+							<?php print do_shortcode( '[snippet slug="library-search" /]' ) ?>
+						</div>
+
+						<div class="databases">
+							Search Databases
+							<?php quick_nav_menu( 'library-databases', '- select a database -' ); ?>
+						</div>
+
+						<div class="guides">
+							Research Guides
+							<?php quick_nav_menu( 'library-guides', '- select a guide -' ); ?>
+						</div>
+
+					</div>
 				</div>
 
-				<div class="library-search">
-			
-					<div class="everything">
-						Search Everything:
-						<?php print do_shortcode( '[snippet slug="library-search" /]' ) ?>
-					</div>
-
-					<div class="databases">
-						Search Databases
-						<?php quick_nav_menu( 'library-databases', '- select a database -' ); ?>
-					</div>
-
-					<div class="guides">
-						Research Guides
-						<?php quick_nav_menu( 'library-guides', '- select a guide -' ); ?>
-					</div>
-
-				</div>
 
 			</div>
 

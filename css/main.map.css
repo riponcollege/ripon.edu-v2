@@ -1279,89 +1279,89 @@ footer {
   .alum-banner-container a:hover .alum-banner-button {
     background: #0094E3; }
 
-.library-search {
-  zoom: 1;
-  background-color: #eee;
-  padding: 20px; }
-  .library-search:before, .library-search:after {
-    content: "";
-    display: table; }
-  .library-search, .library-search:before, .library-search:after {
-    clear: both; }
-  .library-search .everything {
-    padding-bottom: 20px; }
-    .library-search .everything input[type=text] {
-      font-family: "Open Sans", sans-serif;
-      font-weight: 300;
-      float: left;
-      width: 80%;
-      padding: 6px 10px;
-      font-size: 16px;
-      line-height: 16px;
-      border: 1px solid #ccc;
-      border-right: 0;
-      color: #434039; }
-      @media only screen and (min-width: 1220px) {
-        .library-search .everything input[type=text] {
-          width: 90%; } }
-    .library-search .everything input[type=submit] {
-      font-family: "Open Sans", sans-serif;
-      font-weight: 800;
-      float: left;
-      width: 20%;
-      padding: 9px 10px;
-      font-size: 16px;
-      line-height: 16px; }
-      @media only screen and (min-width: 1220px) {
-        .library-search .everything input[type=submit] {
-          width: 10%; } }
-  .library-search select {
-    display: block;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 16px;
-    padding: 6px 10px;
-    width: 100%;
-    color: #434039;
-    border: 1px solid #ccc; }
-  .library-search .databases {
-    padding-bottom: 20px; }
-    @media only screen and (min-width: 768px) {
-      .library-search .databases {
-        float: left;
-        padding-bottom: 0;
-        width: 47.5%;
-        margin-right: 5%; } }
-  @media only screen and (min-width: 768px) {
-    .library-search .guides {
-      float: left;
-      width: 47.5%; } }
-
 .hours {
+  zoom: 1;
   background: url(../img/bg-hours.webp) center center no-repeat;
   background-size: cover;
   padding: 20px;
   color: white;
   text-align: center; }
-  .hours .day {
-    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5); }
-    .hours .day span {
+  .hours:before, .hours:after {
+    content: "";
+    display: table; }
+  .hours, .hours:before, .hours:after {
+    clear: both; }
+  @media only screen and (min-width: 768px) {
+    .hours .hours-inner {
+      float: right;
+      width: 30%; } }
+  .hours .hours-inner .day {
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    font-size: .85em;
+    line-height: 1.5em; }
+    .hours .hours-inner .day span {
       opacity: .9;
       padding-left: 20px; }
-  .hours .status {
+  .hours .hours-inner .status {
     font-family: "Open Sans", sans-serif;
     font-weight: 800;
     font-size: 2.5em;
-    line-height: 1.4em;
+    line-height: 1.2em;
     text-shadow: 0 0 15px rgba(0, 0, 0, 0.5); }
-  @media only screen and (min-width: 768px) {
-    .hours .day {
-      width: 40%; }
-    .hours .status {
-      float: right;
-      width: 40%;
-      padding-top: 50px; } }
+  .hours .library-search {
+    opacity: .85;
+    background-color: #eee;
+    color: #434039;
+    padding: 20px;
+    margin-top: 20px; }
+    @media only screen and (min-width: 768px) {
+      .hours .library-search {
+        width: 70%;
+        float: right;
+        margin-top: 0; } }
+    .hours .library-search .everything {
+      padding-bottom: 20px; }
+      .hours .library-search .everything input[type=text] {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        float: left;
+        width: 80%;
+        padding: 6px 10px;
+        font-size: 16px;
+        line-height: 16px;
+        border: 1px solid #ccc;
+        border-right: 0;
+        color: #434039; }
+      .hours .library-search .everything input[type=submit] {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 800;
+        float: left;
+        width: 20%;
+        padding: 9px 10px;
+        font-size: 16px;
+        line-height: 16px; }
+    .hours .library-search select {
+      display: block;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 16px;
+      padding: 6px 10px;
+      width: 100%;
+      color: #434039;
+      border: 1px solid #ccc; }
+    .hours .library-search .databases {
+      padding-bottom: 20px; }
+      @media only screen and (min-width: 768px) {
+        .hours .library-search .databases {
+          float: left;
+          padding-bottom: 0;
+          width: 47.5%;
+          margin-right: 5%; } }
+    @media only screen and (min-width: 768px) {
+      .hours .library-search .guides {
+        float: left;
+        width: 47.5%; } }
 
 /* Magnific Popup CSS */
 .mfp-bg {
