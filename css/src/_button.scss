@@ -1,0 +1,74 @@
+
+
+button, input[type=submit], input[type=reset], .btn {
+  padding: 6px 10px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 1em;
+  color: $red-dark;
+  text-decoration: none;
+  background: white;
+  border: 1px solid $red-dark;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 4px;
+  transition: opacity 400ms ease-in-out;
+
+  &:hover {
+    opacity: .8;
+  }
+
+  &.red-dark {
+    background-color: $red-dark;
+    color: white;
+    border-color: $red-dark;
+  }
+
+  &.red-light {
+    background-color: $red-light;
+    color: white;
+    border-color: $red-light;
+  }
+
+  &.orange {
+    background-color: $orange;
+    color: white;
+    border-color: $orange;
+  }
+
+  &.teal {
+    background-color: $teal;
+    color: white;
+    border-color: $teal;
+  }
+
+  &.grey {
+    background-color: $grey;
+    color: white;
+    border-color: $grey;
+  }
+
+  &.grey-light {
+    background-color: $grey-light;
+    color: $grey;
+    border-color: $grey-light;
+  }
+}
+
+
+.button {
+  padding: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 1em;
+  color: #b30838;
+  text-decoration: none;
+  background: white;
+  border: 1px solid #b30838;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0 0 20px rgba(37, 37, 42, 0.3);
+  box-shadow: 0 0 20px rgba(37, 37, 42, 0.3);
+  cursor: pointer;
+}
+

@@ -117,6 +117,11 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 
 					<hr />
 
+					<div class="pad bg-grey-light area-info">
+						<?php print do_shortcode( '[snippet slug="areas-request-info" /]' ); ?>
+					</div>
+
+					<!---
 					<div class="area-buttons">
 						<?php
 						if ( has_cmb_value( 'area_facebook' ) ) {
@@ -124,6 +129,7 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 						}
 						?>
 					</div>
+					--->
 
 					<?php if ( !empty( get_cmb_value( 'area_post_tag' ) ) ) { ?>
 					<hr>

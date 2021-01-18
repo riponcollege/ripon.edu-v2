@@ -214,57 +214,6 @@ article ol li, article ul li {
 ol {
   list-style: decimal; }
 
-button, input[type=submit], input[type=reset], .btn {
-  padding: 6px 10px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 800;
-  font-size: 1em;
-  color: #6A0A1B;
-  text-decoration: none;
-  background: white;
-  border: 1px solid #6A0A1B;
-  text-transform: uppercase;
-  cursor: pointer;
-  display: inline-block;
-  margin-bottom: 4px; }
-  button:hover, input[type=submit]:hover, input[type=reset]:hover, .btn:hover {
-    color: #6A0A1B;
-    opacity: .8; }
-  button.red-dark, input[type=submit].red-dark, input[type=reset].red-dark, .btn.red-dark {
-    background-color: #6A0A1B;
-    color: white;
-    border-color: #6A0A1B; }
-  button.red-light, input[type=submit].red-light, input[type=reset].red-light, .btn.red-light {
-    background-color: #A91C3A;
-    color: white;
-    border-color: #A91C3A; }
-  button.orange, input[type=submit].orange, input[type=reset].orange, .btn.orange {
-    background-color: #EA4D3D;
-    color: black;
-    border-color: #EA4D3D; }
-  button.teal, input[type=submit].teal, input[type=reset].teal, .btn.teal {
-    background-color: #0094E3;
-    color: white;
-    border-color: #0094E3; }
-  button.grey, input[type=submit].grey, input[type=reset].grey, .btn.grey {
-    background-color: #434039;
-    color: white;
-    border-color: #434039; }
-
-.button {
-  padding: 10px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 800;
-  font-size: 1em;
-  color: #b30838;
-  text-decoration: none;
-  background: white;
-  border: 1px solid #b30838;
-  text-transform: uppercase;
-  -webkit-box-shadow: 0 0 20px rgba(37, 37, 42, 0.3);
-  box-shadow: 0 0 20px rgba(37, 37, 42, 0.3);
-  cursor: pointer; }
-
 .quiet {
   font-size: .9em;
   color: #9295a2; }
@@ -672,6 +621,12 @@ footer {
         clear: right;
         padding-top: 10px; } }
 
+.pad {
+  padding: 20px; }
+  @media only screen and (min-width: 768px) {
+    .pad {
+      padding: 30px; } }
+
 .content-style ol, .area .tab-content ol, .content-style ul, .area .tab-content ul {
   padding: 7px 0 7px 30px; }
 
@@ -688,6 +643,61 @@ footer {
 
 .content-style .buttons, .area .tab-content .buttons {
   padding: 20px 0; }
+
+button, input[type=submit], input[type=reset], .btn {
+  padding: 6px 10px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 1em;
+  color: #6A0A1B;
+  text-decoration: none;
+  background: white;
+  border: 1px solid #6A0A1B;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 4px;
+  transition: opacity 400ms ease-in-out; }
+  button:hover, input[type=submit]:hover, input[type=reset]:hover, .btn:hover {
+    opacity: .8; }
+  button.red-dark, input[type=submit].red-dark, input[type=reset].red-dark, .btn.red-dark {
+    background-color: #6A0A1B;
+    color: white;
+    border-color: #6A0A1B; }
+  button.red-light, input[type=submit].red-light, input[type=reset].red-light, .btn.red-light {
+    background-color: #A91C3A;
+    color: white;
+    border-color: #A91C3A; }
+  button.orange, input[type=submit].orange, input[type=reset].orange, .btn.orange {
+    background-color: #EA4D3D;
+    color: white;
+    border-color: #EA4D3D; }
+  button.teal, input[type=submit].teal, input[type=reset].teal, .btn.teal {
+    background-color: #0094E3;
+    color: white;
+    border-color: #0094E3; }
+  button.grey, input[type=submit].grey, input[type=reset].grey, .btn.grey {
+    background-color: #434039;
+    color: white;
+    border-color: #434039; }
+  button.grey-light, input[type=submit].grey-light, input[type=reset].grey-light, .btn.grey-light {
+    background-color: #EBEAE9;
+    color: #434039;
+    border-color: #EBEAE9; }
+
+.button {
+  padding: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 1em;
+  color: #b30838;
+  text-decoration: none;
+  background: white;
+  border: 1px solid #b30838;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0 0 20px rgba(37, 37, 42, 0.3);
+  box-shadow: 0 0 20px rgba(37, 37, 42, 0.3);
+  cursor: pointer; }
 
 .elementor-column-gap-default > .elementor-row > .elementor-column > .elementor-element-populated {
   padding: 0; }

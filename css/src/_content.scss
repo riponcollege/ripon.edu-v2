@@ -1,5 +1,14 @@
 
 
+.pad {
+	padding: 20px;
+
+	@include respond-to( 768px ) {
+		padding: 30px;
+	}
+}
+
+
 .content-style {
 	ol, ul {
 		padding: 7px 0 7px 30px;
