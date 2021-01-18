@@ -233,6 +233,46 @@ ol {
     .no-mobile {
       display: initial; } }
 
+.quarter, .third, .half, .two-third, .three-quarter, .twenty, .thirty, .sixty, .forty {
+  padding: 20px; }
+  .pad .quarter, .pad .third, .pad .half, .pad .two-third, .pad .three-quarter, .pad .twenty, .pad .thirty, .pad .sixty, .pad .forty {
+    padding: 10px 0; }
+
+@media only screen and (min-width: 768px) {
+  .quarter, .third, .half, .two-third, .three-quarter, .twenty, .thirty, .sixty, .forty {
+    float: left; }
+    .quarter.first, .third.first, .half.first, .two-third.first, .three-quarter.first, .twenty.first, .thirty.first, .sixty.first, .forty.first {
+      margin-left: 0; }
+    .quarter.right, .third.right, .half.right, .two-third.right, .three-quarter.right, .twenty.right, .thirty.right, .sixty.right, .forty.right {
+      float: right; }
+  .quarter {
+    width: 22.5%;
+    margin: 0 1%; }
+  .half {
+    width: 48%;
+    margin: 0 1%; }
+  .third {
+    width: 31%;
+    margin: 0 1%; }
+  .two-third {
+    width: 65%;
+    margin: 0 1%; }
+  .three-quarter {
+    width: 73%;
+    margin: 0 1%; }
+  .twenty {
+    width: 18%;
+    margin: 0 1%; }
+  .thirty {
+    width: 28%;
+    margin: 0 1%; }
+  .forty {
+    width: 38%;
+    margin: 0 1%; }
+  .sixty {
+    width: 58%;
+    margin: 0 1%; } }
+
 .content {
   position: relative; }
 

@@ -117,7 +117,7 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 
 					<hr />
 
-					<div class="pad bg-grey-light area-info">
+					<div class="pad bg-grey-light area-info group">
 						<?php print do_shortcode( '[snippet slug="areas-request-info" /]' ); ?>
 					</div>
 
