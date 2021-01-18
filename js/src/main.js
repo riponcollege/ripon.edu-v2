@@ -31,9 +31,14 @@ jQuery(document).ready(function($){
 	// remove height and width from images inside
 	fluid_images.removeAttr( 'width' ).removeAttr( 'height' );
 
+
     // lightboxes
     $('.lightbox-image').magnificPopup({ type:'image' });
     $('.lightbox-iframe').magnificPopup({ type:'iframe' });
+
+
+    // fitvids for responsive videos
+    $('.content').fitVids();
 
 });
 

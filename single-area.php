@@ -108,18 +108,23 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 				<div class="tab-content active area-overview">
 					<h2>Overview</h2>
 					<?php the_content(); ?>
+
+					<?php the_icon_showcase(); ?>
+
 					<hr />
 					
+					<?php if ( !empty( $sidebar_video_url ) ) print apply_filters( 'the_content', $sidebar_video_url ); ?>
+
+					<hr />
+
 					<div class="area-buttons">
 						<?php
-						if ( !empty( $sidebar_video_url ) ) {
-							print do_shortcode( '[button url="' . $sidebar_video_url . '" class="lightbox-iframe"]Program Spotlight[/button]' );
-						}
 						if ( has_cmb_value( 'area_facebook' ) ) {
 							print do_shortcode( '[button url="' . get_cmb_value( 'area_facebook' ) . '" target="_blank"]Download Info Sheet[/button]' );
 						}
 						?>
 					</div>
+
 					<?php if ( !empty( get_cmb_value( 'area_post_tag' ) ) ) { ?>
 					<hr>
 					<div class="area-news">

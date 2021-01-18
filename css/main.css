@@ -7,6 +7,43 @@
   .clearfix, .clearfix:before, .clearfix:after, .group, .group:before, .group:after {
     clear: both; }
 
+/*
+$red-dark: #6A0A1B;
+$red-light: #A91C3A;
+$orange: #EA4D3D;
+$yellow: #F6B44D;
+$teal: #0094E3;
+$grey: #434039;
+$grey-light: #EBEAE9;
+*/
+.bg-red-dark {
+  background-color: #6A0A1B;
+  color: white; }
+
+.bg-red-light {
+  background-color: #A91C3A;
+  color: white; }
+
+.bg-orange {
+  background-color: #EA4D3D;
+  color: white; }
+
+.bg-teal {
+  background-color: #0094E3;
+  color: white; }
+
+.bg-yellow {
+  background-color: #F6B44D;
+  color: white; }
+
+.bg-grey {
+  background-color: #434039;
+  color: white; }
+
+.bg-grey-light {
+  background-color: #EBEAE9;
+  color: #434039; }
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;
   padding: 0;
@@ -240,26 +277,6 @@ button, input[type=submit], input[type=reset], .btn {
 
 .text-center {
   text-align: center; }
-
-.bg-teal {
-  background-color: #0094E3;
-  color: white; }
-
-.bg-red-dark {
-  background-color: #6A0A1B;
-  color: white; }
-
-.bg-red-light {
-  background-color: #A91C3A;
-  color: white; }
-
-.bg-orange {
-  background-color: #EA4D3D;
-  color: black; }
-
-.bg-grey {
-  background-color: #434039;
-  color: white; }
 
 .no-mobile {
   display: none; }
@@ -952,6 +969,27 @@ footer {
     font-size: .85em; }
     .area-legend .term-description p {
       padding: 0; }
+
+.icons {
+  margin: 30px -20px; }
+  @media only screen and (min-width: 768px) {
+    .icons {
+      margin: 30px 0; } }
+  @media only screen and (min-width: 860px) {
+    .icons {
+      display: flex;
+      margin-right: -3%; } }
+  .icons .icon {
+    padding: 20px; }
+    @media only screen and (min-width: 860px) {
+      .icons .icon {
+        width: 33.3333%;
+        padding: 40px 20px; } }
+    @media only screen and (min-width: 1220px) {
+      .icons .icon {
+        width: 30.3333%;
+        margin: 0 3% 0 0;
+        padding: 40px; } }
 
 .crowd-funding {
   padding-top: 20px; }

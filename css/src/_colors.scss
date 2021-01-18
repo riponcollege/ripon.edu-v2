@@ -1,0 +1,20 @@
+
+
+/*
+$red-dark: #6A0A1B;
+$red-light: #A91C3A;
+$orange: #EA4D3D;
+$yellow: #F6B44D;
+$teal: #0094E3;
+$grey: #434039;
+$grey-light: #EBEAE9;
+*/
+
+.bg-red-dark { background-color: $red-dark; color: white; }
+.bg-red-light { background-color: $red-light; color: white; }
+.bg-orange { background-color: $orange; color: white; }
+.bg-teal { background-color: $teal; color: white; }
+.bg-yellow { background-color: $yellow; color: white; }
+.bg-grey { background-color: $grey; color: white; }
+.bg-grey-light { background-color: $grey-light; color: $grey; }
+
