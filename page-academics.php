@@ -33,7 +33,7 @@ get_header();
 			<div class="wrap group two-column academics">
 			
 				<div class="area-legend">
-					<div class="area-legend-header bg-red-dark">
+					<div class="area-legend-header icon-header bg-red-dark">
 						<div class="icon">
 							<img src="<?php bloginfo( 'template_url' ); ?>/img/icon-area-legend.webp" />
 						</div>

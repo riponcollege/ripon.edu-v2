@@ -955,30 +955,6 @@ button, input[type=submit], input[type=reset], .btn {
 
 .area-legend {
   margin: 0 -20px; }
-  .area-legend .area-legend-header {
-    padding: 20px;
-    display: flex; }
-    @media only screen and (min-width: 1024px) {
-      .area-legend .area-legend-header {
-        padding: 30px; } }
-    .area-legend .area-legend-header .icon {
-      text-align: center;
-      width: 20%; }
-      @media only screen and (min-width: 1024px) {
-        .area-legend .area-legend-header .icon {
-          width: 15%; } }
-      @media only screen and (min-width: 1220px) {
-        .area-legend .area-legend-header .icon {
-          width: 10%; } }
-    .area-legend .area-legend-header .intro {
-      width: 80%; }
-      @media only screen and (min-width: 1024px) {
-        .area-legend .area-legend-header .intro {
-          width: 85%; } }
-      @media only screen and (min-width: 1220px) {
-        .area-legend .area-legend-header .intro {
-          width: 90%;
-          padding-left: 20px; } }
   .area-legend dl {
     background: #EBEAE9;
     padding: 20px;
@@ -1019,6 +995,31 @@ button, input[type=submit], input[type=reset], .btn {
     font-size: .85em; }
     .area-legend .term-description p {
       padding: 0; }
+
+.icon-header {
+  padding: 20px;
+  display: flex; }
+  @media only screen and (min-width: 1024px) {
+    .icon-header {
+      padding: 30px; } }
+  .icon-header .icon {
+    text-align: center;
+    width: 20%; }
+    @media only screen and (min-width: 1024px) {
+      .icon-header .icon {
+        width: 15%; } }
+    @media only screen and (min-width: 1220px) {
+      .icon-header .icon {
+        width: 10%; } }
+  .icon-header .intro {
+    width: 80%; }
+    @media only screen and (min-width: 1024px) {
+      .icon-header .intro {
+        width: 85%; } }
+    @media only screen and (min-width: 1220px) {
+      .icon-header .intro {
+        width: 90%;
+        padding-left: 20px; } }
 
 .icons {
   margin: 30px -20px; }

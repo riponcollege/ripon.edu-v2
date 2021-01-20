@@ -134,7 +134,7 @@ if ( $query_yr || $query_cat || $query_search ) {
 		<?php print do_shortcode( "[snippet slug='alum-showcase' /]" ); ?>
 	</div>
 
-	<section id="primary" class="content-area wrap group" role="main">
+	<section id="primary" class="content group" role="main">
 
 		<div class="content-wide">
 			

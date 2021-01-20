@@ -955,30 +955,6 @@ button, input[type=submit], input[type=reset], .btn {
 
 .area-legend {
   margin: 0 -20px; }
-  .area-legend .area-legend-header {
-    padding: 20px;
-    display: flex; }
-    @media only screen and (min-width: 1024px) {
-      .area-legend .area-legend-header {
-        padding: 30px; } }
-    .area-legend .area-legend-header .icon {
-      text-align: center;
-      width: 20%; }
-      @media only screen and (min-width: 1024px) {
-        .area-legend .area-legend-header .icon {
-          width: 15%; } }
-      @media only screen and (min-width: 1220px) {
-        .area-legend .area-legend-header .icon {
-          width: 10%; } }
-    .area-legend .area-legend-header .intro {
-      width: 80%; }
-      @media only screen and (min-width: 1024px) {
-        .area-legend .area-legend-header .intro {
-          width: 85%; } }
-      @media only screen and (min-width: 1220px) {
-        .area-legend .area-legend-header .intro {
-          width: 90%;
-          padding-left: 20px; } }
   .area-legend dl {
     background: #EBEAE9;
     padding: 20px;
@@ -1019,27 +995,6 @@ button, input[type=submit], input[type=reset], .btn {
     font-size: .85em; }
     .area-legend .term-description p {
       padding: 0; }
-
-.icons {
-  margin: 30px -20px; }
-  @media only screen and (min-width: 768px) {
-    .icons {
-      margin: 30px 0; } }
-  @media only screen and (min-width: 860px) {
-    .icons {
-      display: flex;
-      margin-right: -3%; } }
-  .icons .icon {
-    padding: 20px; }
-    @media only screen and (min-width: 860px) {
-      .icons .icon {
-        width: 33.3333%;
-        padding: 40px 20px; } }
-    @media only screen and (min-width: 1220px) {
-      .icons .icon {
-        width: 30.3333%;
-        margin: 0 3% 0 0;
-        padding: 40px; } }
 
 .crowd-funding {
   padding-top: 20px; }

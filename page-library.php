@@ -28,6 +28,14 @@ get_header();
 
 			<div class="group library">
 
+				<div class="icon-header pad bg-red-dark">
+					<div class="icon">
+						<img src="<?php bloginfo( 'template_url' ); ?>/img/icon-book.webp" />
+					</div>
+					<div class="intro">
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+					</div>
+				</div>
 				<div class="hours">
 					<div class="library-search">
 				
