@@ -23,41 +23,41 @@ if ( $current_yr > 0 ) {
 		the_post();
 		global $post;
 		$year_info = array();
-		$year_info['president'] = get_cmb2_value( 'year_president' );
-		$year_info['grad_date'] = get_cmb2_value( 'year_grad_date' );
-		$year_info['grad_seniors'] = get_cmb2_value( 'year_grad_seniors' );
-		$year_info['commencement_theme'] = get_cmb2_value( 'year_commencement_theme' );
-		$year_info['commencement_speakers'] = get_cmb2_value( 'year_commencement_speakers' );
-		$year_info['honorary_degrees'] = get_cmb2_value( 'year_honorary_degrees' );
-		$year_info['medal'] = get_cmb2_value( 'year_medal' );
-		$year_info['agent_current_name'] = get_cmb2_value( 'year_agent_current_name' );
-		$year_info['agent_current_email'] = get_cmb2_value( 'year_agent_current_email' );
-		$year_info['agent_current_name_2'] = get_cmb2_value( 'year_agent_current_name_2' );
-		$year_info['agent_current_email_2'] = get_cmb2_value( 'year_agent_current_email_2' );
-		$year_info['agent_current_name_3'] = get_cmb2_value( 'year_agent_current_name_3' );
-		$year_info['agent_current_email_3'] = get_cmb2_value( 'year_agent_current_email_3' );
-		$year_info['agent_current_name_4'] = get_cmb2_value( 'year_agent_current_name_4' );
-		$year_info['agent_current_email_4'] = get_cmb2_value( 'year_agent_current_email_4' );
-		$year_info['agent_former_name'] = get_cmb2_value( 'year_agent_former_name' );
-		$year_info['has_memory'] = get_cmb2_value( 'year_memory' );
-		$year_info['has_green'] = get_cmb2_value( 'year_green' );
+		$year_info['president'] = get_cmb_value( 'year_president' );
+		$year_info['grad_date'] = get_cmb_value( 'year_grad_date' );
+		$year_info['grad_seniors'] = get_cmb_value( 'year_grad_seniors' );
+		$year_info['commencement_theme'] = get_cmb_value( 'year_commencement_theme' );
+		$year_info['commencement_speakers'] = get_cmb_value( 'year_commencement_speakers' );
+		$year_info['honorary_degrees'] = get_cmb_value( 'year_honorary_degrees' );
+		$year_info['medal'] = get_cmb_value( 'year_medal' );
+		$year_info['agent_current_name'] = get_cmb_value( 'year_agent_current_name' );
+		$year_info['agent_current_email'] = get_cmb_value( 'year_agent_current_email' );
+		$year_info['agent_current_name_2'] = get_cmb_value( 'year_agent_current_name_2' );
+		$year_info['agent_current_email_2'] = get_cmb_value( 'year_agent_current_email_2' );
+		$year_info['agent_current_name_3'] = get_cmb_value( 'year_agent_current_name_3' );
+		$year_info['agent_current_email_3'] = get_cmb_value( 'year_agent_current_email_3' );
+		$year_info['agent_current_name_4'] = get_cmb_value( 'year_agent_current_name_4' );
+		$year_info['agent_current_email_4'] = get_cmb_value( 'year_agent_current_email_4' );
+		$year_info['agent_former_name'] = get_cmb_value( 'year_agent_former_name' );
+		$year_info['has_memory'] = get_cmb_value( 'year_memory' );
+		$year_info['has_green'] = get_cmb_value( 'year_green' );
 
 		$year_info['memories'] = array();
-		if ( has_cmb2_value( 'year_memory_50' ) ) $year_info['memories'][50] = get_cmb2_value( 'year_memory_50' );
-		if ( has_cmb2_value( 'year_memory_40' ) ) $year_info['memories'][40] = get_cmb2_value( 'year_memory_40' );
-		if ( has_cmb2_value( 'year_memory_35' ) ) $year_info['memories'][35] = get_cmb2_value( 'year_memory_35' );
-		if ( has_cmb2_value( 'year_memory_25' ) ) $year_info['memories'][25] = get_cmb2_value( 'year_memory_25' );
-		if ( has_cmb2_value( 'year_memory_10' ) ) $year_info['memories'][10] = get_cmb2_value( 'year_memory_10' );
+		if ( has_cmb_value( 'year_memory_50' ) ) $year_info['memories'][50] = get_cmb_value( 'year_memory_50' );
+		if ( has_cmb_value( 'year_memory_40' ) ) $year_info['memories'][40] = get_cmb_value( 'year_memory_40' );
+		if ( has_cmb_value( 'year_memory_35' ) ) $year_info['memories'][35] = get_cmb_value( 'year_memory_35' );
+		if ( has_cmb_value( 'year_memory_25' ) ) $year_info['memories'][25] = get_cmb_value( 'year_memory_25' );
+		if ( has_cmb_value( 'year_memory_10' ) ) $year_info['memories'][10] = get_cmb_value( 'year_memory_10' );
 		
 
-		$year_info['letters'] = get_cmb2_value( 'year_letters' );
-		$year_info['facebook'] = get_cmb2_value( 'year_facebook' );
-		$year_info['news'] = get_cmb2_value( 'year_news' );
-		$year_info['sightings'] = get_cmb2_value( 'year_sightings' );
+		$year_info['letters'] = get_cmb_value( 'year_letters' );
+		$year_info['facebook'] = get_cmb_value( 'year_facebook' );
+		$year_info['news'] = get_cmb_value( 'year_news' );
+		$year_info['sightings'] = get_cmb_value( 'year_sightings' );
 
 		$year_info['photo'] = get_the_post_thumbnail_url( $post, 'full' );
 		$year_info['photo_thumb'] = get_the_post_thumbnail_url( $post, array( 400, 400 ) );
-		$year_info['photo_reunion'] = get_cmb2_value( 'year_photo_reunion' );
+		$year_info['photo_reunion'] = get_cmb_value( 'year_photo_reunion' );
 	endwhile;
 	wp_reset_query();
 	// print_r( $year_info );
@@ -237,17 +237,17 @@ if ( $query_yr || $query_cat || $query_search ) {
 							if ( has_post_thumbnail() ) {
 								the_post_thumbnail();
 							} else {
-								show_alum_category_image( get_cmb2_value( 'alum_category' ) );
+								show_alum_category_image( get_cmb_value( 'alum_category' ) );
 							}
 							?>
 						</div>
 						<div class="info group">
 							<h5><?php print substr( get_the_title(), 0, 50 ); print ( strlen( get_the_title() ) > 50 ? '...' : '' ); ?></h5>
-							<?php if ( has_cmb2_value( 'alum_submitter' ) ) { ?><div class="quiet">Submitted by: <?php show_cmb2_value( 'alum_submitter' ) ?></div><?php } ?>
-							<?php if ( get_cmb2_value( 'alum_year' ) > 0 ) { ?><div class="alum-year"><?php show_cmb2_value( 'alum_year' ) ?></div><?php } ?>
-							<div class="alum-location"><?php show_cmb2_value( 'alum_city' ); ?>, <?php show_cmb2_value( 'alum_state' ) ?></div>
+							<?php if ( has_cmb_value( 'alum_submitter' ) ) { ?><div class="quiet">Submitted by: <?php show_cmb_value( 'alum_submitter' ) ?></div><?php } ?>
+							<?php if ( get_cmb_value( 'alum_year' ) > 0 ) { ?><div class="alum-year"><?php show_cmb_value( 'alum_year' ) ?></div><?php } ?>
+							<div class="alum-location"><?php show_cmb_value( 'alum_city' ); ?>, <?php show_cmb_value( 'alum_state' ) ?></div>
 						</div>
-						<div class="alum-category alum-category-<?php show_cmb2_value( 'alum_category' ) ?>"><?php print ucwords( str_replace( '-', ' ', get_cmb2_value( 'alum_category' ) ) ); ?></div>
+						<div class="alum-category alum-category-<?php show_cmb_value( 'alum_category' ) ?>"><?php print ucwords( str_replace( '-', ' ', get_cmb_value( 'alum_category' ) ) ); ?></div>
 					</div>
 				</a>
 				<div class="alum-details mfp-hide" id="alum-<?php the_ID(); ?>">
@@ -258,17 +258,17 @@ if ( $query_yr || $query_cat || $query_search ) {
 							if ( has_post_thumbnail() ) {
 								the_post_thumbnail();
 							} else {
-								show_alum_category_image( get_cmb2_value( 'alum_category' ) );
+								show_alum_category_image( get_cmb_value( 'alum_category' ) );
 							}
 							?>
 						</div>
-						<h5><?php show_cmb2_value( 'alum_name_first' ); ?> <?php show_cmb2_value( 'alum_name_last' ) ?></h5>
-						<div class="alum-year"><strong>Class of <?php show_cmb2_value( 'alum_year' ) ?></strong></div>
-						<div class="alum-location"><?php show_cmb2_value( 'alum_city' ); ?>, <?php show_cmb2_value( 'alum_state' ) ?></div>
-						<div class="alum-category alum-category-<?php show_cmb2_value( 'alum_category' ) ?>"><?php print ucwords( str_replace( '-', ' ', get_cmb2_value( 'alum_category' ) ) ); ?></div>
+						<h5><?php show_cmb_value( 'alum_name_first' ); ?> <?php show_cmb_value( 'alum_name_last' ) ?></h5>
+						<div class="alum-year"><strong>Class of <?php show_cmb_value( 'alum_year' ) ?></strong></div>
+						<div class="alum-location"><?php show_cmb_value( 'alum_city' ); ?>, <?php show_cmb_value( 'alum_state' ) ?></div>
+						<div class="alum-category alum-category-<?php show_cmb_value( 'alum_category' ) ?>"><?php print ucwords( str_replace( '-', ' ', get_cmb_value( 'alum_category' ) ) ); ?></div>
 						<div class="details-content">
 							<p><?php the_content(); ?></p>
-							<?php if ( has_cmb2_value( 'alum_submitter' ) ) { ?><p class="quiet">Submitted by: <?php show_cmb2_value( 'alum_submitter' ) ?></p><?php } ?>
+							<?php if ( has_cmb_value( 'alum_submitter' ) ) { ?><p class="quiet">Submitted by: <?php show_cmb_value( 'alum_submitter' ) ?></p><?php } ?>
 						</div>
 					</div>
 				</div>
