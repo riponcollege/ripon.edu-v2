@@ -1444,7 +1444,8 @@ button, input[type=submit], input[type=reset], .btn {
     padding: 20px; }
     @media only screen and (min-width: 900px) {
       .hours .hours-inner {
-        width: 35%; } }
+        width: 35%;
+        padding: 50px 20px; } }
     @media only screen and (min-width: 1024px) {
       .hours .hours-inner {
         width: 30%; } }
