@@ -1497,8 +1497,8 @@ button, input[type=submit], input[type=reset], .btn {
         color: #434039; }
         @media only screen and (min-width: 768px) {
           .hours .library-search .everything input[type=text] {
-            width: 70%;
-            margin-right: 3%; } }
+            width: 71.5%;
+            margin-right: 1.5%; } }
       .hours .library-search .everything input[type=submit] {
         font-family: "Open Sans", sans-serif;
         font-weight: 800;
@@ -1510,6 +1510,55 @@ button, input[type=submit], input[type=reset], .btn {
         @media only screen and (min-width: 768px) {
           .hours .library-search .everything input[type=submit] {
             width: 27%; } }
+    .hours .library-search select {
+      display: block;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 16px;
+      padding: 6px 10px;
+      width: 100%;
+      color: #434039;
+      border: 1px solid #ccc; }
+    .hours .library-search .books {
+      padding-bottom: 20px; }
+      .hours .library-search .books input[type=text] {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        padding: 6px 10px;
+        font-size: 16px;
+        line-height: 16px;
+        border: 1px solid #ccc;
+        border-right: 0;
+        color: #434039;
+        float: left;
+        width: 60%; }
+        @media only screen and (min-width: 768px) {
+          .hours .library-search .books input[type=text] {
+            width: 40%;
+            margin: 0 1.5%; } }
+      .hours .library-search .books input[type=submit] {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 800;
+        padding: 9px 10px;
+        font-size: 16px;
+        line-height: 16px;
+        float: left;
+        width: 40%; }
+        @media only screen and (min-width: 768px) {
+          .hours .library-search .books input[type=submit] {
+            width: 27%; } }
+      .hours .library-search .books select {
+        margin-bottom: 4px; }
+        @media only screen and (min-width: 768px) {
+          .hours .library-search .books select {
+            float: left;
+            width: 30%; } }
+      .hours .library-search .books .advanced {
+        clear: left;
+        text-align: center;
+        padding: 3px 0 10px;
+        font-size: .85em; }
     .hours .library-search select {
       display: block;
       font-family: "Open Sans", sans-serif;

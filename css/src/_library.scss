@@ -90,8 +90,8 @@
 				color: $grey;
 
 				@include respond-to( 768px ) {
-					width: 70%;
-					margin-right: 3%;
+					width: 71.5%;
+					margin-right: 1.5%;
 				}
 			}
 
@@ -106,6 +106,69 @@
 				@include respond-to( 768px ) {
 					width: 27%;
 				}
+			}
+		}
+
+		select {
+			display: block;
+			@include font;
+			font-size: 16px;
+			line-height: 16px;
+			padding: 6px 10px;
+			width: 100%;
+			color: $grey;
+			border: 1px solid #ccc;
+		}
+
+		.books {
+			padding-bottom: 20px;
+
+			input[type=text] {
+				@include font;
+				padding: 6px 10px;
+				font-size: 16px;
+				line-height: 16px;
+				border: 1px solid #ccc;
+				border-right: 0;
+				color: $grey;
+
+				float: left;
+				width: 60%;
+
+				@include respond-to( 768px ) {
+					width: 40%;
+					margin: 0 1.5%;
+				}
+			}
+
+			input[type=submit] {
+				@include font-bold;
+				padding: 9px 10px;
+				font-size: 16px;
+				line-height: 16px;
+
+				float: left;
+				width: 40%;
+
+				@include respond-to( 768px ) {
+					width: 27%;
+				}
+			}
+
+			select {
+				margin-bottom: 4px;
+
+				@include respond-to( 768px ) {
+					float: left;
+					width: 30%;
+				}
+			}
+
+			.advanced {
+				clear: left;
+				text-align: center;
+				padding: 3px 0 10px;
+				font-size: .85em;
 			}
 		}
 

@@ -33,7 +33,12 @@ get_header();
 				
 						<div class="everything">
 							Search Everything:
-							<?php print do_shortcode( '[snippet slug="library-search" /]' ) ?>
+							<?php print do_shortcode( '[snippet slug="library-search-everything" /]' ) ?>
+						</div>
+
+						<div class="books">
+							Search Books:
+							<?php print do_shortcode( '[snippet slug="library-search-books" /]' ) ?>
 						</div>
 
 						<div class="databases">
