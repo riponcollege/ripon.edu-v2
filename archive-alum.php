@@ -65,7 +65,7 @@ if ( $current_yr > 0 ) {
 
 
 function show_alum_category_image( $category ) {
-	print '<img src="' . get_bloginfo( 'template_url' ) . '/img/alum-' . $category . '.png?v=2">';
+	print '<img src="' . get_bloginfo( 'template_url' ) . '/img/alum-' . $category . '.webp">';
 }
 
 
@@ -73,6 +73,8 @@ function remove_img_attr ( $html ) {
     return preg_replace('/(width|height)="\d+"\s/', "", $html);
 }
 add_filter( 'post_thumbnail_html', 'remove_img_attr' );
+
+
 
 $have_filters = false;
 
