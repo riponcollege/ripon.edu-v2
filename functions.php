@@ -5,6 +5,7 @@
 define( "CMB_PREFIX", "_p_" );
 
 
+
 // colors array, for use in metaboxes
 global $colors;
 $colors = array(
@@ -18,6 +19,7 @@ $colors = array(
 );
 
 
+
 // require multiple - a little helper function to require multiple files from the library directory in a one 
 function require_multi( $files ) {
     $files = func_get_args();
@@ -26,8 +28,20 @@ function require_multi( $files ) {
 }
 
 
+
 // include utility functions
-require_multi( 'site', 'post-type/area', 'post-type/faculty', 'post-type/fund', 'post-type/alum', 'post-type/year', 'menus', 'scripts', 'images', 'metabox', 'search', 'button', 'page-header', 'icons', 'accordion', 'hep/send-donation' );
+require_multi( 
+
+	// include the essential components
+	'site', 'metabox', 
+
+	// include custom post types
+	'post-type/area', 'post-type/faculty', 'post-type/fund', 'post-type/alum', 'post-type/year', 
+
+	// include theme functions and metaboxes
+	'menus', 'scripts', 'images', 'search', 'icons', 'accordion', 'button', 'page-header', 'call-to-action', 'hep/send-donation'
+
+);
 
 
 

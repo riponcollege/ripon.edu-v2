@@ -10,5 +10,8 @@ if ( has_cmb_value( 'menu_primary' ) ) {
 }
 
 
+call_to_action();
+
+
 get_footer();
 

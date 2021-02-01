@@ -660,6 +660,37 @@ header {
         .page-header .breadcrumbs .page-title {
           font-size: 2.4em; } }
 
+body.cta-active {
+  padding-bottom: 55px; }
+  @media only screen and (min-width: 768px) {
+    body.cta-active {
+      padding-bottom: 78px; } }
+
+.call-to-action {
+  background: #A91C3A;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  transition: bottom 500ms ease-in-out;
+  position: fixed;
+  bottom: -100px;
+  right: 0;
+  left: 0; }
+  @media only screen and (min-width: 768px) {
+    .call-to-action {
+      padding: 20px; } }
+  body.cta-active .call-to-action {
+    bottom: 0;
+    right: 0;
+    left: 0; }
+  .call-to-action .btn {
+    margin: 0 10px; }
+    .call-to-action .btn.two {
+      display: none; }
+      @media only screen and (min-width: 768px) {
+        .call-to-action .btn.two {
+          display: inline-block; } }
+
 footer {
   zoom: 1;
   background: #6A0A1B;
