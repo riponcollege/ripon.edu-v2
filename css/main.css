@@ -511,7 +511,7 @@ header {
   header .menu-show {
     position: absolute;
     right: 30px;
-    bottom: 20px;
+    bottom: 24px;
     color: transparent;
     width: 26px;
     height: 26px;
@@ -519,7 +519,7 @@ header {
     background: url(../img/icon-menu-white.webp) center center no-repeat;
     background-size: contain;
     transition: all 400ms ease-in-out; }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 1024px) {
       header .menu-show {
         width: auto;
         color: rgba(255, 255, 255, 0.7);
@@ -542,7 +542,7 @@ header {
       header .buttons {
         display: block;
         position: absolute;
-        right: 200px;
+        right: 250px;
         top: 24px; }
         header .buttons li {
           display: inline; }
@@ -561,9 +561,9 @@ header {
               border: 2px solid rgba(255, 255, 255, 0.8); } }
     @media only screen and (min-width: 1220px) {
       header .buttons {
-        right: 230px; }
+        right: 340px; }
         header .buttons li a {
-          margin: 0 40px;
+          margin: 0 25px;
           padding: 5px 30px;
           letter-spacing: 2px; } }
     @media only screen and (min-width: 1440px) {
@@ -572,6 +572,52 @@ header {
     @media only screen and (min-width: 1680px) {
       header .buttons {
         right: 420px; } }
+  header .search-show {
+    display: none;
+    background: url(../img/icon-search-white.webp) center center no-repeat;
+    background-size: contain; }
+    @media only screen and (min-width: 768px) {
+      header .search-show {
+        display: block;
+        position: absolute;
+        right: 80px;
+        bottom: 20px;
+        width: 26px;
+        color: transparent; } }
+    @media only screen and (min-width: 1024px) {
+      header .search-show {
+        right: 180px;
+        width: 35px;
+        bottom: 22px; } }
+  header .search {
+    display: none;
+    position: absolute;
+    right: 70px;
+    bottom: 20px; }
+    @media only screen and (min-width: 1024px) {
+      header .search {
+        right: 170px;
+        bottom: 21px; } }
+    header .search input[type=text] {
+      background: #530815;
+      color: white;
+      border: 0;
+      width: 120px;
+      padding: 10px;
+      font-size: 1.1em;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 300;
+      border-radius: 30px;
+      text-align: center; }
+      @media only screen and (min-width: 1024px) {
+        header .search input[type=text] {
+          width: 150px; } }
+    header .search ::placeholder {
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.5);
+      letter-spacing: 2px; }
+    header .search button[type=submit] {
+      display: none; }
 
 .page-header {
   background: url(../img/bg-area-header.webp) center center no-repeat;

@@ -13,7 +13,7 @@ header {
 	.menu-show {
 		position: absolute;
 		right: 30px;
-		bottom: 20px;
+		bottom: 24px;
 		color: transparent;
 		width: 26px;
 		height: 26px;
@@ -22,7 +22,7 @@ header {
 		background-size: contain;
 		transition: all 400ms ease-in-out;
 
-		@include respond-to( 768px ) {
+		@include respond-to( 1024px ) {
 			width: auto;
 			color: rgba( white, .7 );
 			padding: 0 60px 0 0;
@@ -50,7 +50,7 @@ header {
 		@include respond-to( 768px ) {
 			display: block;
 			position: absolute;
-			right: 200px;
+			right: 250px;
 			top: 24px;
 
 			li {
@@ -76,10 +76,10 @@ header {
 		}
 
 		@include respond-to( 1220px ) {
-			right: 230px;
+			right: 340px;
 
 			li a {
-				margin: 0 40px;
+				margin: 0 25px;
 				padding: 5px 30px;
 				letter-spacing: 2px;
 			}
@@ -93,6 +93,66 @@ header {
 			right: 420px;
 		}
 	}
+
+	.search-show {
+		display: none;
+		background: url(../img/icon-search-white.webp) center center no-repeat;
+		background-size: contain;
+
+		@include respond-to( 768px ) {
+			display: block;
+			position: absolute;
+			right: 80px;
+			bottom: 20px;
+			width: 26px;
+			color: transparent;
+		}
+
+		@include respond-to( 1024px ) {
+			right: 180px;
+			width: 35px;
+			bottom: 22px;
+		}
+	}
+
+	.search {
+		display: none;
+		position: absolute;
+		right: 70px;
+		bottom: 20px;
+
+		@include respond-to( 1024px ) {
+			right: 170px;
+			bottom: 21px;
+		}
+
+		input[type=text] {
+			background: darken( $red-dark, 5% );
+			color: white;
+			border: 0;
+			width: 120px;
+			padding: 10px;
+			font-size: 1.1em;
+			@include font;
+			border-radius: 30px;
+			text-align: center;
+
+			@include respond-to( 1024px ) {
+				width: 150px;
+			}
+		}
+
+		::placeholder {
+			text-transform: uppercase;
+			color: rgba( white, .5 );
+			letter-spacing: 2px;
+		}
+
+		button[type=submit] {
+			display: none;
+		}
+	}
+
 }
 
 
