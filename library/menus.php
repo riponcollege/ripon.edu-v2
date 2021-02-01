@@ -11,6 +11,39 @@ register_nav_menus( array(
 
 
 
+
+// cmb2 fields for managing the menu
+add_action( 'cmb2_admin_init', 'menu_metaboxes' );
+function menu_metaboxes() {
+
+    $all_menus = get_all_menus();
+
+    // menu metabox
+    $menu_box = new_cmb2_box( array(
+        'id' => 'menu_box',
+        'title' => 'Page Menus',
+        'object_types' => array( 'page' ), // Post type
+        'context' => 'normal',
+        'priority' => 'default',
+        'show_names' => true // Show field names on the left
+    ) );
+    $menu_box->add_field( array(
+        'name' => 'Title',
+        'id'   => CMB_PREFIX . 'menu_title',
+        'type' => 'text'
+    ) );
+    $menu_box->add_field( array(
+        'name'    => 'Sidebar Menu',
+        'id'      => CMB_PREFIX . 'menu_primary',
+        'type'    => 'select',
+        'options' => $all_menus,
+    ) );
+
+}
+
+
+
+// get all wp menus in an array.
 function get_all_menus(){
 	$menus = get_terms( 'nav_menu', array( 'hide_empty' => true ) ); 
 
@@ -24,6 +57,7 @@ function get_all_menus(){
 
 
 
+// output the left menu
 function left_menu_display( $mode = 'both' ) {
 
 	// grab the menu the user selected in the menus metabox.

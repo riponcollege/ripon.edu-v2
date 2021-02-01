@@ -1,81 +1,8 @@
 <?php
 
 
-$states = array(
-    '0' =>'State',
-    'AL'=>'Alabama',
-    'AK'=>'Alaska',
-    'AZ'=>'Arizona',
-    'AR'=>'Arkansas',
-    'CA'=>'California',
-    'CO'=>'Colorado',
-    'CT'=>'Connecticut',
-    'DE'=>'Delaware',
-    'DC'=>'District of Columbia',
-    'FL'=>'Florida',
-    'FM'=>'Federated States of Micronesia',
-    'GA'=>'Georgia',
-    'HI'=>'Hawaii',
-    'ID'=>'Idaho',
-    'IL'=>'Illinois',
-    'IN'=>'Indiana',
-    'IA'=>'Iowa',
-    'KS'=>'Kansas',
-    'KY'=>'Kentucky',
-    'LA'=>'Louisiana',
-    'ME'=>'Maine',
-    'MD'=>'Maryland',
-    'MA'=>'Massachusetts',
-    'MI'=>'Michigan',
-    'MN'=>'Minnesota',
-    'MS'=>'Mississippi',
-    'MO'=>'Missouri',
-    'MT'=>'Montana',
-    'NE'=>'Nebraska',
-    'NV'=>'Nevada',
-    'NH'=>'New Hampshire',
-    'NJ'=>'New Jersey',
-    'NM'=>'New Mexico',
-    'NY'=>'New York',
-    'NC'=>'North Carolina',
-    'ND'=>'North Dakota',
-    'OH'=>'Ohio',
-    'OK'=>'Oklahoma',
-    'OR'=>'Oregon',
-    'PA'=>'Pennsylvania',
-    'RI'=>'Rhode Island',
-    'SC'=>'South Carolina',
-    'SD'=>'South Dakota',
-    'TN'=>'Tennessee',
-    'TX'=>'Texas',
-    'UT'=>'Utah',
-    'VT'=>'Vermont',
-    'VA'=>'Virginia',
-    'WA'=>'Washington',
-    'WV'=>'West Virginia',
-    'WI'=>'Wisconsin',
-    'WY'=>'Wyoming',
-    'AE'=>'Armed Forces Africa \ Canada \ Europe \ Middle East',
-    'AA'=>'Armed Forces America (Except Canada)',
-    'AP'=>'Armed Forces Pacific',
-    'UK'=>'United Kingdom'
-);
-
-
-// set up an array of years from 1940 to current
-$years = array();
-$years[0] = '- none -';
-$n = 1950;
-while ( $n < ( date( 'Y' ) + 1 ) ) {
-    $years[$n] = $n;
-    $n++;
-}
-
-
 if ( file_exists( __DIR__ . '/cmb2/init.php' ) ) {
-  require_once __DIR__ . '/cmb2/init.php';
-} elseif ( file_exists(  __DIR__ . '/CMB2/init.php' ) ) {
-  require_once __DIR__ . '/CMB2/init.php';
+    require_once __DIR__ . '/cmb2/init.php';
 }
 
 
@@ -84,35 +11,6 @@ add_action( 'cmb2_admin_init', 'cmb2_metaboxes' );
  * Define the metabox and field configurations.
  */
 function cmb2_metaboxes() {
-
-	// Start with an underscore to hide fields from custom fields list
-	$prefix = '_p_';
-
-
-    $all_menus = get_all_menus();
-
-    // menu metabox
-    $menu_box = new_cmb2_box( array(
-        'id' => 'menu_box',
-        'title' => 'Page Menus',
-        'object_types' => array( 'page' ), // Post type
-        'context' => 'normal',
-        'priority' => 'default',
-        'show_names' => true // Show field names on the left
-    ) );
-    $menu_box->add_field( array(
-        'name' => 'Title',
-        'id'   => CMB_PREFIX . 'menu_title',
-        'type' => 'text'
-    ) );
-    $menu_box->add_field( array(
-        'name'    => 'Sidebar Menu',
-        'id'      => CMB_PREFIX . 'menu_primary',
-        'type'    => 'select',
-        'options' => $all_menus,
-    ) );
-
-
 
     $args = array( 'post_type' => 'faculty', 'posts_per_page' => -1, 'orderby' => 'title', 'order' => 'ASC' );
     $loop = new WP_Query( $args );
@@ -440,8 +338,6 @@ function cmb2_metaboxes() {
 }
 
 
-
-
 // get CMB value
 function get_cmb_value( $field ) {
     return get_post_meta( get_the_ID(), CMB_PREFIX . $field, 1 );
@@ -467,7 +363,3 @@ function show_cmb_wysiwyg_value( $field ) {
 }
 
 
-
-
-
-?>
