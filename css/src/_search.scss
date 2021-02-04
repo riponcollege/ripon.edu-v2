@@ -1,0 +1,95 @@
+
+
+.search-pane {
+	position: fixed;
+	z-index: 10001;
+	top: 0;
+	right: -100%;
+	bottom: 0;
+	width: 26%;
+	min-width: 300px;
+	transition: all 300ms ease-in-out;
+	background: white;
+	overflow: auto;
+	padding: 85px 20px 20px 20px;
+
+	&.open {
+		right: 0;
+		box-shadow: 0 0 30px rgba( black, .4 );
+	}
+
+	.close {
+		position: absolute;
+		top: 30px;
+		right: 30px;
+		width: 30px;
+		height: 30px;
+		color: transparent;
+		background: url(../img/icon-close-black.webp) right center no-repeat;
+		background-size: contain;
+		opacity: .5;
+		border: 0;
+		transition: color 400ms ease-in-out, padding-right 400ms ease-in-out, width 400ms ease-in-out;
+		text-align: right;
+		font-size: 20px;
+		line-height: 20px;
+
+		&:hover {
+			opacity: .7;
+		}
+
+		@include respond-to( 768px ) {
+			@include font;
+
+			&:hover {
+				width: 130px;
+				padding-right: 50px;
+				color: rgba( black, .8 );
+			}
+		}
+	}
+
+	.admin-bar & {
+		top: 32px;
+	}
+
+	input[type=text] {
+		width: 100%;
+		padding: 10px 15px;
+		@include font;
+		font-size: 1.1em;
+		border: 2px solid #888;
+
+		&:focus {
+			border: 2px solid $red-light;
+		}
+	}
+
+	::placeholder {
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		@include font;
+	}
+
+	button[type=submit] {
+		display: none;
+	}
+
+	h4 {
+		@include font;
+		text-transform: uppercase;
+		font-size: .9em;
+		letter-spacing: 1px;
+		padding: 40px 10px 10px 10px;
+		color: lighten( $grey, 15% );
+	}
+
+	.popular-searches a {
+		@include font-medium;
+		display: block;
+		color: $grey;
+		text-decoration: none;
+		padding: 5px 10px;
+	}
+}
+

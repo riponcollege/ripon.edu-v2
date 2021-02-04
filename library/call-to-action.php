@@ -47,6 +47,7 @@ function call_to_action() {
 	if ( !empty( $button_one_text ) && !empty( $button_one_link ) ) {
 		?>
 		<div class="call-to-action">
+			<button class="back-to-top">^</button>
 			<a href="<?php print $button_one_link ?>" class="btn one"><?php print $button_one_text ?></a>
 			<?php if ( !empty( $button_two_text ) && !empty( $button_two_link ) ) { ?><a href="<?php print $button_two_link ?>" class="btn two"><?php print $button_two_text ?></a><?php } ?>
 		</div>

@@ -3,8 +3,10 @@
 
 // register a couple nav menus
 register_nav_menus( array(
-	'main-menu' => 'Main Menu',
-	'buttons' => 'Header Buttons',
+	'menu-main' => 'Menu - Main',
+	'menu-buttons' => 'Menu - Buttons',
+	'menu-info' => 'Menu - Information',
+	'search-popular' => 'Search - Popular',
 	'library-databases' => 'Library - Databases',
 	'library-guides' => 'Library - Guides',
 ) );

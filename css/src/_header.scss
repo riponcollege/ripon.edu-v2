@@ -10,40 +10,6 @@ header {
 		width: 140px;
 	}
 
-	.menu-show {
-		position: absolute;
-		right: 30px;
-		bottom: 24px;
-		color: transparent;
-		width: 26px;
-		height: 26px;
-		border: 0;
-		background: url(../img/icon-menu-white.webp) center center no-repeat;
-		background-size: contain;
-		transition: all 400ms ease-in-out;
-
-		@include respond-to( 1024px ) {
-			width: auto;
-			color: rgba( white, .7 );
-			padding: 0 60px 0 0;
-			background-position: right center;
-			top: 30px;
-			height: 26px;
-			bottom: auto;
-			@include font;
-			font-size: 16.5px;
-
-			&:hover {
-				color: rgba( white, 1 );
-			}
-		}
-
-		@include respond-to( 1220px ) {
-			letter-spacing: 2px;
-		}
-
-	}
-
 	.buttons {
 		display: none;
 
@@ -95,12 +61,15 @@ header {
 	}
 
 	.search-show {
-		display: none;
 		background: url(../img/icon-search-white.webp) center center no-repeat;
 		background-size: contain;
+		position: absolute;
+		right: 80px;
+		bottom: 20px;
+		width: 26px;
+		color: transparent;
 
 		@include respond-to( 768px ) {
-			display: block;
 			position: absolute;
 			right: 80px;
 			bottom: 20px;
@@ -115,44 +84,38 @@ header {
 		}
 	}
 
-	.search {
-		display: none;
+	.menu-show {
 		position: absolute;
-		right: 70px;
-		bottom: 20px;
+		right: 30px;
+		bottom: 24px;
+		color: transparent;
+		width: 26px;
+		height: 26px;
+		border: 0;
+		background: url(../img/icon-menu-white.webp) center center no-repeat;
+		background-size: contain;
+		transition: all 400ms ease-in-out;
 
 		@include respond-to( 1024px ) {
-			right: 170px;
-			bottom: 21px;
-		}
-
-		input[type=text] {
-			background: darken( $red-dark, 5% );
-			color: white;
-			border: 0;
-			width: 120px;
-			padding: 10px;
-			font-size: 1.1em;
+			width: auto;
+			color: rgba( white, .7 );
+			padding: 0 60px 0 0;
+			background-position: right center;
+			top: 30px;
+			height: 26px;
+			bottom: auto;
 			@include font;
-			border-radius: 30px;
-			text-align: center;
+			font-size: 16.5px;
 
-			@include respond-to( 1024px ) {
-				width: 150px;
+			&:hover {
+				color: rgba( white, 1 );
 			}
 		}
 
-		::placeholder {
-			text-transform: uppercase;
-			color: rgba( white, .5 );
+		@include respond-to( 1220px ) {
 			letter-spacing: 2px;
 		}
-
-		button[type=submit] {
-			display: none;
-		}
 	}
-
 }
 
 

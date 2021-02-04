@@ -3,57 +3,44 @@
 // onload responsive footer and menu stuff
 jQuery(document).ready(function($){
 
-	// select some things we'll use to make things responsive
-	var menu = $( '.main-menus' ),
+	// select some things we'll use to make things work
+	var menu_pane = $( '.menu-pane' ),
 		menu_show = $( '.menu-show' ),
-		menu_hide = $( '.menu-hide' ),
-		menu_photo = $( '.menu-photo' ),
-		search_show_header = $( 'header .search-show' ),
-		search_box_header = $( 'header .search' ),
-		search_show_menu = $( '.main-menus .search-show' ),
-		search_box_menu = $( '.main-menus .search' );
+		menu_hide = menu_pane.find('.close'),
+		menu_photo = $( '.menu-photo' );
 
-	menu_show.on("click",function(){
-		menu.addClass('open');
+	// click menu show, show the menu
+	menu_show.on( "click", function(){
+		menu_pane.addClass('open');
 		menu_photo.addClass('open');
 	});
 
-	menu_hide.on("click",function(){
-		menu.removeClass('open');
+	// click close button inside menu-pane
+	menu_hide.on( "click", function(){
+		menu_pane.removeClass('open');
 		menu_photo.removeClass('open');
-		$( '.main-menus' ).find( '.sub-menu' ).removeClass('open');
+		menu_pane.find( '.sub-menu' ).removeClass('open');
 	});
 
-	$('.main-menus .nav-menu > li > a').on( 'click', function(event){
+	// handle submenu stuff
+	menu_pane.find('.main-menu > li > a').on( 'click', function(event){
+
+		// cancel default behavior for main menu items
 		event.preventDefault();
-		$('.sub-menu.open').removeClass('open');
-		$(this).next('.sub-menu').toggleClass('open');
-	});
-	
-	search_show_menu.on( 'click', function(){
-		search_box_menu.fadeIn( 400 );
-		search_box_menu.find('input[type=text]').focus();
+		
+		// if the item has a submenu
+		$( this ).next('.sub-menu')
 
-		search_box_menu.find('input[type=text]').keyup(function(e) {
-		    if (e.key === "Escape") {
-		        search_box_menu.fadeOut( 400 );
-		    }
+		// close any visible submenus
+		$( '.sub-menu.open' ).removeClass('open');
+
+		// show the submenu
+		$( this ).next('.sub-menu').addClass('open');
+
+		// if the user then clicks the main menu item again, go to it.
+		$( this ).on( 'click', function(){
+			location.href = $(this).attr('href');
 		});
-	});
-	
-	search_show_header.on( 'click', function(){
-		search_box_header.fadeIn( 400 );
-		search_box_header.find('input[type=text]').focus();
-
-		search_box_header.find('input[type=text]').keyup(function(e) {
-		    if (e.key === "Escape") {
-		        search_box_header.fadeOut( 400 );
-		    }
-		});
-	});
-
-	$('select.quick-nav').on('change',function(){
-		location.href = $(this).val();
 	});
 
 });

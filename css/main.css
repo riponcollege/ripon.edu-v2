@@ -333,7 +333,7 @@ ol {
 body {
   overflow-x: hidden; }
 
-.main-menus {
+.menu-pane {
   position: fixed;
   right: -100%;
   top: 0;
@@ -345,7 +345,10 @@ body {
   z-index: 10000;
   overflow-y: auto;
   padding: 85px 20px 20px 20px; }
-  .main-menus .menu-hide {
+  .menu-pane.open {
+    right: 0;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); }
+  .menu-pane .close {
     position: absolute;
     top: 30px;
     right: 30px;
@@ -360,25 +363,22 @@ body {
     text-align: right;
     font-size: 20px;
     line-height: 20px; }
-    .main-menus .menu-hide:hover {
+    .menu-pane .close:hover {
       opacity: .7; }
     @media only screen and (min-width: 768px) {
-      .main-menus .menu-hide {
+      .menu-pane .close {
         font-family: "Open Sans", sans-serif;
         font-weight: 300; }
-        .main-menus .menu-hide:hover {
+        .menu-pane .close:hover {
           width: 130px;
           padding-right: 50px;
           color: rgba(0, 0, 0, 0.8); } }
-  .admin-bar .main-menus {
+  .admin-bar .menu-pane {
     top: 32px; }
-  .main-menus.open {
-    right: 0;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); }
-  .main-menus .main-menu {
+  .menu-pane .main-menu {
     border-top: 1px dotted #aba79d;
     padding-top: 15px; }
-    .main-menus .main-menu a {
+    .menu-pane .main-menu a {
       display: block;
       color: #434039;
       padding: 6px 9px;
@@ -386,23 +386,23 @@ body {
       transition: 400ms all ease-in-out;
       font-size: 1.1em;
       line-height: 1.4em; }
-      .main-menus .main-menu a:hover {
+      .menu-pane .main-menu a:hover {
         color: #5f5a50; }
       @media only screen and (min-width: 768px) {
-        .main-menus .main-menu a {
+        .menu-pane .main-menu a {
           padding: 7px 10px; } }
-    .main-menus .main-menu .sub-menu {
+    .menu-pane .main-menu .sub-menu {
       display: none;
       border-top: 1px solid #c3c0b8; }
-      .main-menus .main-menu .sub-menu a {
+      .menu-pane .main-menu .sub-menu a {
         border-bottom: 1px solid #c3c0b8;
         font-size: 1em;
         padding: 5px;
         line-height: 1.5em; }
-      .main-menus .main-menu .sub-menu.open {
+      .menu-pane .main-menu .sub-menu.open {
         display: block; }
       @media only screen and (min-width: 768px) {
-        .main-menus .main-menu .sub-menu {
+        .menu-pane .main-menu .sub-menu {
           opacity: 0;
           position: fixed;
           top: 102px;
@@ -412,18 +412,18 @@ body {
           display: block;
           z-index: 11000;
           border-top: 1px solid rgba(255, 255, 255, 0.2); }
-          .main-menus .main-menu .sub-menu a {
+          .menu-pane .main-menu .sub-menu a {
             color: white;
             text-align: right;
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
             text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
             padding: 5px; }
-          .main-menus .main-menu .sub-menu.open {
+          .menu-pane .main-menu .sub-menu.open {
             opacity: 1;
             right: 28%; } }
-  .main-menus .buttons {
-    padding-top: 30px; }
-    .main-menus .buttons li a {
+  .menu-pane .buttons {
+    padding-top: 20px; }
+    .menu-pane .buttons li a {
       display: block;
       padding: 8px 10px;
       border: 2px solid rgba(0, 0, 0, 0.2);
@@ -435,53 +435,25 @@ body {
       text-align: center;
       transition: all 400ms ease-in-out;
       margin: 15px 10px 0 10px; }
-      .main-menus .buttons li a:hover {
+      .menu-pane .buttons li a:hover {
         border: 2px solid rgba(0, 0, 0, 0.8);
         color: rgba(0, 0, 0, 0.8); }
-  .main-menus .search-show {
-    background: url(../img/icon-search.webp) left center no-repeat;
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    width: 30px;
-    height: 30px;
-    color: transparent;
-    background-size: contain;
-    opacity: .5;
-    border: 0;
-    transition: color 400ms ease-in-out, padding-left 400ms ease-in-out, width 400ms ease-in-out;
-    text-align: left;
-    font-size: 20px;
-    line-height: 20px; }
-    .main-menus .search-show:hover {
-      opacity: .7; }
-    @media only screen and (min-width: 768px) {
-      .main-menus .search-show {
-        font-family: "Open Sans", sans-serif;
-        font-weight: 300; }
-        .main-menus .search-show:hover {
-          width: 130px;
-          padding-left: 50px;
-          color: rgba(0, 0, 0, 0.8); } }
-  .main-menus .search {
-    position: absolute;
-    top: 18px;
-    left: 20px;
-    display: none; }
-    .main-menus .search ::placeholder {
-      text-transform: uppercase; }
-    .main-menus .search input[type=text] {
-      border: 1px solid #c3c0b8;
-      border-radius: 30px;
-      font-size: 16.5px;
-      line-height: 50px;
-      width: 200px;
-      padding: 0 20px;
-      text-align: left;
-      font-family: "Open Sans", sans-serif;
-      font-weight: 300; }
-    .main-menus .search button[type=submit] {
-      display: none; }
+  .menu-pane h4 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: .9em;
+    letter-spacing: 1px;
+    padding: 40px 10px 10px 10px;
+    color: #6c675c; }
+  .menu-pane .info-for a {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 1.1em;
+    display: block;
+    color: #434039;
+    text-decoration: none;
+    padding: 6px 10px; }
 
 .menu-photo {
   position: fixed;
@@ -508,34 +480,6 @@ header {
     clear: both; }
   header .logo {
     width: 140px; }
-  header .menu-show {
-    position: absolute;
-    right: 30px;
-    bottom: 24px;
-    color: transparent;
-    width: 26px;
-    height: 26px;
-    border: 0;
-    background: url(../img/icon-menu-white.webp) center center no-repeat;
-    background-size: contain;
-    transition: all 400ms ease-in-out; }
-    @media only screen and (min-width: 1024px) {
-      header .menu-show {
-        width: auto;
-        color: rgba(255, 255, 255, 0.7);
-        padding: 0 60px 0 0;
-        background-position: right center;
-        top: 30px;
-        height: 26px;
-        bottom: auto;
-        font-family: "Open Sans", sans-serif;
-        font-weight: 300;
-        font-size: 16.5px; }
-        header .menu-show:hover {
-          color: white; } }
-    @media only screen and (min-width: 1220px) {
-      header .menu-show {
-        letter-spacing: 2px; } }
   header .buttons {
     display: none; }
     @media only screen and (min-width: 768px) {
@@ -573,12 +517,15 @@ header {
       header .buttons {
         right: 420px; } }
   header .search-show {
-    display: none;
     background: url(../img/icon-search-white.webp) center center no-repeat;
-    background-size: contain; }
+    background-size: contain;
+    position: absolute;
+    right: 80px;
+    bottom: 20px;
+    width: 26px;
+    color: transparent; }
     @media only screen and (min-width: 768px) {
       header .search-show {
-        display: block;
         position: absolute;
         right: 80px;
         bottom: 20px;
@@ -589,35 +536,34 @@ header {
         right: 180px;
         width: 35px;
         bottom: 22px; } }
-  header .search {
-    display: none;
+  header .menu-show {
     position: absolute;
-    right: 70px;
-    bottom: 20px; }
+    right: 30px;
+    bottom: 24px;
+    color: transparent;
+    width: 26px;
+    height: 26px;
+    border: 0;
+    background: url(../img/icon-menu-white.webp) center center no-repeat;
+    background-size: contain;
+    transition: all 400ms ease-in-out; }
     @media only screen and (min-width: 1024px) {
-      header .search {
-        right: 170px;
-        bottom: 21px; } }
-    header .search input[type=text] {
-      background: #530815;
-      color: white;
-      border: 0;
-      width: 120px;
-      padding: 10px;
-      font-size: 1.1em;
-      font-family: "Open Sans", sans-serif;
-      font-weight: 300;
-      border-radius: 30px;
-      text-align: center; }
-      @media only screen and (min-width: 1024px) {
-        header .search input[type=text] {
-          width: 150px; } }
-    header .search ::placeholder {
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.5);
-      letter-spacing: 2px; }
-    header .search button[type=submit] {
-      display: none; }
+      header .menu-show {
+        width: auto;
+        color: rgba(255, 255, 255, 0.7);
+        padding: 0 60px 0 0;
+        background-position: right center;
+        top: 30px;
+        height: 26px;
+        bottom: auto;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+        font-size: 16.5px; }
+        header .menu-show:hover {
+          color: white; } }
+    @media only screen and (min-width: 1220px) {
+      header .menu-show {
+        letter-spacing: 2px; } }
 
 .page-header {
   background: url(../img/bg-area-header.webp) center center no-repeat;
@@ -660,6 +606,80 @@ header {
         .page-header .breadcrumbs .page-title {
           font-size: 2.4em; } }
 
+.search-pane {
+  position: fixed;
+  z-index: 10001;
+  top: 0;
+  right: -100%;
+  bottom: 0;
+  width: 26%;
+  min-width: 300px;
+  transition: all 300ms ease-in-out;
+  background: white;
+  overflow: auto;
+  padding: 85px 20px 20px 20px; }
+  .search-pane.open {
+    right: 0;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); }
+  .search-pane .close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    color: transparent;
+    background: url(../img/icon-close-black.webp) right center no-repeat;
+    background-size: contain;
+    opacity: .5;
+    border: 0;
+    transition: color 400ms ease-in-out, padding-right 400ms ease-in-out, width 400ms ease-in-out;
+    text-align: right;
+    font-size: 20px;
+    line-height: 20px; }
+    .search-pane .close:hover {
+      opacity: .7; }
+    @media only screen and (min-width: 768px) {
+      .search-pane .close {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300; }
+        .search-pane .close:hover {
+          width: 130px;
+          padding-right: 50px;
+          color: rgba(0, 0, 0, 0.8); } }
+  .admin-bar .search-pane {
+    top: 32px; }
+  .search-pane input[type=text] {
+    width: 100%;
+    padding: 10px 15px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 1.1em;
+    border: 2px solid #888; }
+    .search-pane input[type=text]:focus {
+      border: 2px solid #A91C3A; }
+  .search-pane ::placeholder {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300; }
+  .search-pane button[type=submit] {
+    display: none; }
+  .search-pane h4 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: .9em;
+    letter-spacing: 1px;
+    padding: 40px 10px 10px 10px;
+    color: #6c675c; }
+  .search-pane .popular-searches a {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    display: block;
+    color: #434039;
+    text-decoration: none;
+    padding: 5px 10px; }
+
 body.cta-active {
   padding-bottom: 55px; }
   @media only screen and (min-width: 768px) {
@@ -675,7 +695,8 @@ body.cta-active {
   position: fixed;
   bottom: -100px;
   right: 0;
-  left: 0; }
+  left: 0;
+  z-index: 10000; }
   @media only screen and (min-width: 768px) {
     .call-to-action {
       padding: 20px; } }
