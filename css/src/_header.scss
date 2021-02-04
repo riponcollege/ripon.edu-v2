@@ -7,7 +7,29 @@ header {
 	padding: 10px 20px;
 
 	.logo {
-		width: 140px;
+		margin: -10px 0 -10px -20px;
+		width: 180px;
+		background: lighten( $red-dark, 5% );
+		padding: 10px 20px;
+	}
+
+	.slogan {
+		display: none;
+
+		@include respond-to( 768px ) {
+			display: block;
+			position: absolute;
+			bottom: 20px;
+			left: 200px;
+			font-size: .9em;
+			color: rgba( white, .7 );
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+
+		@include respond-to( 1220px ) {
+			left: 250px;
+		}
 	}
 
 	.buttons {
@@ -16,7 +38,7 @@ header {
 		@include respond-to( 768px ) {
 			display: block;
 			position: absolute;
-			right: 250px;
+			right: 150px;
 			top: 24px;
 
 			li {
@@ -45,7 +67,7 @@ header {
 			right: 340px;
 
 			li a {
-				margin: 0 25px;
+				margin: 0 15px;
 				padding: 5px 30px;
 				letter-spacing: 2px;
 			}
@@ -68,6 +90,7 @@ header {
 		bottom: 20px;
 		width: 26px;
 		color: transparent;
+		overflow: hidden;
 
 		@include respond-to( 768px ) {
 			position: absolute;

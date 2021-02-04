@@ -100,6 +100,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			</a>
 		</div>
 
+		<div class="slogan">
+			It's a slogan.
+		</div>
+
 		<button class="menu-show">menu</button>
 
 		<button class="search-show">search</button>

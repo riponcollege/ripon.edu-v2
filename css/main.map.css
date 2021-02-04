@@ -479,14 +479,32 @@ header {
   header, header:before, header:after {
     clear: both; }
   header .logo {
-    width: 140px; }
+    margin: -10px 0 -10px -20px;
+    width: 180px;
+    background: #810c21;
+    padding: 10px 20px; }
+  header .slogan {
+    display: none; }
+    @media only screen and (min-width: 768px) {
+      header .slogan {
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        left: 200px;
+        font-size: .9em;
+        color: rgba(255, 255, 255, 0.7);
+        text-transform: uppercase;
+        letter-spacing: 1px; } }
+    @media only screen and (min-width: 1220px) {
+      header .slogan {
+        left: 250px; } }
   header .buttons {
     display: none; }
     @media only screen and (min-width: 768px) {
       header .buttons {
         display: block;
         position: absolute;
-        right: 250px;
+        right: 150px;
         top: 24px; }
         header .buttons li {
           display: inline; }
@@ -507,7 +525,7 @@ header {
       header .buttons {
         right: 340px; }
         header .buttons li a {
-          margin: 0 25px;
+          margin: 0 15px;
           padding: 5px 30px;
           letter-spacing: 2px; } }
     @media only screen and (min-width: 1440px) {
@@ -523,7 +541,8 @@ header {
     right: 80px;
     bottom: 20px;
     width: 26px;
-    color: transparent; }
+    color: transparent;
+    overflow: hidden; }
     @media only screen and (min-width: 768px) {
       header .search-show {
         position: absolute;
