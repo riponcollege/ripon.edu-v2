@@ -691,26 +691,39 @@ body.cta-active {
   color: white;
   text-align: center;
   padding: 10px;
-  transition: bottom 500ms ease-in-out;
-  position: fixed;
-  bottom: -100px;
-  right: 0;
-  left: 0;
-  z-index: 10000; }
+  transition: bottom 500ms ease-in-out; }
   @media only screen and (min-width: 768px) {
     .call-to-action {
       padding: 20px; } }
   body.cta-active .call-to-action {
+    position: fixed;
+    z-index: 10000;
     bottom: 0;
     right: 0;
     left: 0; }
   .call-to-action .btn {
-    margin: 0 10px; }
+    transition: all 400ms ease-in-out;
+    margin: 0 10px;
+    background: rgba(255, 255, 255, 0.8);
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
+    .call-to-action .btn:hover {
+      background: white;
+      opacity: 1;
+      color: #6A0A1B;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); }
     .call-to-action .btn.two {
       display: none; }
       @media only screen and (min-width: 768px) {
         .call-to-action .btn.two {
           display: inline-block; } }
+  .call-to-action .back-to-top {
+    float: right;
+    padding: 6px 14px;
+    background: #6A0A1B;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: rgba(255, 255, 255, 0.7); }
 
 footer {
   zoom: 1;

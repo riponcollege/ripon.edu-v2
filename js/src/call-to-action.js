@@ -3,18 +3,9 @@
 // calls to action
 jQuery(document).ready(function($){
 
-	/*
-	var footer_reached = function(){
-		if ( $(window).scrollTop() + $(window).height() > $(document).height() - $('footer').height() ) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-	*/
-
-
+	// if we have a call to action bar
 	if ( $('.call-to-action').length ) {
+
 		// when the page is scrolled
 		$(window).scroll(function() {
 
@@ -28,7 +19,15 @@ jQuery(document).ready(function($){
 	       	} else {
 	       		$( 'body' ).removeClass( 'cta-active' );
 	       	}
+
+	       	// if scroll has reached near the bottom of the page, return ctas to static
+	       	var bottom = parseInt( $( document ).height() ) - parseInt( $( window ).height() ) - 140;
+	       	if ( scroll_position > bottom ) {
+	       		$( 'body' ).removeClass( 'cta-active' );
+	       	}
+
 	    });
+
 	}
 
 });

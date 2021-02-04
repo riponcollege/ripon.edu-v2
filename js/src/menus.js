@@ -38,7 +38,7 @@ jQuery(document).ready(function($){
 		$( this ).next('.sub-menu').addClass('open');
 
 		// if the user then clicks the main menu item again, go to it.
-		$( this ).on( 'click', function(){
+		$( this ).on( 'click.submenu-active', function(){
 			location.href = $(this).attr('href');
 		});
 	});

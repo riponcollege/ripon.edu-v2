@@ -1,0 +1,61 @@
+
+
+body.cta-active {
+	padding-bottom: 55px;
+
+	@include respond-to( 768px ) {
+		padding-bottom: 78px;
+	}
+}
+
+.call-to-action {
+	background: $red-light;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	transition: bottom 500ms ease-in-out;
+
+	@include respond-to( 768px ) {
+		padding: 20px;
+	}
+
+	body.cta-active & {
+		position: fixed;
+		z-index: 10000;
+		bottom: 0;
+		right: 0;
+		left: 0;
+	}
+
+	.btn {
+		transition: all 400ms ease-in-out;
+		margin: 0 10px;
+		background: rgba( white, .8 );
+		opacity: 1;
+		box-shadow: 0 0 10px rgba( black, .2 );
+
+		&:hover {
+			background: rgba( white, 1 );
+			opacity: 1;
+			color: $red-dark;
+			box-shadow: 0 0 20px rgba( black, .4 );
+		}
+
+		&.two {
+			display: none;
+
+			@include respond-to( 768px ) {
+				display: inline-block;
+			}
+		}
+	}
+
+	.back-to-top {
+		float: right;
+		padding: 6px 14px;
+		background: $red-dark;
+		border: 1px solid rgba( black, .2 );
+		box-shadow: 0 0 10px rgba( black, .2 );
+		color: rgba( white, .7 );
+	}
+}

@@ -40,5 +40,13 @@ jQuery(document).ready(function($){
     // fitvids for responsive videos
     $('.content').fitVids();
 
+
+    // creep for smooth scrolling anchor links
+    $(".back-to-top").on( 'click', function(){
+        $('html, body').animate({
+            scrollTop: 0
+        }, 1000 );
+    });
+
 });
 

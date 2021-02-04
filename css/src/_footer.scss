@@ -1,49 +1,5 @@
 
 
-body.cta-active {
-	padding-bottom: 55px;
-
-	@include respond-to( 768px ) {
-		padding-bottom: 78px;
-	}
-}
-
-.call-to-action {
-	background: $red-light;
-	color: white;
-	text-align: center;
-	padding: 10px;
-	transition: bottom 500ms ease-in-out;
-	position: fixed;
-	bottom: -100px;
-	right: 0;
-	left: 0;
-	z-index: 10000;
-
-	@include respond-to( 768px ) {
-		padding: 20px;
-	}
-
-	body.cta-active & {
-		bottom: 0;
-		right: 0;
-		left: 0;
-	}
-
-	.btn {
-		margin: 0 10px;
-
-		&.two {
-			display: none;
-
-			@include respond-to( 768px ) {
-				display: inline-block;
-			}
-		}
-	}
-}
-
-
 footer {
 	@include clearfix;
 	background: $red-dark;
