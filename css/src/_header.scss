@@ -64,7 +64,7 @@ header {
 		}
 
 		@include respond-to( 1220px ) {
-			right: 340px;
+			right: 250px;
 
 			li a {
 				margin: 0 15px;
@@ -74,7 +74,7 @@ header {
 		}
 
 		@include respond-to( 1440px ) {
-			right: 330px;
+			right: 300px;
 		}
 
 		@include respond-to( 1680px ) {
@@ -94,14 +94,13 @@ header {
 
 		@include respond-to( 768px ) {
 			position: absolute;
-			right: 80px;
 			bottom: 20px;
 			width: 26px;
 			color: transparent;
 		}
 
 		@include respond-to( 1024px ) {
-			right: 180px;
+			right: 100px;
 			width: 35px;
 			bottom: 22px;
 		}
@@ -120,23 +119,11 @@ header {
 		transition: all 400ms ease-in-out;
 
 		@include respond-to( 1024px ) {
-			width: auto;
-			color: rgba( white, .7 );
 			padding: 0 60px 0 0;
 			background-position: right center;
 			top: 30px;
 			height: 26px;
 			bottom: auto;
-			@include font;
-			font-size: 16.5px;
-
-			&:hover {
-				color: rgba( white, 1 );
-			}
-		}
-
-		@include respond-to( 1220px ) {
-			letter-spacing: 2px;
 		}
 	}
 }

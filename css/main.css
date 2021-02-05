@@ -524,14 +524,14 @@ header {
               border: 2px solid rgba(255, 255, 255, 0.8); } }
     @media only screen and (min-width: 1220px) {
       header .buttons {
-        right: 340px; }
+        right: 250px; }
         header .buttons li a {
           margin: 0 15px;
           padding: 5px 30px;
           letter-spacing: 2px; } }
     @media only screen and (min-width: 1440px) {
       header .buttons {
-        right: 330px; } }
+        right: 300px; } }
     @media only screen and (min-width: 1680px) {
       header .buttons {
         right: 420px; } }
@@ -547,13 +547,12 @@ header {
     @media only screen and (min-width: 768px) {
       header .search-show {
         position: absolute;
-        right: 80px;
         bottom: 20px;
         width: 26px;
         color: transparent; } }
     @media only screen and (min-width: 1024px) {
       header .search-show {
-        right: 180px;
+        right: 100px;
         width: 35px;
         bottom: 22px; } }
   header .menu-show {
@@ -569,21 +568,11 @@ header {
     transition: all 400ms ease-in-out; }
     @media only screen and (min-width: 1024px) {
       header .menu-show {
-        width: auto;
-        color: rgba(255, 255, 255, 0.7);
         padding: 0 60px 0 0;
         background-position: right center;
         top: 30px;
         height: 26px;
-        bottom: auto;
-        font-family: "Open Sans", sans-serif;
-        font-weight: 300;
-        font-size: 16.5px; }
-        header .menu-show:hover {
-          color: white; } }
-    @media only screen and (min-width: 1220px) {
-      header .menu-show {
-        letter-spacing: 2px; } }
+        bottom: auto; } }
 
 .page-header {
   background: url(../img/bg-area-header.webp) center center no-repeat;
