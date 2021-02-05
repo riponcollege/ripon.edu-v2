@@ -423,7 +423,7 @@ body {
             opacity: 1;
             right: 28%; } }
   .menu-pane .buttons {
-    padding-top: 20px; }
+    padding-top: 30px; }
     .menu-pane .buttons li a {
       display: block;
       padding: 8px 10px;
@@ -445,7 +445,7 @@ body {
     text-transform: uppercase;
     font-size: .9em;
     letter-spacing: 1px;
-    padding: 40px 10px 10px 10px;
+    padding: 30px 10px 10px 10px;
     color: #6c675c; }
   .menu-pane .info-for a {
     font-family: "Open Sans", sans-serif;

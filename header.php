@@ -71,13 +71,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	<?php wp_nav_menu( array( 'theme_location' => 'menu-main', 'menu_class' => 'nav-menu main-menu' ) ); ?>
 
-	<div class="buttons">
-		<?php wp_nav_menu( array( 'theme_location' => 'menu-buttons', 'menu_class' => 'nav-menu' ) ); ?>
-	</div>
-
 	<h4>Information For</h4>
 	<div class="info-for">
 		<?php wp_nav_menu( array( 'theme_location' => 'menu-info', 'menu_class' => 'nav-menu' ) ); ?>
+	</div>
+
+	<div class="buttons">
+		<?php wp_nav_menu( array( 'theme_location' => 'menu-buttons', 'menu_class' => 'nav-menu' ) ); ?>
 	</div>
 </div>
 <div class="search-pane pane">
