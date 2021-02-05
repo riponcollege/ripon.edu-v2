@@ -818,9 +818,10 @@ button, input[type=submit], input[type=reset], .btn {
   cursor: pointer;
   display: inline-block;
   margin-bottom: 4px;
-  transition: opacity 400ms ease-in-out;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border-radius: 4px; }
+  transition: opacity 400ms ease-in-out; }
+  .content button, .content input[type=submit], .content input[type=reset], .content .btn {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px; }
   button:hover, input[type=submit]:hover, input[type=reset]:hover, .btn:hover {
     opacity: .8; }
   button.red-dark, input[type=submit].red-dark, input[type=reset].red-dark, .btn.red-dark {
