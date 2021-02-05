@@ -5,6 +5,9 @@
 define( "CMB_PREFIX", "_p_" );
 
 
+// set the timezone
+date_default_timezone_set( 'America/Chicago' );
+
 
 // colors array, for use in metaboxes
 global $colors;
@@ -39,7 +42,7 @@ require_multi(
 	'post-type/area', 'post-type/faculty', 'post-type/fund', 'post-type/alum', 'post-type/year', 
 
 	// include theme functions and metaboxes
-	'menus', 'scripts', 'images', 'search', 'icons', 'accordion', 'button', 'page-header', 'call-to-action', 'hep/send-donation'
+	'menus', 'library', 'scripts', 'images', 'search', 'icons', 'accordion', 'button', 'page-header', 'call-to-action', 'hep/send-donation'
 
 );
 

@@ -1592,6 +1592,7 @@ button, input[type=submit], input[type=reset], .btn {
     .hours .hours-inner .status {
       font-family: "Open Sans", sans-serif;
       font-weight: 800;
+      text-transform: uppercase;
       font-size: 2.5em;
       line-height: 1.2em;
       text-shadow: 0 0 15px rgba(0, 0, 0, 0.5); }

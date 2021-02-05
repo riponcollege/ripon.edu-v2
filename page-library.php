@@ -8,8 +8,7 @@ get_header();
 
 
 // get today's date
-
-
+$lib = get_library_hours();
 
 ?>
 	
@@ -63,14 +62,14 @@ get_header();
 					</div>
 
 					<div class="hours-inner">
-						<div class="status">OPEN</div>
-						<div class="day monday">Monday <span>8am - 5pm</span></div>
-						<div class="day tuesday">Tuesday <span>8am - 5pm</span></div>
-						<div class="day wednesday">Wednesday <span>8am - 5pm</span></div>
-						<div class="day thursday">Thursday <span>8am - 5pm</span></div>
-						<div class="day friday">Friday <span>8am - 5pm</span></div>
-						<div class="day saturday">Saturday <span>8am - 5pm</span></div>
-						<div class="day sunday">Sunday <span>8am - 5pm</span></div>
+						<div class="status"><?php print $lib['status'] ?></div>
+						<div class="day monday">Monday <span><?php print $lib['hours']['monday']['open'] . " - " . $lib['hours']['monday']['close']; ?></span></div>
+						<div class="day tuesday">Tuesday <span><?php print $lib['hours']['tuesday']['open'] . " - " . $lib['hours']['tuesday']['close']; ?></span></div>
+						<div class="day wednesday">Wednesday <span><?php print $lib['hours']['wednesday']['open'] . " - " . $lib['hours']['wednesday']['close']; ?></span></div>
+						<div class="day thursday">Thursday <span><?php print $lib['hours']['thursday']['open'] . " - " . $lib['hours']['thursday']['close']; ?></span></div>
+						<div class="day friday">Friday <span><?php print $lib['hours']['friday']['open'] . " - " . $lib['hours']['friday']['close']; ?></span></div>
+						<div class="day saturday">Saturday <span><?php print $lib['hours']['saturday']['open'] . " - " . $lib['hours']['saturday']['close']; ?></span></div>
+						<div class="day sunday">Sunday <span><?php print $lib['hours']['sunday']['open'] . " - " . $lib['hours']['sunday']['close']; ?></span></div>
 					</div>
 				</div>
 
