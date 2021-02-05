@@ -37,6 +37,12 @@ button, input[type=submit], input[type=reset], .btn {
     border-color: $orange;
   }
 
+  &.yellow {
+    background-color: $yellow;
+    color: black;
+    border-color: $yellow;
+  }
+
   &.teal {
     background-color: $teal;
     color: white;
