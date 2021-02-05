@@ -1711,6 +1711,10 @@ button, input[type=submit], input[type=reset], .btn {
       .hours .library-search .guides {
         float: left;
         width: 47.5%; } }
+  .hours .contact {
+    padding-top: 15px; }
+    .hours .contact a {
+      color: white; }
 
 @media only screen and (min-width: 1024px) {
   .guide .librarian {

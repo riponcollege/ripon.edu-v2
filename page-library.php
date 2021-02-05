@@ -70,6 +70,7 @@ $lib = get_library_hours();
 						<div class="day friday">Friday <span><?php print $lib['hours']['friday']['open'] . " - " . $lib['hours']['friday']['close']; ?></span></div>
 						<div class="day saturday">Saturday <span><?php print $lib['hours']['saturday']['open'] . " - " . $lib['hours']['saturday']['close']; ?></span></div>
 						<div class="day sunday">Sunday <span><?php print $lib['hours']['sunday']['open'] . " - " . $lib['hours']['sunday']['close']; ?></span></div>
+						<div class="contact">Email: <a href="mailto:library@ripon.edu">library@ripon.edu</a><br>Phone: <a href="tel:9207488175">(920)-748-8175</a></div>
 					</div>
 				</div>
 
