@@ -293,15 +293,16 @@ ol {
     @media only screen and (min-width: 768px) {
       .two-column .sidebar {
         position: absolute;
-        left: 20px;
+        left: 30px;
         top: 60px;
-        width: 23%;
+        width: 25%;
         margin-right: 2%;
         border-bottom: 0;
         padding: 0; } }
     @media only screen and (min-width: 1220px) {
       .two-column .sidebar {
-        left: 40px; } }
+        left: 40px;
+        width: 23%; } }
     .two-column .sidebar.scrolled {
       position: fixed; }
     .two-column .sidebar .nav-menu li a {
@@ -319,10 +320,10 @@ ol {
     padding: 20px; }
     @media only screen and (min-width: 768px) {
       .two-column .right-column {
-        padding: 30px 20px 40px 27%; } }
+        padding: 30px 20px 50px 31%; } }
     @media only screen and (min-width: 1220px) {
       .two-column .right-column {
-        padding: 40px 40px 60px 27%; } }
+        padding: 40px 40px 70px 28%; } }
 
 .two-column {
   min-height: 900px; }
@@ -598,7 +599,7 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4); }
+    background-color: rgba(36, 3, 9, 0.4); }
   .page-header .breadcrumbs {
     position: absolute;
     bottom: 20px;
@@ -1556,6 +1557,13 @@ button, input[type=submit], input[type=reset], .btn {
         font-size: 22px; } }
   .alum-banner-container a:hover .alum-banner-button {
     background: #0094E3; }
+
+.faculty-info {
+  text-align: center; }
+  .faculty-info p {
+    padding: 0; }
+  .faculty-info p.cv-link {
+    padding-top: 20px; }
 
 .hours {
   zoom: 1; }

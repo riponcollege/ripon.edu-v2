@@ -9,30 +9,23 @@ $education = get_cmb_value( "faculty_education" );
 $courses = get_cmb_value( "faculty_courses" );
 
 ?>
-	<div id="primary" class="faculty wrap group" role="main">
+	<div class="page-header" style="background-image: url(<?php bloginfo(); ?>/img/)">
+		<div class="page-header-overlay"></div>
+		<div class="breadcrumbs">
+			<div class="crumbs">
+				<a href="/faculty">Faculty &amp; Staff</a> &raquo; 
+			</div>
+			<h1 class="page-title"><?php the_title(); ?></h1>
+		</div>
+	</div>
+
+	<div class="two-column faculty">
 
 		<?php 
 		if ( have_posts() ) :
 			while ( have_posts() ) : the_post(); 
-				edit_post_link( __( 'Edit', 'textdomain' ), '<p>', '</p>', null, 'btn btn-primary btn-edit-post-link' );
 				?>
-		<div class="quarter">
-			<div class="tab-nav">
-				<button class="back-to-faculty-list">&laquo; Back to Directory</button>
-				<ul>
-					<li class="basic">Basic Information</li>
-					<?php do_faculty_tab_nav( "Awards &amp; Honors", "awards" ) ?>
-					<?php do_faculty_tab_nav( "Publications", "publications" ) ?>
-					<?php do_faculty_tab_nav( "Areas of Interest", "areas" ) ?>
-					<?php do_faculty_tab_nav( "Professional Affiliations", "affiliations" ) ?>
-					<?php do_faculty_tab_nav( "Presentations", "presentations" ) ?>
-					<?php do_faculty_tab_nav( "Pedagogy", "pedagogy" ) ?>
-					<?php do_faculty_tab_nav( "Production Credits", "credits" ) ?>
-					<?php do_faculty_tab_nav( "Professional Experience", "experience" ) ?>
-				</ul>
-			</div>
-		</div><!-- #content -->
-		<div class="quarter right">
+		<div class="sidebar">
 			<div class="faculty-info">
 				<?php the_post_thumbnail() ?>
 				<h2><?php the_title(); ?></h2>
@@ -40,46 +33,14 @@ $courses = get_cmb_value( "faculty_courses" );
 				<p class="faculty-contact">
 					<a href="mailto:<?php print get_cmb_value( "faculty_email" ); ?>"><?php print get_cmb_value( "faculty_email" ); ?></a><br>
 					<?php print get_cmb_value( "faculty_phone" ); ?><br>
-					Office: <?php print get_cmb_value( "faculty_office" ); ?>
-					<?php 
-					if ( !empty( get_cmb_value( "faculty_website" ) ) ) {
-						print "<br><a href='" . get_cmb_value( "faculty_website" ) . "' target='_blank'>Website</a>";
-					}
-					?>
+					<?php if ( has_cmb_value( "faculty_office" ) ) { ?>Office: <?php print get_cmb_value( "faculty_office" ); ?><br><?php } ?>
+					<?php if ( has_cmb_value( "faculty_website" ) ) { ?><br><a href='" . get_cmb_value( "faculty_website" ) . "' target='_blank'>Website</a><?php } ?>
 				</p>
+				<p class="cv-link"><a href="<?php show_cmb_value( "faculty_cv" ); ?>">View CV/Resume</a></p>
 			</div>
 		</div>
-		<div class="half tab-container">
-
-			<div class="tab-content basic first">
-				<h1>Basic Information</h1>
-				<?php 
-				if ( !empty( $education ) ) {
-					?>
-				<h3>Education</h3>
-					<?php 
-					print wpautop( $education );
-				} 
-				?>
-				<?php 
-				if ( !empty( $courses ) ) {
-					?>
-				<h3>Courses Taught</h3>
-					<?php 
-					print wpautop( $courses );
-				} 
-				?>
-			</div>
-
-			<?php do_faculty_tab_content( "Awards &amp; Honors", "awards" ); ?>
-			<?php do_faculty_tab_content( "Publications", "publications" ); ?>
-			<?php do_faculty_tab_content( "Areas of Interest", "areas" ); ?>
-			<?php do_faculty_tab_content( "Professional/Scholarly Affiliations", "affiliations" ) ?>
-			<?php do_faculty_tab_content( "Presentations", "presentations" ) ?>
-			<?php do_faculty_tab_content( "Pedagogy", "pedagogy" ) ?>
-			<?php do_faculty_tab_content( "Production/Performance Credits", "credits" ) ?>
-			<?php do_faculty_tab_content( "Professional Experience", "experience" ) ?>
-
+		<div class="right-column">
+			<?php the_content(); ?>
 		</div>
 			<?php
 			endwhile;

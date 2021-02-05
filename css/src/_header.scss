@@ -158,7 +158,7 @@ header {
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background-color: rgba( black, .4 );
+		background-color: rgba( darken( $red-dark, 15% ), .4 );
 	}
 
 	.breadcrumbs {
