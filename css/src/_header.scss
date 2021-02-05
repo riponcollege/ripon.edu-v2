@@ -134,6 +134,7 @@ header {
 	background-size: cover;
 	min-height: 250px;
 	position: relative;
+	box-shadow: 0 0 30px rgba( black, .4 );
 
 	@include respond-to( 1220px ) {
 		min-height: 350px;
