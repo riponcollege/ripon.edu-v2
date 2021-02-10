@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,300,600,700);
+@import url("https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@300;600&family=Open+Sans:ital,wght@0,300;0,600;0,700;1,300;1,600;1,700&display=swap");
 .clearfix, .group {
   zoom: 1; }
   .clearfix:before, .clearfix:after, .group:before, .group:after {
@@ -139,7 +139,8 @@ strong {
   font-weight: 700; }
 
 h1, h2, h3, h4 {
-  font-family: "Open Sans", Arial, san-serif; }
+  font-family: "Hepta Slab", serif;
+  font-weight: 300; }
   h1 span, h2 span, h3 span, h4 span {
     opacity: .6; }
 
@@ -675,10 +676,13 @@ header {
       .page-header .breadcrumbs a:hover {
         border-bottom: 1px dotted rgba(255, 255, 255, 0.5); }
     .page-header .breadcrumbs .page-title {
-      font-family: "Open Sans", sans-serif;
-      font-weight: 700;
+      font-family: "Hepta Slab", serif;
+      font-weight: 600;
       font-size: 2em;
       line-height: 1.4em; }
+      @media only screen and (min-width: 1024px) {
+        .page-header .breadcrumbs .page-title {
+          font-size: 2.4em; } }
     @media only screen and (min-width: 1220px) {
       .page-header .breadcrumbs {
         right: 40px;
