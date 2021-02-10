@@ -952,6 +952,9 @@ button, input[type=submit], input[type=reset], .btn {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
   margin-bottom: 20px; }
 
+.elementor-background-video-container {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); }
+
 .elementor-widget-slides .elementor-background-overlay {
   background-color: rgba(0, 0, 0, 0.4) !important; }
 
