@@ -1,6 +1,6 @@
 
 // Google Webfonts
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,800italic,300,600,800);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,300,600,700);
 
 
 @mixin font {
@@ -15,7 +15,7 @@
 
 @mixin font-bold {
 	font-family: "Open Sans", sans-serif;
-	font-weight: 800;
+	font-weight: 700;
 }
 
 @mixin font-title {
@@ -24,7 +24,7 @@
 
 @mixin font-title-bold {
 	font-family: "Open Sans", Arial, san-serif;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 @mixin font-title-italic {

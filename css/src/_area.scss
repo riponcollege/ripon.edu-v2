@@ -128,29 +128,38 @@
 		}
 
 		ul {
+			border-top: 2px solid $grey-light;
+			border-bottom: 2px solid $grey-light;
+
 			li {
-				padding: 20px 15px;
-				font-size: 20px;
-				line-height: 25px;
-				color: lighten( $grey, 20% );
+				display: block;
+				color: $grey;
+				font-size: 14px;
+				line-height: 18px;
+				text-decoration: none;
+				padding: 5px 0;
+				border-bottom: 1px solid $grey-light;
 				cursor: pointer;
-				border-top: 1px solid lighten( $grey, 50% );
-				position: relative;
+				@include font-medium
+
+				@include respond-to( 768px ) {
+					padding: 10px 12px;
+				}
 
 				&:first-child {
 					border-top: none;
 				}
 
 				&.active {
-					color: darken( $grey, 40% );
+					@include font-bold;
 		
 					&:hover {
-						color: darken( $grey, 30% );
+						@include font-bold;
 					}
 				}
 
 				&:hover {
-					color: lighten( $grey, 5% );
+					color: $red-light;
 				}
 			}
 		}
