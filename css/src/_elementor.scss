@@ -15,6 +15,10 @@
 	background-color: rgba( black, .4 ) !important;
 }
 
+.elementor-widget-slides .elementor-slide-heading {
+	@include font-title-bold;
+}
+
 .elementor-editor-active {
 	.elementor-background-overlay {
 		display: none;

@@ -954,6 +954,10 @@ button, input[type=submit], input[type=reset], .btn {
 .elementor-widget-slides .elementor-background-overlay {
   background-color: rgba(0, 0, 0, 0.4) !important; }
 
+.elementor-widget-slides .elementor-slide-heading {
+  font-family: "Hepta Slab", serif;
+  font-weight: 600; }
+
 .elementor-editor-active .elementor-background-overlay {
   display: none; }
 
