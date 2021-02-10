@@ -21,6 +21,9 @@ jQuery(document).ready(function($){
 		// when the page scrolls
 		$( window ).on( 'scroll', function(){
 
+			// set some initial variables on load.
+			var columns_top = $( '.two-column' ).offset();
+
 			// get the scroll position
 			var scroll_position = $( window ).scrollTop();
 
