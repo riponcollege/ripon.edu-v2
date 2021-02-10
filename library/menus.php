@@ -23,7 +23,7 @@ function menu_metaboxes() {
     // menu metabox
     $menu_box = new_cmb2_box( array(
         'id' => 'menu_box',
-        'title' => 'Page Menus',
+        'title' => 'Sidebar Menu',
         'object_types' => array( 'page' ), // Post type
         'context' => 'normal',
         'priority' => 'default',

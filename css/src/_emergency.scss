@@ -1,0 +1,85 @@
+
+
+.emergency-bar-container {
+	background: $grey;
+	padding: 10px 20px;
+	color: white;
+	@include clearfix;
+	display: none;
+	position: relative;
+	z-index: 200;
+	border-bottom: 1px solid darken( $grey, 5% );
+	font-size: .85em;
+
+	a {
+		color: white;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	&.show {
+		display: block;
+	}
+
+	.close {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		cursor: pointer;
+		transform: scale( 1.4, 1.0 );
+	}
+
+	&.red-light {
+		background: $red-light;
+		color: white;
+		border-bottom: 1px solid darken( $red-light, 5% );
+
+		a {
+			color: white;
+		}
+	}
+
+	&.red-dark {
+		background: $red-dark;
+		color: white;
+		border-bottom: 1px solid darken( $red-dark, 5% );
+
+		a {
+			color: white;
+		}
+	}
+
+	&.orange {
+		background: $orange;
+		color: white;
+		border-bottom: 1px solid darken( $orange, 5% );
+
+		a {
+			color: white;
+		}
+	}
+
+	&.yellow {
+		background: $yellow;
+		color: black;
+		border-bottom: 1px solid darken( $yellow, 5% );
+
+		a {
+			color: black;
+		}
+	}
+
+	&.teal {
+		background: $teal;
+		color: white;
+		border-bottom: 1px solid darken( $teal, 5% );
+
+		a {
+			color: white;
+		}
+	}
+}
+

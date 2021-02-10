@@ -2,8 +2,8 @@
 
 
 // cmb2 fields for managing the menu
-add_action( 'cmb2_admin_init', 'cta_metaboxes' );
-function cta_metaboxes() {
+add_action( 'cmb2_admin_init', 'cta_metabox' );
+function cta_metabox() {
 
     // menu metabox
     $cta_box = new_cmb2_box( array(
@@ -39,7 +39,7 @@ function cta_metaboxes() {
 
 
 
-function call_to_action() {
+function the_call_to_action() {
 	$button_one_text = get_cmb_value( 'cta_1_text' );
 	$button_one_link = get_cmb_value( 'cta_1_link' );
 	$button_two_text = get_cmb_value( 'cta_2_text' );
