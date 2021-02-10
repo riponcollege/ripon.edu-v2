@@ -42,6 +42,7 @@ add_filter( 'cmb2_init', 'emergency_metabox' );
 
 
 // emergency bar output function
+add_action ( 'after_header' , 'the_emergency_bar', 20 );
 function the_emergency_bar() {
 
 	// narrow content

@@ -3,10 +3,6 @@
 get_header();
 
 
-// output the emergency bar
-the_emergency_bar();
-
-
 // determine template to use
 if ( has_cmb_value( 'menu_primary' ) ) {
 	get_template_part( 'parts/two-column' );
