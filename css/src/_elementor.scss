@@ -16,6 +16,10 @@
 	box-shadow: 0 0 30px rgba( black, .4 );
 }
 
+.elementor-widget:not(:last-child) {
+    margin-bottom: 10px;
+}
+
 .elementor-widget-slides .elementor-background-overlay {
 	background-color: rgba( black, .4 ) !important;
 }

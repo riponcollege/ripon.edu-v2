@@ -955,6 +955,9 @@ button, input[type=submit], input[type=reset], .btn {
 .elementor .elementor-background-video-container {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); }
 
+.elementor-widget:not(:last-child) {
+  margin-bottom: 10px; }
+
 .elementor-widget-slides .elementor-background-overlay {
   background-color: rgba(0, 0, 0, 0.4) !important; }
 
