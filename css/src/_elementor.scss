@@ -3,10 +3,6 @@
 	padding: 0;
 }
 
-.elementor-widget-heading, .elementor-widget-text-editor {
-	padding: 10px 20px;
-}
-
 .elementor-widget-slides {
 	box-shadow: 0 0 30px rgba( black, .4 );
 	margin-bottom: 20px;
@@ -14,10 +10,6 @@
 
 .elementor .elementor-background-video-container {
 	box-shadow: 0 0 30px rgba( black, .4 );
-}
-
-.elementor-widget:not(:last-child) {
-    margin-bottom: 10px;
 }
 
 .elementor-widget-slides .elementor-background-overlay {

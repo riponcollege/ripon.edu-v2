@@ -945,18 +945,12 @@ button, input[type=submit], input[type=reset], .btn {
 .elementor-column-gap-default > .elementor-row > .elementor-column > .elementor-element-populated {
   padding: 0; }
 
-.elementor-widget-heading, .elementor-widget-text-editor {
-  padding: 10px 20px; }
-
 .elementor-widget-slides {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
   margin-bottom: 20px; }
 
 .elementor .elementor-background-video-container {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); }
-
-.elementor-widget:not(:last-child) {
-  margin-bottom: 10px; }
 
 .elementor-widget-slides .elementor-background-overlay {
   background-color: rgba(0, 0, 0, 0.4) !important; }
