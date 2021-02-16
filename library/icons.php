@@ -33,6 +33,7 @@ function the_icon_showcase() {
 
 
 // add metabox(es)
+add_filter( 'cmb2_init', 'icon_metabox' );
 function icon_metabox( $meta_boxes ) {
 
     global $colors;
@@ -77,18 +78,19 @@ function icon_metabox( $meta_boxes ) {
         'name' => 'Title',
         'desc' => 'Set a title to display below this icon.',
         'id'   => 'title',
-        'type' => 'text',
-        'sanitization_cb' => false
+        'type' => 'wysiwyg',
+        'options' => array (
+            'textarea_rows' => 4
+        )
     ) );
 
     $icon_showcase_metabox->add_group_field( $icon_showcase_metabox_group, array(
         'name' => 'Link',
-        'desc' => 'Specify a URL to which this ad should link.',
+        'desc' => 'Specify a URL to which this icon box should link. (Optional)',
         'id'   => 'link',
         'type' => 'text',
     ) );
 
 }
-add_filter( 'cmb2_init', 'icon_metabox' );
 
 

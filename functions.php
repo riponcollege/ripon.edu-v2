@@ -38,11 +38,7 @@ require_multi(
 	// include the essential components
 	'site', 'metabox', 
 
-	// include custom post types
-	'post-type/area', 'post-type/faculty', 'post-type/fund', 'post-type/alum', 'post-type/year', 
-
-	// include theme functions and metaboxes
-	'menus', 'library', 'scripts', 'images', 'search', 'emergency', 'icons', 'accordion', 'button', 'page-header', 'call-to-action', 'hep/send-donation'
+	'post-type/faculty', 'post-type/fund', 'post-type/alum', 'post-type/year', 'menus', 'library', 'scripts', 'images', 'search', 'emergency', 'icons', 'post-type/area', 'accordion', 'button', 'page-header', 'call-to-action', 'hep/send-donation'
 
 );
 

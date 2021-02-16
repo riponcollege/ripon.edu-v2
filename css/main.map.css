@@ -376,7 +376,7 @@ ol {
         font-size: 14px;
         line-height: 18px;
         text-decoration: none;
-        padding: 5px 0;
+        padding: 5px 20px;
         border-bottom: 1px solid #EBEAE9;
         font-family: "Open Sans", sans-serif;
         font-weight: 600; }
@@ -1075,7 +1075,7 @@ button, input[type=submit], input[type=reset], .btn {
       font-size: 14px;
       line-height: 18px;
       text-decoration: none;
-      padding: 5px 0;
+      padding: 5px 20px;
       border-bottom: 1px solid #EBEAE9;
       cursor: pointer;
       font-family: "Open Sans", sans-serif;
@@ -1215,31 +1215,6 @@ button, input[type=submit], input[type=reset], .btn {
     .area-legend .term-description p {
       padding: 0; }
 
-.icon-header {
-  padding: 20px;
-  display: flex; }
-  @media only screen and (min-width: 1024px) {
-    .icon-header {
-      padding: 30px; } }
-  .icon-header .icon {
-    text-align: center;
-    width: 20%; }
-    @media only screen and (min-width: 1024px) {
-      .icon-header .icon {
-        width: 15%; } }
-    @media only screen and (min-width: 1220px) {
-      .icon-header .icon {
-        width: 10%; } }
-  .icon-header .intro {
-    width: 80%; }
-    @media only screen and (min-width: 1024px) {
-      .icon-header .intro {
-        width: 85%; } }
-    @media only screen and (min-width: 1220px) {
-      .icon-header .intro {
-        width: 90%;
-        padding-left: 20px; } }
-
 .icons {
   margin: 30px -20px; }
   @media only screen and (min-width: 768px) {
@@ -1253,11 +1228,11 @@ button, input[type=submit], input[type=reset], .btn {
     padding: 20px; }
     @media only screen and (min-width: 860px) {
       .icons .icon {
-        width: 33.3333%;
+        flex-grow: 1;
+        flex-basis: 0;
         padding: 40px 20px; } }
     @media only screen and (min-width: 1220px) {
       .icons .icon {
-        width: 30.3333%;
         margin: 0 3% 0 0;
         padding: 40px; } }
 
