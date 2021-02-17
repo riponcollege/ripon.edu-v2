@@ -1232,7 +1232,8 @@ button, input[type=submit], input[type=reset], .btn {
       .icon-header .icon {
         width: 10%; } }
   .icon-header .intro {
-    width: 80%; }
+    width: 80%;
+    padding-left: 20px; }
     @media only screen and (min-width: 1024px) {
       .icon-header .intro {
         width: 85%;
@@ -1243,6 +1244,9 @@ button, input[type=submit], input[type=reset], .btn {
         padding-left: 20px; } }
     .icon-header .intro p {
       padding: 0; }
+      @media only screen and (min-width: 1220px) {
+        .icon-header .intro p {
+          padding: 10px 0; } }
 
 .icons {
   margin: 30px -20px; }
