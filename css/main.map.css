@@ -561,12 +561,13 @@ header {
       header .slogan {
         display: block;
         position: absolute;
-        bottom: 20px;
+        top: 30px;
         left: 200px;
-        font-size: .9em;
         color: rgba(255, 255, 255, 0.7);
         text-transform: uppercase;
-        letter-spacing: 1px; } }
+        letter-spacing: 1px;
+        font-size: 13px;
+        line-height: 25px; } }
     @media only screen and (min-width: 1220px) {
       header .slogan {
         left: 250px; } }
@@ -582,17 +583,16 @@ header {
           display: inline; }
           header .buttons li a {
             display: inline-block;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            color: white;
-            font-size: 20px;
+            color: rgba(255, 255, 255, 0.8);
             text-transform: uppercase;
             padding: 5px 10px;
             text-decoration: none;
             transition: all 400ms ease-in-out;
             margin: 0 10px;
-            font-size: 16.5px; }
+            font-size: 16.5px;
+            line-height: 25px; }
             header .buttons li a:hover {
-              border: 2px solid rgba(255, 255, 255, 0.8); } }
+              color: white; } }
     @media only screen and (min-width: 1220px) {
       header .buttons {
         right: 250px; }

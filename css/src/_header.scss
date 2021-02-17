@@ -19,12 +19,13 @@ header {
 		@include respond-to( 768px ) {
 			display: block;
 			position: absolute;
-			bottom: 20px;
+			top: 30px;
 			left: 200px;
-			font-size: .9em;
 			color: rgba( white, .7 );
 			text-transform: uppercase;
 			letter-spacing: 1px;
+			font-size: 13px;
+			line-height: 25px;
 		}
 
 		@include respond-to( 1220px ) {
@@ -46,18 +47,17 @@ header {
 
 				a {
 					display: inline-block;
-					border: 2px solid rgba( white, .2 );
-					color: white;
-					font-size: 20px;
+					color: rgba( white, .8 );
 					text-transform: uppercase;
 					padding: 5px 10px;
 					text-decoration: none;
 					transition: all 400ms ease-in-out;
 					margin: 0 10px;
 					font-size: 16.5px;
+					line-height: 25px;
 
 					&:hover {
-						border: 2px solid rgba( white, .8 );
+						color: white;
 					}
 				}
 			}
