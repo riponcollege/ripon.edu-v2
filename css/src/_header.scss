@@ -152,11 +152,11 @@ header {
 	.breadcrumbs {
 		position: absolute;
 		bottom: 20px;
-		right: 20px;
+		left: 20px;
 		text-shadow: 0 0 10px rgba( black, .6 );
 		color: white;
 		font-size: .85em;
-		text-align: right;
+		text-align: left;
 
 		a {
 			color: white;
@@ -179,7 +179,7 @@ header {
 		}
 
 		@include respond-to( 1220px ) {
-			right: 40px;
+			left: 50px;
 			bottom: 40px;
 
 			.page-title {
