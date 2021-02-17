@@ -319,9 +319,19 @@
 	}
 
 	.area-filter {
+		select {
+			width: 100%;
+			margin-bottom: 20px;
+
+			@include respond-to( 1024px ) {
+				width: auto;
+			}
+		}
+
 		@include respond-to( 1024px ) {
 			float: right;
 			margin-left: 15px;
+			margin-bottom: 0;
 		}
 
 		select {
