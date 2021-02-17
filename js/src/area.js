@@ -113,15 +113,22 @@ jQuery(document).ready(function($){
 
 			// if they choose all.
 			if ( $(this).val() == 'all' ) {
+				// reset the mini legend and term visibility to initial settings
 				area_legend.find('.mini-legend').show();
 				area_legend.find('.term').hide();
 			} else {
+				// loop through and hide all items that don't fit the filter
 				area_list.find( 'li:not(.'+filter_value+')' ).each(function(){
 					$(this).hide();
 				});
 
+				// hide all terms that aren't the one they chose.
 				area_legend.find( '.term:not(.'+filter_value+')' ).hide();
+
+				// show the legend item for the area category they chose
 				area_legend.find( '.term.'+filter_value+'' ).css('display','flex');
+
+				// hide the legend
 				area_legend.find( '.mini-legend' ).hide();
 			}
 
