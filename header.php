@@ -101,7 +101,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</div>
 
 		<div class="slogan">
-			It's a slogan.
+			<?php bloginfo('description'); ?>
 		</div>
 
 		<button class="menu-show">menu</button>
@@ -114,7 +114,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 	</header>
+	<?php do_action( 'after_header' ); ?>
 
 	<section class="content">
-		<?php do_action( 'after_header' ); ?>
+		<?php do_action( 'before_content' ); ?>
 		
