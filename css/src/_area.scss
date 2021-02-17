@@ -48,42 +48,36 @@
 		color: white;
 	}
 
-	.column {
-		@include respond-to( 1220px ) {
-			float: left;
-			width: 48%;
-			margin: 0 2% 0 0;
-		}
+	.area-listing {
+		ul {
+			list-style-type: none;
 
-		li {
-			padding: 10px;
-			box-shadow: 0 0 10px rgba( black, .1 );
-			margin: 10px 0;
+			li {
+				padding: 10px;
+				box-shadow: 0 0 10px rgba( black, .1 );
+				margin: 10px 0;
 
-			a {
-				text-decoration: none;
-				width: 70%;
-				display: inline-block;
-				color: $grey;
+				a {
+					text-decoration: none;
+					width: 70%;
+					display: inline-block;
+					color: $grey;
 
-				@include respond-to( 768px ) {
-					width: 80%;
+					@include respond-to( 768px ) {
+						width: 80%;
+					}
 				}
-			}
 
-			span {
-				float: right;
-				margin: -4px 0 0 5px;
+				span {
+					float: right;
+					margin: -4px 0 0 5px;
 
-				@include respond-to( 768px ) {
-					margin: -3px 0 0 5px;
+					@include respond-to( 768px ) {
+						margin: -3px 0 0 5px;
+					}
 				}
 			}
 		}
-	}
-
-	.area-legend {
-		padding: 20px 0 30px;
 	}
 }
 
@@ -274,6 +268,10 @@
 .area-legend {
 	margin: 0 -20px;
 
+	@include respond-to( 768px ) {
+		margin: 20px 0;
+	}
+
 	dl {
 		background: $grey-light;
 		padding: 20px;
@@ -285,30 +283,21 @@
 	}
 
 	.term {
-		display: flex;
-		background: white;
-		box-shadow: 0 0 15px rgba( black, .2);
-		margin-bottom: 10px;
-
-		@include respond-to( 1024px ) {
-			float: left;
-			width: 48%;
-			margin: 10px 1%;
-		}
+		display: none;
 
 		dt {
 			width: 20%;
 			padding: 10px;
 			text-align: center;
 
-			@include respond-to( 768px ) { width: 10%; }
+			@include respond-to( 1024px ) { width: 10%; }
 		}
 
 		dd {
 			width: 80%;
 			padding: 5px;
 
-			@include respond-to( 768px ) { width: 90%; }
+			@include respond-to( 1024px ) { width: 90%; }
 		}
 	}
 
@@ -318,6 +307,27 @@
 
 		p {
 			padding: 0;
+		}
+	}
+
+	.mini-legend {
+		.item {
+			display: inline-block;
+			white-space: nowrap;
+			padding: 5px 10px;
+		}
+	}
+
+	.area-filter {
+		@include respond-to( 1024px ) {
+			float: right;
+			margin-left: 15px;
+		}
+
+		select {
+			@include font;
+			padding: 10px 15px;
+			border: 2px solid $grey;
 		}
 	}
 }

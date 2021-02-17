@@ -10,7 +10,7 @@ get_header();
 	
 	<?php page_header(); ?>
 	
-	<div class="two-column area-listing">
+	<div class="two-column">
 
 		<div class="sidebar">
 		<?php
@@ -19,7 +19,7 @@ get_header();
 		?>
 		</div>
 
-		<div class="right-column">
+		<div class="right-column area-listing">
 			<?php 
 			while ( have_posts() ) : the_post(); ?>
 			
@@ -42,35 +42,41 @@ get_header();
 						</div>
 					</div>
 					<dl>
-						<div class="term">
+						<div class="area-filter">
+							<select><option value="all">-- All Areas --</option><option value="ma">Major</option><option value="mi">Minor</option><option value="pa">Pre-Professional Advising</option><option value="tc">Teaching Certification</option><option value="dd">Dual Degree</option></select>
+						</div>
+						<div class="mini-legend">
+							<span class="item"><span class="ma">MA</span> = Major</span><span class="item"><span class="mi">MI</span> = Minor</span><span class="item"><span class="pa">PA</span> = Pre-Professional Advising</span><span class="item"><span class="tc">TC</span> = Teaching Certification</span><span class="item"><span class="dd">DD</span> = Dual Degree</span>
+						</div>
+						<div class="term ma">
 							<dt><span class="ma">MA</span></dt>
 							<dd>
 								Major
 								<span class="term-description"><?php echo term_description( 502, "area_cat" ); ?></span>
 							</dd>
 						</div>
-						<div class="term">
+						<div class="term mi">
 							<dt><span class="mi">MI</span></dt>
 							<dd>
 								Minor
 								<span class="term-description"><?php echo term_description( 503, "area_cat" ); ?></span>
 							</dd>
 						</div>
-						<div class="term">
+						<div class="term pa">
 							<dt><span class="pa">PA</span></dt>
 							<dd>
 								Pre-Professional Advising
 								<span class="term-description"><?php echo term_description( 5297, "area_cat" ); ?></span>
 							</dd>
 						</div>
-						<div class="term">
+						<div class="term tc">
 							<dt><span class="tc">TC</span></dt>
 							<dd>
 								Teaching Certification
 								<span class="term-description"><?php echo term_description( 5316, "area_cat" ); ?></span>
 							</dd>
 						</div>
-						<div class="term">
+						<div class="term dd">
 							<dt><span class="dd">DD</span></dt>
 							<dd>
 								Dual Degree<br>
@@ -79,7 +85,7 @@ get_header();
 						</div>
 					</dl>
 				</div>
-				<div class="group area-tabs">
+				<div class="group area-listing">
 					<?php list_area_category() ?>
 				</div>
 

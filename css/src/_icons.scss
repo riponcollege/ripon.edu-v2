@@ -17,10 +17,18 @@
 
 	.intro {
 		width: 80%;
-		@include respond-to( 1024px ) { width: 85%; }
+		
+		@include respond-to( 1024px ) { 
+			width: 85%;
+			padding-left: 10px;
+		}
 		@include respond-to( 1220px ) {
 			width: 90%;
 			padding-left: 20px;
+		}
+
+		p {
+			padding: 0;
 		}
 	}
 }

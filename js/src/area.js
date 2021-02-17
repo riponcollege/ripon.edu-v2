@@ -86,6 +86,48 @@ jQuery(document).ready(function($){
 		// set faculty photo height equal to width.
 		set_photo_height();
 	}
+
+
+	// handle area filtering on the main areas-of-study page
+	if ( $('.area-listing').length > 0 ) {
+
+		// store some sections of the page
+		var area_list = $('.area-listing');
+		var area_filter = $('.area-filter select');
+		var area_legend = $('.area-legend');
+
+		// function to reset the list if they choose 'all'
+		var reset_list = function(){
+			area_list.find('li').show();
+		}
+
+		// area filter select list change
+		area_filter.on( 'change', function(){
+
+			// reset the listing
+			reset_list();
+
+			// get the filter value
+			var filter_value = $(this).val();
+
+
+			// if they choose all.
+			if ( $(this).val() == 'all' ) {
+				area_legend.find('.mini-legend').show();
+				area_legend.find('.term').hide();
+			} else {
+				area_list.find( 'li:not(.'+filter_value+')' ).each(function(){
+					$(this).hide();
+				});
+
+				area_legend.find( '.term:not(.'+filter_value+')' ).hide();
+				area_legend.find( '.term.'+filter_value+'' ).css('display','flex');
+				area_legend.find( '.mini-legend' ).hide();
+			}
+
+		});
+
+	}
 	
 });
 
