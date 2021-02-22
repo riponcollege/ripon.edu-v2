@@ -863,6 +863,15 @@ footer {
     .pad {
       padding: 30px; } }
 
+.content-wide {
+  padding: 20px; }
+  @media only screen and (min-width: 768px) {
+    .content-wide {
+      padding: 20px 30px; } }
+  @media only screen and (min-width: 1024px) {
+    .content-wide {
+      padding: 20px 40px; } }
+
 .content-style ol, .area .tab-content ol, .content-style ul, .area .tab-content ul {
   padding: 7px 0 7px 30px; }
 

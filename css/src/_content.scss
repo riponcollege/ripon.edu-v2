@@ -9,6 +9,19 @@
 }
 
 
+.content-wide {
+	padding: 20px;
+
+	@include respond-to( 768px ) {
+		padding: 20px 30px;
+	}
+
+	@include respond-to( 1024px ) {
+		padding: 20px 40px;
+	}
+}
+
+
 .content-style {
 	ol, ul {
 		padding: 7px 0 7px 30px;
