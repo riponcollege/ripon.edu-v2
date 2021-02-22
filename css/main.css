@@ -1343,10 +1343,12 @@ button, input[type=submit], input[type=reset], .btn {
         .crowd-funding .fund:nth-child(3), .crowd-funding .fund:nth-child(6), .crowd-funding .fund:nth-child(9), .crowd-funding .fund:nth-child(12), .crowd-funding .fund:nth-child(15), .crowd-funding .fund:nth-child(18), .crowd-funding .fund:nth-child(21), .crowd-funding .fund:nth-child(24), .crowd-funding .fund:nth-child(27), .crowd-funding .fund:nth-child(30), .crowd-funding .fund:nth-child(33), .crowd-funding .fund:nth-child(36), .crowd-funding .fund:nth-child(39) {
           margin-right: 0; } }
 
-.alum-listing a {
-  text-decoration: none; }
-  .alum-listing a:hover .alum .alum-category {
-    opacity: 1; }
+.alum-listing {
+  margin-right: -2%; }
+  .alum-listing a {
+    text-decoration: none; }
+    .alum-listing a:hover .alum .alum-category {
+      opacity: 1; }
 
 .alum {
   border: 1px solid #888;

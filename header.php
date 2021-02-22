@@ -18,7 +18,7 @@
 <?php wp_head(); ?>
 
 <?php if ( is_search() ) { ?><meta name="robots" content="noindex" /><?php } ?>
-<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=213" rel="stylesheet" type="text/css">
+<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=214" rel="stylesheet" type="text/css">
 
 <!-- Facebook Pixel Code -->
 <script>
