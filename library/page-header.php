@@ -43,6 +43,7 @@ function page_header() {
 			</div>
 			<h1 class="page-title"><?php the_title(); ?></h1>
 		</div>
+		<?php the_call_to_action() ?>
 	</div>
 	<?php
 }

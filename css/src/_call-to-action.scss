@@ -13,7 +13,6 @@ body.cta-active {
 	color: white;
 	text-align: center;
 	padding: 10px;
-	transition: bottom 500ms ease-in-out;
 	z-index: 500;
 	position: relative;
 
@@ -60,3 +59,26 @@ body.cta-active {
 		color: rgba( white, .7 );
 	}
 }
+
+
+.page-header .call-to-action {
+	display: none;
+	background: none;
+
+	.cta-active & {
+		display: none;
+	}
+
+	@include respond-to( 768px ) {
+		display: block;
+		position: absolute;
+		right: 10px;
+		bottom: 15px;
+
+		.back-to-top {
+			display: none;
+		}
+
+	}
+}
+

@@ -11,7 +11,12 @@ jQuery(document).ready(function($){
 
 			// store some variables
 	        var scroll_position = $(window).scrollTop();
-	        var content_top = $('.content').offset().top;
+
+	        if ( $( '.two-column' ).length ) {
+	        	var content_top = $('.two-column').offset().top;
+	        } else {
+		        var content_top = $('.content').offset().top;
+	        }
 
 	        // if scrolled past the top of the content div, show the ctas
 	       	if ( scroll_position > content_top ) {

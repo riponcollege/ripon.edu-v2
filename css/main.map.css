@@ -775,7 +775,6 @@ body.cta-active {
   color: white;
   text-align: center;
   padding: 10px;
-  transition: bottom 500ms ease-in-out;
   z-index: 500;
   position: relative; }
   @media only screen and (min-width: 768px) {
@@ -809,6 +808,20 @@ body.cta-active {
     border: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     color: rgba(255, 255, 255, 0.7); }
+
+.page-header .call-to-action {
+  display: none;
+  background: none; }
+  .cta-active .page-header .call-to-action {
+    display: none; }
+  @media only screen and (min-width: 768px) {
+    .page-header .call-to-action {
+      display: block;
+      position: absolute;
+      right: 10px;
+      bottom: 15px; }
+      .page-header .call-to-action .back-to-top {
+        display: none; } }
 
 footer {
   zoom: 1;
