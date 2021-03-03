@@ -387,6 +387,12 @@ ol {
           color: #A91C3A; }
       .two-column .sidebar .nav-menu li .sub-menu {
         display: none; }
+        .two-column .sidebar .nav-menu li .sub-menu.open {
+          display: block;
+          padding-left: 20px; }
+          .two-column .sidebar .nav-menu li .sub-menu.open li a {
+            font-family: "Open Sans", sans-serif;
+            font-weight: 300; }
   .two-column .right-column {
     padding: 20px; }
     @media only screen and (min-width: 768px) {
@@ -492,7 +498,10 @@ body {
             padding: 5px; }
           .menu-pane .main-menu .sub-menu.open {
             opacity: 1;
-            right: 28%; } }
+            right: 330px; } }
+      @media only screen and (min-width: 1100px) {
+        .menu-pane .main-menu .sub-menu.open {
+          right: 28%; } }
   .menu-pane .buttons {
     padding-top: 30px; }
     .menu-pane .buttons li a {

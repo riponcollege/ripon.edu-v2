@@ -74,6 +74,15 @@
 
 				.sub-menu {
 					display: none;
+
+					&.open {
+						display: block;
+						padding-left: 20px;
+
+						li a {
+							@include font;
+						}
+					}
 				}
 			}
 		}

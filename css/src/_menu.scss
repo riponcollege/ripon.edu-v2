@@ -119,6 +119,12 @@ body {
 
 				&.open {
 					opacity: 1;
+					right: 330px;
+				}
+			}
+
+			@include respond-to( 1100px ) {
+				&.open {
 					right: 28%;
 				}
 			}
