@@ -40,6 +40,7 @@ $courses = get_cmb_value( "faculty_courses" );
 			</div>
 		</div>
 		<div class="right-column">
+			<?php the_icon_showcase(); ?>
 			<?php the_content(); ?>
 		</div>
 			<?php

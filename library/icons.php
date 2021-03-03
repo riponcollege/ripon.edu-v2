@@ -42,7 +42,7 @@ function icon_metabox( $meta_boxes ) {
     $icon_showcase_metabox = new_cmb2_box( array(
         'id' => 'icon_showcase_metabox',
         'title' => 'Icon Showcase',
-        'object_types' => array( 'area' ),
+        'object_types' => array( 'area', 'faculty' ),
         'context' => 'normal',
         'priority' => 'high',
     ) );
