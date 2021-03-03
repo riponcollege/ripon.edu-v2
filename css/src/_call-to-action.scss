@@ -78,7 +78,11 @@ body.cta-active {
 		.back-to-top {
 			display: none;
 		}
+	}
 
+	@include respond-to( 1220px ) {
+		right: 30px;
+		bottom: 30px;
 	}
 }
 

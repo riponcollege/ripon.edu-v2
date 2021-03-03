@@ -831,6 +831,10 @@ body.cta-active {
       bottom: 15px; }
       .page-header .call-to-action .back-to-top {
         display: none; } }
+  @media only screen and (min-width: 1220px) {
+    .page-header .call-to-action {
+      right: 30px;
+      bottom: 30px; } }
 
 footer {
   zoom: 1;
