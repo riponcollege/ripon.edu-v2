@@ -656,6 +656,35 @@ header {
         height: 26px;
         bottom: auto; } }
 
+.info-for {
+  zoom: 1;
+  background: #434039;
+  display: none; }
+  .info-for:before, .info-for:after {
+    content: "";
+    display: table; }
+  .info-for, .info-for:before, .info-for:after {
+    clear: both; }
+  @media only screen and (min-width: 1024px) {
+    .info-for {
+      display: block; } }
+  .info-for ul li {
+    display: inline; }
+    .info-for ul li a {
+      color: white;
+      padding: 7px 14px;
+      display: inline-block;
+      font-size: .9em; }
+  .info-for .info-for-menu {
+    float: left;
+    padding: 0 0 0 20px; }
+    .info-for .info-for-menu a {
+      font-style: italic;
+      text-decoration: none; }
+  .info-for .info-for-aux {
+    float: right;
+    padding: 0 20px 0 0; }
+
 .page-header {
   background: url(../img/bg-area-header.webp) center center no-repeat;
   background-size: cover;

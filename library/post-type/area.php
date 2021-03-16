@@ -351,6 +351,25 @@ function area_metaboxes() {
     ) );
 
 
+	$args = array(
+		'taxonomy' => 'people_cat',
+		'orderby' => 'name',
+		'order'   => 'ASC'
+	);
+	$cats = get_categories($args);
+	$people_cats[''] = '- none -';
+    foreach ( $cats as $cat ) {
+        $people_cats[$cat->slug] = $cat->name;
+    }
+    $area_box->add_field( array(
+        'name' => 'People to List',
+        'desc' => 'Which category of people to display as the faculty list for the faculty list for this area.',
+        'id' => $prefix . 'area_faculty_list',
+        'type' => 'select',
+        'options' => $people_cats,
+    ) );
+
+
     // get all the tags so they can select one to display related posts on individual area pages.
     $all_tags = get_tags();
     $tag_options = array(

@@ -67,7 +67,7 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 			<div class="tab-nav">
 				<ul>
 					<li class="area-overview active">Overview</li>
-					<li class="area-faculty">Faculty</li>
+					<?php if ( has_cmb_value( 'area_faculty_list' ) ) { ?><li class="area-faculty">Faculty</li><?php } ?>
 					<?php do_area_tab_nav( "Requirements", "requirements" ) ?>
 					<?php do_area_tab_nav( "Career Tracks", "tracks" ) ?>
 					<?php do_area_tab_nav( "Unique Opportunities", "opportunities" ) ?>
@@ -85,25 +85,6 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 			</div>
 			
 			<div class="area-inner">
-
-				<!--
-				<?php
-				if ( has_cmb_value( 'area_facebook' ) ) {
-					?><a href="<?php show_cmb_value( 'area_facebook' ); ?>" class="btn sample-schedule">View Sample<br> Course Schedule</a><?php
-				}
-				?>
-				
-				<h1 class="area-title"><?php the_title(); ?></h1>
-				<h3 class="area-subtitle"><?php 
-				$terms = wp_get_post_terms( get_the_ID(), 'area_cat' );
-				$terms_array = array();
-				foreach ( $terms as $term ) {
-					$terms_array[] = str_replace( 'Minors', 'Minor', str_replace( 'Majors', 'Major', $term->name ) );
-				}
-				// print_r( $terms_array );
-				print implode( ', ', $terms_array );
-				?></h3>
-				-->
 
 				<div class="tab-content active area-overview">
 					<h2>Overview</h2>
@@ -168,50 +149,14 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 
 				</div>
 
+				<?php if ( has_cmb_value( 'area_faculty_list' ) ) { ?>
 				<div class="tab-content area-faculty">
 					<h2>Faculty</h2>
-
-					<?php 
-					$faculty_query = new WP_Query( array(
-						"post__in" => $faculty,
-						"post_type" => 'faculty',
-						"posts_per_page" => -1,
-						"order" => "ASC",
-						"orderby" => "title"
-					) );
-
-					if ( $faculty_query->have_posts() ) : 
-						?>
-
 					<div class="area-faculty">
-					<?php
-
-						// Start the Loop.
-						while ( $faculty_query->have_posts() ) : $faculty_query->the_post();
-							?>
-							<div class="faculty-entry">
-								<a href="<?php the_permalink(); ?>">
-								<div class="photo" style="background-image: url(<?php the_post_thumbnail_url( array( 500, 500 ) ); ?>);"></div>
-								<div class="info">
-									<h4><?php the_title(); ?></h4>
-									<p class="faculty-title"><?php print get_cmb_value( "faculty_title" ); ?></p>
-								</div>
-								</a>
-							</div>
-							<?php
-
-						endwhile;
-
-						?>
+						<?php print do_shortcode( '[people category="' . get_cmb_value( 'area_faculty_list' ) . '" /]' ); ?>
 					</div>
-					<?php
-					endif;
-
-					wp_reset_query();
-					
-					?>
-
 				</div>
+				<?php } ?>
 
 				<div class="tab-content area-advising">
 					<h2>Advising</h2>

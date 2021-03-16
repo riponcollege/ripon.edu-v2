@@ -114,6 +114,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 	</header>
+	<?php if ( is_home() || is_front_page() ) { ?>
+	<section class="info-for">
+		<div class="info-for-menu">
+			<?php wp_nav_menu( array( 'theme_location' => 'info-for', 'menu_class' => 'nav-menu' ) ); ?>
+		</div>
+		<div class="info-for-aux">
+			<?php wp_nav_menu( array( 'theme_location' => 'info-for-aux', 'menu_class' => 'nav-menu' ) ); ?>
+		</div>
+	</section>
+	<?php } ?>
 	<?php do_action( 'after_header' ); ?>
 
 	<section class="content">

@@ -129,63 +129,40 @@ header {
 }
 
 
-.page-header {
-	background: url(../img/bg-area-header.webp) center center no-repeat;
-	background-size: cover;
-	min-height: 250px;
-	position: relative;
-	box-shadow: 0 0 30px rgba( black, .4 );
+.info-for {
+	@include clearfix;
+	background: $grey;
+	display: none;
 
-	@include respond-to( 1220px ) {
-		min-height: 350px;
+	@include respond-to( 1024px ) {
+		display: block;
 	}
 
-	.page-header-overlay {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background-color: rgba( darken( $red-dark, 15% ), .4 );
+	ul {
+		li {
+			display: inline;
+
+			a {
+				color: white;
+				padding: 7px 14px;
+				display: inline-block;
+				font-size: .9em;
+			}
+		}
 	}
 
-	.breadcrumbs {
-		position: absolute;
-		bottom: 20px;
-		left: 20px;
-		text-shadow: 0 0 10px rgba( black, .6 );
-		color: white;
-		font-size: .85em;
-		text-align: left;
+	.info-for-menu {
+		float: left;
+		padding: 0 0 0 20px;
 
 		a {
-			color: white;
+			font-style: italic;
 			text-decoration: none;
-			margin: 0 5px;
-
-			&:hover {
-				border-bottom: 1px dotted rgba( white, .5 );
-			}
-		}
-
-		.page-title {
-			@include font-title-bold;
-			font-size: 2em;
-			line-height: 1.4em;
-
-			@include respond-to( 1024px ) {
-				font-size: 2.4em;
-			}
-		}
-
-		@include respond-to( 1220px ) {
-			left: 50px;
-			bottom: 40px;
-
-			.page-title {
-				font-size: 2.4em;
-			}
 		}
 	}
-}
 
+	.info-for-aux {
+		float: right;
+		padding: 0 20px 0 0;
+	}
+}

@@ -9,6 +9,8 @@ register_nav_menus( array(
 	'search-popular' => 'Search - Popular',
 	'library-databases' => 'Library - Databases',
 	'library-guides' => 'Library - Guides',
+	'info-for' => 'Header - Information For',
+	'info-for-aux' => 'Header - Information For Auxiliary'
 ) );
 
 
