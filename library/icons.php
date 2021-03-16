@@ -4,29 +4,43 @@
 // icon showcase
 function the_icon_showcase() {
 
-	$icons = get_cmb_value( 'icon_showcase' );
+    $icons = get_cmb_value( 'icon_showcase' );
 
-	if ( !empty( $icons ) ) {
+    if ( !empty( $icons ) ) {
         ?>
         <div class="icons text-center group">
         <?php
         $num=1;
-		foreach ( $icons as $icon ) {
-			if ( !empty( $icon['image'] ) ) { ?>
-			<?php if ( !empty( $icon['link'] ) ) { ?><a href="<?php print $icon['link']; ?>"><?php } ?>
-				<div class="icon bg-<?php print $icon['color'] ?> icon-<?php print $num ?>">
-					<img src="<?php print $icon['image']; ?>" alt="Icon for: <?php print strip_tags( $icon['title'] ); ?>">
-					<?php if ( !empty( $icon['title'] ) ) { ?><p><?php print $icon['title']; ?></p><?php } ?>
-				</div>
-			<?php if ( !empty( $icon['link'] ) ) { ?></a><?php } ?>
-				<?php 
+        foreach ( $icons as $icon ) {
+            if ( !empty( $icon['image'] ) ) { ?>
+            <?php if ( !empty( $icon['link'] ) ) { ?><a href="<?php print $icon['link']; ?>"><?php } ?>
+                <div class="icon bg-<?php print $icon['color'] ?> icon-<?php print $num ?>">
+                    <img src="<?php print $icon['image']; ?>" alt="Icon for: <?php print strip_tags( $icon['title'] ); ?>">
+                    <?php if ( !empty( $icon['title'] ) ) { print apply_filters( 'the_content', $icon['title'] ); } ?>
+                </div>
+            <?php if ( !empty( $icon['link'] ) ) { ?></a><?php } ?>
+                <?php 
                 $num++;
-			}
-		}
+            }
+        }
         ?>
         </div>
         <?php
-	}
+    }
+
+}
+
+
+// icon showcase
+function has_icon_showcase() {
+
+    $icons = get_cmb_value( 'icon_showcase' );
+
+    if ( !empty( $icons ) ) {
+        return true;
+    } else {
+        return false;
+    }
 
 }
 

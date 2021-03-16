@@ -1,12 +1,12 @@
 <?php
 
 
-function page_header() {
+function page_header( $title_override = '', $image_override = '' ) {
 	global $post;
 	
 	// get featured image.
-	$featured_image_url = get_the_post_thumbnail_url( null, 'full' );
-
+	$featured_image_url = ( !empty( $image_override ) ? $image_override : get_the_post_thumbnail_url( null, 'full' ) );
+ 
 	// get page ancestors
 	$ancestors = get_post_ancestors( get_the_ID() );
 
@@ -41,7 +41,7 @@ function page_header() {
 				<?php print_r( $crumb_code ); ?>
 				<!--<a href="/academics">Academics</a> &raquo; <a href="/areas-of-study">Areas of Study</a> &raquo; -->
 			</div>
-			<h1 class="page-title"><?php the_title(); ?></h1>
+			<h1 class="page-title"><?php print ( !empty( $title_override ) ? $title_override : get_the_title() ); ?></h1>
 		</div>
 		<?php the_call_to_action() ?>
 	</div>

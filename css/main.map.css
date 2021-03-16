@@ -153,20 +153,22 @@ h1 {
 
 h2 {
   font-size: 1.6em;
-  line-height: 1.2em; }
+  line-height: 1.3em; }
 
 h3 {
   font-size: 1.3em;
-  line-height: 1.2em; }
+  line-height: 1.3em; }
 
 h4 {
-  font-size: 1.2em;
-  line-height: 1.1em; }
+  font-size: 1.1em;
+  line-height: 1.3em;
+  font-family: "Hepta Slab", serif;
+  font-weight: 600; }
 
 h5 {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
-  font-size: 1.1em;
+  font-size: 1em;
   line-height: 1.1em; }
 
 h6 {
@@ -342,16 +344,6 @@ ol {
     border-bottom: 1px solid rgba(67, 64, 57, 0.2);
     padding: 20px; }
     @media only screen and (min-width: 768px) {
-      .two-column .sidebar .toggle-sidebar-menu {
-        display: none; } }
-    .two-column .sidebar .menu-title {
-      display: none;
-      font-size: 22px;
-      padding: 10px 0; }
-      @media only screen and (min-width: 768px) {
-        .two-column .sidebar .menu-title {
-          padding: 10px; } }
-    @media only screen and (min-width: 768px) {
       .two-column .sidebar {
         position: absolute;
         left: 30px;
@@ -363,7 +355,17 @@ ol {
     @media only screen and (min-width: 1220px) {
       .two-column .sidebar {
         left: 40px;
-        width: 23%; } }
+        width: 20%; } }
+    @media only screen and (min-width: 768px) {
+      .two-column .sidebar .toggle-sidebar-menu {
+        display: none; } }
+    .two-column .sidebar .menu-title {
+      display: none;
+      font-size: 22px;
+      padding: 10px 0; }
+      @media only screen and (min-width: 768px) {
+        .two-column .sidebar .menu-title {
+          padding: 10px; } }
     .two-column .sidebar.scrolled {
       position: fixed;
       z-index: 400; }
@@ -400,7 +402,7 @@ ol {
         padding: 30px 20px 50px 31%; } }
     @media only screen and (min-width: 1220px) {
       .two-column .right-column {
-        padding: 40px 40px 70px 28%; } }
+        padding: 40px 40px 70px 25%; } }
 
 .two-column {
   min-height: 900px; }
@@ -898,21 +900,42 @@ footer {
     .content-wide {
       padding: 20px 40px; } }
 
-.content-style ol, .area .tab-content ol, .content-style ul, .area .tab-content ul {
+.box {
+  background: #EBEAE9;
+  padding: 40px 20px;
+  margin: 0 -20px; }
+  @media only screen and (min-width: 768px) {
+    .box {
+      margin: 0;
+      padding: 20px 30px; } }
+  .box.red-dark {
+    background: #6A0A1B;
+    color: white; }
+  .box.red-light {
+    background: #A91C3A;
+    color: white; }
+  .box.orange {
+    background: #EA4D3D;
+    color: white; }
+  .box.grey-dark {
+    background: #434039;
+    color: white; }
+
+.content-style ol, .area .tab-content ol, .bio .bio-content ol, .content-style ul, .area .tab-content ul, .bio .bio-content ul {
   padding: 7px 0 7px 30px; }
 
-.content-style ul, .area .tab-content ul {
+.content-style ul, .area .tab-content ul, .bio .bio-content ul {
   list-style-type: disc; }
 
-.content-style ol, .area .tab-content ol {
+.content-style ol, .area .tab-content ol, .bio .bio-content ol {
   list-style-type: decimal; }
 
 @media only screen and (min-width: 600px) {
-  .content-style img.alignleft, .area .tab-content img.alignleft {
+  .content-style img.alignleft, .area .tab-content img.alignleft, .bio .bio-content img.alignleft {
     float: left;
     margin: 0 15px 15px 0; } }
 
-.content-style .buttons, .area .tab-content .buttons {
+.content-style .buttons, .area .tab-content .buttons, .bio .bio-content .buttons {
   padding: 20px 0; }
 
 button, input[type=submit], input[type=reset], .btn {
@@ -1291,16 +1314,18 @@ button, input[type=submit], input[type=reset], .btn {
           padding: 10px 0; } }
 
 .icons {
-  margin: 30px -20px; }
+  margin: 0 -20px; }
   @media only screen and (min-width: 768px) {
     .icons {
       margin: 30px 0; } }
   @media only screen and (min-width: 860px) {
     .icons {
-      display: flex;
+      display: flex; } }
+  @media only screen and (min-width: 1220px) {
+    .icons {
       margin-right: -3%; } }
   .icons .icon {
-    padding: 20px; }
+    padding: 40px 20px; }
     @media only screen and (min-width: 860px) {
       .icons .icon {
         flex-grow: 1;
@@ -1698,12 +1723,92 @@ button, input[type=submit], input[type=reset], .btn {
   .alum-banner-container a:hover .alum-banner-button {
     background: #0094E3; }
 
-.faculty-info {
-  text-align: center; }
-  .faculty-info p {
-    padding: 0; }
-  .faculty-info p.cv-link {
-    padding-top: 20px; }
+.people {
+  padding: 20px 0; }
+
+.people-search {
+  padding: 10px;
+  border: 3px solid #EBEAE9;
+  margin-bottom: 20px; }
+  .people-search input[type=text] {
+    font-family: "Hepta Slab", serif;
+    font-weight: 300;
+    display: block;
+    width: 100%;
+    padding: 0 0 0 40px;
+    border: 0;
+    background: url(../img/icon-search.webp) left center no-repeat;
+    background-size: contain;
+    font-size: 1.1em; }
+    .people-search input[type=text]:focus {
+      outline: 0; }
+
+@media only screen and (min-width: 500px) {
+  .people-listing {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -2%; } }
+
+@media only screen and (min-width: 900px) {
+  .people-listing {
+    margin-right: -1.333%; } }
+
+@media only screen and (min-width: 1220px) {
+  .people-listing {
+    margin-right: -2%; } }
+
+.people-listing .person-entry {
+  display: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); }
+  .people-listing .person-entry.visible {
+    display: block; }
+  .people-listing .person-entry img {
+    width: 100%; }
+  .people-listing .person-entry .info {
+    padding: 10px 20px 20px; }
+    .people-listing .person-entry .info h4 {
+      padding-bottom: 0; }
+    .people-listing .person-entry .info .person-title {
+      padding: 3px 0; }
+    .people-listing .person-entry .info .person-email {
+      padding: 0;
+      font-size: .9em;
+      text-transform: lowercase; }
+  @media only screen and (min-width: 500px) {
+    .people-listing .person-entry {
+      flex: 1;
+      flex-basis: 48%;
+      flex-grow: 0;
+      margin: 0 2% 20px 0; } }
+  @media only screen and (min-width: 900px) {
+    .people-listing .person-entry {
+      flex-basis: 32%;
+      margin-right: 1.3333%; } }
+  @media only screen and (min-width: 1220px) {
+    .people-listing .person-entry {
+      flex-basis: 23%;
+      margin-right: 2%; } }
+  @media only screen and (min-width: 1440px) {
+    .people-listing .person-entry {
+      flex-basis: 18%;
+      margin-right: 2%; } }
+
+.bio .sidebar {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); }
+  .bio .sidebar img {
+    width: 100%;
+    display: block; }
+  @media only screen and (min-width: 1024px) {
+    .bio .sidebar .person-info {
+      padding: 20px; } }
+  .bio .sidebar .person-info h5 {
+    padding-bottom: 3px; }
+  .bio .sidebar .person-info p {
+    padding: 3px 0;
+    color: #EBEAE9; }
+  .bio .sidebar .person-info .btn {
+    margin-top: 20px;
+    padding: 10px 20px; }
 
 .hours {
   zoom: 1; }

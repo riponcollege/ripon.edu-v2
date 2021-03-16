@@ -12,6 +12,21 @@
 		border-bottom: 1px solid rgba( $grey, .2 );
 		padding: 20px;
 
+		@include respond-to( 768px ) {
+			position: absolute;
+			left: 30px;
+			top: 60px;
+			width: 25%;
+			margin-right: 2%;
+			border-bottom: 0;
+			padding: 0;
+		}
+
+		@include respond-to( 1220px ) {
+			left: 40px;
+			width: 20%;
+		}
+
 		.toggle-sidebar-menu {
 			@include respond-to( 768px ) {
 				display: none;
@@ -26,21 +41,6 @@
 			@include respond-to( 768px ) {
 				padding: 10px;
 			}
-		}
-
-		@include respond-to( 768px ) {
-			position: absolute;
-			left: 30px;
-			top: 60px;
-			width: 25%;
-			margin-right: 2%;
-			border-bottom: 0;
-			padding: 0;
-		}
-
-		@include respond-to( 1220px ) {
-			left: 40px;
-			width: 23%;
 		}
 
 		&.scrolled {
@@ -96,7 +96,7 @@
 		}
 
 		@include respond-to( 1220px ) {
-			padding: 40px 40px 70px 28%;
+			padding: 40px 40px 70px 25%;
 		}
 	}
 }

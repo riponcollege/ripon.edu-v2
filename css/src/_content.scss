@@ -22,6 +22,38 @@
 }
 
 
+.box {
+	background: $grey-light;
+	padding: 40px 20px;
+	margin: 0 -20px;
+
+	@include respond-to( 768px ) {
+		margin: 0;
+		padding: 20px 30px;
+	}
+
+	&.red-dark {
+		background: $red-dark;
+		color: white;
+	}
+
+	&.red-light {
+		background: $red-light;
+		color: white;
+	}
+
+	&.orange {
+		background: $orange;
+		color: white;
+	}
+
+	&.grey-dark {
+		background: $grey;
+		color: white;
+	}
+}
+
+
 .content-style {
 	ol, ul {
 		padding: 7px 0 7px 30px;

@@ -145,22 +145,23 @@ h1 {
 
 h2 {
   font-size: 1.6em;
-  line-height: 1.2em;
+  line-height: 1.3em;
 }
 
 h3 {
   font-size: 1.3em;
-  line-height: 1.2em;
+  line-height: 1.3em;
 }
 
 h4 {
-  font-size: 1.2em;
-  line-height: 1.1em;
+  font-size: 1.1em;
+  line-height: 1.3em;
+  @include font-title-bold;
 }
 
 h5 {
   @include font-medium;
-  font-size: 1.1em;
+  font-size: 1em;
   line-height: 1.1em;
 }
 
