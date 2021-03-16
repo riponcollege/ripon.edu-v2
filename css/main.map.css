@@ -601,15 +601,17 @@ header {
             transition: all 400ms ease-in-out;
             margin: 0 10px;
             font-size: 16.5px;
-            line-height: 25px; }
+            line-height: 25px;
+            border-bottom: 2px dotted rgba(255, 255, 255, 0.2); }
             header .buttons li a:hover {
-              color: white; } }
+              color: white;
+              border-bottom: 2px dotted white; } }
     @media only screen and (min-width: 1220px) {
       header .buttons {
         right: 250px; }
         header .buttons li a {
-          margin: 0 15px;
-          padding: 5px 30px;
+          margin: 0 35px;
+          padding: 5px 10px;
           letter-spacing: 2px; } }
     @media only screen and (min-width: 1440px) {
       header .buttons {

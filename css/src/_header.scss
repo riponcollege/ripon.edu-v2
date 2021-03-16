@@ -55,9 +55,11 @@ header {
 					margin: 0 10px;
 					font-size: 16.5px;
 					line-height: 25px;
+					border-bottom: 2px dotted rgba( white, .2 );
 
 					&:hover {
 						color: white;
+						border-bottom: 2px dotted white;
 					}
 				}
 			}
@@ -67,8 +69,8 @@ header {
 			right: 250px;
 
 			li a {
-				margin: 0 15px;
-				padding: 5px 30px;
+				margin: 0 35px;
+				padding: 5px 10px;
 				letter-spacing: 2px;
 			}
 		}
