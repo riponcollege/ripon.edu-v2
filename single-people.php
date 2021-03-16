@@ -26,8 +26,8 @@ $courses = get_cmb_value( "faculty_courses" );
 			while ( have_posts() ) : the_post(); 
 				?>
 		<div class="sidebar">
+			<?php the_post_thumbnail() ?>
 			<div class="person-info">
-				<?php the_post_thumbnail() ?>
 				<div class="person-info-inner">
 					<h2><?php the_title(); ?></h2>
 					<h4 class="person-title"><?php print get_cmb_value( "faculty_title" ); ?></h4>
@@ -40,7 +40,7 @@ $courses = get_cmb_value( "faculty_courses" );
 			</div>
 		</div>
 		<div class="right-column">
-			<div class="box grey-dark">
+			<div class="box white">
 				<h2>Meet <?php the_title(); ?></h2>
 				<?php the_excerpt(); ?>		
 			</div>

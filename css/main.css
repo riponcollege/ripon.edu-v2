@@ -951,6 +951,9 @@ footer {
   .box.grey-dark {
     background: #434039;
     color: white; }
+  .box.white {
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); }
 
 .content-style ol, .area .tab-content ol, .bio .bio-content ol, .content-style ul, .area .tab-content ul, .bio .bio-content ul {
   padding: 7px 0 7px 30px; }
@@ -1826,20 +1829,22 @@ button, input[type=submit], input[type=reset], .btn {
 
 .bio .sidebar {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); }
+  @media only screen and (min-width: 768px) {
+    .bio .sidebar {
+      margin-top: -30px; } }
   .bio .sidebar img {
     width: 100%;
     display: block; }
-  @media only screen and (min-width: 1024px) {
-    .bio .sidebar .person-info {
-      padding: 20px; } }
-  .bio .sidebar .person-info h5 {
-    padding-bottom: 3px; }
-  .bio .sidebar .person-info p {
-    padding: 3px 0;
-    color: #EBEAE9; }
-  .bio .sidebar .person-info .btn {
-    margin-top: 20px;
-    padding: 10px 20px; }
+  .bio .sidebar .person-info {
+    padding: 20px; }
+    .bio .sidebar .person-info h5 {
+      padding-bottom: 3px; }
+    .bio .sidebar .person-info p {
+      padding: 3px 0;
+      color: #EBEAE9; }
+    .bio .sidebar .person-info .btn {
+      margin-top: 20px;
+      padding: 10px 20px; }
 
 .hours {
   zoom: 1; }

@@ -174,6 +174,8 @@ if ( is_ripon() ) {
 		// run the query
 	    $p = new WP_Query( $vars );
 
+	    print_r( $p );
+
 	    $people_content = '<section class="people">';
 
 		$people_content .= '<div class="people-search"><input type="text" name="people-search-term" id="s" placeholder="Search Name, Academic Department, or Title"></div>';
@@ -197,13 +199,13 @@ if ( is_ripon() ) {
 
 			endwhile;
 
+			$people_content .="</div>";
+
 		else :
 			
 			$people_content .= '<p>No people found in database.</p>';
 
 		endif;
-
-		$people_content .='</div>';
 
 		$people_content .='</section>';
 

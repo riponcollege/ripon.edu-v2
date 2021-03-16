@@ -51,6 +51,11 @@
 		background: $grey;
 		color: white;
 	}
+
+	&.white {
+		background: white;
+		box-shadow: 0 0 20px rgba( black, .2 );
+	}
 }
 
 
