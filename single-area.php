@@ -153,7 +153,7 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 				<div class="tab-content area-faculty">
 					<h2>Faculty</h2>
 					<div class="area-faculty">
-						<?php print do_shortcode( '[people category="' . get_cmb_value( 'area_faculty_list' ) . '" /]' ); ?>
+						<?php print do_shortcode( '[people category="' . get_cmb_value( 'area_people_list' ) . '" /]' ); ?>
 					</div>
 				</div>
 				<?php } ?>
