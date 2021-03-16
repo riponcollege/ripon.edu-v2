@@ -115,7 +115,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	</header>
 	<?php if ( is_home() || is_front_page() ) { ?>
-	<section class="info-for">
+	<section class="header-info-for">
 		<div class="info-for-menu">
 			<?php wp_nav_menu( array( 'theme_location' => 'info-for', 'menu_class' => 'nav-menu' ) ); ?>
 		</div>
