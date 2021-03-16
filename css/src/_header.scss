@@ -9,7 +9,7 @@ header {
 	.logo {
 		margin: -10px 0 -10px -20px;
 		width: 180px;
-		background: lighten( $red-dark, 5% );
+		// background: lighten( $red-dark, 5% );
 		padding: 10px 20px;
 	}
 
@@ -140,7 +140,21 @@ header {
 		display: block;
 	}
 
-	ul {
+	.label {
+		//font-weight: bold;
+		font-size: .9em;
+		font-style: italic;
+		color: rgba( white, .6 );
+		text-transform: uppercase;
+	}
+
+	.menu-constituent-container {
+		display: inline;
+	}
+
+	ul {		
+		display: inline;
+
 		li {
 			display: inline;
 

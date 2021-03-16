@@ -568,7 +568,6 @@ header {
   header .logo {
     margin: -10px 0 -10px -20px;
     width: 180px;
-    background: #810c21;
     padding: 10px 20px; }
   header .slogan {
     display: none; }
@@ -674,13 +673,22 @@ header {
   @media only screen and (min-width: 1024px) {
     .header-info-for {
       display: block; } }
-  .header-info-for ul li {
+  .header-info-for .label {
+    font-size: .9em;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase; }
+  .header-info-for .menu-constituent-container {
     display: inline; }
-    .header-info-for ul li a {
-      color: white;
-      padding: 7px 14px;
-      display: inline-block;
-      font-size: .9em; }
+  .header-info-for ul {
+    display: inline; }
+    .header-info-for ul li {
+      display: inline; }
+      .header-info-for ul li a {
+        color: white;
+        padding: 7px 14px;
+        display: inline-block;
+        font-size: .9em; }
   .header-info-for .info-for-menu {
     float: left;
     padding: 0 0 0 20px; }
@@ -1362,16 +1370,20 @@ button, input[type=submit], input[type=reset], .btn {
   @media only screen and (min-width: 1220px) {
     .icons {
       margin-right: -3%; } }
-  .icons .icon {
+  @media only screen and (min-width: 860px) {
+    .icons .icon {
+      flex-grow: 1;
+      flex-basis: 0; } }
+  @media only screen and (min-width: 1220px) {
+    .icons .icon {
+      margin: 0 3% 0 0; } }
+  .icons .icon .icon-inner {
     padding: 40px 20px; }
     @media only screen and (min-width: 860px) {
-      .icons .icon {
-        flex-grow: 1;
-        flex-basis: 0;
+      .icons .icon .icon-inner {
         padding: 40px 20px; } }
     @media only screen and (min-width: 1220px) {
-      .icons .icon {
-        margin: 0 3% 0 0;
+      .icons .icon .icon-inner {
         padding: 40px; } }
 
 .crowd-funding {

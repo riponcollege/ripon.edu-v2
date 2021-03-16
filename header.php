@@ -18,7 +18,7 @@
 <?php wp_head(); ?>
 
 <?php if ( is_search() ) { ?><meta name="robots" content="noindex" /><?php } ?>
-<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=214" rel="stylesheet" type="text/css">
+<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=215" rel="stylesheet" type="text/css">
 
 <!-- Facebook Pixel Code -->
 <script>
@@ -117,6 +117,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<?php if ( is_home() || is_front_page() ) { ?>
 	<section class="header-info-for">
 		<div class="info-for-menu">
+			<span class='label'>Info for:</span>
 			<?php wp_nav_menu( array( 'theme_location' => 'info-for', 'menu_class' => 'nav-menu' ) ); ?>
 		</div>
 		<div class="info-for-aux">

@@ -55,17 +55,25 @@
 	}
 
 	.icon {
-		padding: 40px 20px;
-
 		@include respond-to( 860px ) {
 			flex-grow: 1;
 			flex-basis: 0;
-			padding: 40px 20px;
 		}
 
 		@include respond-to( 1220px ) {
 			margin: 0 3% 0 0;
-			padding: 40px;
+		}
+
+		.icon-inner {
+			padding: 40px 20px;
+
+			@include respond-to( 860px ) {
+				padding: 40px 20px;
+			}
+
+			@include respond-to( 1220px ) {
+				padding: 40px;
+			}
 		}
 	}
 }

@@ -81,9 +81,17 @@ function icon_metabox( $meta_boxes ) {
     ));
 
     $icon_showcase_metabox->add_group_field( $icon_showcase_metabox_group, array(
-        'name' => 'Image',
+        'name' => 'Photo',
+        'desc' => 'Upload a 500x500 pixel icon image.',
+        'id'   => 'photo',
+        'type' => 'file',
+        'preview_size' => array( 100, 100 )
+    ) );
+
+    $icon_showcase_metabox->add_group_field( $icon_showcase_metabox_group, array(
+        'name' => 'Icon',
         'desc' => 'Upload a 100x100 pixel icon image. Ideally a transparent PNG.',
-        'id'   => 'image',
+        'id'   => 'icon',
         'type' => 'file',
         'preview_size' => array( 100, 100 )
     ) );
