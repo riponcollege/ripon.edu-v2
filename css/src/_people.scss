@@ -101,10 +101,6 @@
 	.sidebar {
 		box-shadow: 0 0 20px rgba( black, .2 );
 
-		@include respond-to( 768px ) {		
-			margin-top: -30px;
-		}
-
 		img {
 			width: 100%;
 			display: block;

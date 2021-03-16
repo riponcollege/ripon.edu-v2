@@ -15,7 +15,7 @@
 		@include respond-to( 768px ) {
 			position: absolute;
 			left: 30px;
-			top: 60px;
+			top: 30px;
 			width: 25%;
 			margin-right: 2%;
 			border-bottom: 0;
@@ -24,6 +24,7 @@
 
 		@include respond-to( 1220px ) {
 			left: 40px;
+			top: 30px;
 			width: 20%;
 		}
 
@@ -96,7 +97,11 @@
 		}
 
 		@include respond-to( 1220px ) {
-			padding: 40px 40px 70px 25%;
+			padding: 30px 40px 70px 26%;
+		}
+
+		@include respond-to( 1440px ) {
+			padding: 30px 40px 70px 24.5%;
 		}
 	}
 }

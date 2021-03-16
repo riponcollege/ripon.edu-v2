@@ -347,7 +347,7 @@ ol {
       .two-column .sidebar {
         position: absolute;
         left: 30px;
-        top: 60px;
+        top: 30px;
         width: 25%;
         margin-right: 2%;
         border-bottom: 0;
@@ -355,6 +355,7 @@ ol {
     @media only screen and (min-width: 1220px) {
       .two-column .sidebar {
         left: 40px;
+        top: 30px;
         width: 20%; } }
     @media only screen and (min-width: 768px) {
       .two-column .sidebar .toggle-sidebar-menu {
@@ -402,7 +403,10 @@ ol {
         padding: 30px 20px 50px 31%; } }
     @media only screen and (min-width: 1220px) {
       .two-column .right-column {
-        padding: 40px 40px 70px 25%; } }
+        padding: 30px 40px 70px 26%; } }
+    @media only screen and (min-width: 1440px) {
+      .two-column .right-column {
+        padding: 30px 40px 70px 24.5%; } }
 
 .two-column {
   min-height: 900px; }
@@ -1829,9 +1833,6 @@ button, input[type=submit], input[type=reset], .btn {
 
 .bio .sidebar {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); }
-  @media only screen and (min-width: 768px) {
-    .bio .sidebar {
-      margin-top: -30px; } }
   .bio .sidebar img {
     width: 100%;
     display: block; }
