@@ -335,9 +335,6 @@ ol {
     .emergency-bar-container.teal a {
       color: white; }
 
-.content {
-  position: relative; }
-
 .two-column {
   position: relative; }
   .two-column .sidebar {
@@ -630,7 +627,8 @@ header {
     bottom: 20px;
     width: 26px;
     color: transparent;
-    overflow: hidden; }
+    overflow: hidden;
+    border: 0; }
     @media only screen and (min-width: 768px) {
       header .search-show {
         position: absolute;
@@ -698,6 +696,64 @@ header {
   .header-info-for .info-for-aux {
     float: right;
     padding: 0 20px 0 0; }
+
+.video-showcase-container {
+  position: relative;
+  overflow: hidden; }
+  .video-showcase-container .video-thumbnail {
+    width: 100%;
+    position: absolute;
+    z-index: 0; }
+  .video-showcase-container .video-showcase {
+    position: relative;
+    z-index: 1; }
+  .video-showcase-container header.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    background: transparent; }
+    .video-showcase-container header.video .buttons {
+      top: 200px;
+      left: 50%;
+      width: 200px;
+      margin-left: -100px; }
+      @media only screen and (min-width: 768px) {
+        .video-showcase-container header.video .buttons {
+          width: 300px;
+          margin-left: -150px; } }
+      @media only screen and (min-width: 1024px) {
+        .video-showcase-container header.video .buttons {
+          top: 350px; } }
+      @media only screen and (min-width: 1220px) {
+        .video-showcase-container header.video .buttons {
+          top: 450px;
+          margin-left: -200px;
+          width: 400px; } }
+      .video-showcase-container header.video .buttons li {
+        display: block;
+        margin-bottom: 5px; }
+        @media only screen and (min-width: 768px) {
+          .video-showcase-container header.video .buttons li {
+            margin-bottom: 10px; } }
+        .video-showcase-container header.video .buttons li:first-child a {
+          background: #0094E3; }
+          .video-showcase-container header.video .buttons li:first-child a:hover {
+            background: #00a5fd; }
+        .video-showcase-container header.video .buttons li a {
+          font-family: "Open Sans", sans-serif;
+          font-weight: 700;
+          display: block;
+          text-align: center;
+          border: 2px solid white;
+          transition: 400ms all ease-in-out; }
+          .video-showcase-container header.video .buttons li a:hover {
+            background: rgba(255, 255, 255, 0.2); }
+          @media only screen and (min-width: 1220px) {
+            .video-showcase-container header.video .buttons li a {
+              font-size: 1.2em;
+              padding: 10px 25px; } }
 
 .page-header {
   background: url(../img/bg-area-header.webp) center center no-repeat;
@@ -886,7 +942,10 @@ footer {
   background: #6A0A1B;
   border-top: 20px solid #c3c0b8;
   padding: 20px;
-  color: white; }
+  color: white;
+  margin-top: 0;
+  position: relative;
+  z-index: 10; }
   footer:before, footer:after {
     content: "";
     display: table; }
@@ -933,6 +992,12 @@ footer {
   @media only screen and (min-width: 768px) {
     .pad {
       padding: 30px; } }
+
+section.content {
+  position: relative;
+  z-index: 10;
+  background: white;
+  padding-bottom: 30px; }
 
 .content-wide {
   padding: 20px; }

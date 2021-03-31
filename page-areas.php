@@ -1,7 +1,7 @@
 <?php
 
 /*
-Template Name: Academics
+Template Name: Areas of Study
 */
 
 get_header();

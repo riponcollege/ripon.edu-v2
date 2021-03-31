@@ -92,6 +92,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <div class="menu-photo"></div>
 <div class="container">
+	<?php 
+	if ( has_video_showcase() ) { 
+		the_video_showcase();
+	} else { ?>
 	<header>
 
 		<div class="logo">
@@ -114,6 +118,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 	</header>
+	<?php } ?>
 	<?php if ( is_home() || is_front_page() ) { ?>
 	<section class="header-info-for">
 		<div class="info-for-menu">

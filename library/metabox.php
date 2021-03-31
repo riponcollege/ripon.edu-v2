@@ -11,7 +11,7 @@ add_action( 'cmb2_admin_init', 'guide_metaboxes' );
 function guide_metaboxes() {
 
     // select all faculty for the study guide picklists
-    $args = array( 'post_type' => 'faculty', 'posts_per_page' => -1, 'orderby' => 'title', 'order' => 'ASC' );
+    $args = array( 'post_type' => 'people', 'posts_per_page' => -1, 'orderby' => 'title', 'order' => 'ASC' );
     $loop = new WP_Query( $args );
     $faculty = array();
     while ( $loop->have_posts() ) : $loop->the_post();

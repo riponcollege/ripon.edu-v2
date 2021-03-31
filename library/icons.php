@@ -15,7 +15,8 @@ function the_icon_showcase() {
             if ( !empty( $icon['image'] ) ) { ?>
             <?php if ( !empty( $icon['link'] ) ) { ?><a href="<?php print $icon['link']; ?>"><?php } ?>
                 <div class="icon bg-<?php print $icon['color'] ?> icon-<?php print $num ?>">
-                    <img src="<?php print $icon['image']; ?>" alt="Icon for: <?php print strip_tags( $icon['title'] ); ?>">
+                    <?php if( !empty( $icon['photo'] ) ) { ?><img src="<?php print $icon['photo']; ?>" class="icon-photo" /><?php } ?>
+                    <img src="<?php print $icon['image']; ?>" class="icon-icon" alt="Icon for: <?php print strip_tags( $icon['title'] ); ?>">
                     <?php if ( !empty( $icon['title'] ) ) { print apply_filters( 'the_content', $icon['title'] ); } ?>
                 </div>
             <?php if ( !empty( $icon['link'] ) ) { ?></a><?php } ?>
@@ -82,7 +83,7 @@ function icon_metabox( $meta_boxes ) {
 
     $icon_showcase_metabox->add_group_field( $icon_showcase_metabox_group, array(
         'name' => 'Photo',
-        'desc' => 'Upload a 500x500 pixel icon image.',
+        'desc' => 'Upload a 500x500 pixel photo for this icon block.',
         'id'   => 'photo',
         'type' => 'file',
         'preview_size' => array( 100, 100 )

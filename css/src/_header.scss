@@ -93,6 +93,7 @@ header {
 		width: 26px;
 		color: transparent;
 		overflow: hidden;
+		border: 0;
 
 		@include respond-to( 768px ) {
 			position: absolute;

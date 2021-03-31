@@ -6,6 +6,10 @@ footer {
 	border-top: 20px solid lighten( $grey, 50% );
 	padding: 20px;
 	color: white;
+	margin-top: 0;
+
+	position: relative;
+	z-index: 10;
 
 	a {
 		color: rgba( white, .9 );
