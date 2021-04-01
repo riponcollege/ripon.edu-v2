@@ -33,12 +33,12 @@ function require_multi( $files ) {
 
 
 // include utility functions
-require_multi( 
+require_multi(
 
 	// include the essential components
 	'site', 'metabox', 
 
-	'post-type/people', 'post-type/fund', 'post-type/alum', 'post-type/year',
+	'post-type/people', 'post-type/fund', 'post-type/alum', 'post-type/year','post-type/event',
 
 	'menus', 'library', 'scripts', 'images', 'search', 'emergency', 'video-showcase', 'icons', 'post-type/area', 'accordion', 'button', 'page-header', 'call-to-action', 'hep/send-donation'
 

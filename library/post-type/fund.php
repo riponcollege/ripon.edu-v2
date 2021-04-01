@@ -8,7 +8,6 @@ if ( is_ripon() ) {
 	add_action( 'after_switch_theme', 'flush_rewrite_rules' );
 
 
-
 	// let's create the function for the custom type
 	function fund_post_type() { 
 		// creating (registering) the custom type 

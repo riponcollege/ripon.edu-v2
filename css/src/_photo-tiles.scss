@@ -1,0 +1,94 @@
+
+
+.phototiles {
+	@include clearfix;
+	
+	.phototile {
+		padding: 40px;
+		color: white;
+		text-shadow: 0 0 20px rgba( black, .7 );
+		position: relative;
+		text-align: center;
+		background-position: center center;
+		background-size: cover;
+
+		@include respond-to( 768px ) {
+			float: left;
+			width: 50%;
+			height: 200px;
+		}
+
+		@include respond-to( 1024px ) {
+			height: 300px;
+			padding: 70px 40px;
+		}
+
+		@include respond-to( 1220px ) {
+			height: 300px;
+			padding: 120px;
+			height: 380px;
+		}
+
+		.phototile-title {
+			font-size: 2em;
+			line-height: 1.4em;
+			font-weight: bold;
+		}
+
+		.phototile-subtitle {
+			font-size: 1.4em;
+			line-height: 1.4em;
+			font-weight: 500;
+			font-style: italic;
+		}
+
+		.phototile-content {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			opacity: 0;
+			transition: 400ms opacity ease-in-out;
+			padding: 35px;
+
+			&.red-dark {
+				background: $red-dark;
+			}
+
+			&.red-light {
+				background: $red-light;
+			}
+
+			&.teal {
+				background: $teal;
+			}
+
+			&.grey {
+				background: $grey;
+			}
+
+			&.grey-light {
+				background: $grey-light;
+			}
+
+			&.orange {
+				background: $orange;
+			}
+
+			@include respond-to( 1024px ) {
+				padding: 70px 40px;
+			}
+
+			@include respond-to( 1220px ) {
+				padding: 120px;
+			}
+		}
+
+		&:hover .phototile-content {
+			opacity: 1;
+		}
+	}
+
+}
+

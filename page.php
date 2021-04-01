@@ -11,7 +11,7 @@ if ( has_cmb_value( 'menu_primary' ) ) {
 }
 
 
-// out[ut the calls to action]
+// output the calls to action
 the_call_to_action();
 
 
