@@ -10,26 +10,28 @@ function articles_shortcode( $atts ) {
 	), $atts );
 
 	$args = array(
-	    'posts_per_page' => 3
+	    'posts_per_page' => 4
 	);
 
-	$tags = explode( ',', $a['tags'] );
-	$cats = explode( ',', $a['cats'] );
-
-	if ( !empty($tags) ) {
-		$args['tags__in'] = $tags;
+	if ( !empty($a['tags']) ) {
+		$tags = explode( ',', $a['tags'] );
+		$args['tag__in'] = $tags;
 	}
 
-	if ( !empty($cats) ) {
+	if ( !empty($a['cats']) ) {
+		$cats = explode( ',', $a['cats'] );
 		$args['category__in'] = $cats;
 	}
 
 	$query = new WP_Query( $args );
 
-	$return = '<div class="article-cards">';
+
+	print_r( $query );
 
 	// Check that we have query results.
 	if ( $query->have_posts() ) {
+
+		$return = '<div class="article-cards">';
 	  
 	    // Start looping over the query results.
 	    while ( $query->have_posts() ) {
@@ -41,12 +43,13 @@ function articles_shortcode( $atts ) {
 		    $return .= get_the_excerpt();
 		    $return .= '</div></div>';
 	    }
+
+		$return .= '</div>';
 	  
 	} else {
 		return '';
 	}
 
-	$return .= '</div>';
 	  
 	// Restore original post data.
 	wp_reset_postdata();
