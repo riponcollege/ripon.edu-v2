@@ -25,9 +25,6 @@ function articles_shortcode( $atts ) {
 
 	$query = new WP_Query( $args );
 
-
-	print_r( $query );
-
 	// Check that we have query results.
 	if ( $query->have_posts() ) {
 
