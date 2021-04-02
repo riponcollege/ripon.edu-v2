@@ -12,12 +12,14 @@ function the_icon_showcase() {
         <?php
         $num=1;
         foreach ( $icons as $icon ) {
-            if ( !empty( $icon['image'] ) ) { ?>
+            if ( !empty( $icon['icon'] ) ) { ?>
             <?php if ( !empty( $icon['link'] ) ) { ?><a href="<?php print $icon['link']; ?>"><?php } ?>
                 <div class="icon bg-<?php print $icon['color'] ?> icon-<?php print $num ?>">
                     <?php if( !empty( $icon['photo'] ) ) { ?><img src="<?php print $icon['photo']; ?>" class="icon-photo" /><?php } ?>
-                    <img src="<?php print $icon['image']; ?>" class="icon-icon" alt="Icon for: <?php print strip_tags( $icon['title'] ); ?>">
-                    <?php if ( !empty( $icon['title'] ) ) { print apply_filters( 'the_content', $icon['title'] ); } ?>
+                    <div class="icon-inner">
+                        <img src="<?php print $icon['icon']; ?>" class="icon-icon" alt="Icon for: <?php print strip_tags( $icon['title'] ); ?>">
+                        <?php if ( !empty( $icon['title'] ) ) { print apply_filters( 'the_content', $icon['title'] ); } ?>
+                    </div>
                 </div>
             <?php if ( !empty( $icon['link'] ) ) { ?></a><?php } ?>
                 <?php 
