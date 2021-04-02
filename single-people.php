@@ -30,12 +30,12 @@ $courses = get_cmb_value( "faculty_courses" );
 			<div class="person-info">
 				<div class="person-info-inner">
 					<h2><?php the_title(); ?></h2>
-					<h4 class="person-title"><?php print get_cmb_value( "faculty_title" ); ?></h4>
-					<p><a href="mailto:<?php print get_cmb_value( "faculty_email" ); ?>"><?php print get_cmb_value( "faculty_email" ); ?></a><br>
-					<?php print get_cmb_value( "faculty_phone" ); ?></p>
-					<?php if ( has_cmb_value( "faculty_office" ) ) { ?><p>Office: <?php print get_cmb_value( "faculty_office" ); ?></p><?php } ?>
-					<?php if ( has_cmb_value( "faculty_website" ) ) { ?><p><a href='" . get_cmb_value( "faculty_website" ) . "' target='_blank'>Website</a></p><?php } ?>
-					<p class="cv-link"><a href="<?php show_cmb_value( "faculty_cv" ); ?>" class="btn red-dark">View CV/Resume</a></p>
+					<h4 class="person-title"><?php print get_cmb_value( "person_title" ); ?></h4>
+					<p><a href="mailto:<?php print get_cmb_value( "person_email" ); ?>"><?php print get_cmb_value( "person_email" ); ?></a><br>
+					<?php print get_cmb_value( "person_phone" ); ?></p>
+					<?php if ( has_cmb_value( "person_office" ) ) { ?><p>Office: <?php print get_cmb_value( "person_office" ); ?></p><?php } ?>
+					<?php if ( has_cmb_value( "person_website" ) ) { ?><p><a href='" . get_cmb_value( "person_website" ) . "' target='_blank'>Website</a></p><?php } ?>
+					<p class="cv-link"><a href="<?php show_cmb_value( "person_cv" ); ?>" class="btn red-dark">View CV/Resume</a></p>
 				</div>
 			</div>
 		</div>
