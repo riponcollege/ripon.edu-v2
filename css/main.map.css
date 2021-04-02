@@ -1919,7 +1919,7 @@ button, input[type=submit], input[type=reset], .btn {
       padding-bottom: 3px; }
     .bio .sidebar .person-info p {
       padding: 3px 0;
-      color: #EBEAE9; }
+      color: #434039; }
     .bio .sidebar .person-info .btn {
       margin-top: 20px;
       padding: 10px 20px; }
@@ -2633,5 +2633,21 @@ img.mfp-img {
     .company-results li:hover {
       cursor: pointer;
       background: #e5e5e5 !important; }
+
+.article-cards {
+  padding-top: 20px; }
+  @media only screen and (min-width: 1024px) {
+    .article-cards {
+      display: flex; } }
+  .article-cards .entry {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px; }
+    .article-cards .entry .entry-inner {
+      padding: 20px; }
+    @media only screen and (min-width: 1024px) {
+      .article-cards .entry {
+        flex: 1;
+        margin: 0 3% 0 0;
+        width: 30.3333%; } }
 
 /*# sourceMappingURL=main.map.css.map */
