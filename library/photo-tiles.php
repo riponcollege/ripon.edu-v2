@@ -2,7 +2,9 @@
 
 
 function the_phototiles() {
-	$tiles = get_cmb_value( 'phototiles' );
+	$tiles = get_cmb_value( 'phototile' );
+
+    // only do the thing if we have to
 	if ( !empty( $tiles ) ) {
 		?>
 		<div class="phototiles">
@@ -20,12 +22,16 @@ function the_phototiles() {
 				if ( !empty( $tile['link'] ) ) { ?></a><?php } 
 			}
 		}
+        ?>
+        </div>
+        <?php
 	}
 }
 
 
-function phototile_metaboxes() {
-    // accordion metabox
+function phototiles_metabox() {
+
+    // phototiles metabox
     $phototiles = new_cmb2_box( array(
         'id' => 'phototiles_metabox',
         'title' => 'Photo Tiles',
@@ -35,7 +41,7 @@ function phototile_metaboxes() {
         'priority' => 'high'
     ) );
 
-    $phototiles_group = $cmb->add_field( array(
+    $phototiles_group = $phototiles->add_field( array(
         'id' => CMB_PREFIX . 'phototile',
         'type' => 'group',
         'options' => array(
@@ -69,7 +75,7 @@ function phototile_metaboxes() {
     $phototiles->add_group_field( $phototiles_group, array(
         'name' => 'Hover Text',
         'desc' => 'Enter the content that will display when a user mouses over the tile.',
-        'id'   => 'subtitle',
+        'id'   => 'content',
         'type' => 'wysiwyg'
     ) );
 
@@ -96,3 +102,6 @@ function phototile_metaboxes() {
     ) );
 
 }
+add_filter( 'cmb2_admin_init', 'phototiles_metabox' );
+
+

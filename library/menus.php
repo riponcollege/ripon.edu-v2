@@ -31,11 +31,13 @@ function menu_metaboxes() {
         'priority' => 'default',
         'show_names' => true // Show field names on the left
     ) );
+    
     $menu_box->add_field( array(
         'name' => 'Title',
         'id'   => CMB_PREFIX . 'menu_title',
         'type' => 'text'
     ) );
+
     $menu_box->add_field( array(
         'name'    => 'Sidebar Menu',
         'id'      => CMB_PREFIX . 'menu_primary',

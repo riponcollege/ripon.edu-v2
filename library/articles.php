@@ -33,11 +33,13 @@ function articles_shortcode( $atts ) {
 	    // Start looping over the query results.
 	    while ( $query->have_posts() ) {
 	        $query->the_post();
-	        $return .='<div class="entry">';
-	        $return .= get_the_post_thumbnail();
+	        $return .= '<div class="entry">';
+	        $return .= '<div class="entry-thumbnail">';
+	        $return .= get_the_post_thumbnail( null, 'post-thumbnail' );
+	        $return .= '</div>';
 	        $return .= '<div class="entry-inner">';
 		    $return .= '<h4>' . get_the_title() . '</h4>';
-		    $return .= get_the_excerpt();
+		    $return .= wpautop( get_the_excerpt() );
 		    $return .= '</div></div>';
 	    }
 

@@ -707,6 +707,25 @@ header {
   .video-showcase-container .video-showcase {
     position: relative;
     z-index: 1; }
+  .video-showcase-container .header-menu {
+    display: none; }
+    @media only screen and (min-width: 768px) {
+      .video-showcase-container .header-menu {
+        display: block;
+        position: absolute;
+        top: 35px;
+        left: 250px; } }
+    .video-showcase-container .header-menu ul li {
+      display: inline; }
+      .video-showcase-container .header-menu ul li a {
+        color: white;
+        text-decoration: none;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        padding: 5px 20px;
+        transition: all 400ms ease-in-out; }
+        .video-showcase-container .header-menu ul li a:hover {
+          text-decoration: none;
+          color: #F6B44D; }
   .video-showcase-container header.video {
     position: absolute;
     top: 0;
@@ -799,6 +818,136 @@ header {
         bottom: 40px; }
         .page-header .breadcrumbs .page-title {
           font-size: 2.4em; } }
+
+.front-title {
+  padding: 20px;
+  background: #434039; }
+  .front-title h2 {
+    color: white;
+    text-align: center; }
+    .front-title h2:after {
+      content: "\21D3";
+      margin-left: 20px;
+      opacity: .5; }
+
+@media only screen and (min-width: 1024px) {
+  .front-columns {
+    display: flex; } }
+
+.front-columns .front-articles {
+  padding: 20px; }
+  @media only screen and (min-width: 1024px) {
+    .front-columns .front-articles {
+      flex: 1;
+      flex-basis: 50%; }
+      .front-columns .front-articles .entry:first-child {
+        flex-basis: 100%;
+        display: flex; }
+        .front-columns .front-articles .entry:first-child .entry-thumbnail {
+          flex: 1;
+          flex-grow: 0;
+          flex-basis: 50%; }
+        .front-columns .front-articles .entry:first-child .entry-inner {
+          flex: 1;
+          flex-grow: 0;
+          flex-basis: 50%; }
+          .front-columns .front-articles .entry:first-child .entry-inner p {
+            display: block; }
+      .front-columns .front-articles .entry {
+        flex-basis: 30%;
+        margin: 0 3.3333% 2% 0; }
+        .front-columns .front-articles .entry .entry-inner p {
+          display: none; } }
+
+.front-columns .front-events {
+  padding: 20px;
+  background: #A91C3A; }
+  @media only screen and (min-width: 768px) {
+    .front-columns .front-events {
+      flex: 1;
+      flex-basis: 50%; } }
+
+.phototiles {
+  zoom: 1; }
+  .phototiles:before, .phototiles:after {
+    content: "";
+    display: table; }
+  .phototiles, .phototiles:before, .phototiles:after {
+    clear: both; }
+  .phototiles .phototile {
+    padding: 40px;
+    color: white;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    position: relative;
+    text-align: center;
+    background-position: center center;
+    background-size: cover; }
+    @media only screen and (min-width: 768px) {
+      .phototiles .phototile {
+        float: left;
+        width: 50%;
+        height: 200px; } }
+    @media only screen and (min-width: 1024px) {
+      .phototiles .phototile {
+        height: 300px;
+        padding: 70px 40px; } }
+    @media only screen and (min-width: 1220px) {
+      .phototiles .phototile {
+        height: 300px;
+        padding: 120px;
+        height: 380px; } }
+    .phototiles .phototile:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      content: '';
+      z-index: 1; }
+    .phototiles .phototile .phototile-title {
+      font-size: 2em;
+      line-height: 1.4em;
+      font-weight: bold;
+      position: relative;
+      z-index: 2; }
+    .phototiles .phototile .phototile-subtitle {
+      font-size: 1.4em;
+      line-height: 1.4em;
+      font-weight: 500;
+      font-style: italic;
+      position: relative;
+      z-index: 2; }
+    .phototiles .phototile .phototile-content {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      z-index: 3;
+      transition: 400ms opacity ease-in-out;
+      padding: 35px; }
+      .phototiles .phototile .phototile-content.red-dark {
+        background: #6A0A1B; }
+      .phototiles .phototile .phototile-content.red-light {
+        background: #A91C3A; }
+      .phototiles .phototile .phototile-content.teal {
+        background: #0094E3; }
+      .phototiles .phototile .phototile-content.grey {
+        background: #434039; }
+      .phototiles .phototile .phototile-content.grey-light {
+        background: #EBEAE9; }
+      .phototiles .phototile .phototile-content.orange {
+        background: #EA4D3D; }
+      @media only screen and (min-width: 1024px) {
+        .phototiles .phototile .phototile-content {
+          padding: 70px 40px; } }
+      @media only screen and (min-width: 1220px) {
+        .phototiles .phototile .phototile-content {
+          padding: 120px; } }
+    .phototiles .phototile:hover .phototile-content {
+      opacity: 1; }
 
 .search-pane {
   position: fixed;
@@ -998,6 +1147,8 @@ section.content {
   z-index: 10;
   background: white;
   padding-bottom: 30px; }
+  .home section.content {
+    padding-bottom: 0; }
 
 .content-wide {
   padding: 20px; }
@@ -2636,24 +2787,28 @@ img.mfp-img {
 
 .article-cards {
   padding-top: 20px; }
-  @media only screen and (min-width: 840px) {
+  @media only screen and (min-width: 650px) {
     .article-cards {
       display: flex;
-      margin-right: -2%; } }
+      margin-right: -2%;
+      flex-wrap: wrap; } }
   .article-cards .entry {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px; }
+    .article-cards .entry img {
+      width: 100%;
+      display: block; }
     .article-cards .entry .entry-inner {
       padding: 20px; }
-    @media only screen and (min-width: 840px) {
+    @media only screen and (min-width: 650px) {
       .article-cards .entry {
         flex: 1;
         flex-grow: 0;
-        margin: 0 2% 0 0;
+        margin: 0 2% 2% 0;
         flex-basis: 48%; } }
     @media only screen and (min-width: 1024px) {
       .article-cards .entry {
-        margin: 0 2% 0 0;
+        margin: 0 2% 2% 0;
         flex-basis: 23%; } }
 
 /*# sourceMappingURL=main.map.css.map */

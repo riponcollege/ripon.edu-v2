@@ -4,7 +4,7 @@
 // add metabox(es)
 function video_showcase_metabox( $meta_boxes ) {
 
-    global $colors;
+    $all_menus = get_all_menus();
 
     // emergency metabox
     $video_showcase_metabox = new_cmb2_box( array(
@@ -24,42 +24,21 @@ function video_showcase_metabox( $meta_boxes ) {
     ) );
 
     $video_showcase_metabox->add_field( array(
-        'name' => 'Primary Call to Action Text',
-        'id'   => CMB_PREFIX . 'video_showcase_cta1_text',
-        'type' => 'text',
+        'name' => 'Header Menu',
+        'id' => CMB_PREFIX . 'video_showcase_menu_header',
+        'type' => 'select',
+        'options' => $all_menus,
     ) );
 
     $video_showcase_metabox->add_field( array(
-        'name' => 'Primary Call to Action Link',
-        'id'   => CMB_PREFIX . 'video_showcase_cta1_link',
-        'type' => 'text',
+        'name' => 'Call to Action Buttons Menu',
+        'id' => CMB_PREFIX . 'video_showcase_menu_calls',
+        'type' => 'select',
+        'options' => $all_menus,
     ) );
 
-    $video_showcase_metabox->add_field( array(
-        'name' => 'Secondary Call to Action Text',
-        'id'   => CMB_PREFIX . 'video_showcase_cta2_text',
-        'type' => 'text',
-    ) );
-
-    $video_showcase_metabox->add_field( array(
-        'name' => 'Secondary Call to Action Link',
-        'id'   => CMB_PREFIX . 'video_showcase_cta2_link',
-        'type' => 'text',
-    ) );
-
-    $video_showcase_metabox->add_field( array(
-        'name' => 'Tertiary Call to Action Text',
-        'id'   => CMB_PREFIX . 'video_showcase_cta3_text',
-        'type' => 'text',
-    ) );
-
-    $video_showcase_metabox->add_field( array(
-        'name' => 'Tertiary Call to Action Link',
-        'id'   => CMB_PREFIX . 'video_showcase_cta3_link',
-        'type' => 'text',
-    ) );
 }
-add_filter( 'cmb2_init', 'video_showcase_metabox' );
+add_filter( 'cmb2_admin_init', 'video_showcase_metabox' );
 
 
 
@@ -68,12 +47,8 @@ function the_video_showcase() {
 
     // get the background video
     $video_showcase_bg = get_cmb_value( 'video_showcase_bg' );
-    $video_showcase_cta1_text = get_cmb_value( 'video_showcase_cta1_text' );
-    $video_showcase_cta1_link = get_cmb_value( 'video_showcase_cta1_link' );
-    $video_showcase_cta2_text = get_cmb_value( 'video_showcase_cta2_text' );
-    $video_showcase_cta2_link = get_cmb_value( 'video_showcase_cta2_link' );
-    $video_showcase_cta3_text = get_cmb_value( 'video_showcase_cta3_text' );
-    $video_showcase_cta3_link = get_cmb_value( 'video_showcase_cta3_link' );
+    $video_showcase_menu_header = get_cmb_value( 'video_showcase_menu_header' );
+    $video_showcase_menu_calls = get_cmb_value( 'video_showcase_menu_calls' );
 
 	if ( !empty( $video_showcase_bg ) ) {
 		?>
@@ -92,20 +67,32 @@ function the_video_showcase() {
                 </a>
             </div>
 
+            <?php if ( !empty( $video_showcase_menu_header ) ) { ?>
+            <div class="header-menu">
+                <?php
+                wp_nav_menu( array( 
+                    'menu' => $video_showcase_menu_header, 
+                    'menu_class' => 'nav-menu' )
+                );
+                ?>
+            </div>
+            <?php } else { ?>
             <div class="slogan">
                 <?php bloginfo('description'); ?>
             </div>
+            <?php } ?>
 
             <button class="menu-show">menu</button>
 
             <button class="search-show">search</button>
 
             <div class="buttons">
-                <ul>
-                    <?php if ( !empty( $video_showcase_cta1_link ) ) { ?><li><a href="<?php print $video_showcase_cta1_link; ?>"><?php print $video_showcase_cta1_text; ?></a></li><?php } ?>
-                    <?php if ( !empty( $video_showcase_cta2_link ) ) { ?><li><a href="<?php print $video_showcase_cta2_link; ?>"><?php print $video_showcase_cta2_text; ?></a></li><?php } ?>
-                    <?php if ( !empty( $video_showcase_cta3_link ) ) { ?><li><a href="<?php print $video_showcase_cta3_link; ?>"><?php print $video_showcase_cta3_text; ?></a></li><?php } ?>
-                </ul>
+                <?php
+                wp_nav_menu( array( 
+                    'menu' => $video_showcase_menu_calls, 
+                    'menu_class' => 'nav-menu' )
+                );
+                ?>
             </div>
         </header>
 	</div>

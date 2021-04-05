@@ -119,6 +119,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	</header>
 	<?php } ?>
+	<!--
 	<?php if ( is_home() || is_front_page() ) { ?>
 	<section class="header-info-for">
 		<div class="info-for-menu">
@@ -130,6 +131,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		</div>
 	</section>
 	<?php } ?>
+	-->
 	<?php do_action( 'after_header' ); ?>
 
 	<section class="content">

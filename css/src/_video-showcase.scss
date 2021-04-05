@@ -15,6 +15,37 @@
 		z-index: 1;
 	}
 
+	.header-menu {
+		display: none;
+
+		@include respond-to( 768px ) {
+			display: block;
+			position: absolute;
+			top: 35px;
+			left: 250px;
+		}
+
+		ul {
+			li {
+				display: inline;
+
+				a {
+					color: white;
+					text-decoration: none;
+					text-shadow: 0 0 10px rgba( black, .4 );
+					padding: 5px 20px;
+					transition: all 400ms ease-in-out;
+
+
+					&:hover {
+						text-decoration: none;
+						color: $yellow;
+					}
+				}
+			}
+		}
+	}
+
 	header.video {
 		position: absolute;
 		top: 0;
