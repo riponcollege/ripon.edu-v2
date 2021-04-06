@@ -823,7 +823,7 @@ header {
 
 .front-title {
   padding: 20px;
-  background: #EA4D3D; }
+  background: #A91C3A; }
   .front-title h2 {
     color: white;
     text-align: center;
@@ -876,7 +876,7 @@ header {
   background: #434039;
   color: #EBEAE9; }
   .front-columns .front-events a {
-    color: #EA4D3D; }
+    color: #F6B44D; }
     .front-columns .front-events a:hover {
       opacity: .8; }
   @media only screen and (min-width: 1024px) {
