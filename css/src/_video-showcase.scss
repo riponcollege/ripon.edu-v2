@@ -54,6 +54,21 @@
 		width: 100%;
 		background: transparent;
 
+		&:after {
+			content: '';
+			width: 130px;
+			height: 90px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			background: $red-dark;
+			z-index: 3;
+
+			@include respond-to( 1024px ) {
+				width: 160px;
+			}
+		}
+
 		.buttons {
 			top: 200px;
 			left: 50%;

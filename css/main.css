@@ -626,6 +626,7 @@ header {
     right: 80px;
     bottom: 20px;
     width: 26px;
+    z-index: 4;
     color: transparent;
     overflow: hidden;
     border: 0; }
@@ -648,6 +649,7 @@ header {
     width: 26px;
     height: 26px;
     border: 0;
+    z-index: 4;
     background: url(../img/icon-menu-white.webp) center center no-repeat;
     background-size: contain;
     transition: all 400ms ease-in-out; }
@@ -735,6 +737,18 @@ header {
     z-index: 2;
     width: 100%;
     background: transparent; }
+    .video-showcase-container header.video:after {
+      content: '';
+      width: 130px;
+      height: 90px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: #6A0A1B;
+      z-index: 3; }
+      @media only screen and (min-width: 1024px) {
+        .video-showcase-container header.video:after {
+          width: 160px; } }
     .video-showcase-container header.video .buttons {
       top: 200px;
       left: 50%;
