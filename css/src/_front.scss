@@ -81,6 +81,14 @@
 		background: $grey;
 		color: $grey-light;
 
+		a {
+			color: $orange;
+
+			&:hover {
+				opacity: .8;
+			}
+		}
+
 		@include respond-to( 1024px ) {
 			flex: 1;
 			flex-basis: 50%;
