@@ -22,7 +22,7 @@ get_header();
 		<?php print do_shortcode( '[articles /]' ); ?>
 	</div>
 	<div class="front-events">
-
+		<?php print do_shortcode( '[events limit=4 /]' ); ?>
 	</div>
 </div>
 <?php

@@ -116,34 +116,7 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 					<hr>
 					<div class="area-news">
 						<h2>Latest News</h2>						  
-						<?php
-						$args = array(
-						    'tag' => get_cmb_value( 'area_post_tag' ),
-						    'posts_per_page' => 3
-						);
-						$query = new WP_Query( $args );
-
-
-						// Check that we have query results.
-						if ( $query->have_posts() ) {
-						  
-						    // Start looping over the query results.
-						    while ( $query->have_posts() ) {
-						        $query->the_post(); ?>
-						        <div class="entry">
-						        	<?php the_post_thumbnail(); ?>
-						        	<h3><?php the_title(); ?></h3>
-						        	<?php the_excerpt(); ?>
-						        </div>
-						  		<?php
-						    }
-						  
-						}
-						  
-						// Restore original post data.
-						wp_reset_postdata();
-						  
-						?>
+						<?php print do_shortcode( '[articles tag="' . get_cmb_value( 'area_post_tag' ) . '" /]' ); ?>
 					</div>
 					<?php } ?>
 

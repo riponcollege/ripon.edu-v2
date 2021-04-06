@@ -722,7 +722,9 @@ header {
         text-decoration: none;
         text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
         padding: 5px 20px;
-        transition: all 400ms ease-in-out; }
+        transition: all 400ms ease-in-out;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 700; }
         .video-showcase-container .header-menu ul li a:hover {
           text-decoration: none;
           color: #F6B44D; }
@@ -821,10 +823,11 @@ header {
 
 .front-title {
   padding: 20px;
-  background: #434039; }
+  background: #EA4D3D; }
   .front-title h2 {
     color: white;
-    text-align: center; }
+    text-align: center;
+    text-transform: uppercase; }
     .front-title h2:after {
       content: "\21D3";
       margin-left: 20px;
@@ -839,7 +842,10 @@ header {
   @media only screen and (min-width: 1024px) {
     .front-columns .front-articles {
       flex: 1;
-      flex-basis: 50%; }
+      flex-basis: 50%;
+      padding: 20px 30px; }
+      .front-columns .front-articles .article-cards {
+        margin-right: -3.3333%; }
       .front-columns .front-articles .entry:first-child {
         flex-basis: 100%;
         display: flex; }
@@ -858,14 +864,28 @@ header {
         margin: 0 3.3333% 2% 0; }
         .front-columns .front-articles .entry .entry-inner p {
           display: none; } }
+  @media only screen and (min-width: 1220px) {
+    .front-columns .front-articles {
+      padding: 30px 40px; } }
+  @media only screen and (min-width: 1440px) {
+    .front-columns .front-articles {
+      padding: 50px 70px; } }
 
 .front-columns .front-events {
   padding: 20px;
-  background: #A91C3A; }
-  @media only screen and (min-width: 768px) {
+  background: #434039;
+  color: #EBEAE9; }
+  @media only screen and (min-width: 1024px) {
     .front-columns .front-events {
       flex: 1;
-      flex-basis: 50%; } }
+      flex-basis: 50%;
+      padding: 30px; } }
+  @media only screen and (min-width: 1220px) {
+    .front-columns .front-events {
+      padding: 50px; } }
+  @media only screen and (min-width: 1440px) {
+    .front-columns .front-events {
+      padding: 70px; } }
 
 .phototiles {
   zoom: 1; }
@@ -2363,6 +2383,50 @@ button, input[type=submit], input[type=reset], .btn {
     font-size: .85em;
     line-height: 1.4em; }
 
+.event-list .event {
+  position: relative;
+  padding-left: 100px;
+  padding-bottom: 30px; }
+  .event-list .event .event-date-month {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+    font-family: "Hepta Slab", serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center; }
+  .event-list .event .event-date-day {
+    position: absolute;
+    left: 0;
+    top: 25px;
+    width: 80px;
+    font-family: "Hepta Slab", serif;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 50px;
+    text-align: center; }
+  .event-list .event .event-date-year {
+    position: absolute;
+    left: 0;
+    top: 80px;
+    width: 80px;
+    font-family: "Hepta Slab", serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center; }
+  .event-list .event h3 {
+    font-family: "Hepta Slab", serif;
+    font-weight: 600;
+    padding: 0; }
+  .event-list .event .event-location {
+    opacity: .7;
+    padding: 4px 0; }
+  .event-list .event .event-excerpt {
+    font-size: .9em; }
+
 /* Magnific Popup CSS */
 .mfp-bg {
   top: 0;
@@ -2800,6 +2864,10 @@ img.mfp-img {
       display: block; }
     .article-cards .entry .entry-inner {
       padding: 20px; }
+      .article-cards .entry .entry-inner a {
+        color: #434039; }
+        .article-cards .entry .entry-inner a:hover {
+          opacity: .8; }
     @media only screen and (min-width: 650px) {
       .article-cards .entry {
         flex: 1;

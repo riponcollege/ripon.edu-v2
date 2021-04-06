@@ -13,7 +13,11 @@ function articles_shortcode( $atts ) {
 	    'posts_per_page' => 4
 	);
 
-	if ( !empty($a['tags']) ) {
+	if ( !empty( $a['tag'] ) ) {
+		$args['tag'] = $a['tag'];
+	}
+
+	if ( !empty( $a['tags'] ) ) {
 		$tags = explode( ',', $a['tags'] );
 		$args['tag__in'] = $tags;
 	}
@@ -34,11 +38,11 @@ function articles_shortcode( $atts ) {
 	    while ( $query->have_posts() ) {
 	        $query->the_post();
 	        $return .= '<div class="entry">';
-	        $return .= '<div class="entry-thumbnail">';
+	        $return .= '<div class="entry-thumbnail"><a href="' . get_the_permalink() . '">';
 	        $return .= get_the_post_thumbnail( null, 'post-thumbnail' );
-	        $return .= '</div>';
+	        $return .= '</a></div>';
 	        $return .= '<div class="entry-inner">';
-		    $return .= '<h4>' . get_the_title() . '</h4>';
+		    $return .= '<h4><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h4>';
 		    $return .= wpautop( get_the_excerpt() );
 		    $return .= '</div></div>';
 	    }

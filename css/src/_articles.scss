@@ -20,6 +20,14 @@
 
 		.entry-inner {
 			padding: 20px;
+
+			a {
+				color: $grey;
+
+				&:hover {
+					opacity: .8;
+				}
+			}
 		}
 
 		@include respond-to( 650px ) {

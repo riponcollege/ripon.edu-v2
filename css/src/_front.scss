@@ -3,11 +3,12 @@
 
 .front-title {
 	padding: 20px;
-	background: $grey;
+	background: $orange;
 
 	h2 {
 		color: white;
 		text-align: center;
+		text-transform: uppercase;
 
 		&:after {
 			content: "\21D3";
@@ -29,6 +30,11 @@
 		@include respond-to( 1024px ) {
 			flex: 1;
 			flex-basis: 50%;
+			padding: 20px 30px;
+
+			.article-cards {
+				margin-right: -3.3333%;
+			}
 
 			.entry:first-child {
 				flex-basis: 100%;
@@ -60,15 +66,33 @@
 				}
 			}
 		}
+
+		@include respond-to( 1220px ) {
+			padding: 30px 40px;
+		}
+
+		@include respond-to( 1440px ) {
+			padding: 50px 70px;
+		}
 	}
 
 	.front-events {
 		padding: 20px;
-		background: $red-light;
+		background: $grey;
+		color: $grey-light;
 
-		@include respond-to( 768px ) {
+		@include respond-to( 1024px ) {
 			flex: 1;
 			flex-basis: 50%;
+			padding: 30px;
+		}
+
+		@include respond-to( 1220px ) {
+			padding: 50px;
+		}
+
+		@include respond-to( 1440px ) {
+			padding: 70px;
 		}
 	}
 

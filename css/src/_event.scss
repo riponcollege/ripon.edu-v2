@@ -171,3 +171,66 @@
 }
 
 
+
+.event-list {
+	.event {
+		position: relative;
+		padding-left: 100px;
+		padding-bottom: 30px;
+
+		.event-date-month {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 80px;
+
+			@include font-title;
+			font-size: 20px;
+			line-height: 20px;
+			text-align: center;
+		}
+
+		.event-date-day {
+			position: absolute;
+			left: 0;
+			top: 25px;
+			width: 80px;
+
+			@include font-title-bold;
+			font-size: 50px;
+			line-height: 50px;
+			text-align: center;
+		}
+
+		.event-date-year {
+			position: absolute;
+			left: 0;
+			top: 80px;
+			width: 80px;
+
+			@include font-title;
+			font-size: 20px;
+			line-height: 20px;
+			text-align: center;
+		}
+
+		h3 {
+			@include font-title-bold;
+			padding: 0;
+
+			a {
+
+			}
+		}
+
+		.event-location {
+			opacity: .7;
+			padding: 4px 0;
+		}
+
+		.event-excerpt {
+			font-size: .9em;
+		}
+	}
+}
+

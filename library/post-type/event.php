@@ -111,7 +111,7 @@ function event_metaboxes( $meta_boxes ) {
 
     $event_metabox->add_field( array(
         'name' => 'Location Description',
-        'id'   => CMB_PREFIX . 'event_location_text',
+        'id'   => CMB_PREFIX . 'event_location',
         'type' => 'text',
     ) );
 
@@ -263,7 +263,6 @@ function get_month_events( $m, $y, $category='' ) {
 
 
 function get_upcoming_events( $limit, $category=0 ) {
-
 
 	$timestamp_start = mktime( 0, 0, 0 );
 
@@ -653,13 +652,14 @@ function manage_event_columns( $column, $post_id ) {
 
 
 // event shortcode
-function event_shortcode( $event_atts ) {
+function events_shortcode( $event_atts ) {
 
 	// set shortcode defaults
 	$a = shortcode_atts( array(
 		'limit' => 5,
 		'category' => 0,
 		'show_excerpt' => 0,
+		'display' => 'list'
 	), $event_atts );
 
 
@@ -672,14 +672,26 @@ function event_shortcode( $event_atts ) {
 	// list the events
 	if ( !empty( $events ) ) {
 		$list .= '<div class="event-list">';
+		$num = 0;
 		foreach ( $events as $event ) {
-			$list .= '<div class="event-item">';
-			$list .= '<h5><a href="' . ( !empty( $event->_p_event_website ) ? $event->_p_event_website : get_permalink( $event->ID ) ) . '">' . $event->post_title . '</a></h5>';
-			$list .= '<span class="quiet">' . date( 'F jS, Y', $event->_p_event_start ) . '</span>';
+
+			// piece together an excerpt.
+			$excerpt = ( !empty( $event->post_excerpt ) ? $event->post_excerpt : wp_trim_words( $event->post_content, 40 ) . "[...]" );
+
+
+			$list .= '<div class="event' . ( $num == 0 ? ' first' : '' ) . '">';
+			$list .= '<span class="event-date-month">' . date( 'M', $event->_p_event_start ) . '</span>';
+			$list .= '<span class="event-date-day">' . date( 'j', $event->_p_event_start ) . '</span>';
+			$list .= '<span class="event-date-year">' . date( 'Y', $event->_p_event_start ) . '</span>';
+			$list .= '<h3><a href="' . ( !empty( $event->_p_event_website ) ? $event->_p_event_website : get_permalink( $event->ID ) ) . '">' . $event->post_title . '</a></h3>';
+			$list .= '<div class="event-location">' . $event->_p_event_location . '</div>';
+			$list .= '<div class="event-excerpt">' . $excerpt . '</div>';
+
 			if ( $a['show_excerpt'] ) {
 				$list .= $event->post_excerpt;
 			}
 			$list .= '</div>';
+			$num++;
 		}
 		$list .= '</div>';
 	}
@@ -687,7 +699,7 @@ function event_shortcode( $event_atts ) {
 	return $list;
 
 }
-add_shortcode( 'event-list', 'event_shortcode' );
+add_shortcode( 'events', 'events_shortcode' );
 
 
 
