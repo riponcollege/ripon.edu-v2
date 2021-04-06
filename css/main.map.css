@@ -748,7 +748,7 @@ header {
       z-index: 3; }
       @media only screen and (min-width: 1024px) {
         .video-showcase-container header.video:after {
-          width: 160px; } }
+          width: 170px; } }
     .video-showcase-container header.video .buttons {
       top: 200px;
       left: 50%;
