@@ -54,9 +54,12 @@ if ( isset( $_REQUEST['event_category'] ) && $_REQUEST['event_category']!=0 ) {
 			<br>
 			<?php 
 
+			$request = explode( '?', $_SERVER['REQUEST_URI'] );
+			parse_str( $request[1], $query_args );
+
 			// get URL parameters and default to current month.
-			$month = ( isset( $_REQUEST['mo'] ) ? $_REQUEST['mo'] : date( "n" ) );
-			$year = ( isset( $_REQUEST['yr'] ) ? $_REQUEST['yr'] : date( "Y" ) );
+			$month = ( !empty( $query_args['mo'] ) ? $query_args['mo'] : date( "n" ) );
+			$year = ( !empty( $query_args['yr'] ) ? $query_args['yr'] : date( "Y" ) );
 
 			// output month
 			show_month_events( $month, $year );
