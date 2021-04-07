@@ -1110,21 +1110,21 @@ body.cta-active {
     bottom: 0;
     right: 0;
     left: 0; }
-  .call-to-action .btn {
+  .call-to-action .btn, .call-to-action button, .call-to-action input[type=submit], .call-to-action .gform_wrapper .gform_footer input[type=submit], .gform_wrapper .gform_footer .call-to-action input[type=submit], .call-to-action .gform_wrapper .gform_footer input[type=button], .gform_wrapper .gform_footer .call-to-action input[type=button], .call-to-action .gform_wrapper .gform_footer input[type=reset], .gform_wrapper .gform_footer .call-to-action input[type=reset], .call-to-action .gform_wrapper .gform_footer button, .gform_wrapper .gform_footer .call-to-action button {
     transition: all 400ms ease-in-out;
     margin: 0 10px;
     background: rgba(255, 255, 255, 0.8);
     opacity: 1;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
-    .call-to-action .btn:hover {
+    .call-to-action .btn:hover, .call-to-action button:hover, .call-to-action input:hover[type=submit], .call-to-action .gform_wrapper .gform_footer input:hover[type=button], .gform_wrapper .gform_footer .call-to-action input:hover[type=button], .call-to-action .gform_wrapper .gform_footer input:hover[type=reset], .gform_wrapper .gform_footer .call-to-action input:hover[type=reset], .call-to-action .gform_wrapper .gform_footer button:hover, .gform_wrapper .gform_footer .call-to-action button:hover {
       background: white;
       opacity: 1;
       color: #6A0A1B;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); }
-    .call-to-action .btn.two {
+    .call-to-action .btn.two, .call-to-action button.two, .call-to-action input.two[type=submit], .call-to-action .gform_wrapper .gform_footer input.two[type=button], .gform_wrapper .gform_footer .call-to-action input.two[type=button], .call-to-action .gform_wrapper .gform_footer input.two[type=reset], .gform_wrapper .gform_footer .call-to-action input.two[type=reset], .call-to-action .gform_wrapper .gform_footer button.two, .gform_wrapper .gform_footer .call-to-action button.two {
       display: none; }
       @media only screen and (min-width: 768px) {
-        .call-to-action .btn.two {
+        .call-to-action .btn.two, .call-to-action button.two, .call-to-action input.two[type=submit], .call-to-action .gform_wrapper .gform_footer input.two[type=button], .gform_wrapper .gform_footer .call-to-action input.two[type=button], .call-to-action .gform_wrapper .gform_footer input.two[type=reset], .gform_wrapper .gform_footer .call-to-action input.two[type=reset], .call-to-action .gform_wrapper .gform_footer button.two, .gform_wrapper .gform_footer .call-to-action button.two {
           display: inline-block; } }
   .call-to-action .back-to-top {
     float: right;
@@ -1266,7 +1266,7 @@ section.content {
 .content-style .buttons, .area .tab-content .buttons, .bio .bio-content .buttons {
   padding: 20px 0; }
 
-button, input[type=submit], input[type=reset], .btn {
+button, input[type=submit], input[type=reset], .btn, button, input[type=submit], .gform_wrapper .gform_footer input[type=submit], .gform_wrapper .gform_footer input[type=button], .gform_wrapper .gform_footer input[type=reset], .gform_wrapper .gform_footer button {
   padding: 6px 10px;
   font-family: "Open Sans", sans-serif;
   font-weight: 800;
@@ -1280,36 +1280,36 @@ button, input[type=submit], input[type=reset], .btn {
   display: inline-block;
   margin-bottom: 4px;
   transition: opacity 400ms ease-in-out; }
-  .content button, .content input[type=submit], .content input[type=reset], .content .btn {
+  .content button, .content input[type=submit], .content input[type=reset], .content .btn, .content button, .content input[type=submit], .content .gform_wrapper .gform_footer input[type=submit], .gform_wrapper .gform_footer .content input[type=submit], .content .gform_wrapper .gform_footer input[type=button], .gform_wrapper .gform_footer .content input[type=button], .content .gform_wrapper .gform_footer input[type=reset], .gform_wrapper .gform_footer .content input[type=reset], .content .gform_wrapper .gform_footer button, .gform_wrapper .gform_footer .content button {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     border-radius: 5px; }
-  button:hover, input[type=submit]:hover, input[type=reset]:hover, .btn:hover {
+  button:hover, input[type=submit]:hover, input[type=reset]:hover, .btn:hover, button:hover, input:hover[type=submit], .gform_wrapper .gform_footer input:hover[type=submit], .gform_wrapper .gform_footer input:hover[type=button], .gform_wrapper .gform_footer input:hover[type=reset], .gform_wrapper .gform_footer button:hover {
     opacity: .8; }
-  button.red-dark, input[type=submit].red-dark, input[type=reset].red-dark, .btn.red-dark {
+  button.red-dark, input[type=submit].red-dark, input[type=reset].red-dark, .btn.red-dark, button.red-dark, input.red-dark[type=submit], .gform_wrapper .gform_footer input.red-dark[type=submit], .gform_wrapper .gform_footer input.red-dark[type=button], .gform_wrapper .gform_footer input.red-dark[type=reset], .gform_wrapper .gform_footer button.red-dark {
     background-color: #6A0A1B;
     color: white;
     border-color: #6A0A1B; }
-  button.red-light, input[type=submit].red-light, input[type=reset].red-light, .btn.red-light {
+  button.red-light, input[type=submit].red-light, input[type=reset].red-light, .btn.red-light, button.red-light, input.red-light[type=submit], .gform_wrapper .gform_footer input.red-light[type=submit], .gform_wrapper .gform_footer input.red-light[type=button], .gform_wrapper .gform_footer input.red-light[type=reset], .gform_wrapper .gform_footer button.red-light {
     background-color: #A91C3A;
     color: white;
     border-color: #A91C3A; }
-  button.orange, input[type=submit].orange, input[type=reset].orange, .btn.orange {
+  button.orange, input[type=submit].orange, input[type=reset].orange, .btn.orange, button.orange, input.orange[type=submit], .gform_wrapper .gform_footer input.orange[type=submit], .gform_wrapper .gform_footer input.orange[type=button], .gform_wrapper .gform_footer input.orange[type=reset], .gform_wrapper .gform_footer button.orange {
     background-color: #EA4D3D;
     color: white;
     border-color: #EA4D3D; }
-  button.yellow, input[type=submit].yellow, input[type=reset].yellow, .btn.yellow {
+  button.yellow, input[type=submit].yellow, input[type=reset].yellow, .btn.yellow, button.yellow, input.yellow[type=submit], .gform_wrapper .gform_footer input.yellow[type=submit], .gform_wrapper .gform_footer input.yellow[type=button], .gform_wrapper .gform_footer input.yellow[type=reset], .gform_wrapper .gform_footer button.yellow {
     background-color: #F6B44D;
     color: black;
     border-color: #F6B44D; }
-  button.teal, input[type=submit].teal, input[type=reset].teal, .btn.teal {
+  button.teal, input[type=submit].teal, input[type=reset].teal, .btn.teal, button.teal, input.teal[type=submit], .gform_wrapper .gform_footer input.teal[type=submit], .gform_wrapper .gform_footer input.teal[type=button], .gform_wrapper .gform_footer input.teal[type=reset], .gform_wrapper .gform_footer button.teal {
     background-color: #0094E3;
     color: white;
     border-color: #0094E3; }
-  button.grey, input[type=submit].grey, input[type=reset].grey, .btn.grey {
+  button.grey, input[type=submit].grey, input[type=reset].grey, .btn.grey, button.grey, input.grey[type=submit], .gform_wrapper .gform_footer input.grey[type=submit], .gform_wrapper .gform_footer input.grey[type=button], .gform_wrapper .gform_footer input.grey[type=reset], .gform_wrapper .gform_footer button.grey {
     background-color: #434039;
     color: white;
     border-color: #434039; }
-  button.grey-light, input[type=submit].grey-light, input[type=reset].grey-light, .btn.grey-light {
+  button.grey-light, input[type=submit].grey-light, input[type=reset].grey-light, .btn.grey-light, button.grey-light, input.grey-light[type=submit], .gform_wrapper .gform_footer input.grey-light[type=submit], .gform_wrapper .gform_footer input.grey-light[type=button], .gform_wrapper .gform_footer input.grey-light[type=reset], .gform_wrapper .gform_footer button.grey-light {
     background-color: #EBEAE9;
     color: #434039;
     border-color: #EBEAE9; }
@@ -1347,6 +1347,67 @@ button, input[type=submit], input[type=reset], .btn {
 
 .elementor-editor-active .elementor-background-overlay {
   display: none; }
+
+.text-field, input[type=text], input[type=search], select, .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), .gform_wrapper textarea {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  display: inline-block;
+  padding: 6px 8px;
+  max-width: 100%;
+  font-size: 15px;
+  line-height: 1.5em;
+  border: 3px solid #ddd; }
+
+.gform_wrapper .short-form .gfield {
+  margin: 10px 0 !important; }
+  .gform_wrapper .short-form .gfield .ginput_container {
+    margin-top: 5px !important; }
+  .gform_wrapper .short-form .gfield .gfield_description {
+    padding-top: 0; }
+  .gform_wrapper .short-form .gfield ::placeholder {
+    color: #ddd; }
+  .gform_wrapper .short-form .gfield.field_description_below.gsection {
+    margin: 50px 0 10px !important; }
+    @media only screen and (min-width: 768px) {
+      .gform_wrapper .short-form .gfield.field_description_below.gsection {
+        margin: 80px 0 15px !important; } }
+    .gform_wrapper .short-form .gfield.field_description_below.gsection:first-child {
+      margin: 0 0 15px !important; }
+      @media only screen and (min-width: 768px) {
+        .gform_wrapper .short-form .gfield.field_description_below.gsection:first-child {
+          margin: 0 0 15px !important; } }
+
+.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]):focus, .gform_wrapper textarea:focus {
+  border: 3px solid #0094E3;
+  outline: none; }
+
+.gform_wrapper .gsection_description {
+  font-size: .9em; }
+
+.gform_wrapper span.ginput_total {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #0094E3; }
+
+.gform_wrapper .gfield.inline-radio .gfield_radio, .gform_wrapper .gfield.donate-amount .gfield_radio {
+  width: auto !important; }
+  .gform_wrapper .gfield.inline-radio .gfield_radio li, .gform_wrapper .gfield.donate-amount .gfield_radio li {
+    background: #EBEAE9;
+    padding: 7px 13px 10px !important;
+    margin-right: 5px;
+    border-radius: 5px; }
+    @media only screen and (min-width: 768px) {
+      .gform_wrapper .gfield.inline-radio .gfield_radio li, .gform_wrapper .gfield.donate-amount .gfield_radio li {
+        float: left; } }
+
+.gform_wrapper .gfield.conditional-note {
+  font-size: .8em;
+  margin-top: -20px !important;
+  margin-bottom: 20px !important; }
+
+.gform_wrapper .gform_footer input[type=submit], .gform_wrapper .gform_footer input[type=button], .gform_wrapper .gform_footer input[type=reset], .gform_wrapper .gform_footer button {
+  background-color: #0094E3;
+  color: white; }
 
 .entry-content .job_listings li {
   background: none; }
@@ -1548,7 +1609,7 @@ button, input[type=submit], input[type=reset], .btn {
     padding: 20px;
     text-align: center; }
     @media only screen and (min-width: 768px) {
-      .area .area-buttons .btn {
+      .area .area-buttons .btn, .area .area-buttons button, .area .area-buttons input[type=submit], .area .area-buttons .gform_wrapper .gform_footer input[type=button], .gform_wrapper .gform_footer .area .area-buttons input[type=button], .area .area-buttons .gform_wrapper .gform_footer input[type=reset], .gform_wrapper .gform_footer .area .area-buttons input[type=reset], .area .area-buttons .gform_wrapper .gform_footer button, .gform_wrapper .gform_footer .area .area-buttons button {
         margin: 0 30px; } }
 
 .area-legend {
@@ -2137,7 +2198,7 @@ button, input[type=submit], input[type=reset], .btn {
     .bio .sidebar .person-info p {
       padding: 3px 0;
       color: #434039; }
-    .bio .sidebar .person-info .btn {
+    .bio .sidebar .person-info .btn, .bio .sidebar .person-info button, .bio .sidebar .person-info input[type=submit], .bio .sidebar .person-info .gform_wrapper .gform_footer input[type=button], .gform_wrapper .gform_footer .bio .sidebar .person-info input[type=button], .bio .sidebar .person-info .gform_wrapper .gform_footer input[type=reset], .gform_wrapper .gform_footer .bio .sidebar .person-info input[type=reset], .bio .sidebar .person-info .gform_wrapper .gform_footer button, .gform_wrapper .gform_footer .bio .sidebar .person-info button {
       margin-top: 20px;
       padding: 10px 20px; }
 
