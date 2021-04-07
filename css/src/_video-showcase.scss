@@ -29,18 +29,38 @@
 		ul {
 			li {
 				display: inline;
+				position: relative;
 
 				a {
 					color: white;
 					text-decoration: none;
 					text-shadow: 0 0 10px rgba( black, .4 );
-					padding: 5px 20px;
+					padding: 5px 25px;
 					transition: all 400ms ease-in-out;
+					margin: 0 5px;
 					@include font-bold;
+					opacity: .8;
 
 					&:hover {
 						text-decoration: none;
-						color: $yellow;
+						opacity: 1;
+
+						&:before {
+							opacity: .9;
+						}
+					}
+
+					&:before {
+						position: absolute;
+						left: 0;
+						top: 0;
+						content: "";
+						width: 20px;
+						height: 20px;
+						background: url(../img/icon-link.webp) center center no-repeat;
+						background-size: contain;
+						opacity: .5;
+						transition: all 400ms ease-in-out;
 					}
 				}
 			}
