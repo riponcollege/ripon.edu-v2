@@ -708,7 +708,8 @@ header {
     z-index: 0; }
   .video-showcase-container .video-showcase {
     position: relative;
-    z-index: 1; }
+    z-index: 1;
+    width: 100%; }
   .video-showcase-container .header-menu {
     display: none; }
     @media only screen and (min-width: 768px) {
