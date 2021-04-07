@@ -48,9 +48,9 @@
 		}
 
 		.phototile-title {
-			font-size: 2em;
+			font-size: 1.8em;
 			line-height: 1.4em;
-			font-weight: bold;
+			@include font-title-bold;
 			position: relative;
 			z-index: 2;
 		}

@@ -966,9 +966,10 @@ header {
       content: '';
       z-index: 1; }
     .phototiles .phototile .phototile-title {
-      font-size: 2em;
+      font-size: 1.8em;
       line-height: 1.4em;
-      font-weight: bold;
+      font-family: "Hepta Slab", serif;
+      font-weight: 600;
       position: relative;
       z-index: 2; }
     .phototiles .phototile .phototile-subtitle {
