@@ -929,28 +929,33 @@ header {
     display: table; }
   .phototiles, .phototiles:before, .phototiles:after {
     clear: both; }
+  @media only screen and (min-width: 768px) {
+    .phototiles {
+      display: flex;
+      flex-wrap: wrap; } }
   .phototiles .phototile {
-    padding: 40px;
     color: white;
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
     position: relative;
     text-align: center;
     background-position: center center;
-    background-size: cover; }
+    background-size: cover;
+    padding: 40px; }
     @media only screen and (min-width: 768px) {
       .phototiles .phototile {
-        float: left;
-        width: 50%;
-        height: 200px; } }
+        flex: 1;
+        flex-basis: 50%;
+        padding: 60px 50px; } }
     @media only screen and (min-width: 1024px) {
       .phototiles .phototile {
-        height: 300px;
-        padding: 70px 40px; } }
-    @media only screen and (min-width: 1220px) {
+        flex-basis: 33.3333%;
+        padding: 80px 90px; } }
+    @media only screen and (min-width: 1440px) {
       .phototiles .phototile {
-        height: 300px;
-        padding: 120px;
-        height: 380px; } }
+        flex-basis: 25%; } }
+    @media only screen and (min-width: 1920px) {
+      .phototiles .phototile {
+        padding: 130px 130px; } }
     .phototiles .phototile:before {
       position: absolute;
       top: 0;
@@ -982,7 +987,8 @@ header {
       opacity: 0;
       z-index: 3;
       transition: 400ms opacity ease-in-out;
-      padding: 35px; }
+      padding: 50px;
+      overflow: hidden; }
       .phototiles .phototile .phototile-content.red-dark {
         background: #6A0A1B; }
       .phototiles .phototile .phototile-content.red-light {
@@ -997,10 +1003,15 @@ header {
         background: #EA4D3D; }
       @media only screen and (min-width: 1024px) {
         .phototiles .phototile .phototile-content {
-          padding: 70px 40px; } }
-      @media only screen and (min-width: 1220px) {
+          padding: 70px 50px; } }
+      @media only screen and (min-width: 1440px) {
         .phototiles .phototile .phototile-content {
-          padding: 120px; } }
+          padding: 80px 60px; } }
+      @media only screen and (min-width: 1920px) {
+        .phototiles .phototile .phototile-content {
+          font-size: 1.2em;
+          line-height: 1.5em;
+          padding: 80px 80px; } }
     .phototiles .phototile:hover .phototile-content {
       opacity: 1; }
 
