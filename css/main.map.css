@@ -465,21 +465,25 @@ body {
       padding: 6px 9px;
       text-decoration: none;
       transition: 400ms all ease-in-out;
-      font-size: 1.1em;
-      line-height: 1.4em; }
+      font-size: 1.2em;
+      line-height: 1.4em;
+      font-family: "Hepta Slab", serif;
+      font-weight: 600; }
       .menu-pane .main-menu a:hover {
         color: #5f5a50; }
       @media only screen and (min-width: 768px) {
         .menu-pane .main-menu a {
-          padding: 7px 10px; } }
+          padding: 10px; } }
     .menu-pane .main-menu .sub-menu {
       display: none;
       border-top: 1px solid #c3c0b8; }
       .menu-pane .main-menu .sub-menu a {
         border-bottom: 1px solid #c3c0b8;
         font-size: 1em;
-        padding: 5px;
-        line-height: 1.5em; }
+        padding: 5px 9px;
+        line-height: 1.5em;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300; }
       .menu-pane .main-menu .sub-menu.open {
         display: block; }
       @media only screen and (min-width: 768px) {
@@ -1592,20 +1596,6 @@ button, input[type=submit], input[type=reset], .btn, button, input[type=submit],
           font-size: .9em;
           color: #434039;
           padding: 3px 0; }
-  .area .area-news .entry {
-    zoom: 1;
-    padding: 20px 0;
-    border-top: 1px dotted rgba(67, 64, 57, 0.2); }
-    .area .area-news .entry:before, .area .area-news .entry:after {
-      content: "";
-      display: table; }
-    .area .area-news .entry, .area .area-news .entry:before, .area .area-news .entry:after {
-      clear: both; }
-    .area .area-news .entry .wp-post-image {
-      float: left;
-      margin: 0 15px 0 0;
-      width: 25%;
-      max-width: 140px; }
   .area .area-buttons {
     padding: 20px;
     text-align: center; }

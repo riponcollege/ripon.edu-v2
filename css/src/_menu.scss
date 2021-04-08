@@ -71,15 +71,16 @@ body {
 			padding: 6px 9px;
 			text-decoration: none;
 			transition: 400ms all ease-in-out;
-			font-size: 1.1em;
+			font-size: 1.2em;
 			line-height: 1.4em;
+			@include font-title-bold;
 
 			&:hover {
 				color: lighten( $grey, 10% );
 			}
 
 			@include respond-to( 768px ) {
-				padding: 7px 10px;
+				padding: 10px;
 			}
 		}
 
@@ -90,8 +91,9 @@ body {
 			a {
 				border-bottom: 1px solid lighten( $grey, 50% );
 				font-size: 1em;
-				padding: 5px;
+				padding: 5px 9px;
 				line-height: 1.5em;
+				@include font;
 			}
 
 			&.open {
