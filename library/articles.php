@@ -6,11 +6,12 @@ function articles_shortcode( $atts ) {
 	$a = shortcode_atts( array(
 		'style' => "card",
 		'tags' => '',
-		'cats' => ''
+		'cats' => '',
+		'posts_per_page' => 4
 	), $atts );
 
 	$args = array(
-	    'posts_per_page' => 4
+		'posts_per_page' => $a['posts_per_page']
 	);
 
 	if ( !empty( $a['tag'] ) ) {

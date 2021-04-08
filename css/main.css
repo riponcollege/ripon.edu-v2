@@ -2975,4 +2975,20 @@ img.mfp-img {
     @media only screen and (min-width: 1024px) {
       .article-cards .entry {
         margin: 0 2% 2% 0;
+        flex-basis: 31.3333%; } }
+    @media only screen and (min-width: 1220px) {
+      .article-cards .entry {
         flex-basis: 23%; } }
+  @media only screen and (min-width: 650px) {
+    .area .article-cards .entry, .two-column .article-cards .entry {
+      flex: 1;
+      flex-grow: 0;
+      margin: 0 2% 2% 0;
+      flex-basis: 48%; } }
+  @media only screen and (min-width: 1024px) {
+    .area .article-cards .entry, .two-column .article-cards .entry {
+      margin: 0 2% 2% 0;
+      flex-basis: 31.3333%; } }
+  @media only screen and (min-width: 1220px) {
+    .area .article-cards .entry, .two-column .article-cards .entry {
+      flex-basis: 31.3333%; } }

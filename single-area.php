@@ -115,8 +115,8 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 					<?php if ( !empty( get_cmb_value( 'area_post_tag' ) ) ) { ?>
 					<hr>
 					<div class="area-news">
-						<h2>Latest News</h2>						  
-						<?php print do_shortcode( '[articles tag="' . get_cmb_value( 'area_post_tag' ) . '" /]' ); ?>
+						<h2>Latest News</h2>
+						<?php print do_shortcode( '[articles tag="' . get_cmb_value( 'area_post_tag' ) . '" posts_per_page=3 /]' ); ?>
 					</div>
 					<?php } ?>
 
