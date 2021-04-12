@@ -121,3 +121,11 @@ function remove_width_attribute( $html ) {
 }
 
 
+
+// allow webp image uploads in the media library
+function webp_upload_mimes($existing_mimes) {
+    $existing_mimes[ 'webp' ] = 'image/webp';
+    return $existing_mimes;
+}
+add_filter( 'mime_types', 'webp_upload_mimes' );
+

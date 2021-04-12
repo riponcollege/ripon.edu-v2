@@ -7,9 +7,8 @@
 	.breadcrumbs {
 		span.ma, span.mi, span.tc, span.dd, span.pa {
 			font-size: 1.2em;
-			width: 40px;
-			height: 40px;
-			line-height: 40px;
+			line-height: 1.2em;
+			padding: 7px;
 		}
 	}
 }
@@ -17,34 +16,30 @@
 
 .academics, .area-header {
 	span.ma, span.mi, span.tc, span.dd, span.pa {
-		border-radius: 50%;
-		font-size: .7em;
+		line-height: 1em;
+		padding: 7px;
 		text-align: center;
-		vertical-align: middle;
-		width: 30px;
-		height: 30px;
-		line-height: 30px;
 		display: inline-block;
 		@include font-bold;
 	}
 	span.ma {
-		background-color: lighten( $red-dark, 40% );
+		background-color: $red-dark;
 		color: white;
 	}
 	span.mi {
-		background-color: lighten( $red-light, 30% );
+		background-color: $red-light;
 		color: white;
 	}
 	span.pa {
-		background-color: lighten( $orange, 30% );
-		color: darken( $orange, 20% );
+		background-color: $orange;
+		color: white;
 	}
 	span.tc {
-		background-color: lighten( $yellow, 20% );
-		color: darken( $yellow, 30% );
+		background-color: $yellow;
+		color: white;
 	}
 	span.dd {
-		background-color: lighten( $teal, 30% );
+		background-color: $teal;
 		color: white;
 	}
 
@@ -57,25 +52,36 @@
 				box-shadow: 0 0 10px rgba( black, .1 );
 				margin: 10px 0;
 
+				@include respond-to( 768px ) {
+					padding: 15px;
+					display: flex;
+				}
+
+				.area-title {
+					@include respond-to( 768px ) {
+						flex: 1;
+						flex-basis: 60%;
+					}
+				}
+
+				.area-categories {
+					padding: 5px 0 0 0;
+
+					@include respond-to( 768px ) {
+						flex: 1;
+						flex-basis: 40%;
+						text-align: right;
+					}
+				}
+
 				a {
+					@include font-title-bold;
+					font-size: 1.3em;
+					line-height: 1.6em;
 					text-decoration: none;
-					width: 70%;
-					display: inline-block;
 					color: $grey;
-
-					@include respond-to( 768px ) {
-						width: 80%;
-					}
 				}
 
-				span {
-					float: right;
-					margin: -4px 0 0 5px;
-
-					@include respond-to( 768px ) {
-						margin: -3px 0 0 5px;
-					}
-				}
 			}
 		}
 	}
@@ -258,7 +264,7 @@
 	}
 
 	dl {
-		background: $grey-light;
+		border: 8px solid $grey-light;
 		padding: 20px;
 		@include clearfix;
 
@@ -314,9 +320,8 @@
 		}
 
 		@include respond-to( 1024px ) {
-			float: right;
-			margin-left: 15px;
-			margin-bottom: 0;
+			float: left;
+			width: 25%;
 		}
 
 		select {

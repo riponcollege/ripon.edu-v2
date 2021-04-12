@@ -15,7 +15,6 @@ register_nav_menus( array(
 
 
 
-
 // cmb2 fields for managing the menu
 add_action( 'cmb2_admin_init', 'menu_metaboxes' );
 function menu_metaboxes() {
@@ -64,41 +63,32 @@ function get_all_menus(){
 
 
 // output the left menu
-function left_menu_display( $mode = 'both' ) {
-
-	// grab the menu the user selected in the menus metabox.
-	$menu_title = get_post_meta( get_the_ID(), CMB_PREFIX . "menu_title", 1 );
+function section_menu( $mode = 'both' ) {
 
 	// primary menu
-	$menu_primary = get_post_meta( get_the_ID(), CMB_PREFIX . "menu_primary", 1 );
-	$menu_primary_info = wp_get_nav_menu_object( $menu_primary );
+	$menu_primary = get_cmb_value( "menu_primary" );
 
-	// buttons menu
-	// $menu_buttons = get_post_meta( get_the_ID(), CMB_PREFIX . "menu_buttons", 1 );
+	// make sure there's a menu for this page before displaying
+	if ( !empty( $menu_primary ) ) {
 
-	print '<button class="toggle-sidebar-menu">Section Navigation</button>';
-	print '<div class="sidebar-menu-container">';
+		// get the menu items
+		$items = wp_get_nav_menu_items( $menu_primary );
 
-	// verify that the menu exists by checking the menu name to see if it's empty
-	if ( !empty( $menu_primary ) && ( $mode == 'both' || $mode == 'primary' ) ) {
-		print '<div class="menu-primary">';
+		// start the menu container elements
+		print '<div class="section-menu"><ul>';
 
-		// display the menu title
-		if ( !empty( $menu_name ) ) {
-			print '<h5 class="menu-title">' . $menu_name . '</h5>';
-		} else if ( !empty( $menu_primary_info ) ) {
-			print '<h5 class="menu-title">' . $menu_primary_info->name . '</h5>';
+		// loop through the items, only show top level items, limiting total number
+		$num = 0;
+		foreach ( $items as $item ) {
+			if ( $item->menu_item_parent == 0 && $num < 6 ) {
+				print '<li><a href="' . $item->url . '">' . $item->title . '</a></li>';
+			}
+			$num++;
 		}
 
-		// display the menu
-		wp_nav_menu( array( 
-			'menu' => $menu_primary, 
-			'menu_class' => 'nav-menu' )
-		);
-
-		print '</div>';
+		// close the menu container elements
+		print '</ul></div>';
 	}
-	print '</div>';
 
 }
 

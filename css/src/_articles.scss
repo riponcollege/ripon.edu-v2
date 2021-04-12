@@ -49,18 +49,6 @@
 
 
 	.area & .entry, .two-column & .entry {
-		@include respond-to( 650px ) {
-			flex: 1;
-			flex-grow: 0;
-			margin: 0 2% 2% 0;
-			flex-basis: 48%;
-		}
-
-		@include respond-to( 1024px ) {
-			margin: 0 2% 2% 0;
-			flex-basis: 31.3333%;
-		}
-
 		@include respond-to( 1220px ) {
 			flex-basis: 31.3333%;
 		}

@@ -36,33 +36,33 @@ header {
 	.buttons {
 		display: none;
 
+		li {
+			display: inline;
+
+			a {
+				display: inline-block;
+				color: rgba( white, .8 );
+				text-transform: uppercase;
+				padding: 5px 10px;
+				text-decoration: none;
+				transition: all 400ms ease-in-out;
+				margin: 0 10px;
+				font-size: 16.5px;
+				line-height: 25px;
+				border-bottom: 2px dotted rgba( white, .2 );
+
+				&:hover {
+					color: white;
+					border-bottom: 2px dotted white;
+				}
+			}
+		}
+
 		@include respond-to( 768px ) {
 			display: block;
 			position: absolute;
 			right: 150px;
 			top: 24px;
-
-			li {
-				display: inline;
-
-				a {
-					display: inline-block;
-					color: rgba( white, .8 );
-					text-transform: uppercase;
-					padding: 5px 10px;
-					text-decoration: none;
-					transition: all 400ms ease-in-out;
-					margin: 0 10px;
-					font-size: 16.5px;
-					line-height: 25px;
-					border-bottom: 2px dotted rgba( white, .2 );
-
-					&:hover {
-						color: white;
-						border-bottom: 2px dotted white;
-					}
-				}
-			}
 		}
 
 		@include respond-to( 1220px ) {
@@ -89,7 +89,7 @@ header {
 		background-size: contain;
 		position: absolute;
 		right: 80px;
-		bottom: 20px;
+		top: 20px;
 		width: 26px;
 		z-index: 4;
 		color: transparent;
@@ -98,7 +98,7 @@ header {
 
 		@include respond-to( 768px ) {
 			position: absolute;
-			bottom: 20px;
+			top: 20px;
 			width: 26px;
 			color: transparent;
 		}
@@ -106,14 +106,14 @@ header {
 		@include respond-to( 1024px ) {
 			right: 100px;
 			width: 35px;
-			bottom: 22px;
+			top: 26px;
 		}
 	}
 
 	.menu-show {
 		position: absolute;
 		right: 30px;
-		bottom: 24px;
+		top: 24px;
 		color: transparent;
 		width: 26px;
 		height: 26px;
@@ -128,7 +128,6 @@ header {
 			background-position: right center;
 			top: 30px;
 			height: 26px;
-			bottom: auto;
 		}
 	}
 }

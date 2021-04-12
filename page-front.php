@@ -8,7 +8,7 @@ get_header();
 
 ?>
 
-<div class="front-title">
+<div class="front-title first">
 	<h2>Explore Ripon</h2>
 </div>
 <?php the_phototiles(); ?>

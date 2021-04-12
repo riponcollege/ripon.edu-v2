@@ -193,3 +193,38 @@ body {
 	}
 }
 
+
+.section-menu {
+	background: $grey;
+	color: white;
+	padding: 20px 0;
+
+	@include respond-to( 1024px ) {
+		padding: 30px 20px;
+	}
+
+	@include respond-to( 1220px ) {
+		padding: 30px;
+	}
+
+	ul {
+		li {
+			@include respond-to( 768px ) {
+				display: inline;
+			}
+
+			a {
+				display: inline-block;
+				color: white;
+				text-decoration: none;
+				padding: 6px 20px;
+
+				&:hover {
+					opacity: .8;
+				}
+			}
+		}
+	}
+}
+
+

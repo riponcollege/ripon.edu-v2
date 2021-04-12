@@ -17,11 +17,27 @@ function video_showcase_metabox( $meta_boxes ) {
     ));
 
     $video_showcase_metabox->add_field( array(
+        'name' => 'Background Photo',
+        'desc' => 'Select a photo file to display in the background (this will only display on small screens.',
+        'id'   => CMB_PREFIX . 'video_showcase_photo',
+        'type' => 'file',
+    ) );
+
+    $video_showcase_metabox->add_field( array(
+        'name' => 'Background Photo (Large Screens)',
+        'desc' => 'Select a photo file (including animated webp) to display in the background on large screens.',
+        'id'   => CMB_PREFIX . 'video_showcase_photo_large',
+        'type' => 'file',
+    ) );
+
+    /*
+    $video_showcase_metabox->add_field( array(
         'name' => 'Background Video',
         'desc' => 'Select a video file (webm only!) to display in the background.',
         'id'   => CMB_PREFIX . 'video_showcase_bg',
         'type' => 'file',
     ) );
+    */
 
     $video_showcase_metabox->add_field( array(
         'name' => 'Header Menu',
@@ -46,6 +62,8 @@ add_filter( 'cmb2_admin_init', 'video_showcase_metabox' );
 function the_video_showcase() {
 
     // get the background video
+    $video_showcase_photo = get_cmb_value( 'video_showcase_photo' );
+    $video_showcase_photo_large = get_cmb_value( 'video_showcase_photo_large' );
     $video_showcase_bg = get_cmb_value( 'video_showcase_bg' );
     $video_showcase_menu_header = get_cmb_value( 'video_showcase_menu_header' );
     $video_showcase_menu_calls = get_cmb_value( 'video_showcase_menu_calls' );
@@ -53,13 +71,14 @@ function the_video_showcase() {
 	if ( !empty( $video_showcase_bg ) ) {
 		?>
 	<div class="video-showcase-container">
-        <img src="<?php bloginfo( 'template_url' ); ?>/img/video-thumbnail.webp" class="video-thumbnail" />
-
+        <div class="video-showcase-background"<?php print ( !empty( $video_showcase_photo ) ? ' style="background-image: url(' . $video_showcase_photo . ');"' : '' ); ?>></div>
+        <div class="video-showcase-background large"<?php print ( !empty( $video_showcase_photo_large ) ? ' style="background-image: url(' . $video_showcase_photo_large . ');"' : '' ); ?>></div>
+        <?php /*
         <video autoplay muted loop class="video-showcase">
             <source src="<?php print $video_showcase_bg; ?>" type="video/webm">
         </video>
+        */ ?>
 
-        <!-- Optional: some overlay text to describe the video -->
         <header class="video">
             <div class="logo">
                 <a href="/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">

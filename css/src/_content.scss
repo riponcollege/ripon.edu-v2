@@ -98,3 +98,20 @@ section.content {
 	}
 }
 
+
+.section-content {
+	padding: 20px;
+
+	@include respond-to( 768px ) {
+		padding: 20px 30px;
+	}
+
+	@include respond-to( 1024px ) {
+		padding: 30px 40px;
+	}
+
+	@include respond-to( 1220px ) {
+		padding: 30px 50px;
+	}
+}
+

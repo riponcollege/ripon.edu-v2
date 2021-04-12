@@ -165,35 +165,42 @@ if ( is_ripon() ) {
 			foreach ( $categories as $cat ) {
 	 			switch ( $cat->slug ) {
 	 				case "major":
-	 					$cats[] = '<span class="ma">MA</span>';
+	 					$cats[] = '<span class="ma">Major</span>';
 	 					$classes[] = 'ma';
 	 				break;
 	 				case "minor":
-	 					$cats[] = '<span class="mi">MI</span>';
+	 					$cats[] = '<span class="mi">Minor</span>';
 	 					$classes[] = 'mi';
 	 				break;
 	 				case "pre-professional-advising":
-	 					$cats[] = '<span class="pa">PA</span>';
+	 					$cats[] = '<span class="pa">Pre-Professional Advising</span>';
 	 					$classes[] = 'pa';
 	 				break;
 	 				case "teaching-certification":
-	 					$cats[] = '<span class="tc">TC</span>';
+	 					$cats[] = '<span class="tc">Teaching Certification</span>';
 	 					$classes[] = 'tc';
 	 				break;
 	 				case "dual-degree":
-	 					$cats[] = '<span class="dd">DD</span>';
+	 					$cats[] = '<span class="dd">Dual Degree</span>';
 	 					$classes[] = 'dd';
 	 				break;
 	 			}
 			}
 			?>
-			<li class="<?php print implode( ' ', $classes ); ?>"><a href="/area/<?php print $area->post_name ?>"><?php print $area->post_title; ?></a> <?php
-			if ( !empty( $categories ) ) {
-				?><?php
-				print implode( ' ', $cats );
-				?><?php
-			}
-			?></li>
+			<li class="<?php print implode( ' ', $classes ); ?>">
+				<div class="area-title">
+					<a href="/area/<?php print $area->post_name ?>"><?php print $area->post_title; ?></a>
+				</div>
+				<div class="area-categories">
+				<?php
+				if ( !empty( $categories ) ) {
+					?><?php
+					print implode( ' ', $cats );
+					?><?php
+				}
+				?>
+				</div>
+			</li>
 			<?php 
 			/*
 			if ( $num == $quarter || $num == ( $quarter * 2 ) || $num == ( $quarter * 3 ) || $num == $area_count ) {
