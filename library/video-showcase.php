@@ -23,21 +23,21 @@ function video_showcase_metabox( $meta_boxes ) {
         'type' => 'file',
     ) );
 
+    /*
     $video_showcase_metabox->add_field( array(
         'name' => 'Background Photo (Large Screens)',
         'desc' => 'Select a photo file (including animated webp) to display in the background on large screens.',
         'id'   => CMB_PREFIX . 'video_showcase_photo_large',
         'type' => 'file',
     ) );
+    */
 
-    /*
     $video_showcase_metabox->add_field( array(
         'name' => 'Background Video',
         'desc' => 'Select a video file (webm only!) to display in the background.',
         'id'   => CMB_PREFIX . 'video_showcase_bg',
         'type' => 'file',
     ) );
-    */
 
     $video_showcase_metabox->add_field( array(
         'name' => 'Header Menu',
@@ -72,12 +72,12 @@ function the_video_showcase() {
 		?>
 	<div class="video-showcase-container">
         <div class="video-showcase-background"<?php print ( !empty( $video_showcase_photo ) ? ' style="background-image: url(' . $video_showcase_photo . ');"' : '' ); ?>></div>
-        <div class="video-showcase-background large"<?php print ( !empty( $video_showcase_photo_large ) ? ' style="background-image: url(' . $video_showcase_photo_large . ');"' : '' ); ?>></div>
         <?php /*
+        <div class="video-showcase-background large"<?php print ( !empty( $video_showcase_photo_large ) ? ' style="background-image: url(' . $video_showcase_photo_large . ');"' : '' ); ?>></div>
+        */ ?>
         <video autoplay muted loop class="video-showcase">
             <source src="<?php print $video_showcase_bg; ?>" type="video/webm">
         </video>
-        */ ?>
 
         <header class="video">
             <div class="logo">
