@@ -152,6 +152,7 @@ if ( is_ripon() ) {
 		// set default params and override with those in shortcode
 		extract( shortcode_atts( array(
 			'category' => '',
+			'link' => 1
 		), $atts ));
 
 
@@ -161,15 +162,18 @@ if ( is_ripon() ) {
 			"post_type" => 'people',
 			"orderby" => 'meta_value',
 			"meta_key" => '_p_person_lname',
-			"order" => 'ASC',
-			"tax_query" => array(
+			"order" => 'ASC'
+		);
+
+		if ( !empty( $category ) ) {
+			$vars["tax_query"] = array(
 		        array (
 		            'taxonomy' => 'people_cat',
 		            'field' => 'slug',
-		            'terms' => $atts['category'],
+		            'terms' => $category,
 		        )
-		    )
-		);
+		    );
+		}
 
 		// run the query
 	    $p = new WP_Query( $vars );
@@ -187,9 +191,9 @@ if ( is_ripon() ) {
 				$post = get_the_ID();
 
 				$people_content .='<div class="person-entry visible">' . 
-					'<a href="' . get_the_permalink() . '">' . get_the_post_thumbnail() . '</a>' .
+					( $link ? '<a href="' . get_the_permalink() . '">' : '' ) . get_the_post_thumbnail() . ( $link ? '</a>' : '' ) .
 					'<div class="info">
-						<h4><a href="' . get_the_permalink() . '">' . get_cmb_value( "person_lname", $post ) . ', ' . get_cmb_value( "person_fname" ) . '</a></h4>
+						<h4>' . ( $link ? '<a href="' . get_the_permalink() . '">' : '' ) . get_cmb_value( "person_lname", $post ) . ', ' . get_cmb_value( "person_fname" ) . ( $link ? '</a>' : '' ) . '</h4>
 						<p class="person-title">' . get_cmb_value( "person_title" ) . '</p>
 						<p class="person-email"><a href="mailto:' . get_cmb_value( "person_email" ) . '">' . get_cmb_value( "person_email" ) . '</a></p>
 					</div>
@@ -212,6 +216,46 @@ if ( is_ripon() ) {
 		return $people_content;
 	}
 	add_shortcode( 'people', 'people_shortcode' );
+
+
+
+	// add a people shortcode
+	function person_shortcode( $atts ) {
+
+		// set default params and override with those in shortcode
+   		extract( shortcode_atts( array(
+			'link' => true,
+			'id' => ''
+		), $atts ) );
+
+		if ( !empty( $id ) ) {
+
+
+			// set some query vars
+			$person = get_post( $id );
+
+		    $person_content = '<section class="person-single">';
+
+			$person_content .='<div class="person-entry visible">' . 
+				( $link ? '<a href="' . get_the_permalink( $id ) . '">' : '') . get_the_post_thumbnail( $id ) . ( $link ? '</a>' : '') .
+				'<div class="info">
+					<h4>' . ( $link ? '<a href="' . get_the_permalink( $id ) . '">' : ''). get_cmb_value( "person_lname", $id ) . ', ' . get_cmb_value( "person_fname", $id ) . ( $link ? '</a>' : '') . '</h4>
+					<p class="person-title">' . get_cmb_value( "person_title", $id ) . '</p>
+					<p class="person-email"><a href="mailto:' . get_cmb_value( "person_email", $id ) . '">' . get_cmb_value( "person_email", $id ) . '</a></p>
+				</div>
+			</div>';
+
+			$person_content .='</section>';
+
+			wp_reset_postdata();
+
+			return $person_content;
+
+		} else {
+			return '';
+		}
+	}
+	add_shortcode( 'person', 'person_shortcode' );
 
 
 }

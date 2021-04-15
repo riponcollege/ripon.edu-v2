@@ -44,8 +44,8 @@ function guide_metaboxes() {
 
 
 // get cmb value
-function get_cmb_value( $field ) {
-    return get_post_meta( get_the_ID(), CMB_PREFIX . $field, 1 );
+function get_cmb_value( $field, $post_id = null ) {
+    return get_post_meta( ( !is_null( $post_id ) ? $post_id : get_the_ID() ), CMB_PREFIX . $field, 1 );
 }
 
 

@@ -750,10 +750,14 @@ header {
     width: 100%;
     position: absolute;
     z-index: 0; }
-  .video-showcase-container .video-showcase {
-    position: relative;
-    z-index: 1;
-    width: 100%; }
+  .video-showcase-container video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1; }
   .video-showcase-container .header-menu {
     display: none; }
     @media only screen and (min-width: 768px) {
@@ -2190,6 +2194,27 @@ button, input[type=submit], input[type=reset], .btn, button, input[type=submit],
     .people-search input[type=text]:focus {
       outline: 0; }
 
+.person-entry, .people-listing .person-entry {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); }
+  .person-entry img, .people-listing .person-entry img {
+    width: 100%; }
+  .person-entry .info {
+    padding: 10px 20px 20px; }
+    .person-entry .info h4 {
+      padding-bottom: 0; }
+    .person-entry .info .person-title {
+      padding: 3px 0; }
+    .person-entry .info .person-email {
+      padding: 0;
+      font-size: .9em;
+      text-transform: lowercase; }
+
+@media only screen and (min-width: 500px) {
+  .person-single .person-entry {
+    float: right;
+    width: 250px;
+    margin: 0 0 15px 15px; } }
+
 @media only screen and (min-width: 500px) {
   .people-listing {
     display: flex;
@@ -2205,22 +2230,9 @@ button, input[type=submit], input[type=reset], .btn, button, input[type=submit],
     margin-right: -2%; } }
 
 .people-listing .person-entry {
-  display: none;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); }
-  .people-listing .person-entry.visible {
+  display: none; }
+  .people-listing .visible.person-entry {
     display: block; }
-  .people-listing .person-entry img {
-    width: 100%; }
-  .people-listing .person-entry .info {
-    padding: 10px 20px 20px; }
-    .people-listing .person-entry .info h4 {
-      padding-bottom: 0; }
-    .people-listing .person-entry .info .person-title {
-      padding: 3px 0; }
-    .people-listing .person-entry .info .person-email {
-      padding: 0;
-      font-size: .9em;
-      text-transform: lowercase; }
   @media only screen and (min-width: 500px) {
     .people-listing .person-entry {
       flex: 1;
