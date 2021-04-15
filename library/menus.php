@@ -25,7 +25,7 @@ function menu_metaboxes() {
     $menu_box = new_cmb2_box( array(
         'id' => 'menu_box',
         'title' => 'Sidebar Menu',
-        'object_types' => array( 'page' ), // Post type
+        'object_types' => array( 'page', 'guide' ), // Post type
         'context' => 'normal',
         'priority' => 'default',
         'show_names' => true // Show field names on the left

@@ -41,15 +41,13 @@ function the_accordions() {
 add_action( 'cmb2_admin_init', 'accordion_metaboxes' );
 function accordion_metaboxes() {
 
+    global $colors;
+
     // area of interest information
     $accordion_metabox = new_cmb2_box( array(
         'id' => 'accordions',
         'title' => 'Accordions',
-        'object_types' => array( 'page' ), // Post type
-        'show_on' => array( 
-            'key' => 'page-template', 
-            'value' => 'page-guide.php'
-        ),
+        'object_types' => array( 'page', 'guide' ), // Post type
         'context' => 'normal',
         'priority' => 'high',
         'show_names' => true, // Show field names on the left
@@ -69,6 +67,13 @@ function accordion_metaboxes() {
         'name' => 'Title',
         'id'   => 'title',
         'type' => 'text',
+    ) );
+
+    $accordion_metabox->add_group_field( $accordion_metabox_group, array(
+        'name' => 'Color',
+        'id'   => 'color',
+        'type' => 'select',
+        'options' => $colors
     ) );
 
     $accordion_metabox->add_group_field( $accordion_metabox_group, array(

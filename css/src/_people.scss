@@ -63,6 +63,14 @@
 }
 
 
+.guide .librarian .person-single .person-entry {
+	@include respond-to( 500px ) {
+		float: none;
+		width: auto;
+	}
+}
+
+
 .people-listing {
 	@include respond-to( 500px ) {
 		display: flex;

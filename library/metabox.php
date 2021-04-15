@@ -6,43 +6,6 @@ if ( file_exists( __DIR__ . '/cmb2/init.php' ) ) {
 }
 
 
-// eventually move this to the new 'research guide' cpt
-add_action( 'cmb2_admin_init', 'guide_metaboxes' );
-function guide_metaboxes() {
-
-    // select all faculty for the study guide picklists
-    $args = array( 'post_type' => 'people', 'posts_per_page' => -1, 'orderby' => 'title', 'order' => 'ASC' );
-    $loop = new WP_Query( $args );
-    $faculty = array();
-    while ( $loop->have_posts() ) : $loop->the_post();
-        $faculty[get_the_ID()] = get_the_title();
-    endwhile;
-    wp_reset_query();
-
-
-    // accordion metabox
-    $guide_metabox = new_cmb2_box( array(
-        'id' => 'guide_metabox',
-        'title' => 'Guide Librarian',
-        'desc' => 'Select the librarian for this study guide.',
-        'object_types' => array( 'page' ), // post type
-        'show_on' => array( 
-            'key' => 'page-template', 
-            'value' => 'page-guide.php'
-        ),
-        'context' => 'normal',
-        'priority' => 'high',
-    ) );
-    $guide_metabox->add_field( array(
-        'name' => 'Guide Librarian',
-        'id'   => CMB_PREFIX . 'guide_librarian',
-        'type' => 'select',
-        'options' => $faculty,
-    ) );
-
-}
-
-
 // get cmb value
 function get_cmb_value( $field, $post_id = null ) {
     return get_post_meta( ( !is_null( $post_id ) ? $post_id : get_the_ID() ), CMB_PREFIX . $field, 1 );

@@ -38,7 +38,7 @@ require_multi(
 	// include the essential components
 	'site', 'metabox', 
 
-	'post-type/people', 'post-type/fund', 'post-type/alum', 'post-type/year','post-type/event',
+	'post-type/people', 'post-type/fund', 'post-type/alum', 'post-type/year','post-type/event', 'post-type/guide',
 
 	'menus', 'library', 'scripts', 'images', 'search', 'emergency', 'articles', 'video-showcase', 'icons', 'photo-tiles', 'post-type/area', 'accordion', 'button', 'page-header', 'call-to-action', 'hep/send-donation'
 
