@@ -5,11 +5,17 @@
 	background-size: cover;
 
 	.breadcrumbs {
+		max-width: 400px;
+
 		span.ma, span.mi, span.tc, span.dd, span.pa {
 			font-size: 1.2em;
 			line-height: 1.2em;
 			padding: 7px;
 		}
+	}
+
+	.crumbs {
+		margin: 20px 0 0 0;
 	}
 }
 
@@ -111,6 +117,13 @@
 	}
 
 	.tab-nav {
+		h3 {
+			padding: 20px 20px 10px;
+
+			@include respond-to( 768px ) {
+				padding: 20px 20px 10px 10px;
+			}
+		}
 
 		@include respond-to( 768px ) {
 			width: 25%;
@@ -329,6 +342,13 @@
 			padding: 10px 15px;
 			border: 2px solid $grey;
 		}
+	}
+}
+
+.area-inner {
+	h2 {
+		padding-top: 30px;
+		border-bottom: 3px solid $grey-light;
 	}
 }
 

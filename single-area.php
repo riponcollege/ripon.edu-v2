@@ -24,7 +24,6 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 	<div class="page-header area-header"<?php print ( !empty( $featured_image_url ) ? ' style="background-image: url(' . $featured_image_url . ')"' : '' ); ?>>
 		<div class="page-header-overlay"></div>
 		<div class="breadcrumbs">
-			<div class="crumbs"><a href="/academics">Academics</a> &raquo; <a href="/areas-of-study">Areas of Study</a> &raquo;</div>
 			<div class="page-title"><?php the_title(); ?></div>
 			<div class="area-categories">
 			<?php
@@ -34,19 +33,19 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 				foreach ( $categories as $cat ) {
 		 			switch ( $cat->slug ) {
 		 				case "major":
-		 					$cats[] = '<span class="ma">MA</span>';
+		 					$cats[] = '<span class="ma">Major</span>';
 		 				break;
 		 				case "minor":
-		 					$cats[] = '<span class="mi">MI</span>';
+		 					$cats[] = '<span class="mi">Minor</span>';
 		 				break;
 		 				case "pre-professional-advising":
-		 					$cats[] = '<span class="pa">PA</span>';
+		 					$cats[] = '<span class="pa">Pre-Professional Advising</span>';
 		 				break;
 		 				case "teaching-certification":
-		 					$cats[] = '<span class="tc">TC</span>';
+		 					$cats[] = '<span class="tc">Teaching Certification</span>';
 		 				break;
 		 				case "dual-degree":
-		 					$cats[] = '<span class="dd">DD</span>';
+		 					$cats[] = '<span class="dd">Dual Degree</span>';
 		 				break;
 		 			}
 				}
@@ -55,6 +54,7 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 			}
 			?>
 			</div>
+			<div class="crumbs"><a href="/academics">Academics</a> &raquo; <a href="/areas-of-study">Areas of Study</a> &raquo;</div>
 		</div>
 	</div>
 	<div id="primary" class="area group" role="main">
@@ -65,6 +65,7 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 				?>
 			<!--<button class="back-to-areas">Back to All Areas</button>-->
 			<div class="tab-nav">
+				<h3>Overview</h3>
 				<ul>
 					<li class="area-overview active">Overview</li>
 					<?php if ( has_cmb_value( 'area_faculty_list' ) ) { ?><li class="area-faculty">Faculty</li><?php } ?>
@@ -87,39 +88,16 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 			<div class="area-inner">
 
 				<div class="tab-content active area-overview">
-					<h2>Overview</h2>
 					<?php the_content(); ?>
 
 					<?php the_icon_showcase(); ?>
 
-					<hr />
-					
-					<?php if ( !empty( $sidebar_video_url ) ) print apply_filters( 'the_content', $sidebar_video_url ); ?>
-
-					<hr />
-
-					<div class="pad bg-grey-light area-info group">
-						<?php print do_shortcode( '[snippet slug="areas-request-info" /]' ); ?>
-					</div>
-
-					<!---
-					<div class="area-buttons">
-						<?php
-						if ( has_cmb_value( 'area_facebook' ) ) {
-							print do_shortcode( '[button url="' . get_cmb_value( 'area_facebook' ) . '" target="_blank"]Download Info Sheet[/button]' );
-						}
-						?>
-					</div>
-					--->
-
 					<?php if ( !empty( get_cmb_value( 'area_post_tag' ) ) ) { ?>
-					<hr>
 					<div class="area-news">
 						<h2>Latest News</h2>
 						<?php print do_shortcode( '[articles tag="' . get_cmb_value( 'area_post_tag' ) . '" posts_per_page=3 /]' ); ?>
 					</div>
 					<?php } ?>
-
 				</div>
 
 				<?php if ( has_cmb_value( 'area_faculty_list' ) ) { ?>

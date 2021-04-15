@@ -1496,10 +1496,14 @@ button, input[type=submit], input[type=reset], .btn, button, input[type=submit],
 .area-header {
   background: url(../img/bg-area-header.webp) center center no-repeat;
   background-size: cover; }
-  .area-header .breadcrumbs span.ma, .area-header .breadcrumbs span.mi, .area-header .breadcrumbs span.tc, .area-header .breadcrumbs span.dd, .area-header .breadcrumbs span.pa {
-    font-size: 1.2em;
-    line-height: 1.2em;
-    padding: 7px; }
+  .area-header .breadcrumbs {
+    max-width: 400px; }
+    .area-header .breadcrumbs span.ma, .area-header .breadcrumbs span.mi, .area-header .breadcrumbs span.tc, .area-header .breadcrumbs span.dd, .area-header .breadcrumbs span.pa {
+      font-size: 1.2em;
+      line-height: 1.2em;
+      padding: 7px; }
+  .area-header .crumbs {
+    margin: 20px 0 0 0; }
 
 .academics span.ma, .academics span.mi, .academics span.tc, .academics span.dd, .academics span.pa, .area-header span.ma, .area-header span.mi, .area-header span.tc, .area-header span.dd, .area-header span.pa {
   line-height: 1em;
@@ -1573,6 +1577,11 @@ button, input[type=submit], input[type=reset], .btn, button, input[type=submit],
   .area .area-subtitle {
     padding: 0 20px 10px;
     opacity: .7; }
+  .area .tab-nav h3 {
+    padding: 20px 20px 10px; }
+    @media only screen and (min-width: 768px) {
+      .area .tab-nav h3 {
+        padding: 20px 20px 10px 10px; } }
   @media only screen and (min-width: 768px) {
     .area .tab-nav {
       width: 25%;
@@ -1732,6 +1741,10 @@ button, input[type=submit], input[type=reset], .btn, button, input[type=submit],
     font-weight: 300;
     padding: 10px 15px;
     border: 2px solid #434039; }
+
+.area-inner h2 {
+  padding-top: 30px;
+  border-bottom: 3px solid #EBEAE9; }
 
 .icon-header {
   padding: 20px;

@@ -32,13 +32,17 @@ function menu_metaboxes() {
     ) );
     
     $menu_box->add_field( array(
-        'name' => 'Title',
-        'id'   => CMB_PREFIX . 'menu_title',
-        'type' => 'text'
+        'name' => 'Menu Position',
+        'id'   => CMB_PREFIX . 'menu_position',
+        'type' => 'radio',
+        'options' => array(
+        	'top' => 'Top',
+        	'left' => 'Left'
+        )
     ) );
 
     $menu_box->add_field( array(
-        'name'    => 'Sidebar Menu',
+        'name'    => 'Section Menu',
         'id'      => CMB_PREFIX . 'menu_primary',
         'type'    => 'select',
         'options' => $all_menus,
