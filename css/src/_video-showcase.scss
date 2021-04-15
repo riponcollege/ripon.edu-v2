@@ -61,6 +61,15 @@
 				display: inline;
 				position: relative;
 
+				&.emergency a {
+					color: $yellow;
+
+					&:before {
+						background: url(../img/icon-link-yellow.webp) center center no-repeat;
+						background-size: contain;
+					}
+				}
+
 				a {
 					color: white;
 					text-decoration: none;
@@ -70,6 +79,7 @@
 					margin: 0 5px;
 					@include font-bold;
 					opacity: .8;
+
 
 					&:hover {
 						text-decoration: none;

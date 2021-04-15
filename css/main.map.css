@@ -769,6 +769,11 @@ header {
     .video-showcase-container .header-menu ul li {
       display: inline;
       position: relative; }
+      .video-showcase-container .header-menu ul li.emergency a {
+        color: #F6B44D; }
+        .video-showcase-container .header-menu ul li.emergency a:before {
+          background: url(../img/icon-link-yellow.webp) center center no-repeat;
+          background-size: contain; }
       .video-showcase-container .header-menu ul li a {
         color: white;
         text-decoration: none;
