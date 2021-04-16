@@ -58,13 +58,13 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 		</div>
 		<?php the_call_to_action() ?>
 	</div>
-	<div id="primary" class="area group" role="main">
-
-		<?php 
+	<div id="primary" class="area group two-column" role="main">
+		<?php
 		if ( have_posts() ) :
 			while ( have_posts() ) : the_post();
 				?>
-			<!--<button class="back-to-areas">Back to All Areas</button>-->
+		<!--<button class="back-to-areas">Back to All Areas</button>-->
+		<div class="sidebar">
 			<div class="tab-nav">
 				<h3>Overview</h3>
 				<ul>
@@ -85,8 +85,10 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 					<li class="area-offcampus">Off-Campus</li>
 				</ul>
 			</div>
+		</div>
 			
-			<div class="area-inner">
+		<div class="right-column">
+			<div class="area-inner section-content">
 
 				<div class="tab-content active area-overview">
 					<?php the_content(); ?>
@@ -131,14 +133,15 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 				<?php do_area_tab_content( "Clinical Supervisors", "supervisors" ) ?>
 				<?php do_area_tab_content( "Be a Teacher", "teacher" ) ?>
 				<?php do_area_tabs_content(); ?>
-			<?php
-			endwhile;
-		endif;
-		 ?>
+				<?php
+				endwhile;
+			endif;
+			?>
+			</div>
 		</div>
-
 	</div><!-- #primary -->
-	<?php
+<?php
+
 the_call_to_action();
 
 get_footer();

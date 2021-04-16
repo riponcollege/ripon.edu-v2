@@ -562,6 +562,9 @@ body {
   @media only screen and (min-width: 768px) {
     .top-menu {
       padding: 10px 20px; } }
+  @media only screen and (min-width: 1220px) {
+    .top-menu {
+      padding: 20px 40px; } }
   .top-menu .section-menu ul li {
     display: inline; }
     .top-menu .section-menu ul li a {
@@ -1556,128 +1559,109 @@ button, input[type=submit], input[type=reset], .btn, button, input[type=submit],
       text-decoration: none;
       color: #434039; }
 
-.area {
-  position: relative;
-  padding: 0 0 30px 0;
-  min-height: 900px; }
+.area .area-title {
+  padding: 20px 20px 0; }
+
+.area .area-subtitle {
+  padding: 0 20px 10px;
+  opacity: .7; }
+
+.area .tab-nav h3 {
+  padding: 20px 20px 10px;
+  color: white; }
   @media only screen and (min-width: 768px) {
-    .area {
-      padding: 20px 20px 40px 28%; } }
-  @media only screen and (min-width: 1220px) {
-    .area {
-      padding: 30px 60px 60px 29%; } }
-  .area .area-title {
-    padding: 20px 20px 0; }
-  .area .area-subtitle {
-    padding: 0 20px 10px;
-    opacity: .7; }
-  .area .tab-nav h3 {
-    padding: 20px 20px 10px; }
+    .area .tab-nav h3 {
+      padding: 20px 20px 10px 10px; } }
+
+.area .tab-nav ul {
+  border-top: 2px solid rgba(235, 234, 233, 0.1);
+  border-bottom: 2px solid rgba(235, 234, 233, 0.1); }
+  .area .tab-nav ul li {
+    display: block;
+    color: white;
+    border-bottom: 1px solid rgba(235, 234, 233, 0.1);
+    cursor: pointer;
+    transition: all 400ms ease-in-out; }
     @media only screen and (min-width: 768px) {
-      .area .tab-nav h3 {
-        padding: 20px 20px 10px 10px; } }
-  @media only screen and (min-width: 768px) {
-    .area .tab-nav {
-      width: 25%;
-      position: absolute;
-      left: 20px;
-      top: 50px; } }
-  @media only screen and (min-width: 1220px) {
-    .area .tab-nav {
-      left: 40px; } }
-  .area .tab-nav.scrolled {
-    position: fixed; }
-  .area .tab-nav ul {
-    border-top: 2px solid #EBEAE9;
-    border-bottom: 2px solid #EBEAE9; }
-    .area .tab-nav ul li {
-      display: block;
-      color: #434039;
-      font-size: 14px;
-      line-height: 18px;
-      text-decoration: none;
-      padding: 5px 20px;
-      border-bottom: 1px solid #EBEAE9;
-      cursor: pointer;
+      .area .tab-nav ul li {
+        padding: 10px 12px; } }
+    .area .tab-nav ul li:first-child {
+      border-top: none; }
+    .area .tab-nav ul li.active {
       font-family: "Open Sans", sans-serif;
-      font-weight: 600; }
-      @media only screen and (min-width: 768px) {
-        .area .tab-nav ul li {
-          padding: 10px 12px; } }
-      .area .tab-nav ul li:first-child {
-        border-top: none; }
-      .area .tab-nav ul li.active {
+      font-weight: 700; }
+      .area .tab-nav ul li.active:hover {
         font-family: "Open Sans", sans-serif;
         font-weight: 700; }
-        .area .tab-nav ul li.active:hover {
-          font-family: "Open Sans", sans-serif;
-          font-weight: 700; }
-      .area .tab-nav ul li:hover {
-        color: #A91C3A; }
-  .area .tab-content {
-    padding: 20px;
-    display: none; }
-    .area .tab-content.active {
-      display: block; }
-  .area .sample-schedule {
-    float: right;
-    font-size: .9em;
-    text-align: center;
-    margin: 20px; }
-  .area .area-faculty {
-    zoom: 1; }
-    .area .area-faculty:before, .area .area-faculty:after {
-      content: "";
-      display: table; }
-    .area .area-faculty, .area .area-faculty:before, .area .area-faculty:after {
-      clear: both; }
-    @media only screen and (min-width: 1220px) {
-      .area .area-faculty {
-        margin-right: -3%; } }
-    .area .area-faculty .faculty-entry {
-      position: relative;
-      margin-bottom: 20px; }
-      @media only screen and (min-width: 768px) {
-        .area .area-faculty .faculty-entry {
-          width: 47%;
-          margin: 0 2.5% 20px 0;
-          float: left; } }
-      @media only screen and (min-width: 1220px) {
-        .area .area-faculty .faculty-entry {
-          width: 30%;
-          margin: 0 3% 20px 0; } }
-      .area .area-faculty .faculty-entry a {
-        display: block;
-        width: 100%;
-        text-decoration: none;
-        transition: all 400ms ease-in-out; }
-        .area .area-faculty .faculty-entry a:hover {
-          opacity: .9; }
-      .area .area-faculty .faculty-entry .photo {
-        background-position: center center;
-        background-size: cover;
-        border: 1px solid #434039; }
-      .area .area-faculty .faculty-entry .info {
-        padding: 10px; }
-        @media only screen and (min-width: 768px) {
-          .area .area-faculty .faculty-entry .info {
-            min-height: 81px; } }
-        .area .area-faculty .faculty-entry .info h4 {
-          font-family: "Open Sans", sans-serif;
-          font-weight: 700;
-          color: #6A0A1B;
-          padding: 0;
-          font-size: .9em; }
-        .area .area-faculty .faculty-entry .info .faculty-title {
-          font-size: .9em;
-          color: #434039;
-          padding: 3px 0; }
-  .area .area-buttons {
-    padding: 20px;
-    text-align: center; }
+    .area .tab-nav ul li:hover {
+      color: rgba(235, 234, 233, 0.7); }
+
+.area .tab-content {
+  display: none; }
+  .area .tab-content.active {
+    display: block; }
+
+.area .sample-schedule {
+  float: right;
+  font-size: .9em;
+  text-align: center;
+  margin: 20px; }
+
+.area .area-faculty {
+  zoom: 1; }
+  .area .area-faculty:before, .area .area-faculty:after {
+    content: "";
+    display: table; }
+  .area .area-faculty, .area .area-faculty:before, .area .area-faculty:after {
+    clear: both; }
+  @media only screen and (min-width: 1220px) {
+    .area .area-faculty {
+      margin-right: -3%; } }
+  .area .area-faculty .faculty-entry {
+    position: relative;
+    margin-bottom: 20px; }
     @media only screen and (min-width: 768px) {
-      .area .area-buttons .btn, .area .area-buttons button, .area .area-buttons input[type=submit], .area .area-buttons .gform_wrapper .gform_footer input[type=button], .gform_wrapper .gform_footer .area .area-buttons input[type=button], .area .area-buttons .gform_wrapper .gform_footer input[type=reset], .gform_wrapper .gform_footer .area .area-buttons input[type=reset], .area .area-buttons .gform_wrapper .gform_footer button, .gform_wrapper .gform_footer .area .area-buttons button {
-        margin: 0 30px; } }
+      .area .area-faculty .faculty-entry {
+        width: 47%;
+        margin: 0 2.5% 20px 0;
+        float: left; } }
+    @media only screen and (min-width: 1220px) {
+      .area .area-faculty .faculty-entry {
+        width: 30%;
+        margin: 0 3% 20px 0; } }
+    .area .area-faculty .faculty-entry a {
+      display: block;
+      width: 100%;
+      text-decoration: none;
+      transition: all 400ms ease-in-out; }
+      .area .area-faculty .faculty-entry a:hover {
+        opacity: .9; }
+    .area .area-faculty .faculty-entry .photo {
+      background-position: center center;
+      background-size: cover;
+      border: 1px solid #434039; }
+    .area .area-faculty .faculty-entry .info {
+      padding: 10px; }
+      @media only screen and (min-width: 768px) {
+        .area .area-faculty .faculty-entry .info {
+          min-height: 81px; } }
+      .area .area-faculty .faculty-entry .info h4 {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 700;
+        color: #6A0A1B;
+        padding: 0;
+        font-size: .9em; }
+      .area .area-faculty .faculty-entry .info .faculty-title {
+        font-size: .9em;
+        color: #434039;
+        padding: 3px 0; }
+
+.area .area-buttons {
+  padding: 20px;
+  text-align: center; }
+  @media only screen and (min-width: 768px) {
+    .area .area-buttons .btn, .area .area-buttons button, .area .area-buttons input[type=submit], .area .area-buttons .gform_wrapper .gform_footer input[type=button], .gform_wrapper .gform_footer .area .area-buttons input[type=button], .area .area-buttons .gform_wrapper .gform_footer input[type=reset], .gform_wrapper .gform_footer .area .area-buttons input[type=reset], .area .area-buttons .gform_wrapper .gform_footer button, .gform_wrapper .gform_footer .area .area-buttons button {
+      margin: 0 30px; } }
 
 .area-legend {
   margin: 0 -20px; }
@@ -1735,10 +1719,6 @@ button, input[type=submit], input[type=reset], .btn, button, input[type=submit],
     font-weight: 300;
     padding: 10px 15px;
     border: 2px solid #434039; }
-
-.area-inner h2 {
-  padding-top: 30px;
-  border-bottom: 3px solid #EBEAE9; }
 
 .icon-header {
   padding: 20px;

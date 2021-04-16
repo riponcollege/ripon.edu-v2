@@ -228,6 +228,10 @@ body {
 		padding: 10px 20px;
 	}
 
+	@include respond-to( 1220px ) {
+		padding: 20px 40px;
+	}
+
 	.section-menu ul li {
 		display: inline;
 		
