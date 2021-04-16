@@ -335,78 +335,66 @@ ol {
     .emergency-bar-container.teal a {
       color: white; }
 
-.two-column {
-  position: relative; }
-  .two-column .sidebar {
-    border-bottom: 1px solid rgba(67, 64, 57, 0.2);
-    padding: 20px; }
-    @media only screen and (min-width: 768px) {
-      .two-column .sidebar {
-        position: absolute;
-        left: 30px;
-        top: 30px;
-        width: 25%;
-        margin-right: 2%;
-        border-bottom: 0;
-        padding: 0; } }
-    @media only screen and (min-width: 1220px) {
-      .two-column .sidebar {
-        left: 40px;
-        top: 30px;
-        width: 20%; } }
-    @media only screen and (min-width: 768px) {
-      .two-column .sidebar .toggle-sidebar-menu {
-        display: none; } }
-    .two-column .sidebar .menu-title {
-      display: none;
-      font-size: 22px;
-      padding: 10px 0; }
-      @media only screen and (min-width: 768px) {
-        .two-column .sidebar .menu-title {
-          padding: 10px; } }
-    .two-column .sidebar.scrolled {
-      position: fixed;
-      z-index: 400; }
-    .two-column .sidebar .nav-menu {
-      border-top: 2px solid #EBEAE9;
-      border-bottom: 2px solid #EBEAE9; }
-      .two-column .sidebar .nav-menu li a {
-        display: block;
-        color: #434039;
-        font-size: 14px;
-        line-height: 18px;
-        text-decoration: none;
-        padding: 5px 20px;
-        border-bottom: 1px solid #EBEAE9;
-        font-family: "Open Sans", sans-serif;
-        font-weight: 600; }
-        @media only screen and (min-width: 768px) {
-          .two-column .sidebar .nav-menu li a {
-            padding: 10px 12px; } }
-        .two-column .sidebar .nav-menu li a:hover {
-          color: #A91C3A; }
-      .two-column .sidebar .nav-menu li .sub-menu {
-        display: none; }
-        .two-column .sidebar .nav-menu li .sub-menu.open {
-          display: block;
-          padding-left: 20px; }
-          .two-column .sidebar .nav-menu li .sub-menu.open li a {
-            font-family: "Open Sans", sans-serif;
-            font-weight: 300; }
-  .two-column .right-column {
-    padding: 20px; }
-    @media only screen and (min-width: 768px) {
-      .two-column .right-column {
-        padding: 30px 20px 50px 31%; } }
-    @media only screen and (min-width: 1220px) {
-      .two-column .right-column {
-        padding: 30px 40px 70px 26%; } }
-    @media only screen and (min-width: 1440px) {
-      .two-column .right-column {
-        padding: 30px 40px 70px 24.5%; } }
+@media only screen and (min-width: 768px) {
+  .two-column {
+    display: flex;
+    min-height: 80vh; } }
 
-.two-column {
-  min-height: 900px; }
+.two-column .sidebar {
+  padding: 20px;
+  background: #434039; }
+  @media only screen and (min-width: 768px) {
+    .two-column .sidebar {
+      flex: 1;
+      flex-basis: 25%; } }
+  @media only screen and (min-width: 1220px) {
+    .two-column .sidebar {
+      flex-basis: 20%; } }
+  @media only screen and (min-width: 768px) {
+    .two-column .sidebar .toggle-sidebar-menu {
+      display: none; } }
+  .two-column .sidebar .menu-title {
+    display: none;
+    font-size: 22px;
+    padding: 10px 0; }
+    @media only screen and (min-width: 768px) {
+      .two-column .sidebar .menu-title {
+        padding: 10px; } }
+  .two-column .sidebar .nav-menu {
+    border-top: 2px solid #EBEAE9;
+    border-bottom: 2px solid #EBEAE9; }
+    .two-column .sidebar .nav-menu li a {
+      display: block;
+      color: #434039;
+      font-size: 14px;
+      line-height: 18px;
+      text-decoration: none;
+      padding: 5px 20px;
+      border-bottom: 1px solid #EBEAE9;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 600; }
+      @media only screen and (min-width: 768px) {
+        .two-column .sidebar .nav-menu li a {
+          padding: 10px 12px; } }
+      .two-column .sidebar .nav-menu li a:hover {
+        color: #A91C3A; }
+    .two-column .sidebar .nav-menu li .sub-menu {
+      display: none; }
+      .two-column .sidebar .nav-menu li .sub-menu.open {
+        display: block;
+        padding-left: 20px; }
+        .two-column .sidebar .nav-menu li .sub-menu.open li a {
+          font-family: "Open Sans", sans-serif;
+          font-weight: 300; }
+
+@media only screen and (min-width: 768px) {
+  .two-column .right-column {
+    flex: 1;
+    flex-basis: 75%; } }
+
+@media only screen and (min-width: 1220px) {
+  .two-column .right-column {
+    flex-basis: 80%; } }
 
 /****************************
        MAIN MENU STYLES
@@ -556,26 +544,31 @@ body {
   .menu-photo.open {
     left: 0; }
 
-.section-menu {
-  background: #434039;
+.section-menu ul li a {
+  display: block;
   color: white;
-  padding: 20px 0; }
-  @media only screen and (min-width: 1024px) {
-    .section-menu {
-      padding: 30px 20px; } }
-  @media only screen and (min-width: 1220px) {
-    .section-menu {
-      padding: 30px; } }
+  text-decoration: none;
+  padding: 6px 0; }
   @media only screen and (min-width: 768px) {
-    .section-menu ul li {
-      display: inline; } }
-  .section-menu ul li a {
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    padding: 6px 20px; }
-    .section-menu ul li a:hover {
-      opacity: .8; }
+    .top .section-menu ul li a {
+      display: inline;
+      padding: 6px 20px; } }
+  .section-menu ul li a:hover {
+    opacity: .8; }
+
+.top-menu {
+  background: #434039;
+  padding: 10px; }
+  @media only screen and (min-width: 768px) {
+    .top-menu {
+      padding: 10px 20px; } }
+  .top-menu .section-menu ul li {
+    display: inline; }
+    .top-menu .section-menu ul li a {
+      padding: 6px 10px; }
+      @media only screen and (min-width: 768px) {
+        .top-menu .section-menu ul li a {
+          display: inline-block; } }
 
 header {
   zoom: 1;
@@ -886,6 +879,15 @@ header {
     color: white;
     font-size: .85em;
     text-align: left; }
+    @media only screen and (min-width: 768px) {
+      .page-header .breadcrumbs {
+        left: 30px; } }
+    @media only screen and (min-width: 1220px) {
+      .page-header .breadcrumbs {
+        left: 50px;
+        bottom: 40px; }
+        .page-header .breadcrumbs .page-title {
+          font-size: 2.4em; } }
     .page-header .breadcrumbs a {
       color: white;
       text-decoration: none;
@@ -898,12 +900,6 @@ header {
       font-size: 2em;
       line-height: 1.4em; }
       @media only screen and (min-width: 1024px) {
-        .page-header .breadcrumbs .page-title {
-          font-size: 2.4em; } }
-    @media only screen and (min-width: 1220px) {
-      .page-header .breadcrumbs {
-        left: 50px;
-        bottom: 40px; }
         .page-header .breadcrumbs .page-title {
           font-size: 2.4em; } }
 
@@ -1229,6 +1225,9 @@ footer {
     display: table; }
   footer, footer:before, footer:after {
     clear: both; }
+  @media only screen and (min-width: 768px) {
+    footer {
+      padding: 20px 30px; } }
   footer a {
     color: rgba(255, 255, 255, 0.9);
     transition: opacity 400ms ease-in-out; }
@@ -1274,10 +1273,7 @@ footer {
 section.content {
   position: relative;
   z-index: 10;
-  background: white;
-  padding-bottom: 30px; }
-  .home section.content {
-    padding-bottom: 0; }
+  background: white; }
 
 .content-wide {
   padding: 20px; }
@@ -1502,8 +1498,6 @@ button, input[type=submit], input[type=reset], .btn, button, input[type=submit],
       font-size: 1.2em;
       line-height: 1.2em;
       padding: 7px; }
-  .area-header .crumbs {
-    margin: 20px 0 0 0; }
 
 .academics span.ma, .academics span.mi, .academics span.tc, .academics span.dd, .academics span.pa, .area-header span.ma, .area-header span.mi, .area-header span.tc, .area-header span.dd, .area-header span.pa {
   line-height: 1em;

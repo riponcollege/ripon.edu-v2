@@ -1,26 +1,22 @@
 
 
 .two-column {
-	position: relative;
+	@include respond-to( 768px ) {
+		display: flex;
+		min-height: 80vh;
+	} 
 
 	.sidebar {
-		border-bottom: 1px solid rgba( $grey, .2 );
 		padding: 20px;
+		background: $grey;
 
 		@include respond-to( 768px ) {
-			position: absolute;
-			left: 30px;
-			top: 30px;
-			width: 25%;
-			margin-right: 2%;
-			border-bottom: 0;
-			padding: 0;
+			flex: 1;
+			flex-basis: 25%;
 		}
 
 		@include respond-to( 1220px ) {
-			left: 40px;
-			top: 30px;
-			width: 20%;
+			flex-basis: 20%;
 		}
 
 		.toggle-sidebar-menu {
@@ -37,11 +33,6 @@
 			@include respond-to( 768px ) {
 				padding: 10px;
 			}
-		}
-
-		&.scrolled {
-			position: fixed;
-			z-index: 400;
 		}
 
 		.nav-menu {
@@ -85,23 +76,14 @@
 	}
 
 	.right-column {
-		padding: 20px;
-
 		@include respond-to( 768px ) {
-			padding: 30px 20px 50px 31%;
+			flex: 1;
+			flex-basis: 75%;
 		}
 
 		@include respond-to( 1220px ) {
-			padding: 30px 40px 70px 26%;
-		}
-
-		@include respond-to( 1440px ) {
-			padding: 30px 40px 70px 24.5%;
+			flex-basis: 80%;
 		}
 	}
 }
 
-
-.two-column {
-	min-height: 900px;
-}

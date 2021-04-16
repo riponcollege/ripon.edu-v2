@@ -29,6 +29,19 @@
 		font-size: .85em;
 		text-align: left;
 
+		@include respond-to( 768px ) {
+			left: 30px;
+		}
+
+		@include respond-to( 1220px ) {
+			left: 50px;
+			bottom: 40px;
+
+			.page-title {
+				font-size: 2.4em;
+			}
+		}
+
 		a {
 			color: white;
 			text-decoration: none;
@@ -45,15 +58,6 @@
 			line-height: 1.4em;
 
 			@include respond-to( 1024px ) {
-				font-size: 2.4em;
-			}
-		}
-
-		@include respond-to( 1220px ) {
-			left: 50px;
-			bottom: 40px;
-
-			.page-title {
 				font-size: 2.4em;
 			}
 		}

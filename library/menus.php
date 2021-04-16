@@ -66,17 +66,34 @@ function get_all_menus(){
 
 
 
+// get the menu mode
+function get_menu_position() {
+	$menu_position = get_cmb_value( "menu_position" );
+	if ( $menu_position != 'top' ) {
+		$menu_position = 'left';
+	}
+	return $menu_position;
+}
+
+
+
 // output the left menu
 function section_menu( $mode = 'both' ) {
 
 	// primary menu
-	$menu_primary = get_cmb_value( "menu_primary" );
+ 	$menu_primary = get_cmb_value( "menu_primary" );
 
 	// make sure there's a menu for this page before displaying
 	if ( !empty( $menu_primary ) ) {
 
 		// get the menu items
 		$items = wp_get_nav_menu_items( $menu_primary );
+
+		$menu_position = get_menu_position();
+
+		if ( $menu_position == 'top' ) {
+			print '<div class="top-menu">';
+		}
 
 		// start the menu container elements
 		print '<div class="section-menu"><ul>';
@@ -92,9 +109,16 @@ function section_menu( $mode = 'both' ) {
 
 		// close the menu container elements
 		print '</ul></div>';
+
+		if ( $menu_position == 'top' ) {
+			print '</div>';
+		}
+
 	}
 
 }
+
+
 
 
 

@@ -9,7 +9,7 @@ function cta_metabox() {
     $cta_box = new_cmb2_box( array(
         'id' => 'cta_box',
         'title' => 'Calls to Action',
-        'object_types' => array( 'page' ), // Post type
+        'object_types' => array( 'page', 'area' ), // Post type
         'context' => 'normal',
         'priority' => 'default',
         'show_names' => true // Show field names on the left

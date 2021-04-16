@@ -43,7 +43,7 @@ if ( is_ripon() ) {
 				'capability_type' => 'post',
 				'hierarchical' => false,
 				/* the next one is important, it tells what's enabled in the post editor */
-				'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail' )
+				'supports' => array( 'title', 'editor', 'excerpt', 'thumbnail', 'author' )
 			) /* end of options */
 		); /* end of register post type */
 

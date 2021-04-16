@@ -23,7 +23,7 @@ page_header();
 			<div class="librarian">
 				<?php
 				$librarian_id = get_cmb_value( 'guide_librarian' );
-				print do_shortcode( '[person id="' . $librarian_id. '" /]' );
+				print do_shortcode( '[person id="' . $librarian_id. '" link=0 /]' );
 				?>
 			</div>
 

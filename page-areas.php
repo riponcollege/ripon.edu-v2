@@ -25,7 +25,7 @@ section_menu();
 		<?php
 	endwhile; 
 	?>
-	<div class="wrap group two-column academics">
+	<div class="wrap group academics">
 	
 		<div class="area-legend">
 			<dl>

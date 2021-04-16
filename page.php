@@ -3,8 +3,21 @@
 // get header template
 get_header();
 
-// show the section menu
-section_menu();
+$menu_position = get_menu_position();
+
+
+if ( $menu_position == 'left' ) {
+	?>
+<div class="two-column">
+	<div class="sidebar">
+		<?php section_menu(); ?>
+	</div>
+	<div class="right-column">
+	<?php
+} else {
+	// show the section menu
+	section_menu();
+}
 
 ?>
 <div class="section-content">
@@ -16,6 +29,14 @@ section_menu();
 	?>
 </div>
 <?php
+
+if ( $menu_position == 'left' ) {
+	?>
+	</div>
+</div>
+	<?php
+}
+
 // output the calls to action
 the_call_to_action();
 
