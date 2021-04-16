@@ -1336,9 +1336,6 @@ section.content {
   @media only screen and (min-width: 1024px) {
     .section-content {
       padding: 30px 40px; } }
-  @media only screen and (min-width: 1220px) {
-    .section-content {
-      padding: 30px 50px; } }
 
 button, input[type=submit], input[type=reset], .btn, button, input[type=submit], .gform_wrapper .gform_footer input[type=submit], .gform_wrapper .gform_footer input[type=button], .gform_wrapper .gform_footer input[type=reset], .gform_wrapper .gform_footer button {
   padding: 6px 10px;
