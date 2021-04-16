@@ -3,8 +3,9 @@
 // get header template
 get_header();
 
-$menu_position = get_menu_position();
+page_header();
 
+$menu_position = get_menu_position();
 
 if ( $menu_position == 'left' ) {
 	?>
