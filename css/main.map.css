@@ -1419,6 +1419,9 @@ button, input[type=submit], input[type=reset], .btn, button, input[type=submit],
 .elementor-editor-active .elementor-background-overlay {
   display: none; }
 
+.elementor-section.elementor-section-boxed > .elementor-container {
+  max-width: auto; }
+
 .text-field, input[type=text], input[type=search], select, .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), .gform_wrapper textarea {
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
