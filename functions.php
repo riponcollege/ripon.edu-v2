@@ -40,7 +40,7 @@ require_multi(
 
 	'post-type/people', 'post-type/fund', 'post-type/alum', 'post-type/year','post-type/event', 'post-type/guide',
 
-	'menus', 'library', 'scripts', 'images', 'search', 'emergency', 'articles', 'video-showcase', 'icons', 'photo-tiles', 'post-type/area', 'accordion', 'button', 'page-header', 'call-to-action', 'hep/send-donation'
+	'emergency', 'menus', 'video-showcase', 'page-header', 'library', 'icons', 'photo-tiles', 'scripts', 'images', 'search', 'articles', 'post-type/area', 'accordion', 'button', 'call-to-action', 'hep/send-donation'
 
 );
 
