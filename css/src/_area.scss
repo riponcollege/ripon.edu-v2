@@ -257,21 +257,6 @@
 
 	.term {
 		display: none;
-
-		dt {
-			width: 20%;
-			padding: 10px;
-			text-align: center;
-
-			@include respond-to( 1024px ) { width: 10%; }
-		}
-
-		dd {
-			width: 80%;
-			padding: 5px;
-
-			@include respond-to( 1024px ) { width: 90%; }
-		}
 	}
 
 	.term-description {

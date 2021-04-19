@@ -126,7 +126,7 @@ jQuery(document).ready(function($){
 				area_legend.find( '.term:not(.'+filter_value+')' ).hide();
 
 				// show the legend item for the area category they chose
-				area_legend.find( '.term.'+filter_value+'' ).css('display','flex');
+				area_legend.find( '.term.'+filter_value+'' ).show();
 
 				// hide the legend
 				area_legend.find( '.mini-legend' ).hide();

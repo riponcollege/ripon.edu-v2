@@ -35,26 +35,31 @@ section_menu();
 				<div class="mini-legend">
 				</div>
 				<div class="term ma">
+					<dt><span class="ma">Major</span></dt>
 					<dd>
 						<span class="term-description"><?php echo term_description( 502, "area_cat" ); ?></span>
 					</dd>
 				</div>
 				<div class="term mi">
+					<dt><span class="mi">Minor</span></dt>
 					<dd>
 						<span class="term-description"><?php echo term_description( 503, "area_cat" ); ?></span>
 					</dd>
 				</div>
 				<div class="term pa">
+					<dt><span class="pa">Pre-Professional Advising</span></dt>
 					<dd>
 						<span class="term-description"><?php echo term_description( 5297, "area_cat" ); ?></span>
 					</dd>
 				</div>
 				<div class="term tc">
+					<dt><span class="tc">Teaching Certification</span></dt>
 					<dd>
 						<span class="term-description"><?php echo term_description( 5316, "area_cat" ); ?></span>
 					</dd>
 				</div>
 				<div class="term dd">
+					<dt><span class="dd">Dual Degree</span></dt>
 					<dd>
 						<span class="term-description"><?php echo term_description( 5552, "area_cat" ); ?></span>
 					</dd>
