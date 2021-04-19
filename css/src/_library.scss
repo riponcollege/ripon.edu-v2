@@ -223,12 +223,8 @@
 	}
 
 	.accordion-container {
-		padding-bottom: 30px;
-
 		@include respond-to( 1024px ) {
-			float: right;
-			width: 65%;
-			margin-right: 5%;
+			width: 67%;
 		}
 	}
 

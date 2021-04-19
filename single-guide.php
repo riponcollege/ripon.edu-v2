@@ -18,7 +18,7 @@ page_header();
 			?>			
 		</div>
 
-		<div class="right-column guide">
+		<div class="right-column section-content guide">
 
 			<div class="librarian">
 				<?php
@@ -27,10 +27,10 @@ page_header();
 				?>
 			</div>
 
+			<?php the_content(); ?>
+
 			<div class="accordion-container">
 			<?php 
-			the_content();
-
 			the_accordions();
 			?>
 			</div>

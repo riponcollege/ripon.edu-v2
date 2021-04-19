@@ -17,10 +17,11 @@ function the_accordions() {
 
 					// store the title and subtitle
 					$title = ( isset( $accordion["title"] ) ? $accordion["title"] : '' );
-					$content = ( isset( $accordion["content"] ) ? $accordion["content"] : '' );
+                    $content = ( isset( $accordion["content"] ) ? $accordion["content"] : '' );
+                    $color = ( isset( $accordion["color"] ) ? $accordion["color"] : '' );
 
 					?>
-			<div class="accordion<?php print ( isset( $accordion['open'] ) ? ( $accordion['open'] == 'on' ? " open" : "" ) : "" ); ?>">
+			<div class="accordion<?php print ( isset( $accordion['open'] ) ? ( $accordion['open'] == 'on' ? " open" : "" ) : "" ); ?> <?php print $color ?>">
 				<h3 class="accordion-handle"><?php print $title ?></h3>
 				<div class="accordion-content">
 					<?php print do_shortcode( wpautop( $content ) ); ?>
