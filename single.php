@@ -19,7 +19,6 @@ get_header();
 				<h1><?php the_title(); ?></h1>
 				<?php the_post_thumbnail(); ?>
 				<?php the_content(); ?>
-				<?php print do_shortcode( '[sharethis_buttons]' ); ?>
 				<p class="post-meta">
 					Posted <?php the_date(); ?> in <?php print get_the_category_list( ", ", "", get_the_ID() ); ?>.
 				</p>
