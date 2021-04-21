@@ -59,10 +59,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-5Q9X26');</script>
 <!-- End Google Tag Manager -->
 
-<!-- ShareThis Buttons -->
-<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=608066caa5b9db0019250131&product=sop' async='async'></script>
-<!-- end ShareThis Buttons -->
-
 </head>
 <body <?php body_class(); ?>>
 <!-- Google Tag Manager (noscript) -->
