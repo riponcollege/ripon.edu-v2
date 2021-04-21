@@ -556,6 +556,10 @@ body {
   .section-menu ul li a:hover {
     opacity: .8; }
 
+.section-menu ul li.current_page_item a {
+  border-left: 3px solid #EA4D3D;
+  padding-left: 10px; }
+
 .top-menu {
   background: #434039;
   padding: 10px; }

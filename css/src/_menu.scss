@@ -197,7 +197,6 @@ body {
 .section-menu {
 	ul {
 		li {
-
 			a {
 				display: block;
 				color: white;
@@ -214,6 +213,12 @@ body {
 				&:hover {
 					opacity: .8;
 				}
+
+			}
+
+			&.current_page_item a {
+				border-left: 3px solid $orange;
+				padding-left: 10px;
 			}
 		}
 	}

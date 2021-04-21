@@ -85,35 +85,7 @@ function section_menu( $mode = 'both' ) {
 
 	// make sure there's a menu for this page before displaying
 	if ( !empty( $menu_primary ) ) {
-
-		// get the menu items
-		$items = wp_get_nav_menu_items( $menu_primary );
-
-		$menu_position = get_menu_position();
-
-		if ( $menu_position == 'top' ) {
-			print '<div class="top-menu">';
-		}
-
-		// start the menu container elements
-		print '<div class="section-menu"><ul>';
-
-		// loop through the items, only show top level items, limiting total number
-		$num = 0;
-		foreach ( $items as $item ) {
-			if ( $item->menu_item_parent == 0 && $num < 6 ) {
-				print '<li><a href="' . $item->url . '">' . $item->title . '</a></li>';
-			}
-			$num++;
-		}
-
-		// close the menu container elements
-		print '</ul></div>';
-
-		if ( $menu_position == 'top' ) {
-			print '</div>';
-		}
-
+		wp_nav_menu( array( 'menu' => $menu_primary, 'container_class' => 'section-menu' ) );
 	}
 
 }
