@@ -569,13 +569,19 @@ body {
   @media only screen and (min-width: 1220px) {
     .top-menu {
       padding: 20px 40px; } }
-  .top-menu .section-menu ul li {
+  .top-menu ul li {
     display: inline; }
-    .top-menu .section-menu ul li a {
+    .top-menu ul li a {
+      display: block;
+      color: white;
+      text-decoration: none;
       padding: 6px 10px; }
       @media only screen and (min-width: 768px) {
-        .top-menu .section-menu ul li a {
+        .top-menu ul li a {
           display: inline-block; } }
+    .top-menu ul li.current_page_item a {
+      border-left: 3px solid #EA4D3D;
+      padding-left: 10px; }
 
 header {
   zoom: 1;
