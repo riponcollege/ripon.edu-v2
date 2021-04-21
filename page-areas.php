@@ -33,6 +33,7 @@ section_menu();
 					<select><option value="all">-- All Areas --</option><option value="ma">Major</option><option value="mi">Minor</option><option value="pa">Pre-Professional Advising</option><option value="tc">Teaching Certification</option><option value="dd">Dual Degree</option></select>
 				</div>
 				<div class="mini-legend">
+					<dd>At Ripon College, you choose your path. In fact, Ripon offers students the chance to develop a self-designed major (listed below) with the guidance of a faculty advisor. Recent self-design majors have included: Film Studies, Criminal Justice and Journalism. So, if you’re undecided, maybe this is the choice for you!</dd>
 				</div>
 				<div class="term ma">
 					<dt><span class="ma">Major</span></dt>
