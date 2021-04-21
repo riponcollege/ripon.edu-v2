@@ -85,6 +85,10 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 					<li class="area-offcampus">Off-Campus</li>
 				</ul>
 			</div>
+
+			<div class="area-buttons">
+				<?php wp_nav_menu( array( 'menu' => 'area-buttons' ) ); ?>
+			</div>
 		</div>
 			
 		<div class="right-column">

@@ -568,7 +568,7 @@ body {
       padding: 10px 20px; } }
   @media only screen and (min-width: 1220px) {
     .top-menu {
-      padding: 20px 40px; } }
+      padding: 20px 50px; } }
   .top-menu ul li {
     display: inline; }
     .top-menu ul li a {
@@ -1727,11 +1727,18 @@ button, input[type=submit], input[type=reset], .btn, button, input[type=submit],
         padding: 3px 0; }
 
 .area .area-buttons {
-  padding: 20px;
-  text-align: center; }
-  @media only screen and (min-width: 768px) {
-    .area .area-buttons .btn, .area .area-buttons button, .area .area-buttons input[type=submit], .area .area-buttons .gform_wrapper .gform_footer input[type=button], .gform_wrapper .gform_footer .area .area-buttons input[type=button], .area .area-buttons .gform_wrapper .gform_footer input[type=reset], .gform_wrapper .gform_footer .area .area-buttons input[type=reset], .area .area-buttons .gform_wrapper .gform_footer button, .gform_wrapper .gform_footer .area .area-buttons button {
-      margin: 0 30px; } }
+  padding: 20px 0; }
+  .area .area-buttons ul li a {
+    display: block;
+    text-align: left;
+    color: #0094E3;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 2px 10px 2px 35px;
+    background: url(../img/icon-link-teal.webp) left center no-repeat;
+    background-size: contain;
+    margin: 0 0 10px 10px; }
 
 .area-legend {
   margin: 0 -20px; }
