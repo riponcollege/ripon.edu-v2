@@ -10,16 +10,14 @@ function the_phototiles() {
 		<div class="phototiles">
 		<?php
 		foreach ( $tiles as $tile ) {
-			if ( !empty( $tile['title'] ) && !empty( $tile['background'] ) && !empty( $tile['content'] ) ) {
-				if ( !empty( $tile['link'] ) ) { ?><a href="<?php print $tile['link'] ?>"><?php } 
+			if ( !empty( $tile['title'] ) && !empty( $tile['background'] ) && !empty( $tile['content'] ) ) { 
 				?>
-			<div class="phototile" style="background-image: url(<?php print $tile['background'] ?>);">
+			<div class="phototile" style="background-image: url(<?php print $tile['background'] ?>);"<?php if ( !empty( $tile['link'] ) ) { ?> onclick="location.href=<?php print $tile['link'] ?>"<?php } ?>>
 				<div class="phototile-title"><?php print $tile['title'] ?></div>
 				<div class="phototile-subtitle"><?php print $tile['subtitle'] ?></div>
 				<div class="phototile-content <?php print $tile['color'] ?>"><?php print $tile['content'] ?></div>
 			</div>
 				<?php
-				if ( !empty( $tile['link'] ) ) { ?></a><?php } 
 			}
 		}
         ?>
