@@ -12,7 +12,7 @@ function the_phototiles() {
 		foreach ( $tiles as $tile ) {
 			if ( !empty( $tile['title'] ) && !empty( $tile['background'] ) && !empty( $tile['content'] ) ) { 
 				?>
-			<div class="phototile" style="background-image: url(<?php print $tile['background'] ?>);"<?php if ( !empty( $tile['link'] ) ) { ?> onclick="location.href=<?php print $tile['link'] ?>"<?php } ?>>
+			<div class="phototile" style="background-image: url(<?php print $tile['background'] ?>);" data-href="<?php print $tile['link'] ?>">
 				<div class="phototile-title"><?php print $tile['title'] ?></div>
 				<div class="phototile-subtitle"><?php print $tile['subtitle'] ?></div>
 				<div class="phototile-content <?php print $tile['color'] ?>"><?php print $tile['content'] ?></div>
