@@ -17,21 +17,24 @@ get_header();
 				$post_id = $post->ID;
 				?>
 				<h1><?php the_title(); ?></h1>
-				<?php the_post_thumbnail(); ?>
 				<?php the_content(); ?>
 				<p class="post-meta">
 					Posted <?php the_date(); ?> in <?php print get_the_category_list( ", ", "", get_the_ID() ); ?>.
 				</p>
+				<hr>
+				<?php
+				$cat_list = get_the_category_list( ",", "", get_the_ID() );
+				if ( !empty( $cat_list ) ) {
+					print "<h3>Related Posts</h3>";
+					print do_shortcode('[articles cats="' . $cat_list . '" /]');
+				}
+				?>
 		 	</div>
 		 	<div class="third">
+				<?php the_post_thumbnail(); ?>
 		 		<p>&nbsp;</p>
 				<?php
 				if ( $post->post_type == 'post' ) {
-					$cat_list = get_the_category_list( ",", "", get_the_ID() );
-					if ( !empty( $cat_list ) ) {
-						print "<h3>Related Posts</h3>";
-						print do_shortcode('[display-posts category="' . $cat_list . '" posts_per_page=5 exclude_current="true" /]');
-					}
 
 					$tags = wp_get_post_tags( $post->ID );
 					$tag_array = array();

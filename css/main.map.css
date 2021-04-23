@@ -1161,6 +1161,88 @@ header {
     text-decoration: none;
     padding: 5px 10px; }
 
+.search-list .searchform label {
+  display: block;
+  padding: 3px 0; }
+  @media only screen and (min-width: 768px) {
+    .search-list .searchform label {
+      display: inline-block;
+      padding: 0;
+      margin: 0 5px; } }
+
+.search-list .searchform input[type=submit] {
+  margin: 5px 0 0; }
+  @media only screen and (min-width: 768px) {
+    .search-list .searchform input[type=submit] {
+      margin: 0 0 0 10px; } }
+
+.search-list .entries {
+  margin: 20px 0 0 0; }
+  @media only screen and (min-width: 1024px) {
+    .search-list .entries {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -3%; } }
+
+.search-list .entry {
+  border: 3px solid #EBEAE9;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative; }
+  @media only screen and (min-width: 1024px) {
+    .search-list .entry {
+      flex: 1;
+      flex-basis: 47%;
+      margin: 0 3% 3% 0; } }
+  @media only screen and (min-width: 1220px) {
+    .search-list .entry {
+      flex-basis: 30.3333%;
+      margin: 0 3% 3% 0; } }
+  @media only screen and (min-width: 1440px) {
+    .search-list .entry {
+      flex-basis: 22%;
+      margin: 0 3% 3% 0; } }
+  .search-list .entry:before {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #EBEAE9;
+    padding: 6px 12px;
+    font-size: .8em;
+    line-height: 1em;
+    opacity: .8; }
+  .search-list .entry.post:before {
+    content: 'ARTICLE'; }
+  .search-list .entry.page:before {
+    content: 'PAGE'; }
+  .search-list .entry.event:before {
+    content: 'EVENT'; }
+  .search-list .entry.people:before {
+    content: 'PERSON'; }
+  .search-list .entry.guide:before {
+    content: 'RESEARCH GUIDE'; }
+
+.search-list .post-category {
+  display: inline-block;
+  background: #EBEAE9;
+  padding: 5px 8px;
+  font-size: .9em; }
+
+.pagination {
+  padding: 10px 50px 30px;
+  text-align: center;
+  font-family: "Hepta Slab", serif;
+  font-weight: 300; }
+  .pagination .page-numbers {
+    display: inline-block;
+    padding: 6px 10px;
+    text-decoration: none;
+    background: #A91C3A;
+    color: white; }
+    .pagination .page-numbers.current {
+      background: #EBEAE9;
+      color: #434039; }
+
 body.cta-active {
   padding-bottom: 55px; }
   @media only screen and (min-width: 768px) {
@@ -1355,7 +1437,7 @@ section.content {
       padding: 20px 30px; } }
   @media only screen and (min-width: 1024px) {
     .content-wide {
-      padding: 20px 40px; } }
+      padding: 30px 40px; } }
 
 .box {
   background: #EBEAE9;
