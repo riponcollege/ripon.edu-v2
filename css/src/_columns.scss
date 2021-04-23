@@ -76,13 +76,17 @@
 	}
 
 	.right-column {
+		padding: 20px;
+
 		@include respond-to( 768px ) {
 			flex: 1;
 			flex-basis: 75%;
+			padding: 20px 30px;
 		}
 
 		@include respond-to( 1220px ) {
 			flex-basis: 80%;
+			padding: 30px 40px;
 		}
 	}
 }

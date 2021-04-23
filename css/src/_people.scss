@@ -131,13 +131,21 @@
 		.person-info {
 			padding: 20px;
 
+			h2, h4 {
+				color: white;
+			}
+
 			h5 {
 				padding-bottom: 3px;
 			}
 
+			a {
+				color: $grey-light;
+			}
+
 			p {
 				padding: 3px 0;
-				color: $grey;
+				color: white;
 			}
 
 			.btn {

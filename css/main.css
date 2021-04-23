@@ -387,14 +387,17 @@ ol {
           font-family: "Open Sans", sans-serif;
           font-weight: 300; }
 
-@media only screen and (min-width: 768px) {
-  .two-column .right-column {
-    flex: 1;
-    flex-basis: 75%; } }
-
-@media only screen and (min-width: 1220px) {
-  .two-column .right-column {
-    flex-basis: 80%; } }
+.two-column .right-column {
+  padding: 20px; }
+  @media only screen and (min-width: 768px) {
+    .two-column .right-column {
+      flex: 1;
+      flex-basis: 75%;
+      padding: 20px 30px; } }
+  @media only screen and (min-width: 1220px) {
+    .two-column .right-column {
+      flex-basis: 80%;
+      padding: 30px 40px; } }
 
 /****************************
        MAIN MENU STYLES
@@ -2402,11 +2405,15 @@ button, input[type=submit], input[type=reset], .btn, button, input[type=submit],
     display: block; }
   .bio .sidebar .person-info {
     padding: 20px; }
+    .bio .sidebar .person-info h2, .bio .sidebar .person-info h4 {
+      color: white; }
     .bio .sidebar .person-info h5 {
       padding-bottom: 3px; }
+    .bio .sidebar .person-info a {
+      color: #EBEAE9; }
     .bio .sidebar .person-info p {
       padding: 3px 0;
-      color: #434039; }
+      color: white; }
     .bio .sidebar .person-info .btn, .bio .sidebar .person-info button, .bio .sidebar .person-info input[type=submit], .bio .sidebar .person-info .gform_wrapper .gform_footer input[type=button], .gform_wrapper .gform_footer .bio .sidebar .person-info input[type=button], .bio .sidebar .person-info .gform_wrapper .gform_footer input[type=reset], .gform_wrapper .gform_footer .bio .sidebar .person-info input[type=reset], .bio .sidebar .person-info .gform_wrapper .gform_footer button, .gform_wrapper .gform_footer .bio .sidebar .person-info button {
       margin-top: 20px;
       padding: 10px 20px; }
