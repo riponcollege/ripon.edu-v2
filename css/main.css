@@ -1856,13 +1856,11 @@ button, input[type=submit], input[type=reset], .btn, button, input[type=submit],
   .area-legend .area-filter select {
     width: 100%;
     margin-bottom: 20px; }
-    @media only screen and (min-width: 1024px) {
-      .area-legend .area-filter select {
-        width: auto; } }
   @media only screen and (min-width: 1024px) {
     .area-legend .area-filter {
       float: left;
-      width: 25%; } }
+      width: 25%;
+      padding-right: 30px; } }
   .area-legend .area-filter select {
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
