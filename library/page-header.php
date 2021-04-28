@@ -20,6 +20,9 @@ function page_header( $title_override = '', $image_override = '', $subtitle_over
 	$background = !empty( $image_override ) ? $image_override : ( !empty( $metabox_background ) ? $metabox_background : ( !empty( $background_featured ) ? $background_featured : '' ) );
 
 
+	if ( is_search() ) $subtitle = 'Use our advanced search to help you find anything you need on our site.';
+
+
 	// get page ancestors
 	$ancestors = get_post_ancestors( get_the_ID() );
 
