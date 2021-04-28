@@ -11,6 +11,11 @@ header {
 		width: 180px;
 		// background: lighten( $red-dark, 5% );
 		padding: 10px 20px;
+
+		@include respond-to( 1220px ) {
+			padding: 10px 20px 10px 40px;
+			width: 210px;
+		}
 	}
 
 	.slogan {

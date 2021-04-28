@@ -20,7 +20,7 @@
 		background-color: rgba( darken( $red-dark, 15% ), .4 );
 	}
 
-	.breadcrumbs {
+	.page-header-content {
 		position: absolute;
 		bottom: 20px;
 		left: 20px;
@@ -34,7 +34,7 @@
 		}
 
 		@include respond-to( 1220px ) {
-			left: 50px;
+			left: 40px;
 			bottom: 40px;
 
 			.page-title {
@@ -56,10 +56,20 @@
 			@include font-title-bold;
 			font-size: 2em;
 			line-height: 1.4em;
+			padding: 0;
 
 			@include respond-to( 1024px ) {
 				font-size: 2.4em;
 			}
+		}
+
+		.page-subtitle {
+			line-height: 1.6em;
+			max-width: 700px;
+		}
+
+		.crumbs {
+			padding: 10px 0 0;
 		}
 	}
 }

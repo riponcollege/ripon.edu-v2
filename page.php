@@ -20,16 +20,10 @@ if ( $menu_position == 'left' ) {
 	section_menu();
 }
 
-?>
-<div class="section-content">
-	<?php
-	// output page content
-	while ( have_posts() ) : the_post(); 
-		the_content(); 
-	endwhile; 
-	?>
-</div>
-<?php
+// output page content
+while ( have_posts() ) : the_post(); 
+	the_content(); 
+endwhile; 
 
 if ( $menu_position == 'left' ) {
 	?>
