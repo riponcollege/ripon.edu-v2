@@ -36,11 +36,11 @@ function require_multi( $files ) {
 require_multi(
 
 	// include the essential components
-	'site', 'metabox', 
+	'core', 'site', 'metabox', 
 
 	'post-type/people', 'post-type/fund', 'post-type/alum', 'post-type/year','post-type/event', 'post-type/guide',
 
-	'emergency', 'menus', 'video-showcase', 'page-header', 'library', 'icons', 'photo-tiles', 'scripts', 'images', 'search', 'articles', 'post-type/area', 'accordion', 'button', 'call-to-action', 'hep/send-donation'
+	'emergency', 'menus', 'video-showcase', 'page-header', 'library', 'icons', 'photo-tiles', 'images', 'search', 'articles', 'post-type/area', 'accordion', 'button', 'call-to-action', 'hep/send-donation'
 
 );
 
