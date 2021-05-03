@@ -16,8 +16,12 @@ function page_header( $title_override = '', $image_override = '', $subtitle_over
 
 	// get final header elements
 	$title = !empty( $title_override ) ? $title_override : ( !empty( $metabox_title ) ? $metabox_title : get_the_title() );
-	$subtitle = !empty( $subtitle_override ) ? $subtitle_override : ( !empty( $metabox_subtitle ) ? $metabox_subtitle : get_the_excerpt() );
+	$subtitle = strip_tags( !empty( $subtitle_override ) ? $subtitle_override : ( !empty( $metabox_subtitle ) ? $metabox_subtitle : get_the_excerpt() ) );
 	$background = !empty( $image_override ) ? $image_override : ( !empty( $metabox_background ) ? $metabox_background : ( !empty( $background_featured ) ? $background_featured : '' ) );
+
+	if ( empty( $background ) ) {
+		// grab parent background
+	}
 
 
 	if ( is_search() ) $subtitle = 'Use our advanced search to help you find anything you need on our site.';

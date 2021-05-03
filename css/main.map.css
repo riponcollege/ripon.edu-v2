@@ -876,7 +876,7 @@ header {
               padding: 10px 25px; } }
 
 .page-header {
-  background: url(../img/bg-area-header.webp) center center no-repeat;
+  background: url(../img/bg-header-area.webp) center center no-repeat;
   background-size: cover;
   min-height: 250px;
   position: relative;
@@ -1661,7 +1661,7 @@ button, input[type=submit], input[type=reset], .btn, button, input[type=submit],
   padding: 4px 0; }
 
 .area-header {
-  background: url(../img/bg-area-header.webp) center center no-repeat;
+  background: url(../img/bg-header-area.webp) center center no-repeat;
   background-size: cover; }
   .area-header .breadcrumbs {
     max-width: 400px; }

@@ -42,3 +42,11 @@ function is_events() {
 
 }
 
+
+
+// parse the query string
+function parse_query_string() {
+	$url_parts = wp_parse_url( $_SERVER['REQUEST_URI'] );
+	parse_str( $url_parts['query'], $query_args );
+	return $query_args;
+}

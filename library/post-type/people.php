@@ -155,6 +155,8 @@ if ( is_ripon() ) {
 			'link' => 1
 		), $atts ));
 
+		// [people category="mycat" link=0 /]
+
 
 		// set some query vars
 		$vars = array( 

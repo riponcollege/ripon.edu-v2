@@ -30,7 +30,7 @@ if ( $paged > 0 ) {
 ?>
 	<div id="primary" class="site-content">
 
-		<?php page_header( "Search: <span>'" . htmlspecialchars( $_REQUEST["s"] ) . "'</span>", get_bloginfo('template_url') . '/img/bg-search-header.webp' ) ?>
+		<?php page_header( "Search: <span>'" . htmlspecialchars( $_REQUEST["s"] ) . "'</span>", get_bloginfo('template_url') . '/img/bg-header-search.webp' ) ?>
 		
 		<div id="content" class="wrap content-wide search-list" role="main">
 			<?php include( 'searchform-advanced.php' ); ?>

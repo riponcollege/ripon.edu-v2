@@ -5,20 +5,19 @@
 
 get_header(); 
 
-if ( isset( $_REQUEST['event_category'] ) && $_REQUEST['event_category']!=0 ) {
-	$category_info = get_term_by( 'id', $_REQUEST['event_category'], 'category' );
-	$page_title = $category_info->name;
-} else {
-	$page_title = "Events Calendar";
-}
+$request = parse_query_string();
 
 ?>
-	<?php page_header( $page_title ); ?>
+	<?php page_header( "Events Calendar", get_bloginfo( 'template_url' ) . '/img/bg-header-events.webp', get_snippet( 'events-header' ) ); ?>
 	
+	<?php if ( !is_search() ) { ?>
+	<div class="event-filter content-wide bg-grey">
+		<h3>Filter by Category</h3>
+		<?php filter_by_event_type(); ?></p>
+	</div>
+	<?php } ?>
+
 	<div id="content" class="wrap content-wide" role="main">
-		<div class="events-content">
-			<!--<?php print do_shortcode( '[snippet slug="events-calendar-download"]' ); ?>-->
-		</div>
 
 		<h3>Search All Events</h3>
 		<form role="search" method="get" id="searchform" class="searchform" action="/" _lpchecked="1">
@@ -49,22 +48,19 @@ if ( isset( $_REQUEST['event_category'] ) && $_REQUEST['event_category']!=0 ) {
 
 		} else {
 			?>
-			<h3>Browse Events</h3>
-			<p><strong>Filter by Event Type:</strong> <?php filter_by_event_type(); ?></p>
-			<br>
 			<?php 
 
-			$request = explode( '?', $_SERVER['REQUEST_URI'] );
-			parse_str( $request[1], $query_args );
-
 			// get URL parameters and default to current month.
-			$month = ( !empty( $query_args['mo'] ) ? $query_args['mo'] : date( "n" ) );
-			$year = ( !empty( $query_args['yr'] ) ? $query_args['yr'] : date( "Y" ) );
+			$month = ( !empty( $request['mo'] ) ? $request['mo'] : date( "n" ) );
+			$year = ( !empty( $request['yr'] ) ? $request['yr'] : date( "Y" ) );
+			$category = ( isset( $request['event_category'] ) ? $request['event_category'] : 0 );
 
 			// output month
-			show_month_events( $month, $year );
+			show_month_events( $month, $year, $category );
 		}
 		?>
+
+
 	</div><!-- #content -->
 
 <?php

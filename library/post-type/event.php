@@ -188,7 +188,7 @@ function get_day_events( $m, $d, $y ) {
 
 
 
-function get_month_events( $m, $y, $category='' ) {
+function get_month_events( $m, $y, $category = 0 ) {
 
 	$timestamp_start = mktime( 0, 0, 0, $m, 1, $y );
 	$timestamp_end = mktime( 23, 59, 59, $m, date( 't', $timestamp_start ), $y );
@@ -213,33 +213,23 @@ function get_month_events( $m, $y, $category='' ) {
 				'compare' => '<='
 			)
 		),
-		'tax_query' => array(
+		'post_type' => 'event',
+		'orderby' => 'name',
+		'posts_per_page' => 100
+	);
+
+	if ( !empty( $category ) ) {
+		$event_cat = get_term( $category, 'event_cat' );
+		$args[ 'event_cat' ] = $event_cat->slug;
+	} else {
+		$args['tax_query'] = array(
 			array(
 				'taxonomy' => 'event_cat',
 				'field'    => 'slug',
 				'terms'    => 'exclude',
 				'operator' => 'NOT IN',
 			),
-		),
-		'post_type' => 'event',
-		'orderby' => 'name',
-		'posts_per_page' => 100
-	);
-
-	if ( isset( $_GET['event_category'] ) ) {
-		if ( $_GET['event_category'] != 0 ) {
-			$event_cat = get_term( $_GET['event_category'], 'event_cat' );
-			$args[ 'event_cat' ] = $event_cat->slug;
-		} else {
-			$args['tax_query'] = array(
-				array(
-					'taxonomy' => 'event_cat',
-					'field'    => 'slug',
-					'terms'    => 'exclude',
-					'operator' => 'NOT IN',
-				),
-			);
-		}
+		);
 	}
 
 	$event_query = new WP_Query( $args );
@@ -262,7 +252,7 @@ function get_month_events( $m, $y, $category='' ) {
 
 
 
-function get_upcoming_events( $limit, $category=0 ) {
+function get_upcoming_events( $limit, $category = 0 ) {
 
 	$timestamp_start = mktime( 0, 0, 0 );
 
@@ -353,7 +343,7 @@ function get_next_month( $month, $year ) {
 
 
 // show month events
-function show_month_events( $month, $year ) {
+function show_month_events( $month, $year, $category = 0 ) {
 
 	$event_list_url = "/events";
 
@@ -361,7 +351,7 @@ function show_month_events( $month, $year ) {
 	$calendar = '';
 
 	// get the events for the month.
-	$events = get_month_events( $month, $year );
+	$events = get_month_events( $month, $year, $category );
 
 	// show next and previous month links.
 	$prev = get_previous_month( $month, $year );
@@ -487,17 +477,18 @@ function get_event_categories() {
 // filter events by category using a dropdown menu
 function filter_by_event_type() {
 
+	$request = parse_query_string();
+
 	wp_dropdown_categories( 
 		array(
 			'show_option_all' => 'All Event Categories',
-			'orderby' => 'NAME', 
+			'orderby' => 'name', 
 			'taxonomy' => 'event_cat',
 			'class' => 'event-category',
-			'exclude' => '7756',
 			'hierarchical' => 1,
 			'depth' => 1,
-			'selected' => ( isset( $_GET['event_category'] ) ? $_GET['event_category'] : 0 )
-		) 
+			'selected' => ( isset( $request['event_category'] ) ? $request['event_category'] : 0 )
+		)
 	);
 
 }
@@ -743,4 +734,14 @@ function rss_event_sort( $query ) {
 }
 add_filter( 'pre_get_posts', 'rss_event_sort' );
 
+
+
+
+function add_event_query_vars( $vars ){
+    $vars[] = "event_category";
+    $vars[] = "mo";
+    $vars[] = "yr";
+    return $vars;
+}
+add_filter( 'query_vars', 'add_event_query_vars' );
 
