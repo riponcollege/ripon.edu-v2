@@ -5,20 +5,38 @@ Home/catch-all template
 
 get_header(); 
 
+page_header( 'Ripon News', get_bloginfo( 'template_url' ) . '/img/bg-header-news.webp', get_snippet( 'header-news' ) );
+
+?>
+
+<div class="content-wide">
+	<div class="article-cards blog-listing">
+<?php
+
 while ( have_posts() ) : the_post();
 	?>
-	<div class="entry-content">
+	<div class="entry">
 		<div class="thumbnail">
 			<?php the_post_thumbnail(); ?>
 		</div>
-		<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
-		<?php the_excerpt(); ?>
-		<p class="post-meta">
-			Posted <?php the_date(); ?> in <?php print get_the_category_list( ", ", "", get_the_ID() ); ?> by <?php the_author_link() ?>.
-		</p>
+		<div class="entry-inner">
+			<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
+			<?php the_excerpt(); ?>
+		</div>
 	</div>
 	<?php
 endwhile;
+
+?>
+	</div>
+
+	<div class="pagination">
+		<?php pagination(); ?>
+	</div>
+
+</div>
+
+<?php
 
 get_footer();
 

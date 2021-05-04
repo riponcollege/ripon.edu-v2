@@ -8,7 +8,7 @@ get_header();
 $request = parse_query_string();
 
 ?>
-	<?php page_header( "Events Calendar", get_bloginfo( 'template_url' ) . '/img/bg-header-events.webp', get_snippet( 'events-header' ) ); ?>
+	<?php page_header( "Events Calendar", get_bloginfo( 'template_url' ) . '/img/bg-header-events.webp', get_snippet( 'header-events' ) ); ?>
 	
 	<?php if ( !is_search() ) { ?>
 	<div class="event-filter content-wide bg-grey">
