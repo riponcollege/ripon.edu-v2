@@ -17,7 +17,7 @@ while ( have_posts() ) : the_post();
 	?>
 	<div class="entry">
 		<div class="thumbnail">
-			<?php the_post_thumbnail(); ?>
+			<a href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
 		</div>
 		<div class="entry-inner">
 			<h3><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h3>
