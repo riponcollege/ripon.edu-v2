@@ -18,6 +18,9 @@ if ( $menu_position == 'left' ) {
 } else {
 	// show the section menu
 	section_menu();
+	?>
+<div class="content-wide">
+	<?php
 }
 
 // output page content
@@ -28,6 +31,10 @@ endwhile;
 if ( $menu_position == 'left' ) {
 	?>
 	</div>
+</div>
+	<?php
+} else {
+	?>
 </div>
 	<?php
 }
