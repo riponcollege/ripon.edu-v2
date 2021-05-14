@@ -9,13 +9,13 @@ $education = get_cmb_value( "faculty_education" );
 $courses = get_cmb_value( "faculty_courses" );
 
 ?>
-	<div class="page-header">
+	<div class="page-header" style="background-image: url(<?php bloginfo('template_url') ?>/img/bg-header.webp);">
 		<div class="page-header-overlay"></div>
-		<div class="breadcrumbs">
-			<div class="crumbs">
+		<div class="page-header-content">
+			<h1 class="page-title"><?php the_title(); ?></h1>
+			<div class="breadcrumbs">
 				<a href="/faculty">Faculty &amp; Staff</a> &raquo; 
 			</div>
-			<h1 class="page-title"><?php the_title(); ?></h1>
 		</div>
 	</div>
 

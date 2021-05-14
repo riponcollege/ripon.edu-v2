@@ -77,6 +77,7 @@
 
 	.right-column {
 		padding: 20px;
+		@extend .content-style;
 
 		@include respond-to( 768px ) {
 			flex: 1;

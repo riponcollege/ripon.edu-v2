@@ -6,9 +6,7 @@
   font-weight: 800;
   font-size: .9em;
   line-height: 1em;
-  color: white;
   text-decoration: none;
-  background: linear-gradient( 270deg, lighten( $teal, 20% ), $teal );
   text-transform: uppercase;
   cursor: pointer;
   display: inline-block;
@@ -17,10 +15,10 @@
   border-radius: 5px;
   box-shadow: 0 0 10px rgba( black, .3 );
 
-  &:hover {
-    background: linear-gradient( 90deg, lighten( $teal, 20% ), $teal );
-    color: white;
-  }
+  // default button styles
+  background: linear-gradient( 270deg, lighten( $grey, 15% ), $grey );
+  color: white;
+  &:hover { background: linear-gradient( 90deg, lighten( $grey, 15% ), $grey ); }
 
   &.red-dark {
     background: linear-gradient( 270deg, lighten( $red-dark, 15% ), $red-dark );
@@ -41,21 +39,15 @@
   }
 
   &.yellow {
-    background: linear-gradient( 270deg, lighten( $yellow, 15% ), $yellow );
+    background: linear-gradient( 270deg, lighten( $yellow, 10% ), $yellow );
     color: black;
-    &:hover { background: linear-gradient( 90deg, lighten( $yellow, 15% ), $yellow ); }
+    &:hover { background: linear-gradient( 90deg, lighten( $yellow, 10% ), $yellow ); }
   }
 
   &.teal {
     background: linear-gradient( 270deg, lighten( $teal, 20% ), $teal );
     color: white;
     &:hover { background: linear-gradient( 90deg, lighten( $teal, 20% ), $teal ); }
-  }
-
-  &.grey {
-    background: linear-gradient( 270deg, lighten( $grey, 15% ), $grey );
-    color: white;
-    &:hover { background: linear-gradient( 90deg, lighten( $grey, 15% ), $grey ); }
   }
 
   &.grey-light {

@@ -18,6 +18,7 @@ section.content {
 
 .content-wide {
 	padding: 20px;
+	@extend .content-style;
 
 	@include respond-to( 768px ) {
 		padding: 20px 30px;
