@@ -14,11 +14,8 @@
   display: inline-block;
   margin-bottom: 4px;
   transition: all 400ms ease-in-out;
-
-  .content & {
-    box-shadow: 0 0 10px rgba( black, .3 );
-    border-radius: 5px;
-  }
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba( black, .3 );
 
   &:hover {
     background: linear-gradient( 90deg, lighten( $teal, 20% ), $teal );
@@ -26,45 +23,45 @@
   }
 
   &.red-dark {
-    background: $red-dark;
+    background: linear-gradient( 270deg, lighten( $red-dark, 15% ), $red-dark );
     color: white;
-    border-color: $red-dark;
+    &:hover { background: linear-gradient( 90deg, lighten( $red-dark, 15% ), $red-dark ); }
   }
 
   &.red-light {
-    background-color: $red-light;
+    background: linear-gradient( 270deg, lighten( $red-light, 15% ), $red-light );
     color: white;
-    border-color: $red-light;
+    &:hover { background: linear-gradient( 90deg, lighten( $red-light, 15% ), $red-light ); }
   }
 
   &.orange {
-    background-color: $orange;
+    background: linear-gradient( 270deg, lighten( $orange, 15% ), $orange );
     color: white;
-    border-color: $orange;
+    &:hover { background: linear-gradient( 90deg, lighten( $orange, 15% ), $orange ); }
   }
 
   &.yellow {
-    background-color: $yellow;
+    background: linear-gradient( 270deg, lighten( $yellow, 15% ), $yellow );
     color: black;
-    border-color: $yellow;
+    &:hover { background: linear-gradient( 90deg, lighten( $yellow, 15% ), $yellow ); }
   }
 
   &.teal {
-    background-color: $teal;
+    background: linear-gradient( 270deg, lighten( $teal, 20% ), $teal );
     color: white;
-    border-color: $teal;
+    &:hover { background: linear-gradient( 90deg, lighten( $teal, 20% ), $teal ); }
   }
 
   &.grey {
-    background-color: $grey;
+    background: linear-gradient( 270deg, lighten( $grey, 15% ), $grey );
     color: white;
-    border-color: $grey;
+    &:hover { background: linear-gradient( 90deg, lighten( $grey, 15% ), $grey ); }
   }
 
   &.grey-light {
-    background-color: $grey-light;
+    background: linear-gradient( 270deg, lighten( $grey-light, 5% ), $grey-light );
     color: $grey;
-    border-color: $grey-light;
+    &:hover { background: linear-gradient( 90deg, lighten( $grey-light, 5% ), $grey-light ); }
   }
 }
 

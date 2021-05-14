@@ -11,17 +11,27 @@ function page_header( $title_override = '', $image_override = '', $subtitle_over
 
 
 	// get featured image.
-	$background_featured = ( !empty( $image_override ) ? $image_override : get_the_post_thumbnail_url( null, 'full' ) );
+	$featured_background = get_the_post_thumbnail_url( null, 'full' );
+
+
+	// check to see if the override, metabox value, or featured image are set, and if not, lets grab some parent page info
+	if ( empty( $image_override ) && empty( $metabox_background ) && empty( $featured_background ) ) {
+		// get page parent featured image
+		$page_parent_id = wp_get_post_parent_id( get_the_ID() );
+		$page_parent_background = get_the_post_thumbnail_url( $page_parent_id, 'full' );
+
+		// if the page parent doesn't have a featured image, then get the parent of the parent and see if that has one
+		if ( empty( $page_parent_background ) ) {
+			$page_parent_parent_id = wp_get_post_parent_id( $page_parent_id );
+			$page_parent_background = get_the_post_thumbnail_url( $page_parent_parent_id, 'full' );
+		}
+	}
 
 
 	// get final header elements
 	$title = !empty( $title_override ) ? $title_override : ( !empty( $metabox_title ) ? $metabox_title : get_the_title() );
 	$subtitle = strip_tags( !empty( $subtitle_override ) ? $subtitle_override : ( !empty( $metabox_subtitle ) ? $metabox_subtitle : get_the_excerpt() ) );
-	$background = !empty( $image_override ) ? $image_override : ( !empty( $metabox_background ) ? $metabox_background : ( !empty( $background_featured ) ? $background_featured : get_bloginfo('template_url') . '/img/bg-header.webp' ) );
-
-	if ( empty( $background ) ) {
-		// grab parent background
-	}
+	$background = !empty( $image_override ) ? $image_override : ( !empty( $metabox_background ) ? $metabox_background : ( !empty( $featured_background ) ? $featured_background : ( !empty( $page_parent_background ) ? $page_parent_background : get_bloginfo('template_url') . '/img/bg-header.webp' ) ) );
 
 
 	if ( is_search() ) $subtitle = 'Use our advanced search to help you find anything you need on our site.';

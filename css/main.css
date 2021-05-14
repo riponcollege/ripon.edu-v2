@@ -1522,41 +1522,47 @@ section.content {
   cursor: pointer;
   display: inline-block;
   margin-bottom: 4px;
-  transition: all 400ms ease-in-out; }
-  .content .content button, .content .content input[type=submit], .content .content input[type=reset], .content .content .btn, .content .content button, .content .content input[type=submit], .content .content .gform_wrapper .gform_footer input[type=button], .gform_wrapper .gform_footer .content .content input[type=button], .content .content .gform_wrapper .gform_footer input[type=reset], .gform_wrapper .gform_footer .content .content input[type=reset], .content .content .gform_wrapper .gform_footer button, .gform_wrapper .gform_footer .content .content button {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    border-radius: 5px; }
+  transition: all 400ms ease-in-out;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
   .content button:hover, .content input[type=submit]:hover, .content input[type=reset]:hover, .content .btn:hover, .content button:hover, .content input:hover[type=submit], .content .gform_wrapper .gform_footer input:hover[type=button], .gform_wrapper .gform_footer .content input:hover[type=button], .content .gform_wrapper .gform_footer input:hover[type=reset], .gform_wrapper .gform_footer .content input:hover[type=reset], .content .gform_wrapper .gform_footer button:hover, .gform_wrapper .gform_footer .content button:hover {
     background: linear-gradient(90deg, #4ac0ff, #0094E3);
     color: white; }
   .content button.red-dark, .content input[type=submit].red-dark, .content input[type=reset].red-dark, .content .btn.red-dark, .content button.red-dark, .content input.red-dark[type=submit], .content .gform_wrapper .gform_footer input.red-dark[type=button], .gform_wrapper .gform_footer .content input.red-dark[type=button], .content .gform_wrapper .gform_footer input.red-dark[type=reset], .gform_wrapper .gform_footer .content input.red-dark[type=reset], .content .gform_wrapper .gform_footer button.red-dark, .gform_wrapper .gform_footer .content button.red-dark {
-    background: #6A0A1B;
-    color: white;
-    border-color: #6A0A1B; }
+    background: linear-gradient(270deg, #b0112d, #6A0A1B);
+    color: white; }
+    .content button.red-dark:hover, .content input[type=submit].red-dark:hover, .content input[type=reset].red-dark:hover, .content .btn.red-dark:hover, .content button.red-dark:hover, .content input.red-dark:hover[type=submit], .content .gform_wrapper .gform_footer input.red-dark:hover[type=button], .gform_wrapper .gform_footer .content input.red-dark:hover[type=button], .content .gform_wrapper .gform_footer input.red-dark:hover[type=reset], .gform_wrapper .gform_footer .content input.red-dark:hover[type=reset], .content .gform_wrapper .gform_footer button.red-dark:hover, .gform_wrapper .gform_footer .content button.red-dark:hover {
+      background: linear-gradient(90deg, #b0112d, #6A0A1B); }
   .content button.red-light, .content input[type=submit].red-light, .content input[type=reset].red-light, .content .btn.red-light, .content button.red-light, .content input.red-light[type=submit], .content .gform_wrapper .gform_footer input.red-light[type=button], .gform_wrapper .gform_footer .content input.red-light[type=button], .content .gform_wrapper .gform_footer input.red-light[type=reset], .gform_wrapper .gform_footer .content input.red-light[type=reset], .content .gform_wrapper .gform_footer button.red-light, .gform_wrapper .gform_footer .content button.red-light {
-    background-color: #A91C3A;
-    color: white;
-    border-color: #A91C3A; }
+    background: linear-gradient(270deg, #dd3458, #A91C3A);
+    color: white; }
+    .content button.red-light:hover, .content input[type=submit].red-light:hover, .content input[type=reset].red-light:hover, .content .btn.red-light:hover, .content button.red-light:hover, .content input.red-light:hover[type=submit], .content .gform_wrapper .gform_footer input.red-light:hover[type=button], .gform_wrapper .gform_footer .content input.red-light:hover[type=button], .content .gform_wrapper .gform_footer input.red-light:hover[type=reset], .gform_wrapper .gform_footer .content input.red-light:hover[type=reset], .content .gform_wrapper .gform_footer button.red-light:hover, .gform_wrapper .gform_footer .content button.red-light:hover {
+      background: linear-gradient(90deg, #dd3458, #A91C3A); }
   .content button.orange, .content input[type=submit].orange, .content input[type=reset].orange, .content .btn.orange, .content button.orange, .content input.orange[type=submit], .content .gform_wrapper .gform_footer input.orange[type=button], .gform_wrapper .gform_footer .content input.orange[type=button], .content .gform_wrapper .gform_footer input.orange[type=reset], .gform_wrapper .gform_footer .content input.orange[type=reset], .content .gform_wrapper .gform_footer button.orange, .gform_wrapper .gform_footer .content button.orange {
-    background-color: #EA4D3D;
-    color: white;
-    border-color: #EA4D3D; }
+    background: linear-gradient(270deg, #f18c82, #EA4D3D);
+    color: white; }
+    .content button.orange:hover, .content input[type=submit].orange:hover, .content input[type=reset].orange:hover, .content .btn.orange:hover, .content button.orange:hover, .content input.orange:hover[type=submit], .content .gform_wrapper .gform_footer input.orange:hover[type=button], .gform_wrapper .gform_footer .content input.orange:hover[type=button], .content .gform_wrapper .gform_footer input.orange:hover[type=reset], .gform_wrapper .gform_footer .content input.orange:hover[type=reset], .content .gform_wrapper .gform_footer button.orange:hover, .gform_wrapper .gform_footer .content button.orange:hover {
+      background: linear-gradient(90deg, #f18c82, #EA4D3D); }
   .content button.yellow, .content input[type=submit].yellow, .content input[type=reset].yellow, .content .btn.yellow, .content button.yellow, .content input.yellow[type=submit], .content .gform_wrapper .gform_footer input.yellow[type=button], .gform_wrapper .gform_footer .content input.yellow[type=button], .content .gform_wrapper .gform_footer input.yellow[type=reset], .gform_wrapper .gform_footer .content input.yellow[type=reset], .content .gform_wrapper .gform_footer button.yellow, .gform_wrapper .gform_footer .content button.yellow {
-    background-color: #F6B44D;
-    color: black;
-    border-color: #F6B44D; }
+    background: linear-gradient(270deg, #fad396, #F6B44D);
+    color: black; }
+    .content button.yellow:hover, .content input[type=submit].yellow:hover, .content input[type=reset].yellow:hover, .content .btn.yellow:hover, .content button.yellow:hover, .content input.yellow:hover[type=submit], .content .gform_wrapper .gform_footer input.yellow:hover[type=button], .gform_wrapper .gform_footer .content input.yellow:hover[type=button], .content .gform_wrapper .gform_footer input.yellow:hover[type=reset], .gform_wrapper .gform_footer .content input.yellow:hover[type=reset], .content .gform_wrapper .gform_footer button.yellow:hover, .gform_wrapper .gform_footer .content button.yellow:hover {
+      background: linear-gradient(90deg, #fad396, #F6B44D); }
   .content button.teal, .content input[type=submit].teal, .content input[type=reset].teal, .content .btn.teal, .content button.teal, .content input.teal[type=submit], .content .gform_wrapper .gform_footer input.teal[type=button], .gform_wrapper .gform_footer .content input.teal[type=button], .content .gform_wrapper .gform_footer input.teal[type=reset], .gform_wrapper .gform_footer .content input.teal[type=reset], .content .gform_wrapper .gform_footer button.teal, .gform_wrapper .gform_footer .content button.teal {
-    background-color: #0094E3;
-    color: white;
-    border-color: #0094E3; }
+    background: linear-gradient(270deg, #4ac0ff, #0094E3);
+    color: white; }
+    .content button.teal:hover, .content input[type=submit].teal:hover, .content input[type=reset].teal:hover, .content .btn.teal:hover, .content button.teal:hover, .content input.teal:hover[type=submit], .content .gform_wrapper .gform_footer input.teal:hover[type=button], .gform_wrapper .gform_footer .content input.teal:hover[type=button], .content .gform_wrapper .gform_footer input.teal:hover[type=reset], .gform_wrapper .gform_footer .content input.teal:hover[type=reset], .content .gform_wrapper .gform_footer button.teal:hover, .gform_wrapper .gform_footer .content button.teal:hover {
+      background: linear-gradient(90deg, #4ac0ff, #0094E3); }
   .content button.grey, .content input[type=submit].grey, .content input[type=reset].grey, .content .btn.grey, .content button.grey, .content input.grey[type=submit], .content .gform_wrapper .gform_footer input.grey[type=button], .gform_wrapper .gform_footer .content input.grey[type=button], .content .gform_wrapper .gform_footer input.grey[type=reset], .gform_wrapper .gform_footer .content input.grey[type=reset], .content .gform_wrapper .gform_footer button.grey, .gform_wrapper .gform_footer .content button.grey {
-    background-color: #434039;
-    color: white;
-    border-color: #434039; }
+    background: linear-gradient(270deg, #6c675c, #434039);
+    color: white; }
+    .content button.grey:hover, .content input[type=submit].grey:hover, .content input[type=reset].grey:hover, .content .btn.grey:hover, .content button.grey:hover, .content input.grey:hover[type=submit], .content .gform_wrapper .gform_footer input.grey:hover[type=button], .gform_wrapper .gform_footer .content input.grey:hover[type=button], .content .gform_wrapper .gform_footer input.grey:hover[type=reset], .gform_wrapper .gform_footer .content input.grey:hover[type=reset], .content .gform_wrapper .gform_footer button.grey:hover, .gform_wrapper .gform_footer .content button.grey:hover {
+      background: linear-gradient(90deg, #6c675c, #434039); }
   .content button.grey-light, .content input[type=submit].grey-light, .content input[type=reset].grey-light, .content .btn.grey-light, .content button.grey-light, .content input.grey-light[type=submit], .content .gform_wrapper .gform_footer input.grey-light[type=button], .gform_wrapper .gform_footer .content input.grey-light[type=button], .content .gform_wrapper .gform_footer input.grey-light[type=reset], .gform_wrapper .gform_footer .content input.grey-light[type=reset], .content .gform_wrapper .gform_footer button.grey-light, .gform_wrapper .gform_footer .content button.grey-light {
-    background-color: #EBEAE9;
-    color: #434039;
-    border-color: #EBEAE9; }
+    background: linear-gradient(270deg, #f7f7f6, #EBEAE9);
+    color: #434039; }
+    .content button.grey-light:hover, .content input[type=submit].grey-light:hover, .content input[type=reset].grey-light:hover, .content .btn.grey-light:hover, .content button.grey-light:hover, .content input.grey-light:hover[type=submit], .content .gform_wrapper .gform_footer input.grey-light:hover[type=button], .gform_wrapper .gform_footer .content input.grey-light:hover[type=button], .content .gform_wrapper .gform_footer input.grey-light:hover[type=reset], .gform_wrapper .gform_footer .content input.grey-light:hover[type=reset], .content .gform_wrapper .gform_footer button.grey-light:hover, .gform_wrapper .gform_footer .content button.grey-light:hover {
+      background: linear-gradient(90deg, #f7f7f6, #EBEAE9); }
 
 .button {
   padding: 10px;
