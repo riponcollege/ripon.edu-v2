@@ -27,9 +27,24 @@ function articles_shortcode( $atts ) {
 			// grab the feed
 			$feed = fetch_rss( $a['feed'] ); // this is the external website's RSS feed URL
 
-			$items = array_slice( $feed->items, 0, $a['posts_per_page']-1 );
+			$items = array_slice( $feed->items, 0, $a['posts_per_page'] );
 
-			print_r( $items );
+			$return = '<div class="article-cards">';
+
+			foreach ( $items as $item ) {
+		        $return .= '<div class="entry">';
+		        $return .= '<div class="entry-thumbnail"><a href="' . $item['link'] . '">';
+		        //$return .= get_the_post_thumbnail( null, 'post-thumbnail' );
+		        $return .= '</a></div>';
+		        $return .= '<div class="entry-inner">';
+			    $return .= '<h4><a href="' . $item['link'] . '">' . $item['title'] . '</a></h4>';
+			    $return .= wpautop( $item['description'] );
+			    $return .= '</div></div>';
+		    }
+
+		    $return .= '</div>';
+
+		    return $return;
 
 		}
 
