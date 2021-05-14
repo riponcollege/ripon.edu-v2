@@ -434,7 +434,8 @@ body {
     transition: color 400ms ease-in-out, padding-right 400ms ease-in-out, width 400ms ease-in-out;
     text-align: right;
     font-size: 20px;
-    line-height: 20px; }
+    line-height: 20px;
+    cursor: pointer; }
     .menu-pane .close:hover {
       opacity: .7; }
     @media only screen and (min-width: 768px) {
@@ -662,23 +663,22 @@ header {
     background-size: contain;
     position: absolute;
     right: 80px;
-    top: 20px;
+    top: 25px;
     width: 26px;
+    height: 26px;
     z-index: 4;
     color: transparent;
     overflow: hidden;
-    border: 0; }
-    @media only screen and (min-width: 768px) {
-      header .search-show {
-        position: absolute;
-        top: 20px;
-        width: 26px;
-        color: transparent; } }
+    border: 0;
+    cursor: pointer; }
     @media only screen and (min-width: 1024px) {
       header .search-show {
         right: 100px;
         width: 35px;
+        height: 35px;
         top: 26px; } }
+    header .search-show:hover {
+      opacity: .8; }
   header .menu-show {
     position: absolute;
     right: 30px;
@@ -690,13 +690,16 @@ header {
     z-index: 4;
     background: url(../img/icon-menu-white.webp) center center no-repeat;
     background-size: contain;
-    transition: all 400ms ease-in-out; }
+    transition: all 400ms ease-in-out;
+    cursor: pointer; }
     @media only screen and (min-width: 1024px) {
       header .menu-show {
         padding: 0 60px 0 0;
         background-position: right center;
         top: 30px;
         height: 26px; } }
+    header .menu-show:hover {
+      opacity: .8; }
 
 .header-info-for {
   zoom: 1;
@@ -1129,7 +1132,8 @@ header {
     transition: color 400ms ease-in-out, padding-right 400ms ease-in-out, width 400ms ease-in-out;
     text-align: right;
     font-size: 20px;
-    line-height: 20px; }
+    line-height: 20px;
+    cursor: pointer; }
     .search-pane .close:hover {
       opacity: .7; }
     @media only screen and (min-width: 768px) {
@@ -1505,50 +1509,51 @@ section.content {
     .section-content {
       padding: 30px 40px; } }
 
-button, input[type=submit], input[type=reset], .btn, button, input[type=submit], .gform_wrapper .gform_footer input[type=submit], .gform_wrapper .gform_footer input[type=button], .gform_wrapper .gform_footer input[type=reset], .gform_wrapper .gform_footer button {
-  padding: 6px 10px;
+.content button, .content input[type=submit], .content input[type=reset], .content .btn, .content button, .content input[type=submit], .content .gform_wrapper .gform_footer input[type=submit], .gform_wrapper .gform_footer .content input[type=submit], .content .gform_wrapper .gform_footer input[type=button], .gform_wrapper .gform_footer .content input[type=button], .content .gform_wrapper .gform_footer input[type=reset], .gform_wrapper .gform_footer .content input[type=reset], .content .gform_wrapper .gform_footer button, .gform_wrapper .gform_footer .content button {
+  padding: 10px 12px;
   font-family: "Open Sans", sans-serif;
   font-weight: 800;
-  font-size: 1em;
-  color: #6A0A1B;
+  font-size: .9em;
+  line-height: 1em;
+  color: white;
   text-decoration: none;
-  background: white;
-  border: 1px solid #6A0A1B;
+  background: linear-gradient(270deg, #4ac0ff, #0094E3);
   text-transform: uppercase;
   cursor: pointer;
   display: inline-block;
   margin-bottom: 4px;
-  transition: opacity 400ms ease-in-out; }
-  .content button, .content input[type=submit], .content input[type=reset], .content .btn, .content button, .content input[type=submit], .content .gform_wrapper .gform_footer input[type=submit], .gform_wrapper .gform_footer .content input[type=submit], .content .gform_wrapper .gform_footer input[type=button], .gform_wrapper .gform_footer .content input[type=button], .content .gform_wrapper .gform_footer input[type=reset], .gform_wrapper .gform_footer .content input[type=reset], .content .gform_wrapper .gform_footer button, .gform_wrapper .gform_footer .content button {
+  transition: all 400ms ease-in-out; }
+  .content .content button, .content .content input[type=submit], .content .content input[type=reset], .content .content .btn, .content .content button, .content .content input[type=submit], .content .content .gform_wrapper .gform_footer input[type=button], .gform_wrapper .gform_footer .content .content input[type=button], .content .content .gform_wrapper .gform_footer input[type=reset], .gform_wrapper .gform_footer .content .content input[type=reset], .content .content .gform_wrapper .gform_footer button, .gform_wrapper .gform_footer .content .content button {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     border-radius: 5px; }
-  button:hover, input[type=submit]:hover, input[type=reset]:hover, .btn:hover, button:hover, input:hover[type=submit], .gform_wrapper .gform_footer input:hover[type=submit], .gform_wrapper .gform_footer input:hover[type=button], .gform_wrapper .gform_footer input:hover[type=reset], .gform_wrapper .gform_footer button:hover {
-    opacity: .8; }
-  button.red-dark, input[type=submit].red-dark, input[type=reset].red-dark, .btn.red-dark, button.red-dark, input.red-dark[type=submit], .gform_wrapper .gform_footer input.red-dark[type=submit], .gform_wrapper .gform_footer input.red-dark[type=button], .gform_wrapper .gform_footer input.red-dark[type=reset], .gform_wrapper .gform_footer button.red-dark {
-    background-color: #6A0A1B;
+  .content button:hover, .content input[type=submit]:hover, .content input[type=reset]:hover, .content .btn:hover, .content button:hover, .content input:hover[type=submit], .content .gform_wrapper .gform_footer input:hover[type=button], .gform_wrapper .gform_footer .content input:hover[type=button], .content .gform_wrapper .gform_footer input:hover[type=reset], .gform_wrapper .gform_footer .content input:hover[type=reset], .content .gform_wrapper .gform_footer button:hover, .gform_wrapper .gform_footer .content button:hover {
+    background: linear-gradient(90deg, #4ac0ff, #0094E3);
+    color: white; }
+  .content button.red-dark, .content input[type=submit].red-dark, .content input[type=reset].red-dark, .content .btn.red-dark, .content button.red-dark, .content input.red-dark[type=submit], .content .gform_wrapper .gform_footer input.red-dark[type=button], .gform_wrapper .gform_footer .content input.red-dark[type=button], .content .gform_wrapper .gform_footer input.red-dark[type=reset], .gform_wrapper .gform_footer .content input.red-dark[type=reset], .content .gform_wrapper .gform_footer button.red-dark, .gform_wrapper .gform_footer .content button.red-dark {
+    background: #6A0A1B;
     color: white;
     border-color: #6A0A1B; }
-  button.red-light, input[type=submit].red-light, input[type=reset].red-light, .btn.red-light, button.red-light, input.red-light[type=submit], .gform_wrapper .gform_footer input.red-light[type=submit], .gform_wrapper .gform_footer input.red-light[type=button], .gform_wrapper .gform_footer input.red-light[type=reset], .gform_wrapper .gform_footer button.red-light {
+  .content button.red-light, .content input[type=submit].red-light, .content input[type=reset].red-light, .content .btn.red-light, .content button.red-light, .content input.red-light[type=submit], .content .gform_wrapper .gform_footer input.red-light[type=button], .gform_wrapper .gform_footer .content input.red-light[type=button], .content .gform_wrapper .gform_footer input.red-light[type=reset], .gform_wrapper .gform_footer .content input.red-light[type=reset], .content .gform_wrapper .gform_footer button.red-light, .gform_wrapper .gform_footer .content button.red-light {
     background-color: #A91C3A;
     color: white;
     border-color: #A91C3A; }
-  button.orange, input[type=submit].orange, input[type=reset].orange, .btn.orange, button.orange, input.orange[type=submit], .gform_wrapper .gform_footer input.orange[type=submit], .gform_wrapper .gform_footer input.orange[type=button], .gform_wrapper .gform_footer input.orange[type=reset], .gform_wrapper .gform_footer button.orange {
+  .content button.orange, .content input[type=submit].orange, .content input[type=reset].orange, .content .btn.orange, .content button.orange, .content input.orange[type=submit], .content .gform_wrapper .gform_footer input.orange[type=button], .gform_wrapper .gform_footer .content input.orange[type=button], .content .gform_wrapper .gform_footer input.orange[type=reset], .gform_wrapper .gform_footer .content input.orange[type=reset], .content .gform_wrapper .gform_footer button.orange, .gform_wrapper .gform_footer .content button.orange {
     background-color: #EA4D3D;
     color: white;
     border-color: #EA4D3D; }
-  button.yellow, input[type=submit].yellow, input[type=reset].yellow, .btn.yellow, button.yellow, input.yellow[type=submit], .gform_wrapper .gform_footer input.yellow[type=submit], .gform_wrapper .gform_footer input.yellow[type=button], .gform_wrapper .gform_footer input.yellow[type=reset], .gform_wrapper .gform_footer button.yellow {
+  .content button.yellow, .content input[type=submit].yellow, .content input[type=reset].yellow, .content .btn.yellow, .content button.yellow, .content input.yellow[type=submit], .content .gform_wrapper .gform_footer input.yellow[type=button], .gform_wrapper .gform_footer .content input.yellow[type=button], .content .gform_wrapper .gform_footer input.yellow[type=reset], .gform_wrapper .gform_footer .content input.yellow[type=reset], .content .gform_wrapper .gform_footer button.yellow, .gform_wrapper .gform_footer .content button.yellow {
     background-color: #F6B44D;
     color: black;
     border-color: #F6B44D; }
-  button.teal, input[type=submit].teal, input[type=reset].teal, .btn.teal, button.teal, input.teal[type=submit], .gform_wrapper .gform_footer input.teal[type=submit], .gform_wrapper .gform_footer input.teal[type=button], .gform_wrapper .gform_footer input.teal[type=reset], .gform_wrapper .gform_footer button.teal {
+  .content button.teal, .content input[type=submit].teal, .content input[type=reset].teal, .content .btn.teal, .content button.teal, .content input.teal[type=submit], .content .gform_wrapper .gform_footer input.teal[type=button], .gform_wrapper .gform_footer .content input.teal[type=button], .content .gform_wrapper .gform_footer input.teal[type=reset], .gform_wrapper .gform_footer .content input.teal[type=reset], .content .gform_wrapper .gform_footer button.teal, .gform_wrapper .gform_footer .content button.teal {
     background-color: #0094E3;
     color: white;
     border-color: #0094E3; }
-  button.grey, input[type=submit].grey, input[type=reset].grey, .btn.grey, button.grey, input.grey[type=submit], .gform_wrapper .gform_footer input.grey[type=submit], .gform_wrapper .gform_footer input.grey[type=button], .gform_wrapper .gform_footer input.grey[type=reset], .gform_wrapper .gform_footer button.grey {
+  .content button.grey, .content input[type=submit].grey, .content input[type=reset].grey, .content .btn.grey, .content button.grey, .content input.grey[type=submit], .content .gform_wrapper .gform_footer input.grey[type=button], .gform_wrapper .gform_footer .content input.grey[type=button], .content .gform_wrapper .gform_footer input.grey[type=reset], .gform_wrapper .gform_footer .content input.grey[type=reset], .content .gform_wrapper .gform_footer button.grey, .gform_wrapper .gform_footer .content button.grey {
     background-color: #434039;
     color: white;
     border-color: #434039; }
-  button.grey-light, input[type=submit].grey-light, input[type=reset].grey-light, .btn.grey-light, button.grey-light, input.grey-light[type=submit], .gform_wrapper .gform_footer input.grey-light[type=submit], .gform_wrapper .gform_footer input.grey-light[type=button], .gform_wrapper .gform_footer input.grey-light[type=reset], .gform_wrapper .gform_footer button.grey-light {
+  .content button.grey-light, .content input[type=submit].grey-light, .content input[type=reset].grey-light, .content .btn.grey-light, .content button.grey-light, .content input.grey-light[type=submit], .content .gform_wrapper .gform_footer input.grey-light[type=button], .gform_wrapper .gform_footer .content input.grey-light[type=button], .content .gform_wrapper .gform_footer input.grey-light[type=reset], .gform_wrapper .gform_footer .content input.grey-light[type=reset], .content .gform_wrapper .gform_footer button.grey-light, .gform_wrapper .gform_footer .content button.grey-light {
     background-color: #EBEAE9;
     color: #434039;
     border-color: #EBEAE9; }

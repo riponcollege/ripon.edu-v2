@@ -13,7 +13,6 @@ get_header();
 </div>
 <?php the_phototiles(); ?>
 
-
 <div class="front-title">
 	<h2>News & Events</h2>
 </div>

@@ -94,24 +94,24 @@ header {
 		background-size: contain;
 		position: absolute;
 		right: 80px;
-		top: 20px;
+		top: 25px;
 		width: 26px;
+		height: 26px;
 		z-index: 4;
 		color: transparent;
 		overflow: hidden;
 		border: 0;
-
-		@include respond-to( 768px ) {
-			position: absolute;
-			top: 20px;
-			width: 26px;
-			color: transparent;
-		}
+		cursor: pointer;
 
 		@include respond-to( 1024px ) {
 			right: 100px;
 			width: 35px;
+			height: 35px;
 			top: 26px;
+		}
+
+		&:hover {
+			opacity: .8;
 		}
 	}
 
@@ -127,12 +127,17 @@ header {
 		background: url(../img/icon-menu-white.webp) center center no-repeat;
 		background-size: contain;
 		transition: all 400ms ease-in-out;
+		cursor: pointer;
 
 		@include respond-to( 1024px ) {
 			padding: 0 60px 0 0;
 			background-position: right center;
 			top: 30px;
 			height: 26px;
+		}
+
+		&:hover {
+			opacity: .8;
 		}
 	}
 }

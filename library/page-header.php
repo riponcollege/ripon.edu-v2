@@ -17,7 +17,7 @@ function page_header( $title_override = '', $image_override = '', $subtitle_over
 	// get final header elements
 	$title = !empty( $title_override ) ? $title_override : ( !empty( $metabox_title ) ? $metabox_title : get_the_title() );
 	$subtitle = strip_tags( !empty( $subtitle_override ) ? $subtitle_override : ( !empty( $metabox_subtitle ) ? $metabox_subtitle : get_the_excerpt() ) );
-	$background = !empty( $image_override ) ? $image_override : ( !empty( $metabox_background ) ? $metabox_background : ( !empty( $background_featured ) ? $background_featured : '' ) );
+	$background = !empty( $image_override ) ? $image_override : ( !empty( $metabox_background ) ? $metabox_background : ( !empty( $background_featured ) ? $background_featured : get_bloginfo('template_url') . '/img/bg-header.webp' ) );
 
 	if ( empty( $background ) ) {
 		// grab parent background

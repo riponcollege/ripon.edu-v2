@@ -1,19 +1,19 @@
 
 
-button, input[type=submit], input[type=reset], .btn {
-  padding: 6px 10px;
+.content button, .content input[type=submit], .content input[type=reset], .content .btn {
+  padding: 10px 12px;
   font-family: "Open Sans", sans-serif;
   font-weight: 800;
-  font-size: 1em;
-  color: $red-dark;
+  font-size: .9em;
+  line-height: 1em;
+  color: white;
   text-decoration: none;
-  background: white;
-  border: 1px solid $red-dark;
+  background: linear-gradient( 270deg, lighten( $teal, 20% ), $teal );
   text-transform: uppercase;
   cursor: pointer;
   display: inline-block;
   margin-bottom: 4px;
-  transition: opacity 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
 
   .content & {
     box-shadow: 0 0 10px rgba( black, .3 );
@@ -21,11 +21,12 @@ button, input[type=submit], input[type=reset], .btn {
   }
 
   &:hover {
-    opacity: .8;
+    background: linear-gradient( 90deg, lighten( $teal, 20% ), $teal );
+    color: white;
   }
 
   &.red-dark {
-    background-color: $red-dark;
+    background: $red-dark;
     color: white;
     border-color: $red-dark;
   }
