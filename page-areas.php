@@ -9,13 +9,25 @@ get_header();
 
 // output the page header
 page_header();
-	
-// output the section menu
-section_menu(); 
 
-?>
+// get the menu position
+$menu_position = get_menu_position();
+
+if ( $menu_position == 'left' ) {
+	?>
+<div class="two-column">
+	<div class="sidebar">
+		<?php section_menu(); ?>
+	</div>
+	<div class="right-column">
+	<?php
+} else {
+	section_menu();
+	?>
 <div class="section-content area-listing">
 	<?php 
+}
+
 	while ( have_posts() ) : the_post(); ?>
 	
 	<div class="entry-content">
@@ -72,8 +84,18 @@ section_menu();
 		</div>
 
 	</div>
-</div>
 <?php
+
+if ( $menu_position == 'left' ) {
+	?>
+	</div>
+</div>
+	<?php
+} else {
+	?>
+</div>
+	<?php
+}
 
 // get the footer template
 get_footer();
