@@ -1742,11 +1742,11 @@ section.content {
   opacity: .7; }
 
 .area .tab-nav h3 {
-  padding: 20px 20px 10px;
+  padding: 20px 20px 10px 0;
   color: white; }
   @media only screen and (min-width: 768px) {
     .area .tab-nav h3 {
-      padding: 20px 20px 10px 10px; } }
+      padding: 20px 20px 10px 0; } }
 
 .area .tab-nav ul {
   border-top: 2px solid rgba(235, 234, 233, 0.1);
@@ -1759,7 +1759,7 @@ section.content {
     transition: all 400ms ease-in-out; }
     @media only screen and (min-width: 768px) {
       .area .tab-nav ul li {
-        padding: 10px 12px; } }
+        padding: 10px 12px 10px 0; } }
     .area .tab-nav ul li:first-child {
       border-top: none; }
     .area .tab-nav ul li.active {
