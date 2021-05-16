@@ -21,10 +21,9 @@ $featured_image_url = get_the_post_thumbnail_url( null, 'full' );
 $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 
 ?>
-	<div class="page-header area-header"<?php print ( !empty( $featured_image_url ) ? ' style="background-image: url(' . $featured_image_url . ')"' : '' ); ?>>
+	<div class="page-header area-header" style="background-image: url(<?php print get_page_header_background(); ?>)">
 		<div class="page-header-overlay"></div>
-		<div class="breadcrumbs">
-			<div class="crumbs"><a href="/academics">Academics</a> &raquo; <a href="/areas-of-study">Areas of Study</a> &raquo;</div>
+		<div class="page-header-content">
 			<div class="page-title"><?php the_title(); ?></div>
 			<div class="area-categories">
 			<?php
@@ -55,6 +54,7 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 			}
 			?>
 			</div>
+			<div class="breadcrumbs"><a href="/academics">Academics</a> &raquo; <a href="/areas-of-study">Areas of Study</a> &raquo;</div>
 		</div>
 		<?php the_call_to_action() ?>
 	</div>
@@ -92,57 +92,56 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 		</div>
 			
 		<div class="right-column">
-			<div class="area-inner section-content">
 
-				<div class="tab-content active area-overview">
-					<?php the_content(); ?>
+			<div class="tab-content active area-overview">
+				<?php the_content(); ?>
 
-					<?php the_icon_showcase(); ?>
+				<?php the_icon_showcase(); ?>
 
-					<?php if ( !empty( get_cmb_value( 'area_post_tag' ) ) ) { ?>
-					<div class="area-news">
-						<h2>Latest News</h2>
-						<?php print do_shortcode( '[articles tag="' . get_cmb_value( 'area_post_tag' ) . '" posts_per_page=3 /]' ); ?>
-					</div>
-					<?php } ?>
-				</div>
-
-				<?php if ( has_cmb_value( 'area_faculty_list' ) ) { ?>
-				<div class="tab-content area-faculty">
-					<h2>Faculty</h2>
-					<div class="area-faculty">
-						<?php print do_shortcode( '[people category="' . get_cmb_value( 'area_people_list' ) . '" /]' ); ?>
-					</div>
+				<?php if ( !empty( get_cmb_value( 'area_post_tag' ) ) ) { ?>
+				<div class="area-news">
+					<h2>Latest News</h2>
+					<?php print do_shortcode( '[articles tag="' . get_cmb_value( 'area_post_tag' ) . '" posts_per_page=3 /]' ); ?>
 				</div>
 				<?php } ?>
-
-				<div class="tab-content area-advising">
-					<h2>Advising</h2>
-					<?php print do_shortcode( '[snippet slug="areas-advising" /]' ); ?>
-				</div>
-
-				<div class="tab-content area-offcampus">
-					<h2>Off-Campus Study</h2>
-					<?php print do_shortcode( '[snippet slug="areas-off-campus" /]' ); ?>
-				</div>
-
-				<?php do_area_tab_content( "Requirements", "requirements" ) ?>
-				<?php do_area_tab_content( "Career Tracks", "tracks" ) ?>
-				<?php do_area_tab_content( "Unique Opportunities", "opportunities" ) ?>
-				<?php do_area_tab_content( "Ensembles", "ensembles" ) ?>
-				<?php do_area_tab_content( "Events Schedule", "events" ) ?>
-				<?php do_area_tab_content( "Past Productions", "productions" ) ?>
-				<?php do_area_tab_content( "Alumni Profiles", "alumni" ) ?>
-				<?php do_area_tab_content( "Graduate Success", "success" ) ?>
-				<?php do_area_tab_content( "Clinical Supervisors", "supervisors" ) ?>
-				<?php do_area_tab_content( "Be a Teacher", "teacher" ) ?>
-				<?php do_area_tabs_content(); ?>
-				<?php
-				endwhile;
-			endif;
-			?>
 			</div>
+
+			<?php if ( has_cmb_value( 'area_faculty_list' ) ) { ?>
+			<div class="tab-content area-faculty">
+				<h2>Faculty</h2>
+				<div class="area-faculty">
+					<?php print do_shortcode( '[people category="' . get_cmb_value( 'area_people_list' ) . '" /]' ); ?>
+				</div>
+			</div>
+			<?php } ?>
+
+			<div class="tab-content area-advising">
+				<h2>Advising</h2>
+				<?php print do_shortcode( '[snippet slug="areas-advising" /]' ); ?>
+			</div>
+
+			<div class="tab-content area-offcampus">
+				<h2>Off-Campus Study</h2>
+				<?php print do_shortcode( '[snippet slug="areas-off-campus" /]' ); ?>
+			</div>
+
+			<?php do_area_tab_content( "Requirements", "requirements" ) ?>
+			<?php do_area_tab_content( "Career Tracks", "tracks" ) ?>
+			<?php do_area_tab_content( "Unique Opportunities", "opportunities" ) ?>
+			<?php do_area_tab_content( "Ensembles", "ensembles" ) ?>
+			<?php do_area_tab_content( "Events Schedule", "events" ) ?>
+			<?php do_area_tab_content( "Past Productions", "productions" ) ?>
+			<?php do_area_tab_content( "Alumni Profiles", "alumni" ) ?>
+			<?php do_area_tab_content( "Graduate Success", "success" ) ?>
+			<?php do_area_tab_content( "Clinical Supervisors", "supervisors" ) ?>
+			<?php do_area_tab_content( "Be a Teacher", "teacher" ) ?>
+			<?php do_area_tabs_content(); ?>
+			<?php
+			endwhile;
+		endif;
+		?>
 		</div>
+
 	</div><!-- #primary -->
 <?php
 
