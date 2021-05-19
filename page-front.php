@@ -33,6 +33,14 @@ if ( !is_alumni() ) {
 		<?php print do_shortcode( '[events limit=4 /]' ); ?>
 	</div>
 </div>
+
+<?php if ( is_alumni() ) { ?>
+<div class="front-title">
+	<h2>Subscribe</h2>
+</div>
+<?php the_content(); ?>
+<?php } ?>
+
 <?php
 
 the_call_to_action();
