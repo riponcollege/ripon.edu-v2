@@ -934,10 +934,10 @@ header {
       padding: 10px 0 0; }
 
 .front-title {
-  padding: 20px;
+  padding: 10px;
   background: #A91C3A; }
   .front-title.first {
-    margin-top: -90px;
+    margin-top: -70px;
     position: relative;
     z-index: 3; }
   .front-title h2 {
