@@ -25,22 +25,24 @@ jQuery(document).ready(function($){
 	// handle submenu stuff
 	menu_pane.find('.main-menu > li > a').on( 'click', function(event){
 
-		// cancel default behavior for main menu items
-		event.preventDefault();
-		
 		// if the item has a submenu
-		$( this ).next('.sub-menu')
+		if ( $( this ).next('.sub-menu') ) {
 
-		// close any visible submenus
-		$( '.sub-menu.open' ).removeClass('open');
+			// cancel default behavior for main menu items
+			event.preventDefault();
+			
+			// close any visible submenus
+			$( '.sub-menu.open' ).removeClass('open');
 
-		// show the submenu
-		$( this ).next('.sub-menu').addClass('open');
+			// show the submenu
+			$( this ).next('.sub-menu').addClass('open');
 
-		// if the user then clicks the main menu item again, go to it.
-		$( this ).on( 'click.submenu-active', function(){
-			location.href = $(this).attr('href');
-		});
+			// if the user then clicks the main menu item again, go to it.
+			$( this ).on( 'click.submenu-active', function(){
+				location.href = $(this).attr('href');
+			});
+
+		}
 	});
 
 
