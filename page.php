@@ -25,7 +25,9 @@ if ( $menu_position == 'left' ) {
 
 // output page content
 while ( have_posts() ) : the_post(); 
-	the_content(); 
+	the_content();
+
+	the_accordions();
 endwhile; 
 
 if ( $menu_position == 'left' ) {
