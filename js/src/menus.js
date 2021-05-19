@@ -26,7 +26,7 @@ jQuery(document).ready(function($){
 	menu_pane.find('.main-menu > li > a').on( 'click', function(event){
 
 		// if the item has a submenu
-		if ( $( this ).next('.sub-menu') ) {
+		if ( $( this ).next('.sub-menu').length > 0 ) {
 
 			// cancel default behavior for main menu items
 			event.preventDefault();
@@ -44,8 +44,6 @@ jQuery(document).ready(function($){
 
 		}
 	});
-
-
 
 
 	// sidebar menus
