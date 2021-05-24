@@ -62,9 +62,23 @@ if ( is_ripon() ) {
 	function guide_metaboxes() {
 
 	    // select all faculty for the study guide picklists
-	    $args = array( 'post_type' => 'people', 'posts_per_page' => -1, 'orderby' => 'title', 'order' => 'ASC' );
+	    $args = array( 
+	    	'post_type' => 'people', 
+	    	'posts_per_page' => -1, 
+	    	'orderby' => 'title', 
+	    	'order' => 'ASC', 
+			'tax_query' => array(
+				array(
+					'taxonomy' => 'people_cat',
+					'field' => 'slug', 
+					'terms' => 'librarian',
+				)
+			)
+		);
 	    $loop = new WP_Query( $args );
-	    $faculty = array();
+	    $faculty = array(
+	    	'' => '-- select a librarian --'
+	    );
 	    while ( $loop->have_posts() ) : $loop->the_post();
 	        $faculty[get_the_ID()] = get_the_title();
 	    endwhile;
