@@ -152,7 +152,8 @@ if ( is_ripon() ) {
 		// set default params and override with those in shortcode
 		extract( shortcode_atts( array(
 			'category' => '',
-			'link' => 1
+			'link' => 1,
+			'photo' => 1
 		), $atts ));
 
 		// [people category="mycat" link=0 /]
@@ -193,7 +194,7 @@ if ( is_ripon() ) {
 				$post = get_the_ID();
 
 				$people_content .='<div class="person-entry visible">' . 
-					( $link ? '<a href="' . get_the_permalink() . '">' : '' ) . get_the_post_thumbnail() . ( $link ? '</a>' : '' ) .
+					( $photo ? ( $link ? '<a href="' . get_the_permalink() . '">' : '' ) . get_the_post_thumbnail() . ( $link ? '</a>' : '' ) : '' ) .
 					'<div class="info">
 						<h4>' . ( $link ? '<a href="' . get_the_permalink() . '">' : '' ) . get_cmb_value( "person_lname", $post ) . ', ' . get_cmb_value( "person_fname" ) . ( $link ? '</a>' : '' ) . '</h4>
 						<p class="person-title">' . get_cmb_value( "person_title" ) . '</p>

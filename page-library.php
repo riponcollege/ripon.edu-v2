@@ -36,7 +36,7 @@ if ( $menu_position == 'left' ) {
 				<img src="<?php bloginfo( 'template_url' ); ?>/img/icon-book.webp" />
 			</div>
 			<div class="intro">
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+				<?php print get_snippet( 'library-intro' ); ?>
 			</div>
 		</div>
 		<div class="hours">

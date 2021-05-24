@@ -12,6 +12,8 @@
 	
 		</section>
 		
+		<?php do_action( 'before_footer' ); ?>
+	
 		<footer>
 			
 			<div class="address">
