@@ -25,7 +25,7 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 		<div class="page-header-overlay"></div>
 		<div class="page-header-content">
 			<div class="breadcrumbs">
-				<a href="/academics">Academics</a> &raquo; <a href="/areas-of-study">Areas of Study</a> &raquo;
+				<a href="/academics">Academics</a> &raquo; <a href="/areas">Areas of Study</a> &raquo;
 			</div>
 			<div class="page-title"><?php the_title(); ?></div>
 			<div class="area-categories">
@@ -68,7 +68,7 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 		<!--<button class="back-to-areas">Back to All Areas</button>-->
 		<div class="sidebar">
 			<div class="tab-nav">
-				<h3>Overview</h3>
+				<!--<h3>Overview</h3>-->
 				<ul>
 					<li class="area-overview active">Overview</li>
 					<?php if ( has_cmb_value( 'area_faculty_list' ) ) { ?><li class="area-faculty">Faculty</li><?php } ?>
