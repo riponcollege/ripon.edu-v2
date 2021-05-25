@@ -64,6 +64,7 @@ function page_header( $title_override = '', $image_override = '', $subtitle_over
 
 
 
+// function to get the page header background url
 function get_page_header_background() {
 	global $post;
 
