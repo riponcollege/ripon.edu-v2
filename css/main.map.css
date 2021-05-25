@@ -1038,7 +1038,7 @@ header {
 @media only screen and (min-width: 1024px) {
   .site-alumni .front-articles .entry, .site-alumni .front-articles .entry:first-child {
     flex-basis: 48%;
-    margin: 0 2% 0 0;
+    margin: 0 2% 2% 0;
     display: flex; }
     .site-alumni .front-articles .entry .entry-inner, .site-alumni .front-articles .entry:first-child .entry-inner {
       flex-basis: 100%; }

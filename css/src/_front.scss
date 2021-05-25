@@ -126,7 +126,7 @@
 	.entry, .entry:first-child {
 		@include respond-to( 1024px ) {
 			flex-basis: 48%;
-			margin: 0 2% 0 0;
+			margin: 0 2% 2% 0;
 			display: flex;
 
 			.entry-inner {
