@@ -11,7 +11,10 @@ get_header();
 
 		<div class="event" role="main">
 			<div class="event-header">
-				<?php $event_thumbnail_url = get_the_post_thumbnail_url(); ?>
+				<?php 
+				$event_thumbnail_url = get_the_post_thumbnail_url();
+				if ( empty( $event_thumbnail_url ) ) $event_thumbnail_url = '/wp-content/uploads/2021/05/clocktower-500x500.jpg';
+				?>
 				<div class="event-thumbnail" style="background-image: url(<?php print $event_thumbnail_url; ?>);">
 					&nbsp;
 				</div>
