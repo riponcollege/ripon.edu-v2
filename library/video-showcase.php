@@ -82,7 +82,10 @@ function the_video_showcase() {
         </video>
 
         <header class="video">
-            <?php do_action( 'before_video_showcase' ); ?>
+            <?php 
+            do_action( 'before_video_showcase' );
+            the_emergency_bar();
+            ?>
             
             <div class="logo">
                 <a href="/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">

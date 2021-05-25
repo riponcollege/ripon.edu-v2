@@ -42,11 +42,6 @@ add_filter( 'cmb2_init', 'emergency_metabox' );
 
 
 // emergency bar output function
-if ( !has_video_showcase() ) {
-    add_action( 'before_video_showcase', 'the_emergency_bar', 20 );
-} else {
-    add_action( 'after_header' , 'the_emergency_bar', 20 );
-}
 function the_emergency_bar() {
 
 	// narrow content
