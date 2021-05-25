@@ -48,5 +48,18 @@ jQuery(document).ready(function($){
         }, 1000 );
     });
 
+    // handle sidebar menu toggling
+    var left_menu = $('.sidebar .section-menu ul.menu');
+    console.log( left_menu );
+    left_menu.find( 'a' ).click(function(){
+        var parent_li = $( this ).parent( 'li' );
+        var submenu = $( this ).next( 'ul' );
+        if ( !submenu.is( ':visible' ) && parent_li.hasClass( 'menu-item-has-children' ) ) {
+            event.preventDefault();
+            parent_li.addClass( 'open' );
+            submenu.show();
+        }
+    });
+
 });
 

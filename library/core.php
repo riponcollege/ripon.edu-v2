@@ -3,7 +3,7 @@
 
 // include the main.js script in the header on the front-end.
 function theme_scripts() {
-	wp_enqueue_script( 'theme-js', get_stylesheet_directory_uri().'/js/main.js?v=123', array( 'jquery' ), false, true );
+	wp_enqueue_script( 'theme-js', get_stylesheet_directory_uri().'/js/main.js?v=125', array( 'jquery' ), false, true );
 }
 add_action( 'wp_enqueue_scripts', 'theme_scripts' );
 

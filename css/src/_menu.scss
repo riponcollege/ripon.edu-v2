@@ -197,12 +197,14 @@ body {
 
 .section-menu {
 	ul {
+		margin-left: -10px;
+
 		li {
 			a {
 				display: block;
 				color: white;
 				text-decoration: none;
-				padding: 6px 0;
+				padding: 6px 0 6px 10px;
 
 				.top & {
 					@include respond-to( 768px ) {
@@ -214,12 +216,23 @@ body {
 				&:hover {
 					opacity: .8;
 				}
-
 			}
 
-			&.current_page_item a {
+			&.current_page_item > a {
 				border-left: 3px solid $orange;
-				padding-left: 10px;
+			}
+
+			.sub-menu {
+				display: none;
+				padding-left: 20px;
+
+				@include respond-to( 1024px ) {
+					padding-left: 30px;
+				}
+
+				&.open {
+					display: block;
+				}
 			}
 		}
 	}

@@ -87,7 +87,7 @@ function section_menu( $mode = 'both' ) {
 	if ( !empty( $menu_primary ) ) {
 		$menu_position = get_menu_position();
 
-		wp_nav_menu( array( 'menu' => $menu_primary, 'container_class' => ( $menu_position == 'top' ? 'top-menu' : 'section-menu' ), 'depth' => 1 ) );
+		wp_nav_menu( array( 'menu' => $menu_primary, 'container_class' => ( $menu_position == 'top' ? 'top-menu' : 'section-menu' ) ) );
 
 	}
 
