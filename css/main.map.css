@@ -803,6 +803,14 @@ header {
         .video-showcase-container .header-menu ul li.emergency a:before {
           background: url(../img/icon-link-yellow.webp) center center no-repeat;
           background-size: contain; }
+      .video-showcase-container .header-menu ul li.white a {
+        background: white;
+        border-radius: 4px;
+        margin-right: 20px;
+        color: #434039; }
+        .video-showcase-container .header-menu ul li.white a:before {
+          background: url(../img/icon-link-grey.webp) center center no-repeat;
+          background-size: contain; }
       .video-showcase-container .header-menu ul li a {
         color: white;
         text-decoration: none;
@@ -810,14 +818,14 @@ header {
         padding: 5px 25px;
         transition: all 400ms ease-in-out;
         margin: 0 5px;
+        opacity: 1;
         font-family: "Open Sans", sans-serif;
-        font-weight: 700;
-        opacity: .8; }
+        font-weight: 700; }
         .video-showcase-container .header-menu ul li a:hover {
           text-decoration: none;
-          opacity: 1; }
+          opacity: .8; }
           .video-showcase-container .header-menu ul li a:hover:before {
-            opacity: .9; }
+            opacity: .8; }
         .video-showcase-container .header-menu ul li a:before {
           position: absolute;
           left: 0;
@@ -827,7 +835,7 @@ header {
           height: 20px;
           background: url(../img/icon-link.webp) center center no-repeat;
           background-size: contain;
-          opacity: .5;
+          opacity: 1;
           transition: all 400ms ease-in-out; }
   .video-showcase-container header.video {
     position: absolute;
