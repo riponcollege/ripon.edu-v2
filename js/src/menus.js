@@ -46,19 +46,17 @@ jQuery(document).ready(function($){
 	});
 
 
-	// sidebar menus
-	var left_menu = $( '.sidebar .nav-menu' );
-	left_menu.find( 'li.menu-item-has-children > a' ).click(function( event ){
-		var menu_item = $( this ).parent( 'li' );
-		var submenu = $( this ).next( 'ul.sub-menu' );
-		if ( !submenu.hasClass( 'open' ) ) {
-			left_menu.find( 'ul.sub-menu.open' ).removeClass( 'open' );
-			event.preventDefault();
-			menu_item.addClass( 'open' );
-			submenu.addClass( 'open' );
-		}
-	});
-
+    // handle sidebar menu toggling
+    var left_menu = $('.sidebar .section-menu ul.menu');
+    left_menu.find( 'a' ).click(function(){
+        var parent_li = $( this ).parent( 'li' );
+        var submenu = $( this ).next( 'ul' );
+        if ( !submenu.is( ':visible' ) && parent_li.hasClass( 'menu-item-has-children' ) ) {
+            event.preventDefault();
+            parent_li.addClass( 'open' );
+            submenu.show();
+        }
+    });
 
 });
 

@@ -72,14 +72,18 @@ function the_video_showcase() {
 		?>
 	<div class="video-showcase-container">
         <div class="video-showcase-background"<?php print ( !empty( $video_showcase_photo ) ? ' style="background-image: url(' . $video_showcase_photo . ');"' : '' ); ?>></div>
-        <?php /*
+        <?php 
+        /*
         <div class="video-showcase-background large"<?php print ( !empty( $video_showcase_photo_large ) ? ' style="background-image: url(' . $video_showcase_photo_large . ');"' : '' ); ?>></div>
-        */ ?>
+        */ 
+        ?>
         <video autoplay muted loop class="video-showcase">
             <source src="<?php print $video_showcase_bg; ?>" type="video/webm">
         </video>
 
         <header class="video">
+            <?php do_action( 'before_video_showcase' ); ?>
+            
             <div class="logo">
                 <a href="/" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
                     <img src="<?php bloginfo( "template_url" ) ?>/img/logo.webp" alt="<?php bloginfo( 'name' ); ?>">

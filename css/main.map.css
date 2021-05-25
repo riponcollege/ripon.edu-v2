@@ -278,7 +278,7 @@ ol {
 
 .emergency-bar-container {
   background: #434039;
-  padding: 10px 20px;
+  padding: 10px 40px 10px 20px;
   color: white;
   zoom: 1;
   display: none;
@@ -291,6 +291,11 @@ ol {
     display: table; }
   .emergency-bar-container, .emergency-bar-container:before, .emergency-bar-container:after {
     clear: both; }
+  .video-showcase-container header .emergency-bar-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 70px; }
   .emergency-bar-container a {
     color: white;
     text-decoration: none; }

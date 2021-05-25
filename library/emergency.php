@@ -42,7 +42,11 @@ add_filter( 'cmb2_init', 'emergency_metabox' );
 
 
 // emergency bar output function
-add_action ( 'after_header' , 'the_emergency_bar', 20 );
+if ( !has_video_showcase() ) {
+    add_action( 'before_video_showcase', 'the_emergency_bar', 20 );
+} else {
+    add_action( 'after_header' , 'the_emergency_bar', 20 );
+}
 function the_emergency_bar() {
 
 	// narrow content
@@ -53,7 +57,7 @@ function the_emergency_bar() {
 	if ( !empty( $emergency_text ) ) {
 		?>
 	<div class="emergency-bar-container <?php print $emergency_color; ?> <?php print md5( $emergency_text ); ?>">
-		<a class="close">X</a>
+		<a href="#" class="close">X</a>
 		<?php if ( !empty( $emergency_link ) ) { ?><a href="<?php print $emergency_link ?>"><?php } ?>
 		<div class="emergency-bar-text">
 			<?php print do_shortcode( $emergency_text ) ?>

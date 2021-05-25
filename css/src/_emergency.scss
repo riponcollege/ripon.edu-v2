@@ -2,7 +2,7 @@
 
 .emergency-bar-container {
 	background: $grey;
-	padding: 10px 20px;
+	padding: 10px 40px 10px 20px;
 	color: white;
 	@include clearfix;
 	display: none;
@@ -10,6 +10,13 @@
 	z-index: 200;
 	border-bottom: 1px solid darken( $grey, 5% );
 	font-size: .85em;
+
+	.video-showcase-container header & {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 70px;
+	}
 
 	a {
 		color: white;

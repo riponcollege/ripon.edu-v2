@@ -25,11 +25,10 @@ jQuery(document).ready(function($){
 	var bar = $( '.emergency-bar-container' );
 	if ( bar.length ) {
 		var identifier = bar.attr( 'class' ).replace( ' red-light', '' ).replace( ' red-dark', '' ).replace( ' orange', '' ).replace( ' yellow', '' ).replace( ' teal', '' ).replace( ' grey', '' ).replace( ' grey-light', '' ).replace( 'emergency-bar-container', '' );
-		// console.log( identifier );
 		if ( $.cookies.get( 'emergency-'+identifier+'shown' ) == null ) {
-			$( '.emergency-bar-container' ).addClass( 'show' );
-			$( '.emergency-bar-container .close' ).click(function(){
-				$( '.emergency-bar-container' ).removeClass( 'show' );
+			bar.addClass( 'show' );
+			bar.find( '.close' ).click(function(){
+				bar.removeClass( 'show' );
 				$.cookies.set( 'emergency-'+identifier+'shown', 'true' );
 			});
 		}
