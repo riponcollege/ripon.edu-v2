@@ -1031,6 +1031,23 @@ header {
     .front-columns .front-events {
       padding: 70px; } }
 
+@media only screen and (min-width: 1024px) {
+  .site-alumni .front-articles .article-cards {
+    margin-left: -2%; } }
+
+@media only screen and (min-width: 1024px) {
+  .site-alumni .front-articles .entry, .site-alumni .front-articles .entry:first-child {
+    flex-basis: 48%;
+    margin: 0 2% 0 0;
+    display: flex; }
+    .site-alumni .front-articles .entry .entry-inner, .site-alumni .front-articles .entry:first-child .entry-inner {
+      flex-basis: 100%; }
+      .site-alumni .front-articles .entry .entry-inner p, .site-alumni .front-articles .entry:first-child .entry-inner p {
+        display: block; } }
+
+.site-alumni .front-articles .entry .entry-thumbnail, .site-alumni .front-articles .entry:first-child .entry-thumbnail {
+  display: none; }
+
 .phototiles {
   zoom: 1; }
   .phototiles:before, .phototiles:after {

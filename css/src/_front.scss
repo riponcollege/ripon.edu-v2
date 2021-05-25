@@ -115,3 +115,32 @@
 
 }
 
+
+.site-alumni .front-articles {
+	.article-cards {
+		@include respond-to( 1024px ) {
+			margin-left: -2%;
+		}
+	}
+
+	.entry, .entry:first-child {
+		@include respond-to( 1024px ) {
+			flex-basis: 48%;
+			margin: 0 2% 0 0;
+			display: flex;
+
+			.entry-inner {
+				flex-basis: 100%;
+
+				p {
+					display: block;
+				}
+			}
+		}
+
+		.entry-thumbnail {
+			display: none;
+		}
+	}
+}
+
