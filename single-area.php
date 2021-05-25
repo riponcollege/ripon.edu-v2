@@ -24,6 +24,9 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 	<div class="page-header area-header" style="background-image: url(<?php print get_page_header_background(); ?>)">
 		<div class="page-header-overlay"></div>
 		<div class="page-header-content">
+			<div class="breadcrumbs">
+				<a href="/academics">Academics</a> &raquo; <a href="/areas-of-study">Areas of Study</a> &raquo;
+			</div>
 			<div class="page-title"><?php the_title(); ?></div>
 			<div class="area-categories">
 			<?php
@@ -54,7 +57,6 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 			}
 			?>
 			</div>
-			<div class="breadcrumbs"><a href="/academics">Academics</a> &raquo; <a href="/areas-of-study">Areas of Study</a> &raquo;</div>
 		</div>
 		<?php the_call_to_action() ?>
 	</div>
