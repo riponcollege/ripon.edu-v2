@@ -809,7 +809,7 @@ header {
         margin-right: 20px;
         color: #434039; }
         .video-showcase-container .header-menu ul li.white a:before {
-          background: url(../img/icon-link-grey.webp) center center no-repeat;
+          background: none;
           background-size: contain; }
       .video-showcase-container .header-menu ul li a {
         color: white;
