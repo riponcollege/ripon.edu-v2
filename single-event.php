@@ -8,19 +8,25 @@ get_header();
 	if ( have_posts() ) :
 		while ( have_posts() ) : the_post(); 
 			?>
-
-		<div class="event" role="main">
-			<div class="event-header">
-				<?php 
-				$event_thumbnail_url = get_the_post_thumbnail_url();
-				if ( empty( $event_thumbnail_url ) ) $event_thumbnail_url = '/wp-content/uploads/2021/05/clocktower-500x500.jpg';
+	<div id="primary" class="wrap group">
+		<div class="event content-wide" role="main">
+			<div class="two-third entry-content">
+			<?php
+				global $post;
+				$post_id = $post->ID;
 				?>
-				<div class="event-thumbnail" style="background-image: url(<?php print $event_thumbnail_url; ?>);">
-					&nbsp;
-				</div>
-				<div class="event-info">
-					<h2><?php the_title(); ?></h2>
-					<?php 
+				<h1><?php the_title(); ?></h1>
+				<?php the_content(); ?>
+				<hr>
+				<h2>Upcoming Events</h2>
+				<?php
+				print do_shortcode( '[events /]' );
+				?>
+		 	</div>
+		 	<div class="third">
+				<?php the_post_thumbnail(); ?>
+		 		<p>&nbsp;</p>
+				<?php
 					// display credit union name
 					if ( has_cmb_value( 'event_start' ) && has_cmb_value( 'event_end' ) ) {
 						$start = get_cmb_value( 'event_start' );
@@ -40,13 +46,10 @@ get_header();
 						print "<p><strong>Duration:</strong> " . duration( get_cmb_value( 'event_start' ), get_cmb_value( 'event_end' ) ) . "</p>";
 					}
 
-					?>
-				</div>
-			</div>
-			<div class="content-wide">
-				<?php the_content(); ?>
-			</div>
+				?>
+		 	</div>
 		</div>
+	</div>
 
 			<?php
 		endwhile;

@@ -8,7 +8,8 @@ function articles_shortcode( $atts ) {
 		'tags' => '',
 		'cats' => '',
 		'posts_per_page' => 4,
-		'feed' => ''
+		'feed' => '',
+		'post__not_in' => '',
 	), $atts );
 
 	$args = array(
@@ -50,6 +51,11 @@ function articles_shortcode( $atts ) {
 
 	} else {
 
+		// if we have a post__not_in parameter, explode the comma-separated stuff into an array
+		if ( !empty( $a['post__not_in'] ) ) {
+			$args['post__not_in'] = explode( ',', $a['post__not_in'] );
+		}
+
 		// if there's no feed, use the wp functions to display posts from this install
 		if ( !empty( $a['tag'] ) ) {
 			$args['tag'] = $a['tag'];
@@ -60,10 +66,11 @@ function articles_shortcode( $atts ) {
 			$args['tag__in'] = $tags;
 		}
 
-		if ( !empty($a['cats']) ) {
-			$cats = explode( ',', $a['cats'] );
-			$args['category__in'] = $cats;
+		
+		if ( !empty( $a['cats']) ) {
+			$args['category_name'] = $a['cats'];
 		}
+		
 
 		$query = new WP_Query( $args );
 

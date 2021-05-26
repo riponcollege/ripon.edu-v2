@@ -1012,7 +1012,7 @@ header {
       padding: 50px 70px; } }
 
 .front-columns .front-events {
-  padding: 40px 20px;
+  padding: 20px;
   background: #434039;
   color: #EBEAE9; }
   .front-columns .front-events a {
@@ -2758,49 +2758,51 @@ section.content {
     font-size: .85em;
     line-height: 1.4em; }
 
-.event-list .event {
-  position: relative;
-  padding-left: 100px;
-  padding-bottom: 30px; }
-  .event-list .event .event-date-month {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 80px;
-    font-family: "Hepta Slab", serif;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 20px;
-    text-align: center; }
-  .event-list .event .event-date-day {
-    position: absolute;
-    left: 0;
-    top: 25px;
-    width: 80px;
-    font-family: "Hepta Slab", serif;
-    font-weight: 600;
-    font-size: 50px;
-    line-height: 50px;
-    text-align: center; }
-  .event-list .event .event-date-year {
-    position: absolute;
-    left: 0;
-    top: 80px;
-    width: 80px;
-    font-family: "Hepta Slab", serif;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 20px;
-    text-align: center; }
-  .event-list .event h3 {
-    font-family: "Hepta Slab", serif;
-    font-weight: 600;
-    padding: 0; }
-  .event-list .event .event-location {
-    opacity: .7;
-    padding: 4px 0; }
-  .event-list .event .event-excerpt {
-    font-size: .9em; }
+.event-list {
+  padding: 20px 0; }
+  .event-list .event {
+    position: relative;
+    padding-left: 100px;
+    padding-bottom: 30px; }
+    .event-list .event .event-date-month {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 80px;
+      font-family: "Hepta Slab", serif;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 20px;
+      text-align: center; }
+    .event-list .event .event-date-day {
+      position: absolute;
+      left: 0;
+      top: 25px;
+      width: 80px;
+      font-family: "Hepta Slab", serif;
+      font-weight: 600;
+      font-size: 50px;
+      line-height: 50px;
+      text-align: center; }
+    .event-list .event .event-date-year {
+      position: absolute;
+      left: 0;
+      top: 80px;
+      width: 80px;
+      font-family: "Hepta Slab", serif;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 20px;
+      text-align: center; }
+    .event-list .event h3 {
+      font-family: "Hepta Slab", serif;
+      font-weight: 600;
+      padding: 0; }
+    .event-list .event .event-location {
+      opacity: .7;
+      padding: 4px 0; }
+    .event-list .event .event-excerpt {
+      font-size: .9em; }
 
 /* Magnific Popup CSS */
 .mfp-bg {

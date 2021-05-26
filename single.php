@@ -24,9 +24,15 @@ get_header();
 				<hr>
 				<?php
 				$cat_list = get_the_category_list( ",", "", get_the_ID() );
-				if ( !empty( $cat_list ) ) {
-					print "<h3>Related Posts</h3>";
-					print do_shortcode('[articles cats="' . $cat_list . '" /]');
+				$categories = wp_get_post_categories( $post_id, array( 'fields' => 'all' ) );
+				if ( !empty( $categories ) ) {
+					$cats = array();
+					foreach ( $categories as $acat ) {
+						$cats[] = $acat->slug;
+					}
+					print_r( $cats );
+					print "<h2>Related Posts</h2>";
+					print do_shortcode( '[articles cats="' . implode( ',', $cats ) . '" post__not_in="' . $post_id . '" /]' );
 				}
 				?>
 		 	</div>

@@ -10,7 +10,7 @@ function page_header( $title_override = '', $image_override = '', $subtitle_over
 	
 
 	// get the background image
-	$background = get_page_header_background();
+	$background = ( !empty( $image_override ) ? $image_override : get_page_header_background() );
 
 
 	// get final header elements
