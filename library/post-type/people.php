@@ -2,7 +2,7 @@
 
 
 // only show faculty tab on ripmn proper
-if ( is_ripon() ) {
+if ( is_ripon() || is_alumni() ) {
 	
 
 	// Flush rewrite rules for custom post types
