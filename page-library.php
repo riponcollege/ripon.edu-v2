@@ -59,7 +59,18 @@ if ( $menu_position == 'left' ) {
 
 				<div class="guides">
 					Research Guides
-					<?php quick_nav_menu( 'library-guides', '- select a guide -' ); ?>
+					<select class="quick-nav">
+						<option value="">- select a research guide -</option>
+						<?php
+						$guides = get_posts( array( 'post_type' => 'guide', 'orderby' => 'title', 'order' => 'ASC' ) );
+						if ( !empty( $guides ) ) {
+							foreach ( $guides as $guide ) { ?>
+						<option value="/guide/<?php print $guide->post_name ?>"><?php print $guide->post_title ?></option>
+								<?php
+							}
+						}
+						?>
+					</select>
 				</div>
 
 				<div class="group"></div>
