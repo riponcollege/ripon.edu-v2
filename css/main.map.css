@@ -1644,6 +1644,9 @@ section.content {
   line-height: 1.5em;
   border: 3px solid #ddd; }
 
+.gform_wrapper .gform_fields {
+  padding-left: 0; }
+
 .gform_wrapper .short-form .gfield {
   margin: 10px 0 !important; }
   .gform_wrapper .short-form .gfield .ginput_container {
