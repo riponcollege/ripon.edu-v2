@@ -110,6 +110,12 @@ function event_metaboxes( $meta_boxes ) {
     ) );
 
     $event_metabox->add_field( array(
+        'name' => 'All Day Event',
+        'id'   => CMB_PREFIX . 'event_all_day',
+        'type' => 'checkbox',
+    ) );
+
+    $event_metabox->add_field( array(
         'name' => 'Location Description',
         'id'   => CMB_PREFIX . 'event_location',
         'type' => 'text',

@@ -5,6 +5,7 @@
 
 get_header();
 
+
 	if ( have_posts() ) :
 		while ( have_posts() ) : the_post(); 
 			?>
@@ -18,6 +19,8 @@ get_header();
 					?>
 					<h1><?php the_title(); ?></h1>
 					<?php
+					$all_day = get_cmb_value( 'event_all_day' );
+					$is_all_day = ( $all_day == 'on' ? true : false );
 					// display event date
 					if ( has_cmb_value( 'event_start' ) && has_cmb_value( 'event_end' ) ) {
 						$start = get_cmb_value( 'event_start' );
@@ -26,8 +29,7 @@ get_header();
 							print "<h4>" . date( "F jS g:i a", $start ) . " - ";
 							print date( "F jS g:i a", $end ) . "</h4>";
 						} else {
-							print "<h4>" . date( "F jS", $start ) . ': ' . date( "g:i a", $start );
-							print " - " . date( "g:i a", $end ) . "</h4>";
+							print "<h4>" . date( "F jS", $start ) . ( !$is_all_day ? ': ' . date( "g:i a", $start ) . " - " . date( "g:i a", $end ) : '' ) . "</h4>";
 						}
 					}
 					?>
