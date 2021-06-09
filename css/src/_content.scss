@@ -68,7 +68,7 @@ section.content {
 
 
 .content-style {
-	ol, ul {
+	ol:not(.gform_fields), ul:not(.gform_fields) {
 		padding: 7px 0 7px 30px;
 	}
 
