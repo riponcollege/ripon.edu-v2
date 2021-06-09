@@ -15,6 +15,10 @@
   border-radius: 5px;
   box-shadow: 0 0 10px rgba( black, .3 );
 
+  .mce-txt {
+    color: white;
+  }
+
   // default button styles
   background: linear-gradient( 270deg, lighten( $grey, 15% ), $grey );
   color: white;
