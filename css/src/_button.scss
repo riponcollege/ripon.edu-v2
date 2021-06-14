@@ -16,7 +16,7 @@
   box-shadow: 0 0 10px rgba( black, .3 );
 
   .mce-txt, .mce-ico {
-    color: white;
+	color: white;
   }
 
   // default button styles
@@ -25,39 +25,39 @@
   &:hover { background: linear-gradient( 90deg, lighten( $grey, 15% ), $grey ); }
 
   &.red-dark {
-    background: linear-gradient( 270deg, lighten( $red-dark, 15% ), $red-dark );
-    color: white;
-    &:hover { background: linear-gradient( 90deg, lighten( $red-dark, 15% ), $red-dark ); }
+	background: linear-gradient( 270deg, lighten( $red-dark, 15% ), $red-dark );
+	color: white;
+	&:hover { background: linear-gradient( 90deg, lighten( $red-dark, 15% ), $red-dark ); }
   }
 
   &.red-light {
-    background: linear-gradient( 270deg, lighten( $red-light, 15% ), $red-light );
-    color: white;
-    &:hover { background: linear-gradient( 90deg, lighten( $red-light, 15% ), $red-light ); }
+	background: linear-gradient( 270deg, lighten( $red-light, 15% ), $red-light );
+	color: white;
+	&:hover { background: linear-gradient( 90deg, lighten( $red-light, 15% ), $red-light ); }
   }
 
   &.orange {
-    background: linear-gradient( 270deg, lighten( $orange, 15% ), $orange );
-    color: white;
-    &:hover { background: linear-gradient( 90deg, lighten( $orange, 15% ), $orange ); }
+	background: linear-gradient( 270deg, lighten( $orange, 15% ), $orange );
+	color: white;
+	&:hover { background: linear-gradient( 90deg, lighten( $orange, 15% ), $orange ); }
   }
 
   &.yellow {
-    background: linear-gradient( 270deg, lighten( $yellow, 10% ), $yellow );
-    color: black;
-    &:hover { background: linear-gradient( 90deg, lighten( $yellow, 10% ), $yellow ); }
+	background: linear-gradient( 270deg, lighten( $yellow, 10% ), $yellow );
+	color: black;
+	&:hover { background: linear-gradient( 90deg, lighten( $yellow, 10% ), $yellow ); }
   }
 
   &.teal {
-    background: linear-gradient( 270deg, lighten( $teal, 20% ), $teal );
-    color: white;
-    &:hover { background: linear-gradient( 90deg, lighten( $teal, 20% ), $teal ); }
+	background: linear-gradient( 270deg, lighten( $teal, 20% ), $teal );
+	color: white;
+	&:hover { background: linear-gradient( 90deg, lighten( $teal, 20% ), $teal ); }
   }
 
   &.grey-light {
-    background: linear-gradient( 270deg, lighten( $grey-light, 5% ), $grey-light );
-    color: $grey;
-    &:hover { background: linear-gradient( 90deg, lighten( $grey-light, 5% ), $grey-light ); }
+	background: linear-gradient( 270deg, lighten( $grey-light, 5% ), $grey-light );
+	color: $grey;
+	&:hover { background: linear-gradient( 90deg, lighten( $grey-light, 5% ), $grey-light ); }
   }
 }
 

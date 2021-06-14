@@ -1766,7 +1766,7 @@ section.content {
 
 .academics .area-listing ul, .area-header .area-listing ul {
   list-style-type: none;
-  padding: 0; }
+  padding: 0 !important; }
   .academics .area-listing ul li, .area-header .area-listing ul li {
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
