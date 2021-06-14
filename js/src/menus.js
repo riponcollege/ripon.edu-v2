@@ -58,6 +58,14 @@ jQuery(document).ready(function($){
         }
     });
 
+    // auto open a menu if it or one of its children is the current page
+	left_menu.find( 'li' ).each(function(){
+		var item = $(this);
+		if ( item.hasClass( 'current_page_parent' ) || item.hasClass( 'current-menu-item' ) || item.hasClass( 'current-menu-ancestor' ) ) {
+			item.addClass( 'open' );
+			item.find( 'ul.sub-menu' ).addClass( 'open' );
+		}
+	});
 
     // quicknav functionality
     $('select.quick-nav').on( 'change', function(){
