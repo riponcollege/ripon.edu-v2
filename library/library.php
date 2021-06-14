@@ -54,8 +54,6 @@ function get_library_hours() {
 	// is_open boolean
 	$is_open = ( $current_timestamp > $today_open_timestamp && $current_timestamp < $today_close_timestamp ? true : false );
 
-    print $current_timestamp . ' ' . $today_open_timestamp;
-
 	// a human-readable status for open/close
 	$status = ( $is_open ? 'open' : 'closed' );
 
