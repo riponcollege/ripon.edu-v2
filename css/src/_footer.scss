@@ -36,7 +36,7 @@ footer {
 	}
 
 	.social {
-		margin: 20px 0;
+		margin: 20px 50px 20px 0;
 		display: block;
 
 		img {
@@ -52,11 +52,34 @@ footer {
 
 		@include respond-to( 768px ) {
 			float: right;
-			margin: 0;
+			margin: 0 50px 0 0;
 
 			&:after {
 				clear: none;
 			}
+		}
+	}
+
+	.back-to-top {
+		@include font-bold;
+		position: fixed;
+		bottom: 55px;
+		right: 20px;
+		padding: 11px 15px;
+		background: $red-light;
+		border: 1px solid rgba( black, .3 );
+		text-decoration: none;
+		font-size: 1.4em;
+		box-shadow: 0 0 15px rgba( black, .3 );
+		display: none;
+
+		@include respond-to( 768px ) {
+			right: 30px;
+			bottom: 50px;
+		}
+
+		@include respond-to( 1220px ) {
+			right: 40px;
 		}
 	}
 

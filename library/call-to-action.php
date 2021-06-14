@@ -39,20 +39,33 @@ function cta_metabox() {
 
 
 
+// output the calls to action
 function the_call_to_action() {
-	$button_one_text = get_cmb_value( 'cta_1_text' );
-	$button_one_link = get_cmb_value( 'cta_1_link' );
-	$button_two_text = get_cmb_value( 'cta_2_text' );
-	$button_two_link = get_cmb_value( 'cta_2_link' );
-	if ( !empty( $button_one_text ) && !empty( $button_one_link ) ) {
-		?>
-		<div class="call-to-action">
-			<a href="#top" class="btn back-to-top">^</button>
-			<a href="<?php print $button_one_link ?>" class="btn one"><?php print $button_one_text ?></a>
-			<?php if ( !empty( $button_two_text ) && !empty( $button_two_link ) ) { ?><a href="<?php print $button_two_link ?>" class="btn two"><?php print $button_two_text ?></a><?php } ?>
-		</div>
-		<?php
-	}
+    $button_one_text = get_cmb_value( 'cta_1_text' );
+    $button_one_link = get_cmb_value( 'cta_1_link' );
+    $button_two_text = get_cmb_value( 'cta_2_text' );
+    $button_two_link = get_cmb_value( 'cta_2_link' );
+    if ( !empty( $button_one_text ) && !empty( $button_one_link ) ) {
+        ?>
+        <div class="call-to-action">
+            <a href="#top" class="btn back-to-top">^</button>
+            <a href="<?php print $button_one_link ?>" class="btn one"><?php print $button_one_text ?></a>
+            <?php if ( !empty( $button_two_text ) && !empty( $button_two_link ) ) { ?><a href="<?php print $button_two_link ?>" class="btn two"><?php print $button_two_text ?></a><?php } ?>
+        </div>
+        <?php
+    }
+}
+
+
+
+// boolean function to check if there's a call to action
+function has_call_to_action() {
+    $button_one_text = get_cmb_value( 'cta_1_text' );
+    $button_one_link = get_cmb_value( 'cta_1_link' );
+    if ( !empty( $button_one_text ) && !empty( $button_one_link ) ) {
+        return true;
+    }
+    return false;
 }
 
 

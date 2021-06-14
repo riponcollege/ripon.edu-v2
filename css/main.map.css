@@ -1392,7 +1392,7 @@ footer {
     footer .address {
       float: left; } }
   footer .social {
-    margin: 20px 0;
+    margin: 20px 50px 20px 0;
     display: block; }
     footer .social img {
       float: left;
@@ -1405,9 +1405,29 @@ footer {
     @media only screen and (min-width: 768px) {
       footer .social {
         float: right;
-        margin: 0; }
+        margin: 0 50px 0 0; }
         footer .social:after {
           clear: none; } }
+  footer .back-to-top {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    position: fixed;
+    bottom: 55px;
+    right: 20px;
+    padding: 11px 15px;
+    background: #A91C3A;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    font-size: 1.4em;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    display: none; }
+    @media only screen and (min-width: 768px) {
+      footer .back-to-top {
+        right: 30px;
+        bottom: 50px; } }
+    @media only screen and (min-width: 1220px) {
+      footer .back-to-top {
+        right: 40px; } }
   footer .colophon {
     font-size: .8em;
     opacity: .5;

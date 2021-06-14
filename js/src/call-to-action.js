@@ -33,6 +33,22 @@ jQuery(document).ready(function($){
 
 	    });
 
+	} else {
+
+		$(window).scroll(function() {
+
+			// store some variables
+	        var scroll_position = $(window).scrollTop();
+
+	        // if scrolled past the top of the content div, show the ctas
+	       	if ( scroll_position > 400 ) {
+	       		$( 'footer .back-to-top' ).show();
+	       	} else {
+	       		$( 'footer .back-to-top' ).hide();
+	       	}
+
+	    });
+
 	}
 
 });

@@ -8,7 +8,7 @@
  * @subpackage Twenty_Twelve
  * @since Twenty Twelve 1.0
  */
-?>	
+?>
 	
 		</section>
 		
@@ -21,6 +21,10 @@
 				300 W. Seward St.<br>
 				Ripon, WI 54971
 			</div>
+
+			<?php if ( !has_call_to_action() ) { ?>
+			<a href="#top" class="btn back-to-top">^</a>
+			<?php } ?>
 
 			<div class="social">
 				<a href="tel:9207488115"><img src="<?php bloginfo('template_url') ?>/img/social-phone.webp"></a>
