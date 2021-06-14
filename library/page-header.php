@@ -51,9 +51,11 @@ function page_header( $title_override = '', $image_override = '', $subtitle_over
 	<div class="page-header"<?php print ( !empty( $background ) ? ' style="background-image: url(' . $background . ')"' : '' ); ?>>
 		<div class="page-header-overlay"></div>
 		<div class="page-header-content">
+			<?php if ( !is_search() ) { ?>
 			<div class="breadcrumbs">
 				<?php print_r( $crumb_code ); ?>
 			</div>
+			<?php } ?>
 			<h1 class="page-title"><?php print $title; ?></h1>
 			<?php if ( !empty( $subtitle ) ) { ?><h3 class="page-subtitle"><?php print $subtitle ?></h3><?php } ?>
 		</div>
