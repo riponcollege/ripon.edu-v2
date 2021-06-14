@@ -20,16 +20,17 @@ if ( $menu_position == 'left' ) {
 	<div class="sidebar">
 		<?php section_menu(); ?>
 	</div>
-	<div class="right-column">
+	<div class="right-column library">
 	<?php
 } else {
 	// show the section menu
 	section_menu();
+	?>
+	<div class="section-content library">
+	<?php
 }
 
 ?>
-
-	<div class="section-content library">
 
 		<div class="icon-header pad bg-red-dark">
 			<div class="icon">
