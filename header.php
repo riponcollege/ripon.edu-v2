@@ -67,7 +67,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <div class="menu-pane pane">
-	<button class="close">close</button>
+	<button class="close">Close</button>
 
 	<?php wp_nav_menu( array( 'theme_location' => 'menu-main', 'menu_class' => 'nav-menu main-menu' ) ); ?>
 
@@ -83,7 +83,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	</div>
 </div>
 <div class="search-pane pane">
-	<button class="close">close</button>
+	<button class="close">Close</button>
 
 	<div class="search-form"><?php print get_search_form(); ?></div>
 
