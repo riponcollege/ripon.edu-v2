@@ -36,7 +36,6 @@ function get_library_hours() {
 		)
 	);
 
-
 	// get current day and a timestamp
 	$date = new DateTime( date_default_timezone_get() );
 
@@ -48,7 +47,11 @@ function get_library_hours() {
 	$today_open_timestamp = strtotime( $today_open_string );
 	
 	// get the closing datetime as a string and convert to timestamp
-	$today_close_string = date( "m/d/Y", $current_timestamp ) . " " . $times[$current_day]['close'];
+    if ( $times[$current_day]['close'] == '12am' ) {
+        $today_close_string = date( "m/d/Y", $current_timestamp+86400 ) . " " . $times[$current_day]['close'];
+    } else {
+        $today_close_string = date( "m/d/Y", $current_timestamp ) . " " . $times[$current_day]['close'];
+    }
 	$today_close_timestamp = strtotime( $today_close_string );
 
 	// is_open boolean
