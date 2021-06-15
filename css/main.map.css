@@ -1906,22 +1906,18 @@ section.content {
     margin: 0 0 10px 10px; }
 
 .area-legend {
-  margin: 0 -20px; }
+  margin: 0 -20px;
+  border: 8px solid #EBEAE9;
+  padding: 20px; }
   @media only screen and (min-width: 768px) {
     .area-legend {
-      margin: 20px 0; } }
-  .area-legend dl {
-    border: 8px solid #EBEAE9;
-    padding: 20px;
-    zoom: 1; }
-    .area-legend dl:before, .area-legend dl:after {
-      content: "";
-      display: table; }
-    .area-legend dl, .area-legend dl:before, .area-legend dl:after {
-      clear: both; }
-    @media only screen and (min-width: 768px) {
-      .area-legend dl {
-        padding: 40px; } }
+      margin: 20px 0;
+      width: 100%;
+      padding: 30px;
+      display: flex; } }
+  @media only screen and (min-width: 1220px) {
+    .area-legend {
+      padding: 40px; } }
   .area-legend .term {
     display: none; }
   .area-legend .term-description {
@@ -1929,23 +1925,32 @@ section.content {
     font-size: .85em; }
     .area-legend .term-description p {
       padding: 0; }
+  .area-legend .mini-legend p {
+    padding: 0; }
+  @media only screen and (min-width: 768px) {
+    .area-legend .mini-legend {
+      flex-basis: 75%; } }
   .area-legend .mini-legend .item {
     display: inline-block;
     white-space: nowrap;
     padding: 5px 10px; }
-  .area-legend .area-filter select {
-    width: 100%;
-    margin-bottom: 20px; }
-  @media only screen and (min-width: 1024px) {
-    .area-legend .area-filter {
-      float: left;
-      width: 25%;
-      padding-right: 30px; } }
-  .area-legend .area-filter select {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 300;
-    padding: 10px 15px;
-    border: 2px solid #434039; }
+  .area-legend .area-filter {
+    padding-right: 20px; }
+    @media only screen and (min-width: 768px) {
+      .area-legend .area-filter {
+        flex-basis: 25%; } }
+    .area-legend .area-filter select {
+      font-family: "Open Sans", sans-serif;
+      font-weight: 300;
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 10px 15px;
+      border: 2px solid #434039; }
+    @media only screen and (min-width: 1024px) {
+      .area-legend .area-filter {
+        float: left;
+        width: 25%;
+        padding-right: 30px; } }
 
 .icon-header {
   padding: 20px;
