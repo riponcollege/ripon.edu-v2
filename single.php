@@ -30,7 +30,6 @@ get_header();
 					foreach ( $categories as $acat ) {
 						$cats[] = $acat->slug;
 					}
-					print_r( $cats );
 					print "<h2>Related Posts</h2>";
 					print do_shortcode( '[articles cats="' . implode( ',', $cats ) . '" post__not_in="' . $post_id . '" /]' );
 				}
@@ -47,13 +46,7 @@ get_header();
 					foreach ( $tags as $t ) {
 						$tag_array[] = str_replace( '-2', '', $t->slug );
 					}
-					/*
-					print "Tags:<br>";
-					print_r( $tag_array );
-					print "<br><br>";
-					*/
 
-					//print "<br><br>";
 					if ( !empty( $tag_array ) ) {
 						$areas = get_posts( array(
 							'post_type' => 'area',
