@@ -10,6 +10,7 @@
 
 	@include respond-to( 900px ) {
 		display: flex;
+		flex-direction: row-reverse;
 	}
 
 	.hours-inner {

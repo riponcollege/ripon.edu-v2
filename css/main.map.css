@@ -2517,7 +2517,8 @@ section.content {
     clear: both; }
   @media only screen and (min-width: 900px) {
     .hours {
-      display: flex; } }
+      display: flex;
+      flex-direction: row-reverse; } }
   .hours .hours-inner {
     background: url(../img/bg-hours.webp) center center no-repeat;
     background-size: cover;
