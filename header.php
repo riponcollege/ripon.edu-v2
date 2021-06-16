@@ -18,7 +18,7 @@
 <?php wp_head(); ?>
 
 <?php if ( is_search() ) { ?><meta name="robots" content="noindex" /><?php } ?>
-<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=237" rel="stylesheet" type="text/css">
+<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=238" rel="stylesheet" type="text/css">
 
 <!-- Facebook Pixel Code -->
 <script>
@@ -40,6 +40,7 @@ src="https://www.facebook.com/tr?id=737054459766387&ev=PageView
 </noscript>
 <!-- End Facebook Pixel Code -->
 
+<?php if ( is_ripon() ) { ?>
 <!-- Start Google Analytics Universal Tracking Code -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-37190446-2"></script>
 <script>
@@ -58,6 +59,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5Q9X26');</script>
 <!-- End Google Tag Manager -->
+<?php } ?>
+
+<?php if ( is_alumni() ) { ?>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YVD4XWQ2P3"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-YVD4XWQ2P3');
+</script>
+<?php } ?>
 
 </head>
 <body <?php body_class(); ?>>

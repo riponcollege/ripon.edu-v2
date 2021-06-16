@@ -24,13 +24,26 @@ if ( !is_alumni() ) {
 		<?php 
 		if ( is_alumni() ) {
 			print do_shortcode( '[articles feed="https://ripon.edu/category/alumni/feed/" /]' ); 
+			?>
+		<div class="buttons">
+			<a href="https://ripon.edu/news" class="btn red-dark large">View All News</a>
+		</div>
+			<?php
 		} else {
-			print do_shortcode( '[articles /]' ); 
+			print do_shortcode( '[articles /]' );
+			?>
+		<div class="buttons">
+			<a href="/news" class="btn red-dark large">View All News</a>
+		</div>
+			<?php
 		}
 		?>
 	</div>
 	<div class="front-events">
 		<?php print do_shortcode( '[events limit=4 /]' ); ?>
+		<div class="buttons">
+			<a href="/events" class="btn yellow large">View All Events</a>
+		</div>
 	</div>
 </div>
 

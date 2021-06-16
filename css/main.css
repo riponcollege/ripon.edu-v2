@@ -1031,6 +1031,10 @@ header {
     .front-columns .front-events {
       padding: 70px; } }
 
+.front-columns .buttons {
+  padding: 20px 0;
+  text-align: center; }
+
 @media only screen and (min-width: 1024px) {
   .site-alumni .front-articles .article-cards {
     margin-left: -2%; } }
@@ -1618,6 +1622,9 @@ section.content {
     color: #434039; }
     .content button.grey-light:hover, .content input[type=submit].grey-light:hover, .content input[type=reset].grey-light:hover, .content .btn.grey-light:hover, .content button.grey-light:hover, .content input.grey-light:hover[type=submit], .content .gform_wrapper .gform_footer input.grey-light:hover[type=button], .gform_wrapper .gform_footer .content input.grey-light:hover[type=button], .content .gform_wrapper .gform_footer input.grey-light:hover[type=reset], .gform_wrapper .gform_footer .content input.grey-light:hover[type=reset], .content .gform_wrapper .gform_footer button.grey-light:hover, .gform_wrapper .gform_footer .content button.grey-light:hover {
       background: linear-gradient(90deg, #f7f7f6, #EBEAE9); }
+  .content button.large, .content input[type=submit].large, .content input[type=reset].large, .content .btn.large, .content button.large, .content input.large[type=submit], .content .gform_wrapper .gform_footer input.large[type=button], .gform_wrapper .gform_footer .content input.large[type=button], .content .gform_wrapper .gform_footer input.large[type=reset], .gform_wrapper .gform_footer .content input.large[type=reset], .content .gform_wrapper .gform_footer button.large, .gform_wrapper .gform_footer .content button.large {
+    font-size: 1.1em;
+    padding: 12px 15px; }
 
 .button {
   padding: 10px;
