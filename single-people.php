@@ -13,7 +13,11 @@ $courses = get_cmb_value( "faculty_courses" );
 		<div class="page-header-overlay"></div>
 		<div class="page-header-content">
 			<div class="breadcrumbs">
-				<a href="/faculty">Faculty &amp; Staff</a> &raquo; 
+				<?php if ( is_alumni() ) { ?>
+				<a href="/give/advancement-staff/">Advancement Staff</a> &raquo; 
+				<?php } else { ?>
+				<a href="/faculty/">Faculty &amp; Staff</a> &raquo; 
+				<?php } ?>
 			</div>
 			<h1 class="page-title"><?php the_title(); ?></h1>
 		</div>
