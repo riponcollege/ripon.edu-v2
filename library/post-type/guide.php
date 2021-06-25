@@ -39,7 +39,7 @@ if ( is_ripon() ) {
 					'slug' => 'guide', 
 					'with_front' => false 
 				), /* you can specify its url slug */
-				'has_archive' => 'research-guide', /* you can rename the slug here */
+				'has_archive' => 'research-guides', /* you can rename the slug here */
 				'capability_type' => 'post',
 				'hierarchical' => false,
 				/* the next one is important, it tells what's enabled in the post editor */
