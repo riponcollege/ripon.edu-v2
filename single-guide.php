@@ -6,10 +6,17 @@ Template Name: Research Guide
 
 get_header();
 
-
-page_header();
-
 ?>
+	<div class="page-header" style="background-image: url(/wp-content/uploads/2021/01/tour_graphic-3.jpg);">
+		<div class="page-header-overlay"></div>
+		<div class="page-header-content">
+			<div class="breadcrumbs">
+				<a href="/research-guides/">Research Guides</a> &raquo; 
+			</div>
+			<h1 class="page-title"><?php the_title(); ?></h1>
+		</div>
+	</div>
+
 	<div class="two-column guide">
 		<div class="sidebar">
 			<?php
