@@ -236,11 +236,13 @@ if ( $query_yr || $query_cat || $query_search ) {
 					<div class="photo">
 						<a href="#alum-<?php the_ID(); ?>" class="open-alum-link">
 							<?php 
+							/*
 							if ( has_post_thumbnail() ) {
-								the_post_thumbnail();
+								the_post_thumbnail( 'thumbnail' );
 							} else {
-								show_alum_category_image( get_cmb_value( 'alum_category' ) );
-							}
+								*/
+							show_alum_category_image( get_cmb_value( 'alum_category' ) );
+							// }
 							?>
 						</a>
 					</div>
