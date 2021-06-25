@@ -46,7 +46,7 @@ if ( $paged > 0 ) {
 
 <div class="content-wide">
 	<div class="quiet total-results">
-		<strong><?php echo $wp_query->found_posts; ?></strong> total posts. Showing results <strong><?php print $result_range; ?></strong>.
+		<strong><?php echo $wp_query->found_posts; ?></strong> total research guides. Showing results <strong><?php print $result_range; ?></strong>.
 	</div>
 	<hr />
 	<div class="article-cards blog-listing">
