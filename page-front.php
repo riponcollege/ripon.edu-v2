@@ -23,10 +23,10 @@ if ( !is_alumni() ) {
 	<div class="front-articles">
 		<?php 
 		if ( is_alumni() ) {
-			print do_shortcode( '[articles feed="https://ripon.edu/category/alumni/feed/" /]' ); 
+			print do_shortcode( '[articles feed="https://ripon.edu/category/alumni/feed/" posts_per_page=6 /]' ); 
 			?>
 		<div class="buttons">
-			<a href="https://ripon.edu/news" class="btn red-dark large">View All News</a>
+			<a href="https://ripon.edu/category/alumni" class="btn red-dark large">View All News</a>
 		</div>
 			<?php
 		} else {

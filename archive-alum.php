@@ -232,9 +232,9 @@ if ( $query_yr || $query_cat || $query_search ) {
 				// Start the Loop.
 				while ( have_posts() ) : the_post(); 
 					?>
-				<a href="#alum-<?php the_ID(); ?>" class="open-alum-link">
-					<div class="alum">
-						<div class="photo">
+				<div class="alum">
+					<div class="photo">
+						<a href="#alum-<?php the_ID(); ?>" class="open-alum-link">
 							<?php 
 							if ( has_post_thumbnail() ) {
 								the_post_thumbnail();
@@ -242,35 +242,35 @@ if ( $query_yr || $query_cat || $query_search ) {
 								show_alum_category_image( get_cmb_value( 'alum_category' ) );
 							}
 							?>
-						</div>
-						<div class="info group">
-							<h5><?php print substr( get_the_title(), 0, 50 ); print ( strlen( get_the_title() ) > 50 ? '...' : '' ); ?></h5>
-							<?php if ( has_cmb_value( 'alum_submitter' ) ) { ?><div class="quiet">Submitted by: <?php show_cmb_value( 'alum_submitter' ) ?></div><?php } ?>
-							<?php if ( get_cmb_value( 'alum_year' ) > 0 ) { ?><div class="alum-year"><?php show_cmb_value( 'alum_year' ) ?></div><?php } ?>
-							<div class="alum-location"><?php show_cmb_value( 'alum_city' ); ?>, <?php show_cmb_value( 'alum_state' ) ?></div>
-						</div>
-						<div class="alum-category alum-category-<?php show_cmb_value( 'alum_category' ) ?>"><?php print ucwords( str_replace( '-', ' ', get_cmb_value( 'alum_category' ) ) ); ?></div>
+						</a>
 					</div>
-				</a>
-				<div class="alum-details mfp-hide" id="alum-<?php the_ID(); ?>">
-					<h3><?php the_title(); ?></h3>
-					<div class="details">
-						<div class="details-photo">
-							<?php 
-							if ( has_post_thumbnail() ) {
-								the_post_thumbnail();
-							} else {
-								show_alum_category_image( get_cmb_value( 'alum_category' ) );
-							}
-							?>
-						</div>
-						<h5><?php show_cmb_value( 'alum_name_first' ); ?> <?php show_cmb_value( 'alum_name_last' ) ?></h5>
-						<div class="alum-year"><strong>Class of <?php show_cmb_value( 'alum_year' ) ?></strong></div>
+					<div class="info group">
+						<h5><?php print substr( get_the_title(), 0, 50 ); print ( strlen( get_the_title() ) > 50 ? '...' : '' ); ?></h5>
+						<?php if ( has_cmb_value( 'alum_submitter' ) ) { ?><div class="quiet">Submitted by: <?php show_cmb_value( 'alum_submitter' ) ?></div><?php } ?>
+						<?php if ( get_cmb_value( 'alum_year' ) > 0 ) { ?><div class="alum-year"><?php show_cmb_value( 'alum_year' ) ?></div><?php } ?>
 						<div class="alum-location"><?php show_cmb_value( 'alum_city' ); ?>, <?php show_cmb_value( 'alum_state' ) ?></div>
-						<div class="alum-category alum-category-<?php show_cmb_value( 'alum_category' ) ?>"><?php print ucwords( str_replace( '-', ' ', get_cmb_value( 'alum_category' ) ) ); ?></div>
-						<div class="details-content">
-							<p><?php the_content(); ?></p>
-							<?php if ( has_cmb_value( 'alum_submitter' ) ) { ?><p class="quiet">Submitted by: <?php show_cmb_value( 'alum_submitter' ) ?></p><?php } ?>
+					</div>
+					<div class="alum-category alum-category-<?php show_cmb_value( 'alum_category' ) ?>"><?php print ucwords( str_replace( '-', ' ', get_cmb_value( 'alum_category' ) ) ); ?></div>
+					<div class="alum-details mfp-hide" id="alum-<?php the_ID(); ?>">
+						<h3><?php the_title(); ?></h3>
+						<div class="details">
+							<div class="details-photo">
+								<?php 
+								if ( has_post_thumbnail() ) {
+									the_post_thumbnail();
+								} else {
+									show_alum_category_image( get_cmb_value( 'alum_category' ) );
+								}
+								?>
+							</div>
+							<h5><?php show_cmb_value( 'alum_name_first' ); ?> <?php show_cmb_value( 'alum_name_last' ) ?></h5>
+							<div class="alum-year"><strong>Class of <?php show_cmb_value( 'alum_year' ) ?></strong></div>
+							<div class="alum-location"><?php show_cmb_value( 'alum_city' ); ?>, <?php show_cmb_value( 'alum_state' ) ?></div>
+							<div class="alum-category alum-category-<?php show_cmb_value( 'alum_category' ) ?>"><?php print ucwords( str_replace( '-', ' ', get_cmb_value( 'alum_category' ) ) ); ?></div>
+							<div class="details-content">
+								<p><?php the_content(); ?></p>
+								<?php if ( has_cmb_value( 'alum_submitter' ) ) { ?><p class="quiet">Submitted by: <?php show_cmb_value( 'alum_submitter' ) ?></p><?php } ?>
+							</div>
 						</div>
 					</div>
 				</div>

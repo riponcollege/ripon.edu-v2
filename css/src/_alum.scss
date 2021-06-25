@@ -12,81 +12,84 @@
 	}
 }
 
-.alum {
-	border: 1px solid #888;
-	background: white;
-	position: relative;
-	margin-bottom: 10px;
-
+.alum-listing {
 	@include respond-to( 550px ) {
-		width: 47%;
-		float: left;
-		margin: 0 3% 10px 0;
-		min-height: 450px;
+		display: flex;
+		flex-wrap: wrap;
 	}
 
-	@include respond-to( 768px ) {
-		width: 30%;
-	}
+	.alum {
+		border: 1px solid #888;
+		background: white;
+		position: relative;
+		margin-bottom: 10px;
 
-	@include respond-to( 1024px ) {
-		width: 23%;
-		margin: 0 2% 10px 0;
-	}
+		@include respond-to( 550px ) {
+			flex: 1;
+			flex-basis: 47%;
+			float: left;
+			margin: 0 3% 10px 0;
+			min-height: 450px;
+		}
 
-	.photo {
-		max-height: 265px;
-		overflow: hidden;		
-	}
+		@include respond-to( 768px ) {
+			flex-basis: 30%;
+		}
 
-	.info {
-		font-size: .85em;
-		line-height: 1.4em;
-		padding: 10px 10px 50px 10px;
+		@include respond-to( 1024px ) {
+			flex-basis: 23%;
+			margin: 0 2% 10px 0;
+		}
 
-		h5 {
+		.info {
+			font-size: .85em;
 			line-height: 1.4em;
+			padding: 10px 10px 50px 10px;
+
+			h5 {
+				line-height: 1.4em;
+				font-weight: 700;
+				color: $red-dark;
+				padding: 0;
+			}
+
+			.quiet {
+				padding: 6px 0;
+			}
+
+			.alum-year {
+				float: left;
+				width: 48%;
+				padding-left: 20px;
+				position: relative;
+				margin: 5px 0 5px 2%;
+			}
+
+
+			.alum-location {
+				float: left;
+				width: 48%;
+				padding-left: 20px;
+				position: relative;
+				margin: 5px 2% 5px 0;
+			}
+		}
+
+		.alum-category {
+			clear: both;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: lighten( $grey-light, 5% );
+			color: $grey;
+			padding: 10px 0 10px 35px;
 			font-weight: 700;
-			color: $red-dark;
-			padding: 0;
+			margin-top: 5px;
+			opacity: .7;
+			transition: opacity 400ms ease-in-out;
+			border-top: 1px solid $grey;
 		}
-
-		.quiet {
-			padding: 6px 0;
-		}
-
-		.alum-year {
-			float: left;
-			width: 48%;
-			padding-left: 20px;
-			position: relative;
-			margin: 5px 0 5px 2%;
-		}
-
-
-		.alum-location {
-			float: left;
-			width: 48%;
-			padding-left: 20px;
-			position: relative;
-			margin: 5px 2% 5px 0;
-		}
-	}
-
-	.alum-category {
-		clear: both;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		background: lighten( $grey-light, 5% );
-		color: $grey;
-		padding: 10px 0 10px 35px;
-		font-weight: 700;
-		margin-top: 5px;
-		opacity: .7;
-		transition: opacity 400ms ease-in-out;
-		border-top: 1px solid $grey;
 	}
 }
 

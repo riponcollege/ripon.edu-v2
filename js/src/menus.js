@@ -66,6 +66,7 @@ jQuery(document).ready(function($){
 			item.find( 'ul.sub-menu' ).addClass( 'open' );
 		}
 	});
+	
 
     // quicknav functionality
     $('select.quick-nav').on( 'change', function(){
