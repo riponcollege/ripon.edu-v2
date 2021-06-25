@@ -11,7 +11,7 @@ get_header();
 		<div class="page-header-overlay"></div>
 		<div class="page-header-content">
 			<div class="breadcrumbs">
-				<a href="/guides/">Research Guides</a> &raquo; 
+				<a href="/library/">Library</a> &raquo; <a href="/guides/">Research Guides</a> &raquo; 
 			</div>
 			<h1 class="page-title"><?php the_title(); ?></h1>
 		</div>

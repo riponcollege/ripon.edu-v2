@@ -5,9 +5,6 @@
 
 get_header(); 
 
-page_header( 'Research Guides', get_bloginfo('template_url') . '/img/bg-header-news.webp', $page_subtitle );
-
-
 // parse the query string
 $request = parse_query_string();
 
@@ -43,6 +40,15 @@ if ( $paged > 0 ) {
 
 
 ?>
+<div class="page-header" style="background-image: url(/wp-content/uploads/2021/01/tour_graphic-3.jpg);">
+	<div class="page-header-overlay"></div>
+	<div class="page-header-content">
+		<div class="breadcrumbs">
+			<a href="/library/">Library</a> &raquo; 
+		</div>
+		<h1 class="page-title">Research Guides</h1>
+	</div>
+</div>
 
 <div class="content-wide">
 	<div class="quiet total-results">
