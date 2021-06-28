@@ -21,7 +21,6 @@ page_header();
 		
 		<div class="entry-content">
 			<?php the_content(); ?>
-			<hr>
 			<h2>Officers</h2>
 			<?php
 			// get the file contents
