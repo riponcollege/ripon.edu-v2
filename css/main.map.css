@@ -276,6 +276,15 @@ ol {
     width: 58%;
     margin: 0 1%; } }
 
+.quarter-always {
+  width: 23%;
+  float: left;
+  margin-right: 2%; }
+
+.three-quarter-always {
+  width: 75%;
+  float: left; }
+
 .emergency-bar-container {
   background: #434039;
   padding: 10px 40px 10px 20px;

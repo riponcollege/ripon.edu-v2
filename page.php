@@ -1,6 +1,5 @@
 <?php
 
-// get header template
 get_header();
 
 page_header();
