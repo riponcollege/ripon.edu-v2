@@ -16,6 +16,8 @@ $args = $wp_query->query_vars;
 
 // set paged value based on request
 $args['paged'] = $request['paged'];
+$args['posts_per_page'] = -1;
+$args['orderby'] = 'title';
 
 // rerun the query
 query_posts( $args );
@@ -51,10 +53,6 @@ if ( $paged > 0 ) {
 </div>
 
 <div class="content-wide">
-	<div class="quiet total-results">
-		<strong><?php echo $wp_query->found_posts; ?></strong> total research guides. Showing results <strong><?php print $result_range; ?></strong>.
-	</div>
-	<hr />
 	<div class="article-cards blog-listing">
 	<?php
 
@@ -73,10 +71,6 @@ if ( $paged > 0 ) {
 	endwhile;
 
 	?>
-	</div>
-
-	<div class="pagination">
-		<?php pagination(); ?>
 	</div>
 
 </div>
