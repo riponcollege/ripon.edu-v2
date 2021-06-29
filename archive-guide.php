@@ -5,9 +5,6 @@
 
 get_header(); 
 
-// parse the query string
-$request = parse_query_string();
-
 // lets globalize the wp_query var
 global $wp_query;
 
@@ -15,9 +12,9 @@ global $wp_query;
 $args = $wp_query->query_vars;
 
 // set paged value based on request
-$args['paged'] = $request['paged'];
-$args['posts_per_page'] = -1;
+$args['posts_per_page'] = 100;
 $args['orderby'] = 'title';
+$args['order'] = "ASC";
 
 // rerun the query
 query_posts( $args );
