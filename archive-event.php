@@ -47,12 +47,10 @@ $request = parse_query_string();
 			}
 
 		} else {
-			?>
-			<?php 
 
-			// get URL parameters and default to current month.
-			$month = ( !empty( $request['mo'] ) ? $request['mo'] : date( "n" ) );
-			$year = ( !empty( $request['yr'] ) ? $request['yr'] : date( "Y" ) );
+			$moyr = explode( '-', ( !empty( $request['moyr'] ) ? $request['moyr'] : date( "n" ) . '-' . date( "Y" ) ) );
+			list( $month, $year ) = $moyr;
+			
 			$category = ( isset( $request['event_category'] ) ? $request['event_category'] : 0 );
 
 			// output month
