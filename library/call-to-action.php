@@ -50,7 +50,7 @@ function the_call_to_action() {
         <div class="call-to-action">
             <a href="#top" class="btn back-to-top">^</button>
             <a href="<?php print $button_one_link ?>" class="btn one teal"><?php print $button_one_text ?></a>
-            <?php if ( !empty( $button_two_text ) && !empty( $button_two_link ) ) { ?><a href="<?php print $button_two_link ?>" class="btn two white"><?php print $button_two_text ?></a><?php } ?>
+            <?php if ( !empty( $button_two_text ) && !empty( $button_two_link ) ) { ?><a href="<?php print $button_two_link ?>" class="btn two grey-light"><?php print $button_two_text ?></a><?php } ?>
         </div>
         <?php
     }
