@@ -392,16 +392,6 @@ function area_metaboxes() {
         'options' => $tag_options,
         'default' => get_cmb_value( 'area_post_tag' )
     ));
-
-
-
-    $area_box->add_field( array(
-        'name' => 'Faculty',
-        'desc' => 'Select the faculty related to this area of interest.',
-        'id' => CMB_PREFIX . 'area_faculty_list',
-        'type' => 'multicheck_inline',
-        'options' => $faculty,
-    ) );
     $area_box->add_field( array(
         'name' => 'Requirements',
         'id' => CMB_PREFIX . 'area_requirements',
@@ -426,75 +416,6 @@ function area_metaboxes() {
         	'textarea_rows' => 7
         )
     ) );
-
-
-
-    /*
-    $area_box->add_field( array(
-        'name' => 'Ensembles',
-        'id' => CMB_PREFIX . 'area_ensembles',
-        'type' => 'wysiwyg',
-        'options' => array (
-        	'textarea_rows' => 7
-        )
-    ) );
-    $area_box->add_field( array(
-        'name' => 'Events',
-        'id' => CMB_PREFIX . 'area_events',
-        'type' => 'wysiwyg',
-        'options' => array (
-        	'textarea_rows' => 7
-        )
-    ) );
-    $area_box->add_field( array(
-        'name' => 'Past Productions',
-        'id' => CMB_PREFIX . 'area_productions',
-        'type' => 'wysiwyg',
-        'options' => array (
-        	'textarea_rows' => 7
-        )
-    ) );
-    $area_box->add_field( array(
-        'name' => 'Alumni Profiles',
-        'id' => CMB_PREFIX . 'area_alumni',
-        'type' => 'wysiwyg',
-        'options' => array (
-        	'textarea_rows' => 7
-        )
-    ) );
-    $area_box->add_field( array(
-        'name' => 'Graduate Success',
-        'id' => CMB_PREFIX . 'area_success',
-        'type' => 'wysiwyg',
-        'options' => array (
-        	'textarea_rows' => 7
-        )
-    ) );
-    $area_box->add_field( array(
-        'name' => 'Clinical Supervisors',
-        'id' => CMB_PREFIX . 'area_supervisors',
-        'type' => 'wysiwyg',
-        'options' => array (
-        	'textarea_rows' => 7
-        )
-    ) );
-    $area_box->add_field( array(
-        'name' => 'Be a Teacher',
-        'id' => CMB_PREFIX . 'area_teacher',
-        'type' => 'wysiwyg',
-        'options' => array (
-        	'textarea_rows' => 7
-        )
-    ) );
-    $area_box->add_field( array(
-        'name' => 'Be a Teacher',
-        'id' => CMB_PREFIX . 'area_teacher',
-        'type' => 'wysiwyg',
-        'options' => array (
-        	'textarea_rows' => 7
-        )
-    ) );
-    */
 
 }
 
