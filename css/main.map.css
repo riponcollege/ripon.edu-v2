@@ -1600,7 +1600,8 @@ section.content {
   .content button .mce-txt, .content button .mce-ico, .content input[type=submit] .mce-txt, .content input[type=submit] .mce-ico, .content input[type=reset] .mce-txt, .content input[type=reset] .mce-ico, .content .btn .mce-txt, .content .btn .mce-ico {
     color: white; }
   .content button:hover, .content input[type=submit]:hover, .content input[type=reset]:hover, .content .btn:hover {
-    background: linear-gradient(90deg, #4ac0ff, #0094E3); }
+    background: linear-gradient(90deg, #4ac0ff, #0094E3);
+    color: white; }
   .content button.red-dark, .content input[type=submit].red-dark, .content input[type=reset].red-dark, .content .btn.red-dark {
     background: linear-gradient(270deg, #b0112d, #6A0A1B);
     color: white; }
@@ -1628,7 +1629,8 @@ section.content {
       background: linear-gradient(90deg, #6c675c, #434039); }
   .content button.grey-light, .content button.white, .content button.secondary, .content input[type=submit].grey-light, .content input[type=submit].white, .content input[type=submit].secondary, .content input[type=reset].grey-light, .content input[type=reset].white, .content input[type=reset].secondary, .content .btn.grey-light, .content .btn.white, .content .btn.secondary {
     background: linear-gradient(270deg, #f7f7f6, #EBEAE9);
-    color: #434039; }
+    color: #0094E3;
+    border: 1px solid #0094E3; }
     .content button.grey-light:hover, .content button.white:hover, .content button.secondary:hover, .content input[type=submit].grey-light:hover, .content input[type=submit].white:hover, .content input[type=submit].secondary:hover, .content input[type=reset].grey-light:hover, .content input[type=reset].white:hover, .content input[type=reset].secondary:hover, .content .btn.grey-light:hover, .content .btn.white:hover, .content .btn.secondary:hover {
       background: #0094E3;
       color: white; }
