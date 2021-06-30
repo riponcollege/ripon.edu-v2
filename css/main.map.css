@@ -1592,7 +1592,7 @@ section.content {
     color: white; }
   .content button:hover, .content input[type=submit]:hover, .content input[type=reset]:hover, .content .btn:hover {
     background: linear-gradient(90deg, #4ac0ff, #0094E3);
-    color: white !important; }
+    color: white; }
   .content button.red-dark, .content input[type=submit].red-dark, .content input[type=reset].red-dark, .content .btn.red-dark {
     background: linear-gradient(270deg, #b0112d, #6A0A1B);
     color: white; }

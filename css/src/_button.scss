@@ -22,7 +22,7 @@
 	// default button styles
 	background: linear-gradient( 270deg, lighten( $teal, 20% ), $teal );
 	color: white;
-	&:hover { background: linear-gradient( 90deg, lighten( $teal, 20% ), $teal ); color: white !important; }
+	&:hover { background: linear-gradient( 90deg, lighten( $teal, 20% ), $teal ); color: white; }
 
 	&.red-dark {
 		background: linear-gradient( 270deg, lighten( $red-dark, 15% ), $red-dark );
