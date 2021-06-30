@@ -1334,16 +1334,7 @@ body.cta-active {
     right: 0;
     left: 0; }
   .call-to-action .btn {
-    transition: all 400ms ease-in-out;
-    margin: 0 10px;
-    background: rgba(255, 255, 255, 0.8);
-    opacity: 1;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
-    .call-to-action .btn:hover {
-      background: white;
-      opacity: 1;
-      color: #6A0A1B;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); }
+    margin: 0 10px; }
     .call-to-action .btn.two {
       display: none; }
       @media only screen and (min-width: 768px) {
@@ -1628,7 +1619,8 @@ section.content {
     .content button.grey:hover, .content input[type=submit].grey:hover, .content input[type=reset].grey:hover, .content .btn.grey:hover {
       background: linear-gradient(90deg, #6c675c, #434039); }
   .content button.grey-light, .content button.white, .content button.secondary, .content input[type=submit].grey-light, .content input[type=submit].white, .content input[type=submit].secondary, .content input[type=reset].grey-light, .content input[type=reset].white, .content input[type=reset].secondary, .content .btn.grey-light, .content .btn.white, .content .btn.secondary {
-    background: linear-gradient(270deg, #f7f7f6, #EBEAE9);
+    padding: 14px 25px;
+    background: white;
     color: #0094E3;
     border: 1px solid #0094E3; }
     .content button.grey-light:hover, .content button.white:hover, .content button.secondary:hover, .content input[type=submit].grey-light:hover, .content input[type=submit].white:hover, .content input[type=submit].secondary:hover, .content input[type=reset].grey-light:hover, .content input[type=reset].white:hover, .content input[type=reset].secondary:hover, .content .btn.grey-light:hover, .content .btn.white:hover, .content .btn.secondary:hover {

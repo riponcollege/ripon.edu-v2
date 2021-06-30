@@ -55,7 +55,8 @@
 	}
 
 	&.grey-light, &.white, &.secondary {
-		background: linear-gradient( 270deg, lighten( $grey-light, 5% ), $grey-light );
+		padding: 14px 25px;
+		background: white;
 		color: $teal;
 		border: 1px solid $teal;
 		&:hover { background: $teal; color: white !important; }
