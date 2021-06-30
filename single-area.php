@@ -89,7 +89,7 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 			</div>
 
 			<div class="area-buttons">
-				<?php wp_nav_menu( array( 'menu' => 'area-buttons' ) ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'area-buttons' ) ); ?>
 			</div>
 		</div>
 			

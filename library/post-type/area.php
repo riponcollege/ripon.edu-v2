@@ -322,7 +322,6 @@ function area_metaboxes() {
 	// get all the colors so they can pick one for each highlight box
 	global $colors;
 
-
 	// select all faculty so they can choose which ones are part of this area of study
     $args = array( 'post_type' => 'faculty', 'posts_per_page' => -1, 'orderby' => 'title', 'order' => 'ASC' );
     $loop = new WP_Query( $args );
@@ -331,7 +330,6 @@ function area_metaboxes() {
         $faculty[get_the_ID()] = get_the_title();
     endwhile;
     wp_reset_query();
-
 
     // area of interest information
     $area_box = new_cmb2_box( array(
@@ -343,20 +341,18 @@ function area_metaboxes() {
         'show_names' => true, // Show field names on the left
     ) );
 
-
-
     // overview video and doc
     $area_box->add_field( array(
         'name' => 'Overview Video',
         'id' => CMB_PREFIX . 'area_sidebar_video',
         'type' => 'text_url'
     ) );
+
     $area_box->add_field( array(
         'name' => 'Overview Document URL',
         'id' => CMB_PREFIX . 'area_facebook',
         'type' => 'file'
     ) );
-
 
 	$args = array(
 		'taxonomy' => 'people_cat',

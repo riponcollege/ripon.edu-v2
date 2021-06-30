@@ -10,7 +10,8 @@ register_nav_menus( array(
 	'library-databases' => 'Library - Databases',
 	'library-guides' => 'Library - Guides',
 	'info-for' => 'Header - Information For',
-	'info-for-aux' => 'Header - Information For Auxiliary'
+	'info-for-aux' => 'Header - Information For Auxiliary',
+	'area-buttons' => 'Area Buttons - Sidebar Links on Area Pages'
 ) );
 
 
