@@ -1582,7 +1582,7 @@ section.content {
       padding: 30px 40px; } }
 
 .content button, .content input[type=submit], .content input[type=reset], .content .btn {
-  padding: 13px 24px;
+  padding: 15px 25px;
   font-family: "Open Sans", sans-serif;
   font-weight: 800;
   font-size: .9em;
@@ -1593,14 +1593,14 @@ section.content {
   display: inline-block;
   margin-bottom: 4px;
   transition: all 400ms ease-in-out;
-  border-radius: 5px;
+  border-radius: 3px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(270deg, #6c675c, #434039);
+  background: linear-gradient(270deg, #4ac0ff, #0094E3);
   color: white; }
   .content button .mce-txt, .content button .mce-ico, .content input[type=submit] .mce-txt, .content input[type=submit] .mce-ico, .content input[type=reset] .mce-txt, .content input[type=reset] .mce-ico, .content .btn .mce-txt, .content .btn .mce-ico {
     color: white; }
   .content button:hover, .content input[type=submit]:hover, .content input[type=reset]:hover, .content .btn:hover {
-    background: linear-gradient(90deg, #6c675c, #434039); }
+    background: linear-gradient(90deg, #4ac0ff, #0094E3); }
   .content button.red-dark, .content input[type=submit].red-dark, .content input[type=reset].red-dark, .content .btn.red-dark {
     background: linear-gradient(270deg, #b0112d, #6A0A1B);
     color: white; }
@@ -1621,11 +1621,11 @@ section.content {
     color: black; }
     .content button.yellow:hover, .content input[type=submit].yellow:hover, .content input[type=reset].yellow:hover, .content .btn.yellow:hover {
       background: linear-gradient(90deg, #f8c87e, #F6B44D); }
-  .content button.teal, .content button.primary, .content input[type=submit].teal, .content input[type=submit].primary, .content input[type=reset].teal, .content input[type=reset].primary, .content .btn.teal, .content .btn.primary {
-    background: linear-gradient(270deg, #4ac0ff, #0094E3);
+  .content button.grey, .content input[type=submit].grey, .content input[type=reset].grey, .content .btn.grey {
+    background: linear-gradient(270deg, #6c675c, #434039);
     color: white; }
-    .content button.teal:hover, .content button.primary:hover, .content input[type=submit].teal:hover, .content input[type=submit].primary:hover, .content input[type=reset].teal:hover, .content input[type=reset].primary:hover, .content .btn.teal:hover, .content .btn.primary:hover {
-      background: linear-gradient(90deg, #4ac0ff, #0094E3); }
+    .content button.grey:hover, .content input[type=submit].grey:hover, .content input[type=reset].grey:hover, .content .btn.grey:hover {
+      background: linear-gradient(90deg, #6c675c, #434039); }
   .content button.grey-light, .content button.white, .content button.secondary, .content input[type=submit].grey-light, .content input[type=submit].white, .content input[type=submit].secondary, .content input[type=reset].grey-light, .content input[type=reset].white, .content input[type=reset].secondary, .content .btn.grey-light, .content .btn.white, .content .btn.secondary {
     background: linear-gradient(270deg, #f7f7f6, #EBEAE9);
     color: #434039; }

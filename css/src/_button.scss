@@ -1,7 +1,7 @@
 
 
 .content button, .content input[type=submit], .content input[type=reset], .content .btn {
-	padding: 13px 24px;
+	padding: 15px 25px;
 	font-family: "Open Sans", sans-serif;
 	font-weight: 800;
 	font-size: .9em;
@@ -12,7 +12,7 @@
 	display: inline-block;
 	margin-bottom: 4px;
 	transition: all 400ms ease-in-out;
-	border-radius: 5px;
+	border-radius: 3px;
 	box-shadow: 0 0 10px rgba( black, .3 );
 
 	.mce-txt, .mce-ico {
@@ -20,9 +20,9 @@
 	}
 
 	// default button styles
-	background: linear-gradient( 270deg, lighten( $grey, 15% ), $grey );
+	background: linear-gradient( 270deg, lighten( $teal, 20% ), $teal );
 	color: white;
-	&:hover { background: linear-gradient( 90deg, lighten( $grey, 15% ), $grey ); }
+	&:hover { background: linear-gradient( 90deg, lighten( $teal, 20% ), $teal ); }
 
 	&.red-dark {
 		background: linear-gradient( 270deg, lighten( $red-dark, 15% ), $red-dark );
@@ -48,10 +48,10 @@
 		&:hover { background: linear-gradient( 90deg, lighten( $yellow, 10% ), $yellow ); }
 	}
 
-	&.teal, &.primary {
-		background: linear-gradient( 270deg, lighten( $teal, 20% ), $teal );
+	&.grey {
+		background: linear-gradient( 270deg, lighten( $grey, 15% ), $grey );
 		color: white;
-		&:hover { background: linear-gradient( 90deg, lighten( $teal, 20% ), $teal ); }
+		&:hover { background: linear-gradient( 90deg, lighten( $grey, 15% ), $grey ); }
 	}
 
 	&.grey-light, &.white, &.secondary {
