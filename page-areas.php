@@ -41,7 +41,7 @@ if ( $menu_position == 'left' ) {
 	
 		<div class="area-legend">
 			<div class="area-filter">
-				<select><option value="all">-- All Areas --</option><option value="ma">Major</option><option value="mi">Minor</option><option value="pa">Pre-Professional Advising</option><option value="tc">Teaching Certification</option><option value="dd">Dual Degree</option></select>
+				<select><option value="all">-- All Areas --</option><option value="ma">Major</option><option value="mi">Minor</option><option value="pa">Pre-Professional Advising</option><option value="tc">Teaching Certification</option><!--<option value="dd">Dual Degree</option>--></select>
 			</div>
 			<div class="mini-legend">
 				<dd><?php print do_shortcode( '[snippet slug="areas-select-intro" /]' ); ?></dd>
@@ -70,12 +70,14 @@ if ( $menu_position == 'left' ) {
 					<span class="term-description"><?php echo term_description( 5316, "area_cat" ); ?></span>
 				</dd>
 			</div>
+			<!--
 			<div class="term dd">
 				<dt><span class="dd">Dual Degree</span></dt>
 				<dd>
 					<span class="term-description"><?php echo term_description( 5552, "area_cat" ); ?></span>
 				</dd>
 			</div>
+			-->
 		</div>
 		<div class="group area-listing">
 			<?php list_area_category() ?>
