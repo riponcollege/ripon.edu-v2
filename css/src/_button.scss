@@ -1,7 +1,7 @@
 
 
 .content button, .content input[type=submit], .content input[type=reset], .content .btn {
-	padding: 10px 12px;
+	padding: 13px 24px;
 	font-family: "Open Sans", sans-serif;
 	font-weight: 800;
 	font-size: .9em;
@@ -48,16 +48,16 @@
 		&:hover { background: linear-gradient( 90deg, lighten( $yellow, 10% ), $yellow ); }
 	}
 
-	&.teal {
+	&.teal, &.primary {
 		background: linear-gradient( 270deg, lighten( $teal, 20% ), $teal );
 		color: white;
 		&:hover { background: linear-gradient( 90deg, lighten( $teal, 20% ), $teal ); }
 	}
 
-	&.grey-light {
+	&.grey-light, &.white, &.secondary {
 		background: linear-gradient( 270deg, lighten( $grey-light, 5% ), $grey-light );
 		color: $grey;
-		&:hover { background: linear-gradient( 90deg, lighten( $grey-light, 5% ), $grey-light ); }
+		&:hover { background: $teal; color: white; }
 	}
 
 	&.large {
@@ -65,7 +65,7 @@
 		padding: 12px 15px;
 	}
 
-	&.text {
+	&.text, &.tertiary {
 		background: none;
 		text-decoration: none;
 		color: $teal;
