@@ -64,21 +64,42 @@
 		font-size: 1.1em;
 		padding: 12px 15px;
 	}
+
+	&.text {
+		background: none;
+		text-decoration: none;
+		color: $teal;
+		box-shadow: none;
+		padding-right: 8px;
+
+		&:after {
+			content: " \2794";
+		}
+
+		&:hover {
+			color: darken( $teal, 10% );
+			text-decoration: underline
+		}
+
+		&:active {
+			color: darken( $teal, 20% );
+		}
+	}
 }
 
 
 .button {
-  padding: 10px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 800;
-  font-size: 1em;
-  color: #b30838;
-  text-decoration: none;
-  background: white;
-  border: 1px solid #b30838;
-  text-transform: uppercase;
-  -webkit-box-shadow: 0 0 20px rgba(37, 37, 42, 0.3);
-  box-shadow: 0 0 20px rgba(37, 37, 42, 0.3);
-  cursor: pointer;
+	padding: 10px;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 800;
+	font-size: 1em;
+	color: #b30838;
+	text-decoration: none;
+	background: white;
+	border: 1px solid #b30838;
+	text-transform: uppercase;
+	-webkit-box-shadow: 0 0 20px rgba(37, 37, 42, 0.3);
+	box-shadow: 0 0 20px rgba(37, 37, 42, 0.3);
+	cursor: pointer;
 }
 

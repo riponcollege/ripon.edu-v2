@@ -1634,6 +1634,19 @@ section.content {
   .content button.large, .content input[type=submit].large, .content input[type=reset].large, .content .btn.large, .content button.large, .content input.large[type=submit], .content .gform_wrapper .gform_footer input.large[type=button], .gform_wrapper .gform_footer .content input.large[type=button], .content .gform_wrapper .gform_footer input.large[type=reset], .gform_wrapper .gform_footer .content input.large[type=reset], .content .gform_wrapper .gform_footer button.large, .gform_wrapper .gform_footer .content button.large {
     font-size: 1.1em;
     padding: 12px 15px; }
+  .content button.text, .content input[type=submit].text, .content input[type=reset].text, .content .btn.text, .content button.text, .content input.text[type=submit], .content .gform_wrapper .gform_footer input.text[type=button], .gform_wrapper .gform_footer .content input.text[type=button], .content .gform_wrapper .gform_footer input.text[type=reset], .gform_wrapper .gform_footer .content input.text[type=reset], .content .gform_wrapper .gform_footer button.text, .gform_wrapper .gform_footer .content button.text {
+    background: none;
+    text-decoration: none;
+    color: #0094E3;
+    box-shadow: none;
+    padding-right: 8px; }
+    .content button.text:after, .content input[type=submit].text:after, .content input[type=reset].text:after, .content .btn.text:after, .content button.text:after, .content input.text[type=submit]:after, .content .gform_wrapper .gform_footer input.text[type=button]:after, .gform_wrapper .gform_footer .content input.text[type=button]:after, .content .gform_wrapper .gform_footer input.text[type=reset]:after, .gform_wrapper .gform_footer .content input.text[type=reset]:after, .content .gform_wrapper .gform_footer button.text:after, .gform_wrapper .gform_footer .content button.text:after {
+      content: " \2794"; }
+    .content button.text:hover, .content input[type=submit].text:hover, .content input[type=reset].text:hover, .content .btn.text:hover, .content button.text:hover, .content input.text:hover[type=submit], .content .gform_wrapper .gform_footer input.text:hover[type=button], .gform_wrapper .gform_footer .content input.text:hover[type=button], .content .gform_wrapper .gform_footer input.text:hover[type=reset], .gform_wrapper .gform_footer .content input.text:hover[type=reset], .content .gform_wrapper .gform_footer button.text:hover, .gform_wrapper .gform_footer .content button.text:hover {
+      color: #0073b0;
+      text-decoration: underline; }
+    .content button.text:active, .content input[type=submit].text:active, .content input[type=reset].text:active, .content .btn.text:active, .content button.text:active, .content input.text:active[type=submit], .content .gform_wrapper .gform_footer input.text:active[type=button], .gform_wrapper .gform_footer .content input.text:active[type=button], .content .gform_wrapper .gform_footer input.text:active[type=reset], .gform_wrapper .gform_footer .content input.text:active[type=reset], .content .gform_wrapper .gform_footer button.text:active, .gform_wrapper .gform_footer .content button.text:active {
+      color: #00517d; }
 
 .button {
   padding: 10px;
