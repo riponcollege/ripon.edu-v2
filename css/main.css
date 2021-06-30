@@ -1686,6 +1686,93 @@ section.content {
 .elementor-section.elementor-section-boxed > .elementor-container {
   max-width: auto !important; }
 
+.gform_wrapper .donate-form .gfield, #mc_embed_signup .donate-form .gfield {
+  margin: 7px 0 !important; }
+  .gform_wrapper .donate-form .gfield .ginput_container, #mc_embed_signup .donate-form .gfield .ginput_container {
+    margin-top: 5px !important; }
+  .gform_wrapper .donate-form .gfield .gfield_description, #mc_embed_signup .donate-form .gfield .gfield_description {
+    padding-top: 0; }
+  .gform_wrapper .donate-form .gfield ::placeholder, #mc_embed_signup .donate-form .gfield ::placeholder {
+    color: #ddd; }
+  .gform_wrapper .donate-form .gfield.field_description_below.gsection, #mc_embed_signup .donate-form .gfield.field_description_below.gsection {
+    margin: 50px 0 10px !important; }
+    @media only screen and (min-width: 768px) {
+      .gform_wrapper .donate-form .gfield.field_description_below.gsection, #mc_embed_signup .donate-form .gfield.field_description_below.gsection {
+        margin: 80px 0 15px !important; } }
+    .gform_wrapper .donate-form .gfield.field_description_below.gsection:first-child, #mc_embed_signup .donate-form .gfield.field_description_below.gsection:first-child {
+      margin: 0 0 15px !important; }
+      @media only screen and (min-width: 768px) {
+        .gform_wrapper .donate-form .gfield.field_description_below.gsection:first-child, #mc_embed_signup .donate-form .gfield.field_description_below.gsection:first-child {
+          margin: 0 0 15px !important; } }
+  .gform_wrapper .donate-form .gfield.donate-recurring, #mc_embed_signup .donate-form .gfield.donate-recurring {
+    margin-top: -20px !important; }
+
+.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), .gform_wrapper textarea, .gform_wrapper select, #mc_embed_signup input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), #mc_embed_signup textarea, #mc_embed_signup select {
+  padding: 7px 5px;
+  border: 3px solid #ddd; }
+  .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]):focus, .gform_wrapper textarea:focus, .gform_wrapper select:focus, #mc_embed_signup input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]):focus, #mc_embed_signup textarea:focus, #mc_embed_signup select:focus {
+    border: 3px solid #0094E3;
+    outline: none; }
+
+.gform_wrapper .gsection_description, #mc_embed_signup .gsection_description {
+  font-size: .9em; }
+
+.gform_wrapper span.ginput_total, #mc_embed_signup span.ginput_total {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: black; }
+
+.gform_wrapper .gfield.donate-type .gfield_radio, .gform_wrapper .gfield.donate-amount .gfield_radio, #mc_embed_signup .gfield.donate-type .gfield_radio, #mc_embed_signup .gfield.donate-amount .gfield_radio {
+  width: auto !important; }
+  .gform_wrapper .gfield.donate-type .gfield_radio li, .gform_wrapper .gfield.donate-amount .gfield_radio li, #mc_embed_signup .gfield.donate-type .gfield_radio li, #mc_embed_signup .gfield.donate-amount .gfield_radio li {
+    background: #c3c0b8;
+    padding: 7px 13px 10px !important;
+    margin-right: 5px;
+    border-radius: 5px; }
+    @media only screen and (min-width: 768px) {
+      .gform_wrapper .gfield.donate-type .gfield_radio li, .gform_wrapper .gfield.donate-amount .gfield_radio li, #mc_embed_signup .gfield.donate-type .gfield_radio li, #mc_embed_signup .gfield.donate-amount .gfield_radio li {
+        float: left; } }
+
+@media only screen and (min-width: 768px) {
+  .gform_wrapper .gfield.donate-type .gfield_radio li, #mc_embed_signup .gfield.donate-type .gfield_radio li {
+    width: 150px; }
+  .gform_wrapper .gfield.donate-amount .gfield_radio li, #mc_embed_signup .gfield.donate-amount .gfield_radio li {
+    width: 88px; } }
+
+.gform_wrapper .gform_footer input[type=submit], .gform_wrapper .gform_footer input[type=button], .gform_wrapper .gform_footer input[type=reset], .gform_wrapper .gform_footer button, .gform_wrapper .gform_footer .btn, #mc_embed_signup .gform_footer input[type=submit], #mc_embed_signup .gform_footer input[type=button], #mc_embed_signup .gform_footer input[type=reset], #mc_embed_signup .gform_footer button, #mc_embed_signup .gform_footer .btn {
+  padding: 13px 24px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: .9em;
+  line-height: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 4px;
+  transition: all 400ms ease-in-out;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(270deg, #4ac0ff, #0094E3) !important;
+  color: white;
+  border: 0; }
+  .gform_wrapper .gform_footer input[type=submit]:hover, .gform_wrapper .gform_footer input[type=button]:hover, .gform_wrapper .gform_footer input[type=reset]:hover, .gform_wrapper .gform_footer button:hover, .gform_wrapper .gform_footer .btn:hover, #mc_embed_signup .gform_footer input[type=submit]:hover, #mc_embed_signup .gform_footer input[type=button]:hover, #mc_embed_signup .gform_footer input[type=reset]:hover, #mc_embed_signup .gform_footer button:hover, #mc_embed_signup .gform_footer .btn:hover {
+    background: linear-gradient(90deg, #4ac0ff, #0094E3) !important; }
+
+.gform_legacy_markup_wrapper.gf_browser_chrome select {
+  padding: 7px 5px; }
+
+.ginput_product_price_label {
+  display: none !important; }
+
+#gform_44 .ginput_container.error {
+  border: 3px solid #790000;
+  border-left: 0;
+  border-right: 0;
+  background: rgba(255, 223, 224, 0.25);
+  padding: 10px;
+  display: none; }
+
 .entry-content .job_listings li {
   background: none; }
   .entry-content .job_listings li .meta li {
@@ -3261,87 +3348,3 @@ img.mfp-img {
   @media only screen and (min-width: 1220px) {
     .area .article-cards .entry, .two-column .article-cards .entry {
       flex-basis: 31.3333%; } }
-
-.gform_wrapper .donate-form .gfield, #mc_embed_signup .donate-form .gfield {
-  margin: 7px 0 !important; }
-  .gform_wrapper .donate-form .gfield .ginput_container, #mc_embed_signup .donate-form .gfield .ginput_container {
-    margin-top: 5px !important; }
-  .gform_wrapper .donate-form .gfield .gfield_description, #mc_embed_signup .donate-form .gfield .gfield_description {
-    padding-top: 0; }
-  .gform_wrapper .donate-form .gfield ::placeholder, #mc_embed_signup .donate-form .gfield ::placeholder {
-    color: #ddd; }
-  .gform_wrapper .donate-form .gfield.field_description_below.gsection, #mc_embed_signup .donate-form .gfield.field_description_below.gsection {
-    margin: 50px 0 10px !important; }
-    @media only screen and (min-width: 768px) {
-      .gform_wrapper .donate-form .gfield.field_description_below.gsection, #mc_embed_signup .donate-form .gfield.field_description_below.gsection {
-        margin: 80px 0 15px !important; } }
-    .gform_wrapper .donate-form .gfield.field_description_below.gsection:first-child, #mc_embed_signup .donate-form .gfield.field_description_below.gsection:first-child {
-      margin: 0 0 15px !important; }
-      @media only screen and (min-width: 768px) {
-        .gform_wrapper .donate-form .gfield.field_description_below.gsection:first-child, #mc_embed_signup .donate-form .gfield.field_description_below.gsection:first-child {
-          margin: 0 0 15px !important; } }
-  .gform_wrapper .donate-form .gfield.donate-recurring, #mc_embed_signup .donate-form .gfield.donate-recurring {
-    margin-top: -20px !important; }
-
-.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), .gform_wrapper textarea, #mc_embed_signup input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), #mc_embed_signup textarea {
-  padding: 7px 5px;
-  border: 3px solid #ddd; }
-  .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]):focus, .gform_wrapper textarea:focus, #mc_embed_signup input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]):focus, #mc_embed_signup textarea:focus {
-    border: 3px solid #0094E3;
-    outline: none; }
-
-.gform_wrapper .gsection_description, #mc_embed_signup .gsection_description {
-  font-size: .9em; }
-
-.gform_wrapper span.ginput_total, #mc_embed_signup span.ginput_total {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: black; }
-
-.gform_wrapper .gfield.donate-type .gfield_radio, .gform_wrapper .gfield.donate-amount .gfield_radio, #mc_embed_signup .gfield.donate-type .gfield_radio, #mc_embed_signup .gfield.donate-amount .gfield_radio {
-  width: auto !important; }
-  .gform_wrapper .gfield.donate-type .gfield_radio li, .gform_wrapper .gfield.donate-amount .gfield_radio li, #mc_embed_signup .gfield.donate-type .gfield_radio li, #mc_embed_signup .gfield.donate-amount .gfield_radio li {
-    background: #c3c0b8;
-    padding: 7px 13px 10px !important;
-    margin-right: 5px;
-    border-radius: 5px; }
-    @media only screen and (min-width: 768px) {
-      .gform_wrapper .gfield.donate-type .gfield_radio li, .gform_wrapper .gfield.donate-amount .gfield_radio li, #mc_embed_signup .gfield.donate-type .gfield_radio li, #mc_embed_signup .gfield.donate-amount .gfield_radio li {
-        float: left; } }
-
-@media only screen and (min-width: 768px) {
-  .gform_wrapper .gfield.donate-type .gfield_radio li, #mc_embed_signup .gfield.donate-type .gfield_radio li {
-    width: 150px; }
-  .gform_wrapper .gfield.donate-amount .gfield_radio li, #mc_embed_signup .gfield.donate-amount .gfield_radio li {
-    width: 88px; } }
-
-.gform_wrapper .gform_footer input[type=submit], .gform_wrapper .gform_footer input[type=button], .gform_wrapper .gform_footer input[type=reset], .gform_wrapper .gform_footer button, .gform_wrapper .gform_footer .btn, #mc_embed_signup .gform_footer input[type=submit], #mc_embed_signup .gform_footer input[type=button], #mc_embed_signup .gform_footer input[type=reset], #mc_embed_signup .gform_footer button, #mc_embed_signup .gform_footer .btn {
-  padding: 13px 24px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 800;
-  font-size: .9em;
-  line-height: 1em;
-  text-decoration: none;
-  text-transform: uppercase;
-  cursor: pointer;
-  display: inline-block;
-  margin-bottom: 4px;
-  transition: all 400ms ease-in-out;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(270deg, #4ac0ff, #0094E3) !important;
-  color: white;
-  border: 0; }
-  .gform_wrapper .gform_footer input[type=submit]:hover, .gform_wrapper .gform_footer input[type=button]:hover, .gform_wrapper .gform_footer input[type=reset]:hover, .gform_wrapper .gform_footer button:hover, .gform_wrapper .gform_footer .btn:hover, #mc_embed_signup .gform_footer input[type=submit]:hover, #mc_embed_signup .gform_footer input[type=button]:hover, #mc_embed_signup .gform_footer input[type=reset]:hover, #mc_embed_signup .gform_footer button:hover, #mc_embed_signup .gform_footer .btn:hover {
-    background: linear-gradient(90deg, #4ac0ff, #0094E3) !important; }
-
-.ginput_product_price_label {
-  display: none !important; }
-
-#gform_44 .ginput_container.error {
-  border: 3px solid #790000;
-  border-left: 0;
-  border-right: 0;
-  background: rgba(255, 223, 224, 0.25);
-  padding: 10px;
-  display: none; }

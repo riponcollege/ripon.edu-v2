@@ -40,7 +40,7 @@
 	
 
 	// lets set some padding on all text fields.	
-	input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), textarea {
+	input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]), textarea, select {
 		padding: 7px 5px;
 		border: 3px solid #ddd;
 
@@ -126,6 +126,12 @@
 	}
 
 }
+
+
+.gform_legacy_markup_wrapper.gf_browser_chrome select {
+	padding: 7px 5px;
+}
+
 
 // hide the 'price' label on friends of the foundation form
 .ginput_product_price_label {
