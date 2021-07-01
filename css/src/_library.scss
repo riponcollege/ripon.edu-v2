@@ -44,6 +44,7 @@
 			span {
 				opacity: .9;
 				padding-left: 20px;
+				@include font-bold;
 			}
 		}
 
