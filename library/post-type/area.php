@@ -367,7 +367,7 @@ function area_metaboxes() {
     $area_box->add_field( array(
         'name' => 'People to List',
         'desc' => 'Which category of people to display as the faculty list for the faculty list for this area.',
-        'id' => $prefix . 'area_people_list',
+        'id' => CMB_PREFIX . 'area_people_list',
         'type' => 'select',
         'options' => $people_cats,
     ) );

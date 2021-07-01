@@ -20,6 +20,8 @@ $featured_image_url = get_the_post_thumbnail_url( null, 'full' );
 // get area categories
 $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 
+print get_cmb_value( 'area_faculty_list' );
+
 ?>
 	<div class="page-header area-header" style="background-image: url(<?php print get_page_header_background(); ?>)">
 		<div class="page-header-overlay"></div>
