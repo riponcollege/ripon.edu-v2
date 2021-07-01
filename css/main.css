@@ -2860,6 +2860,24 @@ section.content {
     .event-list .event .event-excerpt {
       font-size: .9em; }
 
+.map {
+  height: 350px; }
+  @media only screen and (min-width: 768px) {
+    .map {
+      height: 500px; } }
+  @media only screen and (min-width: 1024px) {
+    .map {
+      height: 650px; } }
+  @media only screen and (min-width: 1220px) {
+    .map {
+      height: 700px; } }
+  @media only screen and (min-width: 1440px) {
+    .map {
+      height: 750px; } }
+  .map iframe {
+    width: 100%;
+    height: 100%; }
+
 /* Magnific Popup CSS */
 .mfp-bg {
   top: 0;
