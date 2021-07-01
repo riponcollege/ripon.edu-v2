@@ -105,6 +105,7 @@
 				font-size: 16px;
 				line-height: 16px;
 				width: 40%;
+				border: none !important;
 
 				@include respond-to( 768px ) {
 					width: 27%;
@@ -149,6 +150,7 @@
 				padding: 9px 10px;
 				font-size: 16px;
 				line-height: 16px;
+				border: none !important;
 
 				float: left;
 				width: 40%;
