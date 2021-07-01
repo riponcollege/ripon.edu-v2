@@ -6,7 +6,7 @@
 get_header();
 
 $advising = get_cmb_value( "area_advising" );
-$faculty = get_cmb_value( "area_faculty_list" );
+$people = get_cmb_value( "area_people_list" );
 
 // mis-named - already populated in test, leaving to prevent forcing re-entry.
 $overview_url = get_cmb_value( "area_facebook" );
@@ -19,8 +19,6 @@ $featured_image_url = get_the_post_thumbnail_url( null, 'full' );
 
 // get area categories
 $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
-
-print get_cmb_value( 'area_faculty_list' );
 
 ?>
 	<div class="page-header area-header" style="background-image: url(<?php print get_page_header_background(); ?>)">
@@ -73,7 +71,7 @@ print get_cmb_value( 'area_faculty_list' );
 				<!--<h3>Overview</h3>-->
 				<ul>
 					<li class="area-overview active">Overview</li>
-					<?php if ( has_cmb_value( 'area_faculty_list' ) ) { ?><li class="area-faculty">Faculty</li><?php } ?>
+					<?php if ( !empty( $people ) ) { ?><li class="area-faculty">Faculty</li><?php } ?>
 					<?php do_area_tab_nav( "Requirements", "requirements" ) ?>
 					<?php do_area_tab_nav( "Career Tracks", "tracks" ) ?>
 					<?php do_area_tab_nav( "Unique Opportunities", "opportunities" ) ?>
@@ -110,7 +108,7 @@ print get_cmb_value( 'area_faculty_list' );
 				<?php } ?>
 			</div>
 
-			<?php if ( has_cmb_value( 'area_faculty_list' ) ) { ?>
+			<?php if ( !empty( $people ) ) { ?>
 			<div class="tab-content area-faculty">
 				<h2>Faculty</h2>
 				<div class="area-faculty">
