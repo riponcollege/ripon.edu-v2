@@ -9,7 +9,6 @@ if ( is_alumni() ) {
 	add_action( 'after_switch_theme', 'flush_rewrite_rules' );
 
 
-
 	// let's create the function for the custom type
 	function yr_post_type() { 
 		// creating (registering) the custom type 
@@ -51,6 +50,121 @@ if ( is_alumni() ) {
 
 	// adding the function to the Wordpress init
 	add_action( 'init', 'yr_post_type');
+
+
+	// add the metabox for the year post type
+	add_action( 'cmb2_admin_init', 'year_metaboxes' );
+	function year_metaboxes() {
+
+	    global $states, $years;
+
+
+	    // year information
+	    $year_box = new_cmb2_box( array(
+	        'id' => 'year_info',
+	        'title' => 'Class Year Details',
+	        'object_types' => array( 'yr' ), // post type
+	        'context' => 'normal',
+	        'priority' => 'high',
+	        'show_names' => true, // Show field names on the left
+	    ) );
+	    $year_box->add_field( array(
+	        'name' => 'President',
+	        'id'   => $prefix . 'year_president',
+	        'type' => 'text',
+	    ) );
+	    $year_box->add_field( array(
+	        'name' => 'Graduation Date',
+	        'id'   => $prefix . 'year_grad_date',
+	        'type' => 'text',
+	    ) );
+	    $year_box->add_field( array(
+	        'name' => 'Graduating Seniors',
+	        'id'   => $prefix . 'year_grad_seniors',
+	        'type' => 'text',
+	    ) );
+	    $year_box->add_field( array(
+	        'name' => 'Commencement Theme',
+	        'id'   => $prefix . 'year_commencement_theme',
+	        'type' => 'text',
+	    ) );
+	    $year_box->add_field( array(
+	        'name' => 'Commencement Speakers',
+	        'id'   => $prefix . 'year_commencement_speakers',
+	        'type' => 'text',
+	    ) );
+	    $year_box->add_field( array(
+	        'name' => 'Honorary Degree Recipient(s)',
+	        'id'   => $prefix . 'year_honorary_degrees',
+	        'type' => 'text',
+	    ) );
+	    $year_box->add_field( array(
+	        'name' => 'Medal of Merit Recipient(s)',
+	        'id'   => $prefix . 'year_medal',
+	        'type' => 'text',
+	    ) );
+	    $year_box->add_field( array(
+	        'name' => 'Current Class Agent (1)',
+	        'id'   => $prefix . 'year_agent_current_name',
+	        'type' => 'text',
+	    ) );
+	    $year_box->add_field( array(
+	        'name' => 'Current Class Agent Email (1)',
+	        'id'   => $prefix . 'year_agent_current_email',
+	        'type' => 'text',
+	    ) );
+	    $year_box->add_field( array(
+	        'name' => 'Current Class Agent (2)',
+	        'id'   => $prefix . 'year_agent_current_name_2',
+	        'type' => 'text',
+	    ) );
+	    $year_box->add_field( array(
+	        'name' => 'Current Class Agent Email (2)',
+	        'id'   => $prefix . 'year_agent_current_email_2',
+	        'type' => 'text',
+	    ) );
+	    $year_box->add_field( array(
+	        'name' => 'Current Class Agent (3)',
+	        'id'   => $prefix . 'year_agent_current_name_3',
+	        'type' => 'text',
+	    ) );
+	    $year_box->add_field( array(
+	        'name' => 'Current Class Agent Email (3)',
+	        'id'   => $prefix . 'year_agent_current_email_3',
+	        'type' => 'text',
+	    ) );
+	    $year_box->add_field( array(
+	        'name' => 'Current Class Agent (4)',
+	        'id'   => $prefix . 'year_agent_current_name_4',
+	        'type' => 'text',
+	    ) );
+	    $year_box->add_field( array(
+	        'name' => 'Current Class Agent Email (4)',
+	        'id'   => $prefix . 'year_agent_current_email_4',
+	        'type' => 'text',
+	    ) );
+	    $year_box->add_field( array(
+	        'name' => 'Former Class Agent',
+	        'id'   => $prefix . 'year_agent_former_name',
+	        'type' => 'text',
+	    ) );
+	    $year_box->add_field( array(
+	        'name' => 'Has Memory Book',
+	        'id' => $prefix . 'year_memory',
+	        'type' => 'checkbox'
+	    ) );
+	    $year_box->add_field( array(
+	        'name' => 'Has Green List',
+	        'id' => $prefix . 'year_green',
+	        'type' => 'checkbox'
+	    ) );
+	    $year_box->add_field( array(
+	        'name' => 'Facebook Page',
+	        'id'   => $prefix . 'year_facebook',
+	        'type' => 'text',
+	    ) );
+
+	}
 
 
 }

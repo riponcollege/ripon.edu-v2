@@ -38,9 +38,10 @@ require_multi(
 	// include the essential components
 	'core', 'site', 'metabox', 
 
-	'post-type/people', 'post-type/fund', 'post-type/alum', 'post-type/year','post-type/event', 'post-type/guide',
+	'post-type/people', 'post-type/fund', 'post-type/alum', 'post-type/year','post-type/event', 'post-type/guide', 'post-type/area', 
 
-	'video-showcase', 'emergency', 'menus', 'page-header', 'library', 'icons', 'photo-tiles', 'images', 'search', 'articles', 'post-type/area', 'accordion', 'button', 'call-to-action', 'hep/send-donation'
+	'video-showcase', 'emergency', 'menus', 'page-header', 'library', 'icons', 'photo-tiles', 'images', 'search', 
+	'articles', 'accordion', 'button', 'call-to-action', 'hep/send-donation'
 
 );
 
