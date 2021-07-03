@@ -1563,6 +1563,12 @@ section.content {
 .content-style .buttons, .two-column .right-column .buttons, .content-wide .buttons, .area .tab-content .buttons, .bio .bio-content .buttons {
   padding: 20px 0; }
 
+.content-style table, .two-column .right-column table, .content-wide table, .area .tab-content table, .bio .bio-content table {
+  border: 1px solid #ccc; }
+  .content-style table thead tr th, .two-column .right-column table thead tr th, .content-wide table thead tr th, .area .tab-content table thead tr th, .bio .bio-content table thead tr th {
+    background: #6A0A1B;
+    color: white; }
+
 .section-content {
   padding: 20px; }
   @media only screen and (min-width: 768px) {

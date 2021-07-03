@@ -92,6 +92,15 @@ section.content {
 	.buttons {
 		padding: 20px 0;
 	}
+
+	table {
+		border: 1px solid #ccc;
+
+		thead tr th {
+			background: $red-dark;
+			color: white;
+		}
+	}
 }
 
 
