@@ -75,6 +75,13 @@
 			transition: 400ms opacity ease-in-out;
 			padding: 50px;
 			overflow: hidden;
+			display: flex;
+  			align-items: center;
+  			justify-content: center;
+
+			.phototile-content-inner {
+
+			}
 
 			&.red-dark {
 				background: $red-dark;
@@ -101,17 +108,17 @@
 			}
 
 			@include respond-to( 1024px ) {
-				padding: 70px 50px;
+				padding: 0 50px;
 			}
 
 			@include respond-to( 1440px ) {
-				padding: 80px 60px;
+				padding: 0 60px;
 			}
 
 			@include respond-to( 1920px ) {
 				font-size: 1.2em;
 				line-height: 1.5em;
-				padding: 80px 80px;
+				padding: 0 80px;
 			}
 		}
 

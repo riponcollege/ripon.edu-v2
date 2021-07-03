@@ -1128,7 +1128,10 @@ header {
       z-index: 3;
       transition: 400ms opacity ease-in-out;
       padding: 50px;
-      overflow: hidden; }
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
       .phototiles .phototile .phototile-content.red-dark {
         background: #6A0A1B; }
       .phototiles .phototile .phototile-content.red-light {
@@ -1143,15 +1146,15 @@ header {
         background: #EA4D3D; }
       @media only screen and (min-width: 1024px) {
         .phototiles .phototile .phototile-content {
-          padding: 70px 50px; } }
+          padding: 0 50px; } }
       @media only screen and (min-width: 1440px) {
         .phototiles .phototile .phototile-content {
-          padding: 80px 60px; } }
+          padding: 0 60px; } }
       @media only screen and (min-width: 1920px) {
         .phototiles .phototile .phototile-content {
           font-size: 1.2em;
           line-height: 1.5em;
-          padding: 80px 80px; } }
+          padding: 0 80px; } }
     .phototiles .phototile:hover .phototile-content {
       opacity: 1; }
 

@@ -15,7 +15,11 @@ function the_phototiles() {
 			<div class="phototile" style="background-image: url(<?php print $tile['background'] ?>);" data-href="<?php print $tile['link'] ?>">
 				<div class="phototile-title"><?php print $tile['title'] ?></div>
 				<div class="phototile-subtitle"><?php print $tile['subtitle'] ?></div>
-				<div class="phototile-content <?php print $tile['color'] ?>"><?php print $tile['content'] ?></div>
+                <div class="phototile-content <?php print $tile['color'] ?>">
+                    <div class="phototile-content-inner">
+                        <?php print $tile['content'] ?>
+                    </div>
+                </div>
 			</div>
 				<?php
 			}
