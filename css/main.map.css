@@ -1592,6 +1592,7 @@ section.content {
   transition: all 400ms ease-in-out;
   border-radius: 3px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border: 0;
   background: linear-gradient(270deg, #4ac0ff, #0094E3);
   color: white; }
   .content button .mce-txt, .content button .mce-ico, .content input[type=submit] .mce-txt, .content input[type=submit] .mce-ico, .content input[type=reset] .mce-txt, .content input[type=reset] .mce-ico, .content .btn .mce-txt, .content .btn .mce-ico {
