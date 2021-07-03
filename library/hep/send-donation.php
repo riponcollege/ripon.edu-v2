@@ -72,6 +72,6 @@ function hep_hook( $entry, $form ) {
 // add_action( 'gform_after_submission_207', 'hep_hook', 10, 2 );
 
 // hookie hookie (production)
-add_action( 'gform_after_submission_251', 'hep_hook', 10, 2 );
+if ( is_alumni() ) add_action( 'gform_after_submission_1', 'hep_hook', 10, 2 );
 
 
