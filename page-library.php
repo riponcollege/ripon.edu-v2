@@ -67,7 +67,8 @@ if ( $menu_position == 'left' ) {
 
 				<div class="databases">
 					Search Databases
-					<?php quick_nav_menu( 'library-databases', '- select a database -' ); ?>
+					<?php print do_shortcode( '[snippet slug="library-databases" /]' ) ?>
+					<!--<?php quick_nav_menu( 'library-databases', '- select a database -' ); ?>-->
 				</div>
 
 				<div class="guides">
