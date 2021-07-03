@@ -10,6 +10,7 @@ function articles_shortcode( $atts ) {
 		'posts_per_page' => 4,
 		'feed' => '',
 		'post__not_in' => '',
+		'tag' => ''
 	), $atts );
 
 	$args = array(

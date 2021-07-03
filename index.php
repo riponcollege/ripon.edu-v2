@@ -14,18 +14,10 @@ page_header( 'Ripon News', get_bloginfo( 'template_url' ) . '/img/bg-header-news
 $request = parse_query_string();
 
 // lets globalize the wp_query var
-global $wp_query;
+global $wp_query, $paged;
 
 // set the args based on current query
 $args = $wp_query->query_vars;
-
-// set paged value based on request
-$args['paged'] = $request['paged'];
-$args['page'] = $request['paged'];
-
-// rerun the query
-query_posts( $args );
-
 
 // calculate results range to show above the result listing
 if ( $paged > 0 ) {
@@ -44,6 +36,11 @@ if ( $paged > 0 ) {
 	}
 }
 
+$args['page'] = ( $paged ? $paged : 1 );
+
+// rerun the query
+$query = new WP_Query( $args );
+
 ?>
 
 <div class="content-wide">
@@ -57,7 +54,7 @@ if ( $paged > 0 ) {
 	<div class="article-cards blog-listing">
 	<?php
 
-	while ( have_posts() ) : the_post();
+	while ( $query->have_posts() ) : $query->the_post();
 		?>
 		<div class="entry">
 			<div class="thumbnail">

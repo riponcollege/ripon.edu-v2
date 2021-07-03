@@ -677,7 +677,6 @@ function events_shortcode( $event_atts ) {
 			// piece together an excerpt.
 			$excerpt = ( !empty( $event->post_excerpt ) ? $event->post_excerpt : wp_trim_words( $event->post_content, 40 ) . "[...]" );
 
-
 			$list .= '<div class="event' . ( $num == 0 ? ' first' : '' ) . '">';
 			$list .= '<span class="event-date-month">' . date( 'M', $event->_p_event_start ) . '</span>';
 			$list .= '<span class="event-date-day">' . date( 'j', $event->_p_event_start ) . '</span>';
