@@ -88,6 +88,7 @@ function section_menu( $mode = 'both' ) {
 	if ( !empty( $menu_primary ) ) {
 		$menu_position = get_menu_position();
 
+ 		print '<button class="toggle-sidebar-menu">Section Navigation</button>';
 		wp_nav_menu( array( 'menu' => $menu_primary, 'container_class' => ( $menu_position == 'top' ? 'top-menu' : 'section-menu' ) ) );
 
 	}

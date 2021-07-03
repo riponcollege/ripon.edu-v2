@@ -562,35 +562,45 @@ body {
   .menu-photo.open {
     left: 0; }
 
-.section-menu ul {
-  margin-left: -10px; }
-  .section-menu ul li a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 6px 0 6px 10px; }
-    @media only screen and (min-width: 768px) {
-      .top .section-menu ul li a {
-        display: inline;
-        padding: 6px 20px; } }
-    .section-menu ul li a:hover {
-      opacity: .8; }
-  .section-menu ul li.current_page_item > a {
-    border-left: 3px solid #EA4D3D; }
-  .section-menu ul li .sub-menu {
-    display: none;
-    padding-left: 20px; }
-    @media only screen and (min-width: 1024px) {
-      .section-menu ul li .sub-menu {
-        padding-left: 30px; } }
-    .section-menu ul li .sub-menu.open {
-      display: block; }
+.toggle-sidebar-menu {
+  width: 100%; }
+
+.section-menu {
+  display: none; }
+  @media only screen and (min-width: 768px) {
+    .section-menu {
+      display: block; } }
+  .section-menu ul {
+    margin-left: -10px; }
+    .section-menu ul li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 6px 0 6px 10px; }
+      @media only screen and (min-width: 768px) {
+        .top .section-menu ul li a {
+          display: inline;
+          padding: 6px 20px; } }
+      .section-menu ul li a:hover {
+        opacity: .8; }
+    .section-menu ul li.current_page_item > a {
+      border-left: 3px solid #EA4D3D; }
+    .section-menu ul li .sub-menu {
+      display: none;
+      padding-left: 20px; }
+      @media only screen and (min-width: 1024px) {
+        .section-menu ul li .sub-menu {
+          padding-left: 30px; } }
+      .section-menu ul li .sub-menu.open {
+        display: block; }
 
 .top-menu {
   background: #434039;
-  padding: 10px; }
+  padding: 10px;
+  display: none; }
   @media only screen and (min-width: 768px) {
     .top-menu {
+      display: block;
       padding: 10px 20px; } }
   @media only screen and (min-width: 1220px) {
     .top-menu {

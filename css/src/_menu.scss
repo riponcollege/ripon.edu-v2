@@ -195,7 +195,18 @@ body {
 }
 
 
+.toggle-sidebar-menu {
+	width: 100%;
+}
+
+
 .section-menu {
+	display: none;
+
+	@include respond-to( 768px ) {
+		display: block;
+	}
+
 	ul {
 		margin-left: -10px;
 
@@ -242,8 +253,10 @@ body {
 .top-menu {
 	background: $grey;
 	padding: 10px;
+	display: none;
 
 	@include respond-to( 768px ) {
+		display: block;
 		padding: 10px 20px;
 	}
 

@@ -46,6 +46,17 @@ jQuery(document).ready(function($){
 	});
 
 
+	// toggle-sidebar-menu
+	var section_menu = $( '.sidebar .section-menu' );
+	var top_menu = $( '.top-menu' );
+	if ( section_menu.length || top_menu.length ) {
+		$('.toggle-sidebar-menu').click( function(){
+			section_menu.slideToggle();
+			top_menu.slideToggle();
+		});
+	}
+
+
     // handle sidebar menu toggling
     var left_menu = $('.sidebar .section-menu ul.menu');
     left_menu.find( 'a' ).click(function(){

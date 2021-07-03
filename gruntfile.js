@@ -33,6 +33,8 @@ module.exports = function(grunt) {
                     'js/main.js': [
                         'js/lib/magnific/dist/jquery.magnific-popup.min.js',
                         'js/lib/fitvids/jquery.fitvids.js',
+                        'js/lib/map/map-library.js',
+                        'js/lib/map/map-usa.js',
                         'js/lib/jquery.query.js',
                         'js/src/*.js',
                     ]
