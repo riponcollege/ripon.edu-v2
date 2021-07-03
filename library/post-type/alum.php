@@ -51,5 +51,81 @@ if ( is_alumni() ) {
 	// adding the function to the Wordpress init
 	add_action( 'init', 'alum_post_type');
 
+
+	// add the metabox for the alum post type
+	add_action( 'cmb2_admin_init', 'alum_metaboxes' );
+	function alum_metaboxes() {
+
+	    global $states, $years;
+
+	    // area of interest information
+	    $alum_box = new_cmb2_box( array(
+	        'id' => 'alum_info',
+	        'title' => 'Alumnus Details',
+	        'object_types' => array( 'alum' ), // post type
+	        'context' => 'normal',
+	        'priority' => 'high',
+	        'show_names' => true, // Show field names on the left
+	    ) );
+	    $alum_box->add_field( array(
+	        'name' => 'First Name',
+	        'id'   => $prefix . 'alum_name_first',
+	        'type' => 'text',
+	    ) );
+	    $alum_box->add_field( array(
+	        'name' => 'Last Name',
+	        'id'   => $prefix . 'alum_name_last',
+	        'type' => 'text',
+	    ) );
+	    $alum_box->add_field( array(
+	        'name' => 'Maiden Name',
+	        'id'   => $prefix . 'alum_name_maiden',
+	        'type' => 'text',
+	    ) );
+	    $alum_box->add_field( array(
+	        'name' => 'City',
+	        'id'   => $prefix . 'alum_city',
+	        'type' => 'text',
+	    ) );
+	    $alum_box->add_field( array(
+	        'name' => 'State',
+	        'id'   => $prefix . 'alum_state',
+	        'type' => 'select',
+	        'options' => $states,
+	        'default' => 0
+	    ) );
+	    $alum_box->add_field( array(
+	        'name' => 'Email',
+	        'id'   => $prefix . 'alum_email',
+	        'type' => 'text_email',
+	    ) );
+	    $alum_box->add_field( array(
+	        'name' => 'Type of Update',
+	        'id'   => $prefix . 'alum_category',
+	        'type' => 'select',
+	        'options' => array(
+	            'class-letter' => 'Class Letter',
+	            'obituary' => 'Obituary',
+	            'news' => 'News',
+	            'sightings' => 'Sightings'
+	        ),
+	        'default' => 'personal'
+	    ) );
+	    $alum_box->add_field( array(
+	        'name' => 'Class Year',
+	        'id'   => $prefix . 'alum_year',
+	        'type' => 'select',
+	        'options' => $years,
+	        'default' => date( 'Y' )
+	    ) );
+	    $alum_box->add_field( array(
+	        'name' => 'Submitted By',
+	        'id'   => $prefix . 'alum_submitter',
+	        'type' => 'text',
+	    ) );
+
+	}
+
+
 }
 
