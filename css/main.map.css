@@ -534,12 +534,12 @@ body {
         color: rgba(0, 0, 0, 0.8); }
   .menu-pane h4 {
     font-family: "Open Sans", sans-serif;
-    font-weight: 300;
+    font-weight: 600;
     text-transform: uppercase;
     font-size: .9em;
     letter-spacing: 1px;
     padding: 30px 10px 10px 10px;
-    color: #6c675c; }
+    color: #A91C3A; }
   .menu-pane .info-for a {
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
