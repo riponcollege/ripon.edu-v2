@@ -137,6 +137,12 @@ if ( is_ripon() || is_alumni() ) {
 	        'desc' => 'Include the Full URL (including "http(s)") to this People members website.'
 	    ) );
 	    $person_box->add_field( array(
+	        'name' => 'Publications',
+	        'id' => $prefix . 'person_publications',
+	        'type' => 'file',
+	        'desc' => 'Upload a publications PDF file.'
+	    ) );
+	    $person_box->add_field( array(
 	        'name' => 'CV/Resume',
 	        'id' => $prefix . 'person_cv',
 	        'type' => 'file',
