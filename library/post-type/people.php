@@ -138,7 +138,7 @@ if ( is_ripon() || is_alumni() ) {
 	    ) );
 	    $person_box->add_field( array(
 	        'name' => 'Publications',
-	        'id' => $prefix . 'person_publications',
+	        'id' => $prefix . 'person_publications_pdf',
 	        'type' => 'file',
 	        'desc' => 'Upload a publications PDF file.'
 	    ) );
