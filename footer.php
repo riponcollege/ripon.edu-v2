@@ -20,7 +20,7 @@
 				<?php if ( is_alumni() ) { ?>
 				<strong>Ripon College</strong><br>
 				300 W. Seward St. | Ripon, WI 54971<br>
-				920-738-8126 | <a href="mailto:alumni@ripon.edu">alumni@ripon.edu</a>
+				920-748-8126 | <a href="mailto:alumni@ripon.edu">alumni@ripon.edu</a>
 				<?php } else { ?>
 				<strong>Ripon College</strong><br>
 				300 W. Seward St.<br>

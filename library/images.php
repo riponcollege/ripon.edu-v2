@@ -129,3 +129,4 @@ function webp_upload_mimes($existing_mimes) {
 }
 add_filter( 'mime_types', 'webp_upload_mimes' );
 
+
