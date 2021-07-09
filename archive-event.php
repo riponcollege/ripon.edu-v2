@@ -63,6 +63,8 @@ $request = parse_query_string();
 
 <?php
 
+the_call_to_action();
+
 get_footer();
 
 ?>
