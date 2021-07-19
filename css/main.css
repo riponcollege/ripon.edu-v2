@@ -813,7 +813,8 @@ header {
         display: block;
         position: absolute;
         top: 35px;
-        left: 250px; } }
+        left: 250px;
+        right: 150px; } }
     .video-showcase-container .header-menu ul li {
       display: inline;
       position: relative; }
