@@ -18,7 +18,7 @@
 <?php wp_head(); ?>
 
 <?php if ( is_search() ) { ?><meta name="robots" content="noindex" /><?php } ?>
-<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=262" rel="stylesheet" type="text/css">
+<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=264" rel="stylesheet" type="text/css">
 
 <!-- Facebook Pixel Code -->
 <script>
@@ -102,15 +102,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	<?php wp_nav_menu( array( 'theme_location' => 'menu-main', 'menu_class' => 'nav-menu main-menu' ) ); ?>
 
-	<?php if ( !is_alumni() ) { ?>
-	<h4>Information For</h4>
-	<div class="info-for">
-		<?php wp_nav_menu( array( 'theme_location' => 'menu-info', 'menu_class' => 'nav-menu' ) ); ?>
-	</div>
-	<?php } ?>
+	<div class="menu-aux">
+		<?php if ( !is_alumni() ) { ?>
+		<div class="info-for">
+			<h4>Information For</h4>
+			<?php wp_nav_menu( array( 'theme_location' => 'menu-info', 'menu_class' => 'nav-menu' ) ); ?>
+		</div>
+		<?php } ?>
 
-	<div class="buttons">
-		<?php wp_nav_menu( array( 'theme_location' => 'menu-buttons', 'menu_class' => 'nav-menu' ) ); ?>
+		<div class="buttons">
+			<?php wp_nav_menu( array( 'theme_location' => 'menu-buttons', 'menu_class' => 'nav-menu' ) ); ?>
+		</div>
 	</div>
 </div>
 <div class="search-pane pane">
@@ -148,7 +150,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<div class="buttons">
 			<?php wp_nav_menu( array( 'theme_location' => 'menu-buttons', 'menu_class' => 'nav-menu' ) ); ?>
 		</div>
-
 
 	</header>
 		<?php 

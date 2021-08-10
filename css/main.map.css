@@ -435,6 +435,13 @@ body {
   .menu-pane.open {
     right: 0;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); }
+    @media only screen and (min-width: 1024px) {
+      .menu-pane.open .info-for, .menu-pane.open .buttons {
+        opacity: 1;
+        left: 50px; } }
+  @media only screen and (min-width: 1024px) {
+    .menu-pane {
+      overflow-y: visible; } }
   .menu-pane .close {
     position: absolute;
     top: 30px;
@@ -493,39 +500,29 @@ body {
         font-weight: 300; }
       .menu-pane .main-menu .sub-menu.open {
         display: block; }
-      @media only screen and (min-width: 768px) {
+      @media only screen and (min-width: 1024px) {
         .menu-pane .main-menu .sub-menu {
-          /*
-				opacity: 0;
-				position: fixed;
-				top: 102px;
-				right: 105%;
-				width: 400px;
-				transition: all 400ms ease-in-out;
-				display: block;
-				z-index: 11000;
-				border-top: 1px solid rgba( white, .2 );
-
-				a {
-					color: white;
-					text-align: right;
-					border-bottom: 1px solid rgba( white, .2 );
-					text-shadow: 0 0 10px rgba( black, .9 );
-					padding: 5px;
-				}
-				*/ }
+          opacity: 0;
+          position: fixed;
+          top: 102px;
+          right: 105%;
+          width: 350px;
+          transition: all 400ms ease-in-out;
+          display: block;
+          z-index: 11000;
+          border-top: 0; }
+          .menu-pane .main-menu .sub-menu a {
+            color: white;
+            text-align: right;
+            border-bottom: 0;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+            padding: 5px; }
           .menu-pane .main-menu .sub-menu.open {
-            /*
-					opacity: 1;
-					right: 330px;
-					*/
-            display: block; }
+            opacity: 1;
+            right: 330px; }
             .menu-pane .main-menu .sub-menu.open a {
-              color: #434039;
-              text-align: left;
-              text-shadow: none;
               padding: 5px 10px;
-              border-bottom: 1px solid rgba(67, 64, 57, 0.2); } }
+              border-bottom: 0; } }
       @media only screen and (min-width: 1100px) {
         .menu-pane .main-menu .sub-menu.open {
           right: 28%; } }
@@ -546,7 +543,23 @@ body {
       .menu-pane .buttons li a:hover {
         border: 2px solid rgba(0, 0, 0, 0.8);
         color: rgba(0, 0, 0, 0.8); }
-  .menu-pane h4 {
+    @media only screen and (min-width: 1024px) {
+      .menu-pane .buttons {
+        position: fixed;
+        bottom: 80px;
+        left: -400px;
+        z-index: 12000;
+        width: 300px;
+        opacity: 0;
+        transition: all 400ms ease-in-out; }
+        .menu-pane .buttons li a {
+          color: rgba(255, 255, 255, 0.5);
+          border: 2px solid rgba(255, 255, 255, 0.5);
+          background: rgba(0, 0, 0, 0.3); }
+          .menu-pane .buttons li a:hover {
+            color: white;
+            border: 2px solid white; } }
+  .menu-pane .info-for h4 {
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
     text-transform: uppercase;
@@ -555,13 +568,30 @@ body {
     padding: 30px 10px 10px 10px;
     color: #A91C3A; }
   .menu-pane .info-for a {
+    display: block;
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
     font-size: 1.1em;
-    display: block;
     color: #434039;
     text-decoration: none;
     padding: 6px 10px; }
+  @media only screen and (min-width: 1024px) {
+    .menu-pane .info-for {
+      position: fixed;
+      top: 80px;
+      left: -400px;
+      z-index: 12000;
+      width: 300px;
+      opacity: 0;
+      transition: all 400ms ease-in-out; }
+      .menu-pane .info-for h4 {
+        color: rgba(255, 255, 255, 0.4);
+        text-shadow: 0 0 20px rgba(0, 0, 0, 0.9); }
+      .menu-pane .info-for li a {
+        color: rgba(255, 255, 255, 0.6);
+        text-shadow: 0 0 20px rgba(0, 0, 0, 0.8); }
+        .menu-pane .info-for li a:hover {
+          color: rgba(255, 255, 255, 0.9); } }
 
 .menu-photo {
   position: fixed;
@@ -667,11 +697,11 @@ header {
     @media only screen and (min-width: 1220px) {
       header .slogan {
         left: 250px; } }
-  header .buttons {
+  header > .buttons {
     display: none; }
-    header .buttons li {
+    header > .buttons li {
       display: inline; }
-      header .buttons li a {
+      header > .buttons li a {
         display: inline-block;
         color: rgba(255, 255, 255, 0.8);
         text-transform: uppercase;
@@ -682,27 +712,27 @@ header {
         font-size: 16.5px;
         line-height: 25px;
         border-bottom: 2px dotted rgba(255, 255, 255, 0.2); }
-        header .buttons li a:hover {
+        header > .buttons li a:hover {
           color: white;
           border-bottom: 2px dotted white; }
     @media only screen and (min-width: 768px) {
-      header .buttons {
+      header > .buttons {
         display: block;
         position: absolute;
         right: 150px;
         top: 24px; } }
     @media only screen and (min-width: 1220px) {
-      header .buttons {
+      header > .buttons {
         right: 250px; }
-        header .buttons li a {
+        header > .buttons li a {
           margin: 0 35px;
           padding: 5px 10px;
           letter-spacing: 2px; } }
     @media only screen and (min-width: 1440px) {
-      header .buttons {
+      header > .buttons {
         right: 300px; } }
     @media only screen and (min-width: 1680px) {
-      header .buttons {
+      header > .buttons {
         right: 420px; } }
   header .search-show {
     background: url(../img/icon-search-white.webp) center center no-repeat;
@@ -892,7 +922,7 @@ header {
         .video-showcase-container header.video:after {
           width: 170px;
           height: 90px; } }
-    .video-showcase-container header.video .buttons {
+    .video-showcase-container header.video > .buttons {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -901,35 +931,35 @@ header {
       margin-left: -100px;
       display: block; }
       @media only screen and (min-width: 768px) {
-        .video-showcase-container header.video .buttons {
+        .video-showcase-container header.video > .buttons {
           width: 300px;
           margin-left: -150px; } }
       @media only screen and (min-width: 1220px) {
-        .video-showcase-container header.video .buttons {
+        .video-showcase-container header.video > .buttons {
           margin-top: -83px;
           margin-left: -200px;
           width: 400px; } }
-      .video-showcase-container header.video .buttons li {
+      .video-showcase-container header.video > .buttons li {
         display: block;
         margin-bottom: 8px; }
         @media only screen and (min-width: 768px) {
-          .video-showcase-container header.video .buttons li {
+          .video-showcase-container header.video > .buttons li {
             margin-bottom: 10px; } }
-        .video-showcase-container header.video .buttons li:first-child a {
+        .video-showcase-container header.video > .buttons li:first-child a {
           background: #0094E3; }
-          .video-showcase-container header.video .buttons li:first-child a:hover {
+          .video-showcase-container header.video > .buttons li:first-child a:hover {
             background: #00a5fd; }
-        .video-showcase-container header.video .buttons li a {
+        .video-showcase-container header.video > .buttons li a {
           font-family: "Open Sans", sans-serif;
           font-weight: 700;
           display: block;
           text-align: center;
           border: 2px solid white;
           transition: 400ms all ease-in-out; }
-          .video-showcase-container header.video .buttons li a:hover {
+          .video-showcase-container header.video > .buttons li a:hover {
             background: rgba(255, 255, 255, 0.2); }
           @media only screen and (min-width: 1220px) {
-            .video-showcase-container header.video .buttons li a {
+            .video-showcase-container header.video > .buttons li a {
               font-size: 1.2em;
               padding: 10px 25px; } }
 
