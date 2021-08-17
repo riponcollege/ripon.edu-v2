@@ -2617,7 +2617,8 @@ section.content {
         padding: 50px 20px; } }
     @media only screen and (min-width: 1024px) {
       .hours .hours-inner {
-        width: 30%; } }
+        width: 30%;
+        padding: 50px 30px; } }
     @media only screen and (min-width: 1440px) {
       .hours .hours-inner {
         width: 25%; } }
