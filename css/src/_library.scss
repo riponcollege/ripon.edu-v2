@@ -17,7 +17,6 @@
 		background: url(../img/bg-hours.webp) center center no-repeat;
 		background-size: cover;
 		color: white;
-		text-align: center;
 		padding: 20px;
 
 		@include respond-to( 900px ) {
@@ -36,6 +35,7 @@
 		.day {
 			text-shadow: 0 0 15px rgba( black, .5 );
 			font-size: .85em;
+			display: flex;
 
 			@include respond-to( 1440px ) {
 				font-size: .95em;
@@ -43,8 +43,12 @@
 
 			span {
 				opacity: .9;
-				padding-left: 20px;
 				@include font-bold;
+				flex: 1;
+
+				&:nth-child( 2 ) {
+					text-align: right;
+				}
 			}
 		}
 
@@ -54,6 +58,13 @@
 			font-size: 2.5em;
 			line-height: 1.2em;
 			text-shadow: 0 0 15px rgba( black, .5 );
+			margin-bottom: 20px;
+			text-align: center;
+		}
+
+		.contact {
+			text-align: center;
+			margin-top: 10px;
 		}
 	}
 

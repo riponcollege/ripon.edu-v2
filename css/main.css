@@ -2610,7 +2610,6 @@ section.content {
     background: url(../img/bg-hours.webp) center center no-repeat;
     background-size: cover;
     color: white;
-    text-align: center;
     padding: 20px; }
     @media only screen and (min-width: 900px) {
       .hours .hours-inner {
@@ -2624,22 +2623,30 @@ section.content {
         width: 25%; } }
     .hours .hours-inner .day {
       text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-      font-size: .85em; }
+      font-size: .85em;
+      display: flex; }
       @media only screen and (min-width: 1440px) {
         .hours .hours-inner .day {
           font-size: .95em; } }
       .hours .hours-inner .day span {
         opacity: .9;
-        padding-left: 20px;
         font-family: "Open Sans", sans-serif;
-        font-weight: 700; }
+        font-weight: 700;
+        flex: 1; }
+        .hours .hours-inner .day span:nth-child(2) {
+          text-align: right; }
     .hours .hours-inner .status {
       font-family: "Open Sans", sans-serif;
       font-weight: 700;
       text-transform: uppercase;
       font-size: 2.5em;
       line-height: 1.2em;
-      text-shadow: 0 0 15px rgba(0, 0, 0, 0.5); }
+      text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+      text-align: center; }
+    .hours .hours-inner .contact {
+      text-align: center;
+      margin-top: 10px; }
   .hours .library-search {
     opacity: .85;
     background-color: #eee;
