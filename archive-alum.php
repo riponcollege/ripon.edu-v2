@@ -5,7 +5,7 @@
 
 get_header(); 
 
-$base_url = '/rconnections';
+$base_url = '/rconnections/';
 
 $current_yr = ( isset( $_REQUEST['y'] ) ? $_REQUEST['y'] : 0 );
 $current_cat = ( isset( $_REQUEST['c'] ) ? $_REQUEST['c'] : 0 );
