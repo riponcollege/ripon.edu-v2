@@ -8,40 +8,40 @@ AmCharts.ready(function() {
     // Counselors and Links
     // Counselor Territory 1
     var counselorT1 = "Emily Ingemann";
-    var territory1 = counselorT1.link("http://www.ripon.edu/ingemanne");
+    var territory1 = counselorT1.link("https://ripon.edu/bio/ingemanne");
     // Counselor Territory 2
     var counselorT2 = "Sarah Quella";
-    var territory2 = counselorT2.link("http://www.ripon.edu/quellas");
+    var territory2 = counselorT2.link("https://ripon.edu/bio/quellas");
     // Counselor Territory 3
     var counselorT3 = "Eliza Stephenson";
-    var territory3 = counselorT3.link("http://www.ripon.edu/stephensone");
+    var territory3 = counselorT3.link("https://ripon.edu/bio/stephensone");
     // Counselor Territory 4
     var counselorT4 = "John Huegel";
-    var territory4 = counselorT4.link("http://www.ripon.edu/huegelj");
+    var territory4 = counselorT4.link("https://ripon.edu/bio/huegelj");
     // Counselor Territory 5
     var counselorT5 = "John Ingemann";
-    var territory5 = counselorT5.link("http://www.ripon.edu/ingemannj");
+    var territory5 = counselorT5.link("https://ripon.edu/bio/ingemannj");
     // Counselor Territory 7
     var counselorT7 = "Lyn McCarthy";
-    var territory7 = counselorT7.link("http://www.ripon.edu/mccarthyl");
+    var territory7 = counselorT7.link("https://ripon.edu/bio/mccarthyl");
     // Counselor Territory 8
     var counselorT8 = "Vacant";
-    var territory8 = counselorT8.link("http://www.ripon.edu/");
+    var territory8 = counselorT8.link("https://ripon.edu/");
     // Counselor Territory 9
     var counselorT9 = "Jennifer Machacek";
-    var territory9 = counselorT9.link("http://www.ripon.edu/machacekj");
+    var territory9 = counselorT9.link("https://ripon.edu/bio/machacekj");
     // Counselor Territory 10
     var counselorT10 = "Leigh Mlodzik";
-    var territory10 = counselorT10.link("http://www.ripon.edu/mlodzikl");
+    var territory10 = counselorT10.link("https://ripon.edu/bio/mlodzikl");
     // Counselor Territory 11
     var counselorT11 = "Hannah Erdman";
-    var territory11 = counselorT11.link("http://www.ripon.edu/erdmanh");
+    var territory11 = counselorT11.link("https://ripon.edu/bio/erdmanh");
     // Counselor Territory 12
     var counselorT12 = "Maddie McCoy";
-    var territory12 = counselorT12.link("https://www.ripon.edu/mccoym/");
+    var territory12 = counselorT12.link("https://ripon.edu/bio/mccoym/");
     // Counselor Territory 13
     var counselorT13 = "Jill Cardinal";
-    var territory13 = counselorT13.link("http://www.ripon.edu/cardinalj");
+    var territory13 = counselorT13.link("https://ripon.edu/bio/cardinalj");
 
     // set path to images
     map.pathToImages = "/wp-content/themes/ripon/img/map/";
