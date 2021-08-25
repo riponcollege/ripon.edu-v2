@@ -69,39 +69,39 @@ if ( is_alumni() ) {
 	    ) );
 	    $alum_box->add_field( array(
 	        'name' => 'First Name',
-	        'id'   => $prefix . 'alum_name_first',
+	        'id'   => CMB_PREFIX . 'alum_name_first',
 	        'type' => 'text',
 	    ) );
 	    $alum_box->add_field( array(
 	        'name' => 'Last Name',
-	        'id'   => $prefix . 'alum_name_last',
+	        'id'   => CMB_PREFIX . 'alum_name_last',
 	        'type' => 'text',
 	    ) );
 	    $alum_box->add_field( array(
 	        'name' => 'Maiden Name',
-	        'id'   => $prefix . 'alum_name_maiden',
+	        'id'   => CMB_PREFIX . 'alum_name_maiden',
 	        'type' => 'text',
 	    ) );
 	    $alum_box->add_field( array(
 	        'name' => 'City',
-	        'id'   => $prefix . 'alum_city',
+	        'id'   => CMB_PREFIX . 'alum_city',
 	        'type' => 'text',
 	    ) );
 	    $alum_box->add_field( array(
 	        'name' => 'State',
-	        'id'   => $prefix . 'alum_state',
+	        'id'   => CMB_PREFIX . 'alum_state',
 	        'type' => 'select',
 	        'options' => $states,
 	        'default' => 0
 	    ) );
 	    $alum_box->add_field( array(
 	        'name' => 'Email',
-	        'id'   => $prefix . 'alum_email',
+	        'id'   => CMB_PREFIX . 'alum_email',
 	        'type' => 'text_email',
 	    ) );
 	    $alum_box->add_field( array(
 	        'name' => 'Type of Update',
-	        'id'   => $prefix . 'alum_category',
+	        'id'   => CMB_PREFIX . 'alum_category',
 	        'type' => 'select',
 	        'options' => array(
 	            'class-letter' => 'Class Letter',
@@ -113,14 +113,14 @@ if ( is_alumni() ) {
 	    ) );
 	    $alum_box->add_field( array(
 	        'name' => 'Class Year',
-	        'id'   => $prefix . 'alum_year',
+	        'id'   => CMB_PREFIX . 'alum_year',
 	        'type' => 'select',
 	        'options' => $years,
 	        'default' => date( 'Y' )
 	    ) );
 	    $alum_box->add_field( array(
 	        'name' => 'Submitted By',
-	        'id'   => $prefix . 'alum_submitter',
+	        'id'   => CMB_PREFIX . 'alum_submitter',
 	        'type' => 'text',
 	    ) );
 
