@@ -8,7 +8,6 @@ function theme_scripts() {
 add_action( 'wp_enqueue_scripts', 'theme_scripts' );
 
 
-
 // parse the query string
 function parse_query_string() {
 	$url_parts = wp_parse_url( $_SERVER['REQUEST_URI'] );
@@ -17,10 +16,10 @@ function parse_query_string() {
 }
 
 
-
 // pagination
 function pagination( $prev = '&laquo;', $next = '&raquo;' ) {
     global $wp_query, $wp_rewrite;
 
     echo '<div class="pagination">' . paginate_links() . '</div>';
 }
+
