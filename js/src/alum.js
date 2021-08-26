@@ -18,7 +18,7 @@ jQuery(document).ready(function($){
 	});
 
 	$('.alum-back').on( 'click', function(){
-		location.href = '/alumni/';
+		location.href = '/';
 	});
 
 	$('.alum-reset').on( 'click', function(){
