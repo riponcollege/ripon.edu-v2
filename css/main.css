@@ -1425,6 +1425,34 @@ body.cta-active {
       right: 30px;
       bottom: 30px; } }
 
+.counselor-state {
+  margin-top: 20px;
+  border: 3px solid rgba(67, 64, 57, 0.2);
+  padding: 20px;
+  font-family: "Hepta Slab", serif;
+  font-weight: 600; }
+  .counselor-state select {
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    margin-top: 7px; }
+
+.counselors .counselor {
+  display: flex;
+  border: 3px solid #EBEAE9;
+  margin-top: 5px; }
+  .counselors .counselor .counselor-photo {
+    width: 150px; }
+    .counselors .counselor .counselor-photo img {
+      display: block; }
+  .counselors .counselor .counselor-info {
+    flex: 1;
+    flex-basis: 120px;
+    padding: 20px; }
+    .counselors .counselor .counselor-info p {
+      padding: 0; }
+
 footer {
   zoom: 1;
   background: #6A0A1B;

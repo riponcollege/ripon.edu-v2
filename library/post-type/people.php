@@ -87,6 +87,9 @@ if ( is_ripon() || is_alumni() ) {
 	add_action( 'cmb2_admin_init', 'person_metaboxes' );
 	function person_metaboxes() {
 
+		// get the counselor states
+		global $states_counselor;
+
 		// Start with an underscore to hide fields from custom fields list
 		$prefix = '_p_';
 
@@ -147,6 +150,13 @@ if ( is_ripon() || is_alumni() ) {
 	        'id' => $prefix . 'person_cv',
 	        'type' => 'file',
 	        'desc' => 'Upload a CV/Resume file.'
+	    ) );
+	    $person_box->add_field( array(
+	        'name' => 'Counselor Regions',
+	        'id' => $prefix . 'person_states',
+	        'type' => 'multicheck_inline',
+	        'desc' => 'Check the states/territories this person is an admission counselor for (if applicable).',
+	        'options' => $states_counselor,
 	    ) );
 
 	}
@@ -239,7 +249,6 @@ if ( is_ripon() || is_alumni() ) {
 
 		if ( !empty( $id ) ) {
 
-
 			// set some query vars
 			$person = get_post( $id );
 
@@ -265,7 +274,68 @@ if ( is_ripon() || is_alumni() ) {
 		}
 	}
 	add_shortcode( 'person', 'person_shortcode' );
+	
 
+	// get people by category
+	function get_people_by_category( $category ) {
+		return get_posts( array(
+			'post_type' => 'people',
+			'posts_per_page' => -1,
+			'tax_query' => array(
+		        array(
+		            'taxonomy' => 'people_cat',
+		            'field'    => 'slug',
+		            'terms'    => $category
+		        )
+		    )
+		) );
+	}
+
+
+	// get the counselor dropdown and filtering features
+	function shortcode_counselors() {
+
+		// get the counselor states/territories
+		global $states_counselor;
+
+		// start building the dropdown
+		$counselors_dropdown = "<div class='counselor-state'><label>Select a State/Territory:</label> <select class='counselor-state-select'>";
+		$counselors_dropdown .= "<option value='0'>-- All Counselors --</option>";
+
+		// loop through the states/territories and generate the options
+		foreach ( $states_counselor as $counselor_state_key => $counselor_state_name ) {
+			$counselors_dropdown .= "<option value='" . $counselor_state_key . "'>" . $counselor_state_name . "</option>";
+		}
+
+		// end the counselors dropdown
+		$counselors_dropdown .= "</select></div>";
+
+		// start a people listing to filter based on the dropdown selection
+		$counselors_dropdown .= "<div class='counselors'>";
+
+		// get the counselors
+		$counselors = get_people_by_category( 'admission-counselor' );
+
+		// start generating the code to output the counselors
+		foreach ( $counselors as $a_counselor ) {
+
+			// get the states for this person
+			$states = get_cmb_value( 'person_states', $a_counselor->ID );
+
+			// start the output of this person's information
+			$counselors_dropdown .= "<div class='counselor'" . ( !empty( $states ) ? " data-states='" . implode( $states, ',' ) . "'" : '' ) . "><div class='counselor-photo'>" . get_the_post_thumbnail( $a_counselor->ID ) . "</div><div class='counselor-info'><h3>" . $a_counselor->post_title . "</h3><p>" . get_cmb_value( 'person_phone', $a_counselor->ID ) . "</p><p><a href='mailto:" . get_cmb_value( 'person_email', $a_counselor->ID ) . "'>" . get_cmb_value( 'person_email', $a_counselor->ID ) . "</a></p></div></div>";
+
+		}
+
+		// end the admission-counselors content area
+		$counselors_dropdown .= "</div>";
+
+		// return the counselor dropdown
+		return $counselors_dropdown;
+
+	}
+	add_shortcode( 'counselors', 'shortcode_counselors' );
 
 }
+
 
