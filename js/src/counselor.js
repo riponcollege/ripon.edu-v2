@@ -22,31 +22,41 @@ jQuery(document).ready(function($){
 				// loop through the counselors and check if the selected state is in the 'data-states' attribute
 				$( '.counselors .counselor' ).each(function(){
 
+					// store the counselor
 					var $counselor = $(this);
 
-					// split the states into an array
-					var states = $counselor.data('states').split(',');
-
-					// hide this counselor until we know if the selected state is theirs
-				 	$counselor.css( 'display', 'none' );
+					// store the states data
+					var states = $counselor.data('states');
 
 				 	// if there are states selected for this counselor
 				 	if ( states.length > 0 ) {
 
-					 	// loop through the states
-					 	$.each( states, function( index, value ){
+				 		// if the states contain a comma
+						if ( states.match( ',' ) ) {
 
-					 		// if this state matches the selection
-					 		if ( value == state ) {
+							// split the states into an array
+							var states_array = states.split(',');
 
-					 			// show the counselor
-					 			$counselor.css( 'display', 'flex' );
+							// hide this counselor until we know if the selected state is theirs
+						 	$counselor.css( 'display', 'none' );
 
-					 		}
+						 	// loop through the states
+						 	$.each( states_array, function( index, value ){
 
-					 	});
+						 		// if this state matches the selection
+						 		if ( value == state ) {
+
+						 			// show the counselor
+						 			$counselor.css( 'display', 'flex' );
+
+						 		}
+
+						 	});
+
+						}
 
 				 	}
+
 				});
 
 			}
