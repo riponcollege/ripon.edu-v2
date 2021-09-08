@@ -323,7 +323,7 @@ if ( is_ripon() || is_alumni() ) {
 			$states = get_cmb_value( 'person_states', $a_counselor->ID );
 
 			// start the output of this person's information
-			$counselors_dropdown .= "<div class='counselor'" . ( !empty( $states ) ? " data-states='" . implode( $states, ',' ) . "'" : '' ) . "><div class='counselor-photo'>" . get_the_post_thumbnail( $a_counselor->ID ) . "</div><div class='counselor-info'><h3>" . $a_counselor->post_title . "</h3><p>" . get_cmb_value( 'person_phone', $a_counselor->ID ) . "</p><p><a href='mailto:" . get_cmb_value( 'person_email', $a_counselor->ID ) . "'>" . get_cmb_value( 'person_email', $a_counselor->ID ) . "</a></p></div></div>";
+			$counselors_dropdown .= "<div class='counselor'" . ( !empty( $states ) ? " data-states='" . implode( $states, ',' ) . "'" : '' ) . "><div class='counselor-photo'><a href='/bio/" . $a_counselor->post_name . "'>" . get_the_post_thumbnail( $a_counselor->ID ) . "</a></div><div class='counselor-info'><h3><a href='/bio/" . $a_counselor->post_name . "'>" . $a_counselor->post_title . "</a></h3><p>" . get_cmb_value( 'person_phone', $a_counselor->ID ) . "</p><p><a href='mailto:" . get_cmb_value( 'person_email', $a_counselor->ID ) . "'>" . get_cmb_value( 'person_email', $a_counselor->ID ) . "</a></p></div></div>";
 
 		}
 
