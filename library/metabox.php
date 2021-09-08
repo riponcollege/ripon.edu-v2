@@ -109,6 +109,7 @@ $states_counselor = array(
     'ID'=>'Idaho',
     'IL'=>'Illinois',
     'IN'=>'Indiana',
+    'INT'=>'International',
     'IA'=>'Iowa',
     'KS'=>'Kansas',
     'KY'=>'Kentucky',
