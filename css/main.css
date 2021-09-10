@@ -1443,12 +1443,12 @@ body.cta-active {
   border: 3px solid #EBEAE9;
   margin-top: 5px; }
   .counselors .counselor .counselor-photo {
-    width: 150px; }
+    width: 170px;
+    padding: 20px 0 20px 20px; }
     .counselors .counselor .counselor-photo img {
       display: block; }
   .counselors .counselor .counselor-info {
     flex: 1;
-    flex-basis: 120px;
     padding: 20px; }
     .counselors .counselor .counselor-info p {
       padding: 0; }
