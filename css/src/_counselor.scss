@@ -37,6 +37,13 @@
 			p {
 				padding: 0;
 			}
+
+			.states {
+				padding-top: 10px;
+				font-size: .9em;
+				font-style: italic;
+				color: rgba( $grey, .7 );
+			}
 		}
 	}
 }

@@ -1452,6 +1452,11 @@ body.cta-active {
     padding: 20px; }
     .counselors .counselor .counselor-info p {
       padding: 0; }
+    .counselors .counselor .counselor-info .states {
+      padding-top: 10px;
+      font-size: .9em;
+      font-style: italic;
+      color: rgba(67, 64, 57, 0.7); }
 
 footer {
   zoom: 1;
