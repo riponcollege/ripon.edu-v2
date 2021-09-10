@@ -12,6 +12,9 @@ jQuery(document).ready(function($){
 			// store the selected state
 			var state = $(this).val();
 
+			// whenever we change states, hide all counselors first.
+			$( '.counselors .counselor').css( 'display', 'none' );
+
 			// if they selected 'all counselors'
 			if ( state == 0 ) {
 
@@ -52,6 +55,16 @@ jQuery(document).ready(function($){
 						 		}
 
 						 	});
+
+						} else {
+
+							// since we don't have a comma in the state, lets just check and see if its value matches the selected state.
+							if ( states == state ) {
+
+					 			// show the counselor
+					 			$counselor.css( 'display', 'flex' );
+
+							}
 
 						}
 
