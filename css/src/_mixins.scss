@@ -4,6 +4,11 @@
     @media only screen and (min-width: $breakpoint) { @content; }
 }
 
+// responsive width-height mixin
+@mixin respond-to-wh( $width, $height ) {
+    @media only screen and (min-width: $width) and (min-height: $height) { @content; }
+}
+
 
 // Clearfix mixin
 @mixin clearfix {
