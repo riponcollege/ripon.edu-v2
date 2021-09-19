@@ -412,12 +412,43 @@ function area_metaboxes() {
         	'textarea_rows' => 7
         )
     ) );
-    $area_box->add_field( array(
-        'name' => 'Events Schedule',
-        'id' => CMB_PREFIX . 'area_events',
+
+
+    // tab metabox
+    $tab_metabox = new_cmb2_box( array(
+        'id' => 'tab_metabox',
+        'title' => 'Tab Boxes',
+        'desc' => 'Boxes of content that are accessed via tabs on the left column.',
+        'object_types' => array( 'area' ), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+    ) );
+
+    $tab_metabox_group = $tab_metabox->add_field( array(
+        'id' => CMB_PREFIX . 'tab',
+        'type' => 'group',
+        'options' => array(
+            'add_button' => __('Add Tab', 'cmb'),
+            'remove_button' => __('Remove Tab', 'cmb'),
+            'group_title'   => __( 'Tab {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+            'sortable' => true, // beta
+        )
+    ) );
+
+    $tab_metabox->add_group_field( $tab_metabox_group, array(
+        'name' => 'Title',
+        'id'   => 'title',
+        'type' => 'text',
+        'sanitization_cb' => false
+    ) );
+
+    $tab_metabox->add_group_field( $tab_metabox_group, array(
+        'name' => 'Content',
+        'id'   => 'content',
         'type' => 'wysiwyg',
-        'options' => array (
-        	'textarea_rows' => 7
+        'show_names' => false,
+        'options' => array(
+            'textarea_rows' => 10
         )
     ) );
 
