@@ -412,6 +412,14 @@ function area_metaboxes() {
         	'textarea_rows' => 7
         )
     ) );
+    $area_box->add_field( array(
+        'name' => 'Events Schedule',
+        'id' => CMB_PREFIX . 'area_events',
+        'type' => 'wysiwyg',
+        'options' => array (
+        	'textarea_rows' => 7
+        )
+    ) );
 
 }
 
