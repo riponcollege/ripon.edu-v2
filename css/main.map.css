@@ -1667,6 +1667,11 @@ section.content {
     background: #6A0A1B;
     color: white; }
 
+.content-style .notice, .two-column .right-column .notice, .content-wide .notice, .area .tab-content .notice, .bio .bio-content .notice {
+  border-left: 5px solid #00a0df;
+  background-color: #f8f8f8;
+  padding: 15px; }
+
 .section-content {
   padding: 20px; }
   @media only screen and (min-width: 768px) {
