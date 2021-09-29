@@ -27,9 +27,9 @@ get_header();
 						$end = get_cmb_value( 'event_end' );
 						if ( date( 'Ymd', $start ) != date( 'Ymd', $end ) ) {
 							print "<h4>" . date( "F jS g:i a", $start ) . " - ";
-							print date( "F jS g:i a", $end ) . "</h4>";
+							print date( "F jS g:i a", $end ) . ( has_cmb_value( 'event_location' ) ? " @ " . get_cmb_value( 'event_location' ) : '' ) . "</h4>";
 						} else {
-							print "<h4>" . date( "F jS", $start ) . ( !$is_all_day ? ': ' . date( "g:i a", $start ) . " - " . date( "g:i a", $end ) : '' ) . "</h4>";
+							print "<h4>" . date( "F jS", $start ) . ( !$is_all_day ? ': ' . date( "g:i a", $start ) . " - " . date( "g:i a", $end ) : '' ) . ( has_cmb_value( 'event_location' ) ? " @ " . get_cmb_value( 'event_location' ) : '' ) . "</h4>";
 						}
 					}
 					?>
