@@ -44,6 +44,27 @@
 }
 
 
+.event-search-form {
+	@include clearfix;
+	margin-bottom: 10px;
+
+	.event-search-text {
+		@include font;
+		font-size: 17px;
+		line-height: 25px;
+		padding: 8px;
+		float: left;
+		width: 150px;
+	}
+
+	.event-search-button {
+		padding: 15px 25px !important;
+		float: left;
+		margin-left: -5px;
+	}
+}
+
+
 .month-nav {
 	padding: 7px 10px;
 	background: $grey;

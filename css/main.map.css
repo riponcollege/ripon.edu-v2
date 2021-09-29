@@ -2855,6 +2855,27 @@ section.content {
       flex: 1;
       flex-basis: 80%; } }
 
+.event-search-form {
+  zoom: 1;
+  margin-bottom: 10px; }
+  .event-search-form:before, .event-search-form:after {
+    content: "";
+    display: table; }
+  .event-search-form, .event-search-form:before, .event-search-form:after {
+    clear: both; }
+  .event-search-form .event-search-text {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 25px;
+    padding: 8px;
+    float: left;
+    width: 150px; }
+  .event-search-form .event-search-button {
+    padding: 15px 25px !important;
+    float: left;
+    margin-left: -5px; }
+
 .month-nav {
   padding: 7px 10px;
   background: #434039;

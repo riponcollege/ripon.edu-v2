@@ -20,10 +20,10 @@ $request = parse_query_string();
 	<div id="content" class="wrap content-wide" role="main">
 
 		<h3>Search All Events</h3>
-		<form role="search" method="get" id="searchform" class="searchform" action="/" _lpchecked="1">
-			<input type="text" value="<?php print ( isset( $_REQUEST['s'] ) ? strip_tags( $_REQUEST['s'] ) : '' ) ?>" name="s" id="s" placeholder="Search">
+		<form role="search" method="get" id="searchform" class="searchform event-search-form" action="/" _lpchecked="1">
+			<input type="text" value="<?php print ( isset( $_REQUEST['s'] ) ? strip_tags( $_REQUEST['s'] ) : '' ) ?>" name="s" id="s" placeholder="Search" class="event-search-text">
 			<input type="hidden" value="event" name="post_type">
-			<input type="submit" id="searchsubmit" value="Search Events" class="btn-arrow">
+			<input type="submit" id="searchsubmit" value="Search Events" class="btn-arrow event-search-button">
 		</form>
 		<hr>
 		<?php
