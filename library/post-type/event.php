@@ -258,7 +258,7 @@ function get_month_events( $m, $y, $category = 0 ) {
 
 
 
-function get_upcoming_events( $limit, $category = 0 ) {
+function get_upcoming_events( $limit, $category = 0, $category_exclude = 0 ) {
 
 	$timestamp_start = mktime( 0, 0, 0 );
 
@@ -306,6 +306,29 @@ function get_upcoming_events( $limit, $category = 0 ) {
 				'operator' => 'NOT IN',
 			),
 		);
+	}
+
+	// if there's a category to exclude
+	if ( !empty( $category_exclude ) ) {
+
+		// separate the categories we want to exclude into an array
+		$categories_exclude = explode( ',', $category_exclude );
+
+		// build an exclude query
+		$exclude_query = array(
+			'taxonomy' => 'event_cat',
+			'field'    => 'slug',
+			'terms'    => $categories_exclude,
+			'operator' => 'NOT IN'
+		);
+
+		if ( !isset( $args['tax_query'] ) ) {
+			$args['tax_query'] = array();
+		}
+
+		// if we already have a tax_query, we have to tell WP the relation
+		array_push( $args['tax_query'], $exclude_query );
+
 	}
 
 	$event_query = new WP_Query( $args );
@@ -657,13 +680,14 @@ function events_shortcode( $event_atts ) {
 	$a = shortcode_atts( array(
 		'limit' => 5,
 		'category' => 0,
+		'category_exclude' => 0,
 		'show_excerpt' => 0,
 		'display' => 'list'
 	), $event_atts );
 
 
 	// get the events
-	$events = get_upcoming_events( $a['limit'], $a['category'] );
+	$events = get_upcoming_events( $a['limit'], $a['category'], $a['category_exclude'] );
 
 	// start an empty event.
 	$list = '';
