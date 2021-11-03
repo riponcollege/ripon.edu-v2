@@ -3003,6 +3003,8 @@ section.content {
       padding: 4px 0; }
     .event-list .event .event-excerpt {
       font-size: .9em; }
+      .event-list .event .event-excerpt .btn {
+        margin-top: 7px; }
 
 .map {
   height: 350px; }
