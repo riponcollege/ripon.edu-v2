@@ -2962,7 +2962,8 @@ section.content {
   .event-list .event {
     position: relative;
     padding-left: 100px;
-    padding-bottom: 30px; }
+    padding-bottom: 30px;
+    min-height: 120px; }
     .event-list .event .event-date-month {
       position: absolute;
       left: 0;

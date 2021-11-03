@@ -192,10 +192,12 @@
 
 .event-list {
 	padding: 20px 0;
+
 	.event {
 		position: relative;
 		padding-left: 100px;
 		padding-bottom: 30px;
+		min-height: 120px;
 
 		.event-date-month {
 			position: absolute;
