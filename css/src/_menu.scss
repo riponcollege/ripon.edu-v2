@@ -301,6 +301,28 @@ body {
 				}
 			}
 
+			&.menu-item-has-children {
+				position: relative;
+
+				&:before {
+					content: "\2965";
+					position: absolute;
+					top: 5px;
+					right: 5px;
+					font-size: 20px;
+					color: white;
+				}
+
+				&.open:before {
+					content: "\2963";
+				}
+
+				a {
+					padding-right: 35px;
+				}
+			}
+
+
 			&.current_page_item > a {
 				border-left: 3px solid $orange;
 			}

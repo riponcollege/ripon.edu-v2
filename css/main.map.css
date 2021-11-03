@@ -634,6 +634,19 @@ body {
           padding: 6px 20px; } }
       .section-menu ul li a:hover {
         opacity: .8; }
+    .section-menu ul li.menu-item-has-children {
+      position: relative; }
+      .section-menu ul li.menu-item-has-children:before {
+        content: "\2965";
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 20px;
+        color: white; }
+      .section-menu ul li.menu-item-has-children.open:before {
+        content: "\2963"; }
+      .section-menu ul li.menu-item-has-children a {
+        padding-right: 35px; }
     .section-menu ul li.current_page_item > a {
       border-left: 3px solid #EA4D3D; }
     .section-menu ul li .sub-menu {
