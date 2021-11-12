@@ -258,19 +258,13 @@ function get_month_events( $m, $y, $category = 0 ) {
 
 
 
-function get_upcoming_events( $limit, $category = 0, $category_exclude = 0 ) {
+function get_upcoming_events( $limit, $category = 0, $category_exclude = 0, $show_past = 0 ) {
 
+	// the timestamp from which we should select events
 	$timestamp_start = mktime( 0, 0, 0 );
 
+	// put together the rest of the args array
 	$args = array(
-		'meta_query' => array(
-			'relation' => 'AND',
-			array(
-				'key' => '_p_event_start',
-				'value' => $timestamp_start,
-				'compare' => '>='
-			)
-		),
 		'post_type' => 'event',
 		'orderby' => 'meta_value_num',
 		'meta_key' => '_p_event_start',
@@ -278,8 +272,25 @@ function get_upcoming_events( $limit, $category = 0, $category_exclude = 0 ) {
 		'posts_per_page' => $limit
 	);
 
+	// if we're supposed to show the past events
+	if ( $show_past == 0 ) {
+		$args['meta_query'] = array(
+			'relation' => 'AND',
+			array(
+				'key' => '_p_event_start',
+				'value' => $timestamp_start,
+				'compare' => '>='
+			)
+		);
+	}
+
+	// if a category has been specified
 	if ( !empty( $category ) ) {
+
+		// split the categories to an array
 		$categories = explode( ',', $category );
+
+		// if we've got an array of categories to include
 		if ( is_string( $categories[0] ) ) {
 			$args['tax_query'] = array(
 				array(
@@ -297,15 +308,19 @@ function get_upcoming_events( $limit, $category = 0, $category_exclude = 0 ) {
 				)
 			);
 		}
-	} else {
+
+	} else if ( $category_exclude > 0 ) {
+
+		// if there are no category arguments, and we've got an exclude one
 		$args['tax_query'] = array(
 			array(
 				'taxonomy' => 'event_cat',
 				'field'    => 'slug',
 				'terms'    => 'exclude',
-				'operator' => 'NOT IN',
+				'operator' => 'NOT IN'
 			),
 		);
+
 	}
 
 	// if there's a category to exclude
@@ -682,12 +697,13 @@ function events_shortcode( $event_atts ) {
 		'category' => 0,
 		'category_exclude' => 0,
 		'show_excerpt' => 0,
-		'display' => 'list'
+		'display' => 'list',
+		'show_past' => 0
 	), $event_atts );
 
 
 	// get the events
-	$events = get_upcoming_events( $a['limit'], $a['category'], $a['category_exclude'] );
+	$events = get_upcoming_events( $a['limit'], $a['category'], $a['category_exclude'], $a['show_past'] );
 
 	// start an empty event.
 	$list = '';
