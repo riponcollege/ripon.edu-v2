@@ -209,3 +209,16 @@
 	}
 }
 
+
+.right-column #searchform {
+	#transl1 {
+		@include font;
+		padding: 7px 15px 8px;
+	}
+
+	select {
+		@include font;
+		padding: 8px 15px 7px;
+	}
+}
+
