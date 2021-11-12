@@ -1400,6 +1400,9 @@ header {
   font-weight: 300;
   padding: 8px 15px 7px; }
 
+.right-column #searchform input[type=submit] {
+  padding: 12px 15px; }
+
 body.cta-active {
   padding-bottom: 55px; }
   @media only screen and (min-width: 768px) {
