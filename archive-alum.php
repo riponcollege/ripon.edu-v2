@@ -279,17 +279,15 @@ if ( $query_yr || $query_cat || $query_search ) {
 					<?php
 
 				endwhile;
-				?>
-				<div class="group pagination">
-					<?php echo paginate_links(); ?>
-				</div>
-				<?php
 			else : ?>
 				<p>No results for that criteria. Try selecting fewer filters or changing your search term.</p>
 				<?php
 
 			endif;
 			?>
+			</div>
+			<div class="group pagination">
+				<?php echo paginate_links(); ?>
 			</div>
 
 		</div>
