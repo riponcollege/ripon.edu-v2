@@ -72,6 +72,10 @@ gtag('config', 'G-YVD4XWQ2P3');
 </script>
 <?php } ?>
 
+<!-- simpli.fi pixel -->
+<script async src='https://tag.simpli.fi/sifitag/cc2c15f0-40d8-013a-4f92-06abc14c0bc6'></script>
+<!-- end simpli.fi pixel -->
+
 <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
