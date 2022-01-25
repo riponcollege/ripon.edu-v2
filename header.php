@@ -18,7 +18,7 @@
 <?php wp_head(); ?>
 
 <?php if ( is_search() ) { ?><meta name="robots" content="noindex" /><?php } ?>
-<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=277" rel="stylesheet" type="text/css">
+<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=278" rel="stylesheet" type="text/css">
 
 <!-- Facebook Pixel Code -->
 <script>
@@ -71,6 +71,10 @@ gtag('js', new Date());
 gtag('config', 'G-YVD4XWQ2P3');
 </script>
 <?php } ?>
+
+<!-- simpli.fi pixel -->
+<script async src='https://tag.simpli.fi/sifitag/cc2c15f0-40d8-013a-4f92-06abc14c0bc6'></script>
+<!-- end simpli.fi pixel -->
 
 <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
