@@ -86,7 +86,7 @@
 	}
 
 	.front-events {
-		padding: 20px;
+		padding: 30px 20px;
 		background: $grey;
 		color: $grey-light;
 
@@ -110,6 +110,10 @@
 
 		@include respond-to( 1440px ) {
 			padding: 70px;
+		}
+
+		.event-list {
+			padding: 0;
 		}
 	}
 

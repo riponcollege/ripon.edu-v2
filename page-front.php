@@ -40,7 +40,8 @@ if ( !is_alumni() ) {
 		?>
 	</div>
 	<div class="front-events">
-		<?php print do_shortcode( '[events limit=4 /]' ); ?>
+		<?php print do_shortcode( '[events category="home-featured" limit=4 /]' ); ?>
+		<?php print do_shortcode( '[events limit=4 category_exclude="home-featured" /]' ); ?>
 		<div class="buttons">
 			<a href="/events" class="btn yellow large">View All Events</a>
 		</div>

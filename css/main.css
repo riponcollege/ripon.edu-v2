@@ -1096,7 +1096,7 @@ header {
       padding: 50px 70px; } }
 
 .front-columns .front-events {
-  padding: 20px;
+  padding: 30px 20px;
   background: #434039;
   color: #EBEAE9; }
   .front-columns .front-events a {
@@ -1114,6 +1114,8 @@ header {
   @media only screen and (min-width: 1440px) {
     .front-columns .front-events {
       padding: 70px; } }
+  .front-columns .front-events .event-list {
+    padding: 0; }
 
 .front-columns .buttons {
   padding: 20px 0;

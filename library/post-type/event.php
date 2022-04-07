@@ -284,6 +284,10 @@ function get_upcoming_events( $limit, $category = 0, $category_exclude = 0, $sho
 		);
 	}
 
+	if ( !empty( $category ) || $category_exclude > 0 ) {
+		$args['tax_query'] = array();
+	}
+
 	// if a category has been specified
 	if ( !empty( $category ) ) {
 
@@ -292,34 +296,18 @@ function get_upcoming_events( $limit, $category = 0, $category_exclude = 0, $sho
 
 		// if we've got an array of categories to include
 		if ( is_string( $categories[0] ) ) {
-			$args['tax_query'] = array(
-				array(
-					'taxonomy' => 'event_cat',
-					'field' => 'slug',
-					'terms' => $categories
-				)
+			$args['tax_query'][] = array(
+				'taxonomy' => 'event_cat',
+				'field' => 'slug',
+				'terms' => $categories
 			);
 		} else {
-			$args['tax_query'] = array(
-				array(
-					'taxonomy' => 'event_cat',
-					'field' => 'id',
-					'terms' => $categories
-				)
+			$args['tax_query'][] = array(
+				'taxonomy' => 'event_cat',
+				'field' => 'id',
+				'terms' => $categories
 			);
 		}
-
-	} else if ( $category_exclude > 0 ) {
-
-		// if there are no category arguments, and we've got an exclude one
-		$args['tax_query'] = array(
-			array(
-				'taxonomy' => 'event_cat',
-				'field'    => 'slug',
-				'terms'    => 'exclude',
-				'operator' => 'NOT IN'
-			),
-		);
 
 	}
 
@@ -330,19 +318,12 @@ function get_upcoming_events( $limit, $category = 0, $category_exclude = 0, $sho
 		$categories_exclude = explode( ',', $category_exclude );
 
 		// build an exclude query
-		$exclude_query = array(
+		$args['tax_query'][] = array(
 			'taxonomy' => 'event_cat',
 			'field'    => 'slug',
 			'terms'    => $categories_exclude,
 			'operator' => 'NOT IN'
 		);
-
-		if ( !isset( $args['tax_query'] ) ) {
-			$args['tax_query'] = array();
-		}
-
-		// if we already have a tax_query, we have to tell WP the relation
-		array_push( $args['tax_query'], $exclude_query );
 
 	}
 
@@ -630,7 +611,7 @@ function manage_event_columns( $column, $post_id ) {
 
 			/* If there is a duration, append 'minutes' to the text string. */
 			else
-				printf( date( 'n/j/Y @ g:ia', $start ) );
+				printf( date( 'Y-m-d @ g:ia', $start ) );
 
 			break;
 
@@ -646,7 +627,7 @@ function manage_event_columns( $column, $post_id ) {
 
 			/* If there is a duration, append 'minutes' to the text string. */
 			else
-				printf( date( 'n/j/Y @ g:ia', $end) );
+				printf( date( 'Y-m-d @ g:ia', $end) );
 
 			break;
 
