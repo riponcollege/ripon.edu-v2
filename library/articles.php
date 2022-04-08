@@ -10,6 +10,7 @@ function articles_shortcode( $atts ) {
 		'posts_per_page' => 4,
 		'feed' => '',
 		'post__not_in' => '',
+		'sort' => 'title',
 		'tag' => ''
 	), $atts );
 
@@ -71,7 +72,12 @@ function articles_shortcode( $atts ) {
 		if ( !empty( $a['cats']) ) {
 			$args['category_name'] = $a['cats'];
 		}
-		
+
+		if ( $a['sort'] == 'custom-sort' ) {
+			$args['orderby'] = 'meta_value';
+			$args['order'] = 'ASC';
+			$args['meta_key'] = 'custom-sort';
+		}
 
 		$query = new WP_Query( $args );
 
