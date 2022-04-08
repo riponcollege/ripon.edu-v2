@@ -73,7 +73,7 @@ function articles_shortcode( $atts ) {
 			$args['category_name'] = $a['cats'];
 		}
 
-		if ( $a['sort'] == 'custom-sort' ) {
+		if ( $a['sort'] == 'custom' ) {
 			$args['orderby'] = 'meta_value';
 			$args['order'] = 'ASC';
 			$args['meta_key'] = 'custom-sort';
