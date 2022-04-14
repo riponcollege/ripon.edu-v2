@@ -96,10 +96,22 @@ gtag('config', 'G-YVD4XWQ2P3');
 
 </head>
 <body <?php body_class(); ?>>
+<?php if ( is_ripon() ) { ?>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5Q9X26"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+<?php } ?>
+<?php if ( is_events() ) { ?>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCS5HW7JEF"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-VCS5HW7JEF');
+</script>
+<?php } ?>
 
 <div class="menu-pane pane">
 	<button class="close">Close</button>
