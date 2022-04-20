@@ -28,47 +28,51 @@ jQuery(document).ready(function($){
 					// store the counselor
 					var $counselor = $(this);
 
-					// store the states data
-					var states = $counselor.data('states');
+					if ( $counselor.data('states') ) {
 
-				 	// if there are states selected for this counselor
-				 	if ( states.length > 0 ) {
+						// store the states data
+						var states = $counselor.data('states');
 
-				 		// if the states contain a comma
-						if ( states.match( ',' ) ) {
+					 	// if there are states selected for this counselor
+					 	if ( states.length > 0 ) {
 
-							// split the states into an array
-							var states_array = states.split(',');
+					 		// if the states contain a comma
+							if ( states.match( ',' ) ) {
 
-							// hide this counselor until we know if the selected state is theirs
-						 	$counselor.css( 'display', 'none' );
+								// split the states into an array
+								var states_array = states.split(',');
 
-						 	// loop through the states
-						 	$.each( states_array, function( index, value ){
+								// hide this counselor until we know if the selected state is theirs
+							 	$counselor.css( 'display', 'none' );
 
-						 		// if this state matches the selection
-						 		if ( value == state ) {
+							 	// loop through the states
+							 	$.each( states_array, function( index, value ){
+
+							 		// if this state matches the selection
+							 		if ( value == state ) {
+
+							 			// show the counselor
+							 			$counselor.css( 'display', 'flex' );
+
+							 		}
+
+							 	});
+
+							} else {
+
+								// since we don't have a comma in the state, lets just check and see if its value matches the selected state.
+								if ( states == state ) {
 
 						 			// show the counselor
 						 			$counselor.css( 'display', 'flex' );
 
-						 		}
-
-						 	});
-
-						} else {
-
-							// since we don't have a comma in the state, lets just check and see if its value matches the selected state.
-							if ( states == state ) {
-
-					 			// show the counselor
-					 			$counselor.css( 'display', 'flex' );
+								}
 
 							}
 
-						}
+					 	}
 
-				 	}
+					}
 
 				});
 

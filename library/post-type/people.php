@@ -322,10 +322,15 @@ if ( is_ripon() || is_alumni() ) {
 			// get the states for this person
 			$states = get_cmb_value( 'person_states', $a_counselor->ID );
 
-			// loop through the states to get a string of all state names. 
-			$state_names = array();
-			foreach ( $states as $state ) {
-				$state_names[] = $states_counselor[$state];
+			// if we have any states
+			if ( !empty( $states ) ) {
+
+				// loop through the states to get a string of all state names. 
+				$state_names = array();
+				
+				foreach ( $states as $state ) {
+					$state_names[] = $states_counselor[$state];
+				}
 			}
 
 			// start the output of this person's information
