@@ -1,0 +1,24 @@
+<?php
+
+
+function alum_attendees() {
+	
+	$entries = GFAPI::get_entries( 261 );
+
+	// return print_r( $entries, 1 );
+
+	$attendee_list = '<ul class="alum-attendees">';
+
+	foreach ( $entries as $entry ) {
+		if ( $entry[120] == 'Yes' ) {
+			$attendee_list .= '<li><strong>' . $entry['43.3'] . ' ' . $entry['43.6'] . '</strong> (' . $entry['44'] . ')' . ( !empty( $entry['103.3'] ) ? '<br>w/ ' . $entry['103.3'] . ' ' . $entry['103.6'] . ( !empty( $entry['104'] ) ? ' (' . $entry['104'] . ') ' : '' ) : '' ) . '</li>';
+		}
+	}
+
+	$attendee_list .= "</ul>";
+
+	return $attendee_list;
+
+}
+add_shortcode( 'alum-attendees', 'alum_attendees' );
+
