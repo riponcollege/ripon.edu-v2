@@ -3,7 +3,13 @@
 
 function alum_attendees() {
 	
-	$entries = GFAPI::get_entries( 261 );
+	$sorting = array(
+		'key' => '43.6',
+		'direction' => 'ASC',
+		'is_numeric' => false
+	);
+
+	$entries = GFAPI::get_entries( 261, null, $sorting );
 
 	// return print_r( $entries, 1 );
 
