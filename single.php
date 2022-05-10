@@ -6,6 +6,9 @@
 get_header();
 
 ?>
+	<div class="aux-breadcrumb">
+		<a href="/news">&laquo; View All News</a>
+	</div>
 	<div class="content-wide" role="main">
 	<?php 
 	if ( have_posts() ) : ?>

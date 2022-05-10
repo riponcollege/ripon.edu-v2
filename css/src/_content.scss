@@ -1,5 +1,19 @@
 
 
+.aux-breadcrumb {
+	background: #eee;
+	padding: 20px;
+
+	@include respond-to( 768px ) {
+		padding: 20px 30px;
+	}
+
+	@include respond-to( 1024px ) {
+		padding: 20px 40px;
+	} 
+}
+
+
 .pad {
 	padding: 20px;
 

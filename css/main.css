@@ -1628,6 +1628,16 @@ footer {
         .accordions .accordion.open .accordion-content {
           padding: 10px 10px 20px 55px; } }
 
+.aux-breadcrumb {
+  background: #eee;
+  padding: 20px; }
+  @media only screen and (min-width: 768px) {
+    .aux-breadcrumb {
+      padding: 20px 30px; } }
+  @media only screen and (min-width: 1024px) {
+    .aux-breadcrumb {
+      padding: 20px 40px; } }
+
 .pad {
   padding: 20px; }
   @media only screen and (min-width: 768px) {

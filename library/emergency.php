@@ -20,6 +20,7 @@ function emergency_metabox( $meta_boxes ) {
         'name' => 'Emergency Text',
         'id'   => CMB_PREFIX . 'emergency_text',
         'type' => 'text',
+        'sanitization_cb' => false
     ) );
 
     $emergency_metabox->add_field( array(
