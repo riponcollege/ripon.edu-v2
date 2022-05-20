@@ -2988,6 +2988,11 @@ section.content {
         border-top: 1px solid #aba79d; }
       .calendar td .day-events .event-title {
         line-height: 20px; }
+      .calendar td .day-events .event-dead {
+        font-size: 13px;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 700;
+        opacity: .6; }
 
 .day-event-list {
   display: block;
