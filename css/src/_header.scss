@@ -77,8 +77,8 @@ header {
 			}
 		}
 
-		@include respond-to( 1220px ) {
-			right: 250px;
+		@include respond-to( 1440px ) {
+			right: 300px;
 
 			li a {
 				font-size: 16.5px;
@@ -86,10 +86,6 @@ header {
 				padding: 5px 10px;
 				letter-spacing: 2px;
 			}
-		}
-
-		@include respond-to( 1440px ) {
-			right: 300px;
 		}
 
 		@include respond-to( 1680px ) {

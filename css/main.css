@@ -746,17 +746,14 @@ header {
           margin: 0 10px;
           padding: 5px 10px;
           letter-spacing: 1px; } }
-    @media only screen and (min-width: 1220px) {
+    @media only screen and (min-width: 1440px) {
       header > .buttons {
-        right: 250px; }
+        right: 300px; }
         header > .buttons li a {
           font-size: 16.5px;
           margin: 0 25px;
           padding: 5px 10px;
           letter-spacing: 2px; } }
-    @media only screen and (min-width: 1440px) {
-      header > .buttons {
-        right: 300px; } }
     @media only screen and (min-width: 1680px) {
       header > .buttons {
         right: 420px; } }
