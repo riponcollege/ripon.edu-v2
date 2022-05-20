@@ -63,11 +63,17 @@ header {
 			}
 		}
 
-		@include respond-to( 768px ) {
+		@include respond-to( 1024px ) {
 			display: block;
 			position: absolute;
 			right: 150px;
 			top: 24px;
+
+			li a {
+				margin: 0 15px;
+				padding: 5px 10px;
+				letter-spacing: 2px;
+			}
 		}
 
 		@include respond-to( 1220px ) {

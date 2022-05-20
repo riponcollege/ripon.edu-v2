@@ -735,12 +735,16 @@ header {
         header > .buttons li a:hover {
           color: white;
           border-bottom: 2px dotted white; }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 1024px) {
       header > .buttons {
         display: block;
         position: absolute;
         right: 150px;
-        top: 24px; } }
+        top: 24px; }
+        header > .buttons li a {
+          margin: 0 15px;
+          padding: 5px 10px;
+          letter-spacing: 2px; } }
     @media only screen and (min-width: 1220px) {
       header > .buttons {
         right: 250px; }
