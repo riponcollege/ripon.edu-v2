@@ -2985,7 +2985,7 @@ section.content {
         font-size: 13px; }
       .calendar td .day-events .event {
         padding: 7px 0;
-        border-top: 1px solid #aba79d; }
+        border-top: 1px solid rgba(67, 64, 57, 0.2); }
       .calendar td .day-events .event-title {
         line-height: 20px; }
       .calendar td .day-events .event-dead {
