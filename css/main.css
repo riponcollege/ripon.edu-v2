@@ -2992,7 +2992,7 @@ section.content {
         font-size: 13px;
         font-family: "Open Sans", sans-serif;
         font-weight: 700;
-        opacity: .6; }
+        color: #777; }
 
 .day-event-list {
   display: block;
