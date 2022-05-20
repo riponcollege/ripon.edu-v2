@@ -2991,7 +2991,7 @@ section.content {
       .calendar td .day-events .event-dead {
         font-size: 13px;
         font-family: "Open Sans", sans-serif;
-        font-weight: 700;
+        font-weight: 600;
         color: #777; }
 
 .day-event-list {
