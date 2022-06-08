@@ -40,9 +40,6 @@ global $wp_query;
 // set the args based on current query
 $args = $wp_query->query_vars;
 
-// set paged value based on request
-$args['paged'] = $request['paged'];
-
 // rerun the query
 query_posts( $args );
 
