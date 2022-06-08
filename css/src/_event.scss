@@ -151,13 +151,18 @@
 			
 			.event {
 				padding: 7px 0;
-				border-top: 1px solid lighten( $grey, 40% );
+				border-top: 1px solid rgba( $grey, .2 );
 			}
 
 			.event-title {
 				line-height: 20px;
 			}
 
+			.event-dead {
+				font-size: 13px;
+				@include font-medium;
+				color: #777;
+			}
 		}
 	}
 }

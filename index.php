@@ -36,7 +36,7 @@ if ( $paged > 0 ) {
 	}
 }
 
-$args['page'] = ( $paged ? $paged : 1 );
+// $args['page'] = ( $paged ? $paged : 1 );
 
 // rerun the query
 $query = new WP_Query( $args );
