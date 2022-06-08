@@ -16,7 +16,7 @@ $admission_referrer = check_visited( '/admission' );
 		<div class="page-header-content">
 			<div class="breadcrumbs">
 				<?php if ( $admission_referrer ) { ?>
-				<a href="<?php print $admission_referrer; ?>">Admissions Counselors</a> &raquo; 
+				<a href="<?php print $admission_referrer; ?>">Admission Counselors</a> &raquo; 
 				<?php } else { ?>
 				<a href="/academics/faculty/">Faculty &amp; Staff</a> &raquo; 
 				<?php } ?>
