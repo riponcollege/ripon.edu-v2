@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 
 // set a custom field prefix
 define( "CMB_PREFIX", "_p_" );

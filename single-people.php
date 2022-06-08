@@ -8,15 +8,13 @@ get_header();
 $education = get_cmb_value( "faculty_education" );
 $courses = get_cmb_value( "faculty_courses" );
 
-$admission_referrer = check_visited( '/admission' );
-
 ?>
 	<div class="page-header" style="background-image: url(<?php bloginfo('template_url') ?>/img/bg-header.webp);">
 		<div class="page-header-overlay"></div>
 		<div class="page-header-content">
 			<div class="breadcrumbs">
-				<?php if ( $admission_referrer ) { ?>
-				<a href="<?php print $admission_referrer; ?>">Admission Counselors</a> &raquo; 
+				<?php if ( has_term( 'admission-counselor', 'people_cat' ) ) { ?>
+				<a href="/admission/apply/admission-counselors/">Admission Counselors</a> &raquo; 
 				<?php } else { ?>
 				<a href="/academics/faculty/">Faculty &amp; Staff</a> &raquo; 
 				<?php } ?>
