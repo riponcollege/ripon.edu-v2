@@ -7,9 +7,22 @@ function get_cmb_value( $field, $post_id = null ) {
 }
 
 
+// get cmb value
+function get_cmb_value_noprefix( $field, $post_id = null ) {
+    return get_post_meta( ( !is_null( $post_id ) ? $post_id : get_the_ID() ), $field, 1 );
+}
+
+
 // check if cmb value exists
 function has_cmb_value( $field ) {
     $cval = get_cmb_value( $field );
+    return ( !empty( $cval ) ? true : false );
+}
+
+
+// check if cmb value exists
+function has_cmb_value_noprefix( $field ) {
+    $cval = get_cmb_value_noprefix( $field );
     return ( !empty( $cval ) ? true : false );
 }
 
