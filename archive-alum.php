@@ -139,21 +139,33 @@ if ( $query_yr || $query_cat || $query_search ) {
 		<div class="content-wide">
 			
 			<div class="alum-info">
-				<h1 class="page-title alum-title">R Connections<?php print ( $current_yr != 0 ? '<span class="class-title"> &raquo; Class of ' . $current_yr : '</span>' ); ?></h1>
-				<div class="alum-buttons">
-					<button class="alum-back">&laquo; Alumni Home</button>
-					<?php if ( $have_filters ) { ?><button class="alum-reset">Reset Search</button><?php } ?>
-					<button class="alum-add-story">Add My Story</button>
+				<div class="class-header">
+					<div class="class-header-column">
+						<h1 class="page-title alum-title">R Connections<?php print ( $current_yr != 0 ? '<span class="class-title"> &raquo; Class of ' . $current_yr : '</span>' ); ?></h1>
+					</div>
+					<div class="class-header-column">
+						<div class="alum-buttons">
+							<button class="alum-back">&laquo; Alumni Home</button>
+							<?php if ( $have_filters ) { ?><button class="alum-reset">Reset Search</button><?php } ?>
+							<button class="alum-add-story">Add My Story</button>
+						</div>
+					</div>
 				</div>
+
+				<div class="alum-add-story-form">
+					<h5>Add My Story</h5>
+					<?php print do_shortcode( '[gravityform id="5" title="false" description="false" /]' ); ?>
+				</div>
+
 				<?php if ( !empty( $current_yr ) ) { ?>
 				<div class="class-information group">
-					<div class="third">
+					<div class="column">
 						<?php if ( !empty( $year_info['president'] ) ) { ?><p><strong>President:</strong><br><?php print $year_info['president'] ?></p><?php } ?>
 						<?php if ( !empty( $year_info['grad_date'] ) ) { ?><p><strong>Graduation Date:</strong><br><?php print $year_info['grad_date'] ?></p><?php } ?>
 						<?php if ( !empty( $year_info['commencement_theme'] ) ) { ?><p><strong>Commencement Theme:</strong><br><?php print $year_info['commencement_theme'] ?></p><?php } ?>
 						<?php if ( !empty( $year_info['commencement_speakers'] ) ) { ?><p><strong>Commencement Speakers:</strong><br><?php print $year_info['commencement_speakers'] ?></p><?php } ?>
 					</div>
-					<div class="third">
+					<div class="column">
 						<!--<span class="year-more-details">-->
 						<?php if ( !empty( $year_info['grad_seniors'] ) ) { ?><p><strong>Graduating Seniors:</strong><br><?php print $year_info['grad_seniors'] ?></p><?php } ?>
 						<?php if ( !empty( $year_info['honorary_degrees'] ) ) { ?><p><strong>Honorary Degrees:</strong><br><?php print $year_info['honorary_degrees'] ?></p><?php } ?>
@@ -164,7 +176,8 @@ if ( $query_yr || $query_cat || $query_search ) {
 						</p><?php } ?><?php } ?>
 						<?php if ( !empty( $year_info['agent_former_name'] ) ) { ?><p><strong>Former Class Agent:</strong><br><?php print $year_info['agent_former_name'] ?></p><?php } ?>
 					</div>
-					<div class="third year-buttons">
+					<div class="column year-buttons">
+						<?php if ( !empty( $year_info['photo'] ) ) { print '<img src="' . $year_info['photo'] . '" class="class-photo" />'; } ?>
 						<!--<?php 
 						if ( !empty( $year_info['memories'] ) ) { 
 							$memories_output = implode(' | ', array_map(
@@ -175,19 +188,14 @@ if ( $query_yr || $query_cat || $query_search ) {
 							?><p><strong>Memory Books (by Reunion):</strong><br><?php print $memories_output ?></p><?php } ?>-->
 						<?php if ( !empty( $year_info['has_memory'] ) ) { ?><div class="class-memory-book"><a href="mailto:alumni@ripon.edu">Request Memory Book<span>email alumni@ripon.edu</span></a></div><?php } ?>
 						<?php if ( !empty( $year_info['has_green'] ) ) { ?><div class="class-green-list"><a href="mailto:alumni@ripon.edu">Request Green List<span>email alumni@ripon.edu</span></a></div><?php } ?>
-						<?php if ( !empty( $year_info['photo'] ) ) { ?><div class="class-photo"><a href="<?php print $year_info['photo']; ?>" class="lightbox-photo">Class Photo</a></div><?php } ?>
 						<?php if ( !empty( $year_info['photo_reunion'] ) ) { ?><div class="reunion-photo"><a href="<?php print $year_info['photo_reunion']; ?>" class="lightbox-photo">Reunion Photo</a></div><?php } ?>
 						<?php if ( !empty( $year_info['facebook'] ) ) { ?><div class="class-facebook"><a href="<?php print $year_info['facebook']; ?>">Class Facebook</a></div><?php } ?>
 					</div>
 				</div>
 				<?php } ?>
-				<div class="alum-add-story-form">
-					<h5>Add My Story</h5>
-					<?php print do_shortcode( '[gravityform id="5" title="false" description="false" /]' ); ?>
-				</div>
 				<div class="alum-filter">
 					<form name="alum-filters" action="<?php print $base_url; ?>" method="get">
-					Year: <select name="y" class="alum-year">
+					<label>Year:</label> <select name="y" class="alum-year">
 						<option value="0">- any -</option>
 						<?php
 						global $years;
@@ -195,15 +203,15 @@ if ( $query_yr || $query_cat || $query_search ) {
 							print "<option value='" . $yr . "'" . ( $yr == $current_yr ? ' selected="selected"' : '' ) . ">" . $yr . "</option>";
 						}
 						?>
-					</select> &nbsp; 
-					Category: <select name="c" class="alum-category">
+					</select>
+					<label>Category:</label> <select name="c" class="alum-category">
 						<option value="0">- select category -</option>
 						<option value='class-letter'<?php print ( $current_cat === 'class-letter' ? ' selected="selected"' : '' ); ?>>Class Letter</option>
 						<option value='obituary'<?php print ( $current_cat === 'obituary' ? ' selected="selected"' : '' ); ?>>Obituary</option>
 						<option value='news'<?php print ( $current_cat === 'news' ? ' selected="selected"' : '' ); ?>>News</option>
 						<option value='sightings'<?php print ( $current_cat === 'sightings' ? ' selected="selected"' : '' ); ?>>Sightings</option>
-					</select> &nbsp; 
-					Name: <input type="text" name="t" class="alum-search" value="<?php print $current_search; ?>" />
+					</select>
+					<label>Name:</label> <input type="text" name="t" class="alum-search" value="<?php print $current_search; ?>" />
 					<input type="submit" value="Filter" />
 					</form>
 				</div>
@@ -247,7 +255,7 @@ if ( $query_yr || $query_cat || $query_search ) {
 						</a>
 					</div>
 					<div class="info group">
-						<h5><?php print substr( get_the_title(), 0, 50 ); print ( strlen( get_the_title() ) > 50 ? '...' : '' ); ?></h5>
+						<h5><?php the_title(); ?></h5>
 						<?php if ( has_cmb_value( 'alum_submitter' ) ) { ?><div class="quiet">Submitted by: <?php show_cmb_value( 'alum_submitter' ) ?></div><?php } ?>
 						<?php if ( get_cmb_value( 'alum_year' ) > 0 ) { ?><div class="alum-year"><?php show_cmb_value( 'alum_year' ) ?></div><?php } ?>
 						<div class="alum-location"><?php show_cmb_value( 'alum_city' ); ?>, <?php show_cmb_value( 'alum_state' ) ?></div>

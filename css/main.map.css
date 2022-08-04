@@ -2253,6 +2253,104 @@ section.content {
         .crowd-funding .fund:nth-child(3), .crowd-funding .fund:nth-child(6), .crowd-funding .fund:nth-child(9), .crowd-funding .fund:nth-child(12), .crowd-funding .fund:nth-child(15), .crowd-funding .fund:nth-child(18), .crowd-funding .fund:nth-child(21), .crowd-funding .fund:nth-child(24), .crowd-funding .fund:nth-child(27), .crowd-funding .fund:nth-child(30), .crowd-funding .fund:nth-child(33), .crowd-funding .fund:nth-child(36), .crowd-funding .fund:nth-child(39) {
           margin-right: 0; } }
 
+.class-header {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px; }
+  @media only screen and (min-width: 1024px) {
+    .class-header {
+      display: flex;
+      align-items: center; }
+      .class-header .class-header-column {
+        flex: 1; }
+      .class-header .alum-buttons {
+        text-align: right; } }
+
+.class-information {
+  clear: both;
+  position: relative;
+  padding: 5px 0 15px; }
+  .class-information .alum-facebook {
+    position: absolute;
+    top: 10px;
+    right: 0; }
+  @media only screen and (min-width: 768px) {
+    .class-information {
+      display: flex;
+      margin-right: -2%; }
+      .class-information .column {
+        flex: 1;
+        margin-right: 2%; } }
+  .class-information .class-photo {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); }
+  .class-information .reunion-photo {
+    float: left;
+    width: 90%;
+    padding-left: 40px;
+    position: relative;
+    margin: 15px 0;
+    text-transform: uppercase;
+    font-weight: 700; }
+    @media only screen and (min-width: 768px) {
+      .class-information .reunion-photo {
+        margin: 25px 0; } }
+    .class-information .reunion-photo a {
+      color: #6A0A1B;
+      text-decoration: none; }
+  .class-information .class-facebook {
+    float: left;
+    width: 90%;
+    padding-left: 40px;
+    position: relative;
+    margin: 15px 0;
+    text-transform: uppercase;
+    font-weight: 700; }
+    @media only screen and (min-width: 768px) {
+      .class-information .class-facebook {
+        margin: 25px 0; } }
+    .class-information .class-facebook a {
+      color: #6A0A1B;
+      text-decoration: none; }
+  .class-information .class-memory-book {
+    float: left;
+    width: 90%;
+    padding-left: 40px;
+    position: relative;
+    margin: 15px 0;
+    text-transform: uppercase;
+    font-weight: 700; }
+    @media only screen and (min-width: 768px) {
+      .class-information .class-memory-book {
+        margin: 25px 0; } }
+    .class-information .class-memory-book a {
+      color: #6A0A1B;
+      text-decoration: none; }
+    .class-information .class-memory-book span {
+      display: block;
+      color: #5f5a50;
+      font-size: .8em;
+      line-height: 1em; }
+  .class-information .class-green-list {
+    float: left;
+    width: 90%;
+    padding-left: 40px;
+    position: relative;
+    margin: 15px 0;
+    text-transform: uppercase;
+    font-weight: 700; }
+    @media only screen and (min-width: 768px) {
+      .class-information .class-green-list {
+        margin: 25px 0; } }
+    .class-information .class-green-list a {
+      color: #6A0A1B;
+      text-decoration: none; }
+    .class-information .class-green-list span {
+      display: block;
+      color: #5f5a50;
+      font-size: .8em;
+      line-height: 1em; }
+
 .alum-listing {
   margin-right: -2%; }
   .alum-listing a {
@@ -2263,7 +2361,12 @@ section.content {
 @media only screen and (min-width: 550px) {
   .alum-listing {
     display: flex;
-    flex-wrap: wrap; } }
+    flex-wrap: wrap;
+    margin-right: -3%; } }
+
+@media only screen and (min-width: 1150px) {
+  .alum-listing {
+    margin-right: -2%; } }
 
 .alum-listing .alum {
   border: 1px solid #888;
@@ -2276,15 +2379,18 @@ section.content {
       flex-basis: 47%;
       float: left;
       flex-grow: 0;
-      margin: 0 3% 10px 0;
+      margin: 0 3% 3% 0;
       min-height: 450px; } }
   @media only screen and (min-width: 768px) {
     .alum-listing .alum {
-      flex-basis: 30%; } }
-  @media only screen and (min-width: 1024px) {
+      flex-basis: 30.3333%; } }
+  @media only screen and (min-width: 1150px) {
     .alum-listing .alum {
       flex-basis: 23%;
-      margin: 0 2% 10px 0; } }
+      margin: 0 2% 2% 0; } }
+  @media only screen and (min-width: 1440px) {
+    .alum-listing .alum {
+      flex-basis: 18%; } }
   .alum-listing .alum .info {
     font-size: .85em;
     line-height: 1.4em;
@@ -2378,34 +2484,40 @@ section.content {
     border-top: 1px solid #eee; }
 
 .alum-filter {
-  padding: 5px 10px;
-  border: 1px solid #ccc;
+  padding: 15px;
   background-color: #eee;
-  margin: 0 0 10px 0;
-  clear: both; }
+  margin: 15px 0;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: bold; }
+  @media only screen and (min-width: 1024px) {
+    .alum-filter {
+      padding: 15px 30px; } }
   .alum-filter input[type=text], .alum-filter select {
-    font-size: 14px;
-    padding: 7px 12px;
+    font-size: 15px;
+    line-height: 17px;
+    padding: 10px 15px;
     display: block;
-    margin-bottom: 10px; }
-    @media only screen and (min-width: 768px) {
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    margin: 0 0 10px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300; }
+    @media only screen and (min-width: 1024px) {
       .alum-filter input[type=text], .alum-filter select {
         display: inline;
-        margin-bottom: 0; } }
+        margin: 0 20px 0 5px; } }
+  .alum-filter input[type=text] {
+    padding: 12px 15px; }
+  .alum-filter input[type=submit] {
+    font-size: 15px;
+    line-height: 20px;
+    padding: 10px 15px; }
 
 .alum-title {
   background: none; }
   @media only screen and (min-width: 1024px) {
     .alum-title {
       float: left; } }
-
-.alum-buttons button {
-  margin: 10px 0; }
-
-@media only screen and (min-width: 1024px) {
-  .alum-buttons {
-    float: right;
-    padding-top: 10px; } }
 
 .alum-back, .alum-reset {
   color: #777; }
@@ -2432,88 +2544,6 @@ section.content {
   @media only screen and (min-width: 600px) {
     .class-title {
       display: inline; } }
-
-.class-information {
-  clear: both;
-  position: relative;
-  padding: 5px 0 15px; }
-  .class-information .alum-facebook {
-    position: absolute;
-    top: 10px;
-    right: 0; }
-  .class-information .third {
-    padding: 0; }
-  .class-information .year-buttons {
-    margin-top: -20px; }
-  @media only screen and (min-width: 768px) {
-    .class-information .third {
-      padding: 0 20px 0 0; } }
-  .class-information .reunion-photo, .class-information .class-photo {
-    float: left;
-    width: 90%;
-    padding-left: 40px;
-    position: relative;
-    margin: 15px 0;
-    text-transform: uppercase;
-    font-weight: 700; }
-    @media only screen and (min-width: 768px) {
-      .class-information .reunion-photo, .class-information .class-photo {
-        margin: 25px 0; } }
-    .class-information .reunion-photo a, .class-information .class-photo a {
-      color: #6A0A1B;
-      text-decoration: none; }
-  .class-information .class-facebook {
-    float: left;
-    width: 90%;
-    padding-left: 40px;
-    position: relative;
-    margin: 15px 0;
-    text-transform: uppercase;
-    font-weight: 700; }
-    @media only screen and (min-width: 768px) {
-      .class-information .class-facebook {
-        margin: 25px 0; } }
-    .class-information .class-facebook a {
-      color: #6A0A1B;
-      text-decoration: none; }
-  .class-information .class-memory-book {
-    float: left;
-    width: 90%;
-    padding-left: 40px;
-    position: relative;
-    margin: 15px 0;
-    text-transform: uppercase;
-    font-weight: 700; }
-    @media only screen and (min-width: 768px) {
-      .class-information .class-memory-book {
-        margin: 25px 0; } }
-    .class-information .class-memory-book a {
-      color: #6A0A1B;
-      text-decoration: none; }
-    .class-information .class-memory-book span {
-      display: block;
-      color: #5f5a50;
-      font-size: .8em;
-      line-height: 1em; }
-  .class-information .class-green-list {
-    float: left;
-    width: 90%;
-    padding-left: 40px;
-    position: relative;
-    margin: 15px 0;
-    text-transform: uppercase;
-    font-weight: 700; }
-    @media only screen and (min-width: 768px) {
-      .class-information .class-green-list {
-        margin: 25px 0; } }
-    .class-information .class-green-list a {
-      color: #6A0A1B;
-      text-decoration: none; }
-    .class-information .class-green-list span {
-      display: block;
-      color: #5f5a50;
-      font-size: .8em;
-      line-height: 1em; }
 
 .alum-banner-container {
   position: relative; }
