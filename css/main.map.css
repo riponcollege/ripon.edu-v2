@@ -2298,20 +2298,10 @@ section.content {
     .class-information .reunion-photo a {
       color: #6A0A1B;
       text-decoration: none; }
-  .class-information .class-facebook {
-    float: left;
-    width: 90%;
-    padding-left: 40px;
-    position: relative;
-    margin: 15px 0;
-    text-transform: uppercase;
-    font-weight: 700; }
-    @media only screen and (min-width: 768px) {
-      .class-information .class-facebook {
-        margin: 25px 0; } }
-    .class-information .class-facebook a {
-      color: #6A0A1B;
-      text-decoration: none; }
+  .class-information .class-facebook a {
+    opacity: .6; }
+    .class-information .class-facebook a:hover {
+      opacity: .9; }
   .class-information .class-memory-book {
     float: left;
     width: 90%;

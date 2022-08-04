@@ -65,21 +65,12 @@
 	}
 
 	.class-facebook {
-		float: left;
-		width: 90%;
-		padding-left: 40px;
-		position: relative;
-		margin: 15px 0;
-		text-transform: uppercase;
-		font-weight: 700;
-
-		@include respond-to( 768px ) {
-			margin: 25px 0;
-		}
-
 		a {
-			color: $red-dark;
-			text-decoration: none;
+			opacity: .6;
+
+			&:hover {
+				opacity: .9;
+			}
 		}
 	}
 
