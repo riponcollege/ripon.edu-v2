@@ -2298,10 +2298,12 @@ section.content {
     .class-information .reunion-photo a {
       color: #6A0A1B;
       text-decoration: none; }
-  .class-information .class-facebook a {
-    opacity: .6; }
-    .class-information .class-facebook a:hover {
-      opacity: .9; }
+  .class-information .class-facebook {
+    padding: 20px 0; }
+    .class-information .class-facebook a {
+      opacity: .6; }
+      .class-information .class-facebook a:hover {
+        opacity: .9; }
   .class-information .class-memory-book {
     float: left;
     width: 90%;
