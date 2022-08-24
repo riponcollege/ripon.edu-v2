@@ -6,7 +6,7 @@
 
 	@include respond-to( 1024px ) {
 		display: flex;
-		align-items: center;
+		align-items: baseline;
 
 		.class-header-column {
 			flex: 1;
@@ -68,10 +68,25 @@
 		padding: 12px 0;
 
 		a {
+			@include clearfix;
 			opacity: .6;
 
 			&:hover {
 				opacity: .9;
+			}
+
+			img {
+				float: left;
+				padding-left: 7px;
+			}
+
+			span {
+				display: inline-block;
+				@include font-bold;
+				padding: 10px 8px;
+				color: $grey;
+				text-transform: uppercase;
+				font-size: .9em;
 			}
 		}
 	}
@@ -349,10 +364,6 @@
 
 .alum-title {
 	background: none;
-
-	@include respond-to( 1024px ) {
-		float: left;
-	}
 }
 
 

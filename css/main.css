@@ -2260,7 +2260,7 @@ section.content {
   @media only screen and (min-width: 1024px) {
     .class-header {
       display: flex;
-      align-items: center; }
+      align-items: baseline; }
       .class-header .class-header-column {
         flex: 1; }
       .class-header .alum-buttons {
@@ -2301,9 +2301,26 @@ section.content {
   .class-information .class-facebook {
     padding: 12px 0; }
     .class-information .class-facebook a {
+      zoom: 1;
       opacity: .6; }
+      .class-information .class-facebook a:before, .class-information .class-facebook a:after {
+        content: "";
+        display: table; }
+      .class-information .class-facebook a, .class-information .class-facebook a:before, .class-information .class-facebook a:after {
+        clear: both; }
       .class-information .class-facebook a:hover {
         opacity: .9; }
+      .class-information .class-facebook a img {
+        float: left;
+        padding-left: 7px; }
+      .class-information .class-facebook a span {
+        display: inline-block;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 700;
+        padding: 10px 8px;
+        color: #434039;
+        text-transform: uppercase;
+        font-size: .9em; }
   .class-information .class-memory-book {
     float: left;
     width: 90%;
@@ -2507,9 +2524,6 @@ section.content {
 
 .alum-title {
   background: none; }
-  @media only screen and (min-width: 1024px) {
-    .alum-title {
-      float: left; } }
 
 .alum-back, .alum-reset {
   color: #777; }

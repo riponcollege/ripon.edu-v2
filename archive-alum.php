@@ -142,6 +142,7 @@ if ( $query_yr || $query_cat || $query_search ) {
 				<div class="class-header">
 					<div class="class-header-column">
 						<h1 class="page-title alum-title">R Connections<?php print ( $current_yr != 0 ? '<span class="class-title"> &raquo; Class of ' . $current_yr : '</span>' ); ?></h1>
+						<?php print do_shortcode( "[snippet slug='rconn-intro']" ); ?>
 					</div>
 					<div class="class-header-column">
 						<div class="alum-buttons">
@@ -189,7 +190,7 @@ if ( $query_yr || $query_cat || $query_search ) {
 						<?php if ( !empty( $year_info['has_memory'] ) ) { ?><div class="class-memory-book"><a href="mailto:alumni@ripon.edu">Request Memory Book<span>email alumni@ripon.edu</span></a></div><?php } ?>
 						<?php if ( !empty( $year_info['has_green'] ) ) { ?><div class="class-green-list"><a href="mailto:alumni@ripon.edu">Request Green List<span>email alumni@ripon.edu</span></a></div><?php } ?>
 						<?php if ( !empty( $year_info['photo_reunion'] ) ) { ?><div class="reunion-photo"><a href="<?php print $year_info['photo_reunion']; ?>" class="lightbox-photo">Reunion Photo</a></div><?php } ?>
-						<?php if ( !empty( $year_info['facebook'] ) ) { ?><div class="class-facebook"><a href="<?php print $year_info['facebook']; ?>"><img src="<?php bloginfo( 'template_url' ) ?>/img/social-facebook.png"></a></div><?php } ?>
+						<?php if ( !empty( $year_info['facebook'] ) ) { ?><div class="class-facebook"><a href="<?php print $year_info['facebook']; ?>"><img src="<?php bloginfo( 'template_url' ) ?>/img/social-facebook.png"><span>Facebook</span></a></div><?php } ?>
 					</div>
 				</div>
 				<?php } ?>
