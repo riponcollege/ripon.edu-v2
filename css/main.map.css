@@ -1988,6 +1988,8 @@ section.content {
       .academics .area-listing ul li .area-title, .area-header .area-listing ul li .area-title {
         flex: 1;
         flex-basis: 60%; } }
+    .academics .area-listing ul li .area-title h4, .area-header .area-listing ul li .area-title h4 {
+      padding: 0; }
     .academics .area-listing ul li .area-categories, .area-header .area-listing ul li .area-categories {
       padding: 5px 0 0 0; }
       @media only screen and (min-width: 768px) {
