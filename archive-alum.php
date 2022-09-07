@@ -142,7 +142,6 @@ if ( $query_yr || $query_cat || $query_search ) {
 				<div class="class-header">
 					<div class="class-header-column">
 						<h1 class="page-title alum-title">R Connections<?php print ( $current_yr != 0 ? '<span class="class-title"> &raquo; Class of ' . $current_yr : '</span>' ); ?></h1>
-						<?php print do_shortcode( "[snippet slug='rconn-intro']" ); ?>
 					</div>
 					<div class="class-header-column">
 						<div class="alum-buttons">
@@ -152,6 +151,7 @@ if ( $query_yr || $query_cat || $query_search ) {
 						</div>
 					</div>
 				</div>
+				<?php print do_shortcode( "[snippet slug='rconn-intro']" ); ?>
 
 				<div class="alum-add-story-form">
 					<h5>Add My Story</h5>
