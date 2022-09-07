@@ -189,7 +189,8 @@ if ( is_ripon() ) {
 			?>
 			<li onClick="location.href='/area/<?php print $area->post_name ?>';" class="<?php print implode( ' ', $classes ); ?>">
 				<div class="area-title">
-					<a href="/area/<?php print $area->post_name ?>"><?php print $area->post_title; ?></a>
+					<h4><a href="/area/<?php print $area->post_name ?>"><?php print $area->post_title; ?></a></h4>
+					<p><?php print $area->post_excerpt; ?></p>
 				</div>
 				<div class="area-categories">
 				<?php
