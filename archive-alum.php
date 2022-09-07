@@ -151,12 +151,13 @@ if ( $query_yr || $query_cat || $query_search ) {
 						</div>
 					</div>
 				</div>
-				<?php print do_shortcode( "[snippet slug='rconn-intro']" ); ?>
 
 				<div class="alum-add-story-form">
 					<h5>Add My Story</h5>
 					<?php print do_shortcode( '[gravityform id="5" title="false" description="false" /]' ); ?>
 				</div>
+
+				<?php print do_shortcode( "[snippet slug='rconn-intro']" ); ?>
 
 				<?php if ( !empty( $current_yr ) ) { ?>
 				<div class="class-information group">
