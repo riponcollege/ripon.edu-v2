@@ -44,6 +44,22 @@
 }
 
 
+.event-columns {
+	@include respond-to( 768px ) {
+		display: flex;
+
+		.event-column {
+			flex: 1;
+
+			&.buttons {
+				text-align: right;
+				padding: 0;
+			}
+		}
+	}
+}
+
+
 .event-search-form {
 	@include clearfix;
 	margin-bottom: 10px;

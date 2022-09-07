@@ -2943,6 +2943,15 @@ section.content {
       flex: 1;
       flex-basis: 80%; } }
 
+@media only screen and (min-width: 768px) {
+  .event-columns {
+    display: flex; }
+    .event-columns .event-column {
+      flex: 1; }
+      .event-columns .event-column.buttons {
+        text-align: right;
+        padding: 0; } }
+
 .event-search-form {
   zoom: 1;
   margin-bottom: 10px; }
