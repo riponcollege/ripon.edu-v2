@@ -31,7 +31,7 @@ $request = parse_query_string();
 			<div class="event-column buttons">
 				<a href="https://riponredhawks.com" class="btn red-light">Athletics Events</a>
 				<?php if ( !is_ripon() ) { ?>
-					<a href="https://ripon.edu/events" class="btn red-dark">All Ripon Events</a>
+					<a href="https://ripon.edu/events" class="btn red-dark">All College Events</a>
 				<?php } ?>
 				<?php if ( !is_alumni() ) { ?>
 					<a href="https://alumni.ripon.edu/events" class="btn red-dark">Alumni Events</a>
