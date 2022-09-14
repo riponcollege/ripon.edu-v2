@@ -71,27 +71,32 @@
 
 				@include respond-to( 768px ) {
 					padding: 15px;
-					display: flex;
 				}
 
-				.area-title {
+				.area-columns {
 					@include respond-to( 768px ) {
-						flex: 1;
-						flex-basis: 60%;
+						display: flex;
+					}
+					
+					.area-title {
+						@include respond-to( 768px ) {
+							flex: 1;
+							flex-basis: 60%;
+						}
+
+						h4 {
+							padding: 0;
+						}
 					}
 
-					h4 {
-						padding: 0;
-					}
-				}
+					.area-categories {
+						padding: 5px 0 0 0;
 
-				.area-categories {
-					padding: 5px 0 0 0;
-
-					@include respond-to( 768px ) {
-						flex: 1;
-						flex-basis: 40%;
-						text-align: right;
+						@include respond-to( 768px ) {
+							flex: 1;
+							flex-basis: 40%;
+							text-align: right;
+						}
 					}
 				}
 

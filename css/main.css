@@ -1982,18 +1982,20 @@ section.content {
       border: 2px solid #d9d9d9; }
     @media only screen and (min-width: 768px) {
       .academics .area-listing ul li, .area-header .area-listing ul li {
-        padding: 15px;
+        padding: 15px; } }
+    @media only screen and (min-width: 768px) {
+      .academics .area-listing ul li .area-columns, .area-header .area-listing ul li .area-columns {
         display: flex; } }
     @media only screen and (min-width: 768px) {
-      .academics .area-listing ul li .area-title, .area-header .area-listing ul li .area-title {
+      .academics .area-listing ul li .area-columns .area-title, .area-header .area-listing ul li .area-columns .area-title {
         flex: 1;
         flex-basis: 60%; } }
-    .academics .area-listing ul li .area-title h4, .area-header .area-listing ul li .area-title h4 {
+    .academics .area-listing ul li .area-columns .area-title h4, .area-header .area-listing ul li .area-columns .area-title h4 {
       padding: 0; }
-    .academics .area-listing ul li .area-categories, .area-header .area-listing ul li .area-categories {
+    .academics .area-listing ul li .area-columns .area-categories, .area-header .area-listing ul li .area-columns .area-categories {
       padding: 5px 0 0 0; }
       @media only screen and (min-width: 768px) {
-        .academics .area-listing ul li .area-categories, .area-header .area-listing ul li .area-categories {
+        .academics .area-listing ul li .area-columns .area-categories, .area-header .area-listing ul li .area-columns .area-categories {
           flex: 1;
           flex-basis: 40%;
           text-align: right; } }

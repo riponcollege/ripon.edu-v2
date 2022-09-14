@@ -18,7 +18,7 @@
 <?php wp_head(); ?>
 
 <?php if ( is_search() ) { ?><meta name="robots" content="noindex" /><?php } ?>
-<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=290" rel="stylesheet" type="text/css">
+<link href="<?php bloginfo( "template_url" ) ?>/css/main.css?v=291" rel="stylesheet" type="text/css">
 
 <!-- Facebook Pixel Code -->
 <script>
@@ -93,6 +93,8 @@ gtag('config', 'G-YVD4XWQ2P3');
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
+
+<meta name="description" content="<?php the_excerpt() ?>">
 
 </head>
 <body <?php body_class(); ?>>
