@@ -352,6 +352,12 @@ function area_metaboxes() {
     ) );
 
     $area_box->add_field( array(
+        'name' => 'Mission Statement',
+        'id' => CMB_PREFIX . 'area_mission',
+        'type' => 'wysiwyg'
+    ) );
+
+    $area_box->add_field( array(
         'name' => 'Overview Document URL',
         'id' => CMB_PREFIX . 'area_facebook',
         'type' => 'file'

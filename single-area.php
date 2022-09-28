@@ -84,7 +84,7 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 					<?php do_area_tab_nav( "Be a Teacher", "teacher" ) ?>
 					<?php do_area_tabs_nav(); ?>
 					<li class="area-advising">Advising</li>
-					<li class="area-offcampus">Off-Campus</li>
+					<!--<li class="area-offcampus">Off-Campus</li>-->
 				</ul>
 			</div>
 
@@ -97,6 +97,15 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 
 			<div class="tab-content active area-overview">
 				<?php the_content(); ?>
+
+				<?php the_statistics(); ?>
+
+				<?php if ( has_cmb_value( "area_mission" ) ) { ?>
+				<div class="area-mission">
+					<h3>Department Mission Statement</h3>
+					<?php show_cmb_value( "area_mission" ); ?>
+				</div>
+				<?php } ?>
 
 				<?php the_icon_showcase(); ?>
 
@@ -122,10 +131,12 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 				<?php print do_shortcode( '[snippet slug="areas-advising" /]' ); ?>
 			</div>
 
+			<!--
 			<div class="tab-content area-offcampus">
 				<h2>Off-Campus Study</h2>
 				<?php print do_shortcode( '[snippet slug="areas-off-campus" /]' ); ?>
 			</div>
+			-->
 
 			<?php do_area_tab_content( "Requirements", "requirements" ) ?>
 			<?php do_area_tab_content( "Career Tracks", "tracks" ) ?>

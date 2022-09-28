@@ -1,0 +1,34 @@
+
+
+.statistics {
+	margin-top: 3%;
+
+	@include respond-to( 768px ) {
+		display: flex;
+		margin-right: -3%;
+	}
+
+	.statistic {
+		border: 1px solid #ccc;
+		padding: 20px;
+		text-align: center;
+
+		h3.stat-number {
+			@include font-bold;
+			font-size: 2.5em;
+			line-height: 1.2em;
+			color: $red-dark;
+			padding: 0 0 10px;
+		}
+
+		.stat-content {
+			color: lighten( $grey, 40% );
+		}
+
+		@include respond-to( 768px ) {
+			flex: 1;
+			margin-right: 3%;
+		}
+	}
+}
+
