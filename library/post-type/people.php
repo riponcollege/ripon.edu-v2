@@ -214,6 +214,7 @@ if ( is_ripon() || is_alumni() ) {
 					'<div class="info">
 						<h4>' . ( $link ? '<a href="' . get_the_permalink() . '">' : '' ) . get_cmb_value( "person_lname", $post ) . ', ' . get_cmb_value( "person_fname" ) . ( $link ? '</a>' : '' ) . '</h4>
 						<p class="person-title">' . get_cmb_value( "person_title" ) . '</p>' .
+						( !$link ? ( has_cmb_value( "person_email" ) ? '<p class="person-email"><a href="mailto:' . get_cmb_value( "person_email" ) . '">Email Me</a></p>' : '' ) : '' ) .
 					'</div>
 				</div>';
 
