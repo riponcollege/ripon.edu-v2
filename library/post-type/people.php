@@ -213,14 +213,13 @@ if ( is_ripon() || is_alumni() ) {
 					( $photo ? ( $link ? '<a href="' . get_the_permalink() . '">' : '' ) . get_the_post_thumbnail() . ( $link ? '</a>' : '' ) : '' ) .
 					'<div class="info">
 						<h4>' . ( $link ? '<a href="' . get_the_permalink() . '">' : '' ) . get_cmb_value( "person_lname", $post ) . ', ' . get_cmb_value( "person_fname" ) . ( $link ? '</a>' : '' ) . '</h4>
-						<p class="person-title">' . get_cmb_value( "person_title" ) . '</p>
-						<p class="person-email"><a href="mailto:' . get_cmb_value( "person_email" ) . '">' . get_cmb_value( "person_email" ) . '</a></p>
-					</div>
+						<p class="person-title">' . get_cmb_value( "person_title" ) . '</p>' .
+					'</div>
 				</div>';
 
 			endwhile;
 
-			$people_content .="</div>";
+			$people_content .= "</div>";
 
 		else :
 			
