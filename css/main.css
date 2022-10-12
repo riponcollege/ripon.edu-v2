@@ -1494,6 +1494,11 @@ body.cta-active {
       font-size: .9em;
       font-style: italic;
       color: rgba(67, 64, 57, 0.7); }
+    .counselors .counselor .counselor-info .counties {
+      padding-top: 10px;
+      font-size: .9em;
+      font-style: italic;
+      color: rgba(67, 64, 57, 0.7); }
 
 footer {
   zoom: 1;

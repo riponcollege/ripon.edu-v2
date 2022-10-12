@@ -312,155 +312,155 @@ if ( is_ripon() ) {
 		} 
 	}
 
+
+
+	add_action( 'cmb2_init', 'area_metaboxes' );
+	/**
+	 * Define the metabox and field configurations.
+	 */
+	function area_metaboxes() {
+
+		// get all the colors so they can pick one for each highlight box
+		global $colors;
+
+		// select all faculty so they can choose which ones are part of this area of study
+	    $args = array( 'post_type' => 'faculty', 'posts_per_page' => -1, 'orderby' => 'title', 'order' => 'ASC' );
+	    $loop = new WP_Query( $args );
+	    $faculty = array();
+	    while ( $loop->have_posts() ) : $loop->the_post();
+	        $faculty[get_the_ID()] = get_the_title();
+	    endwhile;
+	    wp_reset_query();
+
+	    // area of interest information
+	    $area_box = new_cmb2_box( array(
+	        'id' => 'area_info',
+	        'title' => 'Area of Interest Details',
+	        'object_types' => array( 'area' ), // post type
+	        'context' => 'normal',
+	        'priority' => 'high',
+	        'show_names' => true, // Show field names on the left
+	    ) );
+
+	    // overview video and doc
+	    $area_box->add_field( array(
+	        'name' => 'Overview Video',
+	        'id' => CMB_PREFIX . 'area_sidebar_video',
+	        'type' => 'text_url'
+	    ) );
+
+	    $area_box->add_field( array(
+	        'name' => 'Mission Statement',
+	        'id' => CMB_PREFIX . 'area_mission',
+	        'type' => 'wysiwyg'
+	    ) );
+
+	    $area_box->add_field( array(
+	        'name' => 'Overview Document URL',
+	        'id' => CMB_PREFIX . 'area_facebook',
+	        'type' => 'file'
+	    ) );
+
+		$args = array(
+			'taxonomy' => 'people_cat',
+			'orderby' => 'name',
+			'order'   => 'ASC'
+		);
+		$cats = get_categories($args);
+		$people_cats[''] = '- none -';
+	    foreach ( $cats as $cat ) {
+	        $people_cats[$cat->slug] = $cat->name;
+	    }
+	    $area_box->add_field( array(
+	        'name' => 'People to List',
+	        'desc' => 'Which category of people to display as the faculty list for the faculty list for this area.',
+	        'id' => CMB_PREFIX . 'area_people_list',
+	        'type' => 'select',
+	        'options' => $people_cats,
+	    ) );
+
+
+	    // get all the tags so they can select one to display related posts on individual area pages.
+	    $all_tags = get_tags();
+	    $tag_options = array(
+	        '' => '-- None --'
+	    );
+	    foreach ( $all_tags as $tag ) {
+	        $tag_options[$tag->slug] = $tag->name;
+	    }
+	    $area_box->add_field( array(
+	        'name' => 'Post Tag',
+	        'id' => CMB_PREFIX . 'area_post_tag',
+	        'type' => 'select',
+	        'options' => $tag_options,
+	        'default' => get_cmb_value( 'area_post_tag' )
+	    ));
+	    $area_box->add_field( array(
+	        'name' => 'Requirements',
+	        'id' => CMB_PREFIX . 'area_requirements',
+	        'type' => 'wysiwyg',
+	        'options' => array (
+	        	'textarea_rows' => 10
+	        )
+	    ) );
+	    $area_box->add_field( array(
+	        'name' => 'Career Tracks',
+	        'id' => CMB_PREFIX . 'area_tracks',
+	        'type' => 'wysiwyg',
+	        'options' => array (
+	        	'textarea_rows' => 7
+	        )
+	    ) );
+	    $area_box->add_field( array(
+	        'name' => 'Unique Opportunities',
+	        'id' => CMB_PREFIX . 'area_opportunities',
+	        'type' => 'wysiwyg',
+	        'options' => array (
+	        	'textarea_rows' => 7
+	        )
+	    ) );
+
+
+	    // tab metabox
+	    $tab_metabox = new_cmb2_box( array(
+	        'id' => 'tab_metabox',
+	        'title' => 'Tab Boxes',
+	        'desc' => 'Boxes of content that are accessed via tabs on the left column.',
+	        'object_types' => array( 'area' ), // post type
+	        'context' => 'normal',
+	        'priority' => 'high',
+	    ) );
+
+	    $tab_metabox_group = $tab_metabox->add_field( array(
+	        'id' => CMB_PREFIX . 'tab',
+	        'type' => 'group',
+	        'options' => array(
+	            'add_button' => __('Add Tab', 'cmb'),
+	            'remove_button' => __('Remove Tab', 'cmb'),
+	            'group_title'   => __( 'Tab {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+	            'sortable' => true, // beta
+	        )
+	    ) );
+
+	    $tab_metabox->add_group_field( $tab_metabox_group, array(
+	        'name' => 'Title',
+	        'id'   => 'title',
+	        'type' => 'text',
+	        'sanitization_cb' => false
+	    ) );
+
+	    $tab_metabox->add_group_field( $tab_metabox_group, array(
+	        'name' => 'Content',
+	        'id'   => 'content',
+	        'type' => 'wysiwyg',
+	        'show_names' => false,
+	        'options' => array(
+	            'textarea_rows' => 10
+	        )
+	    ) );
+
+	}
+
+
 }
-
-
-
-add_action( 'cmb2_init', 'area_metaboxes' );
-/**
- * Define the metabox and field configurations.
- */
-function area_metaboxes() {
-
-	// get all the colors so they can pick one for each highlight box
-	global $colors;
-
-	// select all faculty so they can choose which ones are part of this area of study
-    $args = array( 'post_type' => 'faculty', 'posts_per_page' => -1, 'orderby' => 'title', 'order' => 'ASC' );
-    $loop = new WP_Query( $args );
-    $faculty = array();
-    while ( $loop->have_posts() ) : $loop->the_post();
-        $faculty[get_the_ID()] = get_the_title();
-    endwhile;
-    wp_reset_query();
-
-    // area of interest information
-    $area_box = new_cmb2_box( array(
-        'id' => 'area_info',
-        'title' => 'Area of Interest Details',
-        'object_types' => array( 'area' ), // post type
-        'context' => 'normal',
-        'priority' => 'high',
-        'show_names' => true, // Show field names on the left
-    ) );
-
-    // overview video and doc
-    $area_box->add_field( array(
-        'name' => 'Overview Video',
-        'id' => CMB_PREFIX . 'area_sidebar_video',
-        'type' => 'text_url'
-    ) );
-
-    $area_box->add_field( array(
-        'name' => 'Mission Statement',
-        'id' => CMB_PREFIX . 'area_mission',
-        'type' => 'wysiwyg'
-    ) );
-
-    $area_box->add_field( array(
-        'name' => 'Overview Document URL',
-        'id' => CMB_PREFIX . 'area_facebook',
-        'type' => 'file'
-    ) );
-
-	$args = array(
-		'taxonomy' => 'people_cat',
-		'orderby' => 'name',
-		'order'   => 'ASC'
-	);
-	$cats = get_categories($args);
-	$people_cats[''] = '- none -';
-    foreach ( $cats as $cat ) {
-        $people_cats[$cat->slug] = $cat->name;
-    }
-    $area_box->add_field( array(
-        'name' => 'People to List',
-        'desc' => 'Which category of people to display as the faculty list for the faculty list for this area.',
-        'id' => CMB_PREFIX . 'area_people_list',
-        'type' => 'select',
-        'options' => $people_cats,
-    ) );
-
-
-    // get all the tags so they can select one to display related posts on individual area pages.
-    $all_tags = get_tags();
-    $tag_options = array(
-        '' => '-- None --'
-    );
-    foreach ( $all_tags as $tag ) {
-        $tag_options[$tag->slug] = $tag->name;
-    }
-    $area_box->add_field( array(
-        'name' => 'Post Tag',
-        'id' => CMB_PREFIX . 'area_post_tag',
-        'type' => 'select',
-        'options' => $tag_options,
-        'default' => get_cmb_value( 'area_post_tag' )
-    ));
-    $area_box->add_field( array(
-        'name' => 'Requirements',
-        'id' => CMB_PREFIX . 'area_requirements',
-        'type' => 'wysiwyg',
-        'options' => array (
-        	'textarea_rows' => 10
-        )
-    ) );
-    $area_box->add_field( array(
-        'name' => 'Career Tracks',
-        'id' => CMB_PREFIX . 'area_tracks',
-        'type' => 'wysiwyg',
-        'options' => array (
-        	'textarea_rows' => 7
-        )
-    ) );
-    $area_box->add_field( array(
-        'name' => 'Unique Opportunities',
-        'id' => CMB_PREFIX . 'area_opportunities',
-        'type' => 'wysiwyg',
-        'options' => array (
-        	'textarea_rows' => 7
-        )
-    ) );
-
-
-    // tab metabox
-    $tab_metabox = new_cmb2_box( array(
-        'id' => 'tab_metabox',
-        'title' => 'Tab Boxes',
-        'desc' => 'Boxes of content that are accessed via tabs on the left column.',
-        'object_types' => array( 'area' ), // post type
-        'context' => 'normal',
-        'priority' => 'high',
-    ) );
-
-    $tab_metabox_group = $tab_metabox->add_field( array(
-        'id' => CMB_PREFIX . 'tab',
-        'type' => 'group',
-        'options' => array(
-            'add_button' => __('Add Tab', 'cmb'),
-            'remove_button' => __('Remove Tab', 'cmb'),
-            'group_title'   => __( 'Tab {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
-            'sortable' => true, // beta
-        )
-    ) );
-
-    $tab_metabox->add_group_field( $tab_metabox_group, array(
-        'name' => 'Title',
-        'id'   => 'title',
-        'type' => 'text',
-        'sanitization_cb' => false
-    ) );
-
-    $tab_metabox->add_group_field( $tab_metabox_group, array(
-        'name' => 'Content',
-        'id'   => 'content',
-        'type' => 'wysiwyg',
-        'show_names' => false,
-        'options' => array(
-            'textarea_rows' => 10
-        )
-    ) );
-
-}
-
 
