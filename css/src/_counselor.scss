@@ -1,16 +1,38 @@
 
 
-.counselor-state {
+.counselor-filters {
 	margin-top: 20px;
 	border: 3px solid rgba( $grey, .2 );
 	padding: 20px;
 	@include font-title-bold;
 
-	select {
+	@include respond-to( 768px ) {
+		display: flex;
+		padding: 0 20px 0 0;
+	}
+
+	.counselor-state, .counselor-search {
+		@include respond-to( 768px ) {
+			flex: 1;
+			padding: 20px 0 20px 20px;
+		}
+	}
+
+	.counselor-search {
+		display: none;
+
+		&.visible {
+			display: block;
+		}
+	}
+
+	select, input[type=text] {
 		display: block;
 		@include font;
 		font-size: 16px;
 		margin-top: 7px;
+		padding: 5px;
+		width: 100%;
 	}
 }
 
@@ -50,6 +72,11 @@
 				font-size: .9em;
 				font-style: italic;
 				color: rgba( $grey, .7 );
+				display: none;
+
+				&.visible {
+					display: block;
+				}
 			}
 		}
 	}

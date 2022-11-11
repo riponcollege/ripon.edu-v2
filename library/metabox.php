@@ -44,7 +44,6 @@ global $states, $states_counselor, $years;
 
 // an array of states
 $states = array(
-    '0' =>'State',
     'AL'=>'Alabama',
     'AK'=>'Alaska',
     'AZ'=>'Arizona',
