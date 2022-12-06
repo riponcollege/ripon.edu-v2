@@ -30,3 +30,51 @@ function quote_shortcode( $atts, $content = null ) {
 }
 add_shortcode( 'quote', 'quote_shortcode' );
 
+
+function the_quote_showcase() {
+	// get the background video
+    $quote_showcase = get_cmb_value( 'quote' );
+    
+    if ( !empty( $quote_showcase ) ) {
+    	print '<div class="quote-showcase">';
+	    foreach ( $quote_showcase as $a_quote ) {
+	    	print '<div class="quote-slide">' . apply_filters( 'the_content', $a_quote['content'] ) . '</div>';
+	    }
+	    print '</div>';
+	}
+
+}
+
+
+add_action( 'cmb2_init', 'quote_metabox' );
+function quote_metabox() {
+
+    // tab metabox
+    $tab_metabox = new_cmb2_box( array(
+        'id' => 'quote_metabox',
+        'title' => 'Quote Showcase',
+        'desc' => 'A quote section on a page that allows you to add multiple quotes to be faded between.',
+        'object_types' => array( 'area' ), // post type
+        'context' => 'normal',
+        'priority' => 'high',
+    ) );
+
+    $tab_metabox_group = $tab_metabox->add_field( array(
+        'id' => CMB_PREFIX . 'quote',
+        'type' => 'group',
+        'options' => array(
+            'add_button' => __('Add Quote', 'cmb'),
+            'remove_button' => __('Remove Quote', 'cmb'),
+            'group_title'   => __( 'Quote {#}', 'cmb' ), // since version 1.1.4, {#} gets replaced by row number
+            'sortable' => true, // beta
+        )
+    ) );
+
+    $tab_metabox->add_group_field( $tab_metabox_group, array(
+        'name' => 'Quote Content',
+        'id'   => 'content',
+        'type' => 'textarea_small',
+        'show_names' => false,
+    ) );
+
+}

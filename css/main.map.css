@@ -3706,4 +3706,7 @@ img.mfp-img {
         flex: 1;
         flex-basis: 67%; } }
 
+.quote-showcase .quote-slide {
+  display: none; }
+
 /*# sourceMappingURL=main.map.css.map */

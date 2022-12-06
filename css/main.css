@@ -3705,3 +3705,6 @@ img.mfp-img {
       .quote .quote-content {
         flex: 1;
         flex-basis: 67%; } }
+
+.quote-showcase .quote-slide {
+  display: none; }

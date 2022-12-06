@@ -98,6 +98,8 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 			<div class="tab-content active area-overview">
 				<?php the_content(); ?>
 
+				<?php the_quote_showcase() ?>
+
 				<?php the_statistics(); ?>
 
 				<?php if ( has_cmb_value( "area_mission" ) ) { ?>
