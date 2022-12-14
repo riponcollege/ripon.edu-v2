@@ -30,40 +30,74 @@ jQuery(document).ready(function($){
 	// show the random quote
 	random_quote.show();
 
-	// grab the time number
-	var time = $(this).data( 'time' );
-	if ( typeof( time ) == 'undefined' ) time = 20000;
+	// bind to the controls, and handle quote navigation
+	quote_group.find('.control').on( 'click', function(){
 
+		var control = $( this );
 
-	// change quotes on an interval
-	var quote_interval = setInterval(function(){
+		if ( quote_group.length > 0 ) {
 
-		// select the current quote
-		var current_quote = quote_group.find( '.quote-slide:visible' );
+			if ( control.hasClass( 'next' ) ) {
 
-		// select the next quote
-		var next_quote = current_quote.next('.quote-slide');
+				// select the current ad
+				var current_quote = quote_group.find( '.quote-slide:visible' );
 
-		// if the next quote is not empty
-		if ( next_quote.length > 0 ) {
+				// select the next ad
+				var next_quote = current_quote.next('.quote-slide');
 
-			// hide the current quote
-			current_quote.hide();
+				// if the next ad is not empty
+				if ( next_quote.length > 0 ) {
 
-			// show the next quote
-			next_quote.show();
+					// hide the current ad
+					current_quote.hide();
 
-		} else {
+					// show the next ad
+					next_quote.show();		
 
-			// hide visible quote
-			current_quote.hide();
+				} else {
 
-			// show the first quote in the group
-			quote_group.find( '.quote-slide:first-child' ).show();
+					// hide visible ad
+					current_quote.hide();
+
+					// show the first ad in the group
+					quote_group.find( '.quote-slide:first-child' ).show();
+
+				}
+
+			} else {
+
+				// select the current ad
+				var current_quote = quote_group.find( '.quote-slide:visible' );
+
+				// select the next ad
+				var prev_quote = current_quote.prev('.quote-slide');
+
+				// if the next ad is not empty
+				if ( prev_quote.length > 0 ) {
+
+					// hide the current ad
+					current_quote.hide();
+
+					// show the next ad
+					prev_quote.show();
+
+				} else {
+
+					// hide visible ad
+					current_quote.hide();
+
+					var prev_quote = quote_group.find( '.quote-slide' ).last();
+
+					// show the first ad in the group
+					prev_quote.show();
+
+				}
+
+			}
 
 		}
 
-	}, time );
+	});
 
 
 });

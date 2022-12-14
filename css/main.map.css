@@ -3706,7 +3706,26 @@ img.mfp-img {
         flex: 1;
         flex-basis: 67%; } }
 
-.quote-showcase .quote-slide {
-  display: none; }
+.quote-showcase {
+  position: relative;
+  margin: 0 40px; }
+  .quote-showcase .quote-slide {
+    display: none; }
+  .quote-showcase .control {
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    font-size: 60px;
+    font-weight: bold;
+    color: #434039;
+    margin-top: -15px;
+    cursor: pointer;
+    opacity: .3;
+    transition: opacity 400ms ease-in-out; }
+    .quote-showcase .control.next {
+      left: auto;
+      right: -50px; }
+    .quote-showcase .control:hover {
+      opacity: .6; }
 
 /*# sourceMappingURL=main.map.css.map */

@@ -61,8 +61,33 @@
 
 
 .quote-showcase {
+	position: relative;
+	margin: 0 40px;
+
 	.quote-slide {
 		display: none;
+	}
+
+	.control {
+		position: absolute;
+		left: -50px;
+		top: 50%;
+		font-size: 60px;
+		font-weight: bold;
+		color: $grey;
+		margin-top: -15px;
+		cursor: pointer;
+		opacity: .3;
+		transition: opacity 400ms ease-in-out;
+
+		&.next {
+			left: auto;
+			right: -50px;
+		}
+
+		&:hover {
+			opacity: .6
+		}
 	}
 }
 

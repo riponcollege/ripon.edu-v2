@@ -8,6 +8,8 @@ function quote_shortcode( $atts, $content = null ) {
 		'style' => 'left'
 	), $atts );
 
+	$return = '';
+
 	// if we have content and an attribution
 	if ( !empty( $a['by'] ) && !empty( $content ) ) {
 		
@@ -40,6 +42,7 @@ function the_quote_showcase() {
 	    foreach ( $quote_showcase as $a_quote ) {
 	    	print '<div class="quote-slide">' . apply_filters( 'the_content', $a_quote['content'] ) . '</div>';
 	    }
+	    print '<span class="control prev">&lt;</span><span class="control next">&gt;</span>';
 	    print '</div>';
 	}
 
