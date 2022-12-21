@@ -2082,13 +2082,26 @@ section.content {
   background: #6A0A1B;
   padding: 20px;
   color: white;
-  margin: 20px -20px 0 -20px; }
-  .area .area-mission h3 {
-    padding: 0 0 15px 0; }
+  margin: 20px -20px 0 -20px;
+  zoom: 1; }
+  .area .area-mission:before, .area .area-mission:after {
+    content: "";
+    display: table; }
+  .area .area-mission, .area .area-mission:before, .area .area-mission:after {
+    clear: both; }
+  .area .area-mission img.alignright, .area .area-mission img.alignleft {
+    display: block;
+    margin: 0 auto 10px; }
   @media only screen and (min-width: 768px) {
     .area .area-mission {
       padding: 30px;
-      margin: 3% 0 0 0; } }
+      margin: 3% 0 0 0; }
+      .area .area-mission img.alignright {
+        float: right;
+        margin: 0 0 15px 15px; }
+      .area .area-mission img.alignleft {
+        float: left;
+        margin: 0 15px 15px 0; } }
   @media only screen and (min-width: 1024px) {
     .area .area-mission {
       padding: 40px; } }
