@@ -94,8 +94,6 @@ gtag('config', 'G-YVD4XWQ2P3');
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 
-<meta name="description" content="<?php the_excerpt() ?>">
-
 </head>
 <body <?php body_class(); ?>>
 <?php if ( is_ripon() ) { ?>
