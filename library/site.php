@@ -5,7 +5,7 @@
 function is_ripon() {
 
 	// get the host name
-	$host = str_replace( ".test", "", str_replace( ".edu", "", $_SERVER['HTTP_HOST'] ) );
+	$host = str_replace( ".jpederson.io", "", str_replace( ".edu", "", $_SERVER['HTTP_HOST'] ) );
 
 	// check if we're on ripon proper
 	if ( $host == 'test.ripon' || $host == 'www.ripon' || $host == 'ripon' ) {
@@ -19,7 +19,7 @@ function is_ripon() {
 function is_alumni() {
 
 	// get the host name
-	$host = str_replace( ".test", "", str_replace( ".edu", "", $_SERVER['HTTP_HOST'] ) );
+	$host = str_replace( ".jpederson.io", "", str_replace( ".edu", "", $_SERVER['HTTP_HOST'] ) );
 
 	// check for alumni domain
 	if ( $host == 'alumni.ripon' ) {
@@ -33,7 +33,7 @@ function is_alumni() {
 function is_events() {
 
 	// get the host name
-	$host = str_replace( ".test", "", str_replace( ".edu", "", $_SERVER['HTTP_HOST'] ) );
+	$host = str_replace( ".jpederson.io", "", str_replace( ".edu", "", $_SERVER['HTTP_HOST'] ) );
 
 	// check for events domain
 	if ( $host == 'events.ripon' ) {
@@ -47,7 +47,7 @@ function is_events() {
 function is_employees() {
 
 	// get the host name
-	$host = str_replace( ".test", "", str_replace( ".edu", "", $_SERVER['HTTP_HOST'] ) );
+	$host = str_replace( ".jpederson.io", "", str_replace( ".edu", "", $_SERVER['HTTP_HOST'] ) );
 
 	// check for events domain
 	if ( $host == 'employees.ripon' ) {

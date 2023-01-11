@@ -5,10 +5,6 @@
 define( "CMB_PREFIX", "_p_" );
 
 
-// set the timezone
-date_default_timezone_set( 'America/Chicago' );
-
-
 // colors array, for use in metaboxes
 global $colors;
 $colors = array(
