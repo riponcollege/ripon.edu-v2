@@ -296,7 +296,10 @@ if ( is_ripon() || is_alumni() ) {
 		            'field'    => 'slug',
 		            'terms'    => $category
 		        )
-		    )
+				),
+			'orderby' => 'meta_value',
+			'meta_key' => CMB_PREFIX . 'person_lname',
+			'order' => 'ASC'
 		) );
 	}
 
@@ -343,7 +346,7 @@ if ( is_ripon() || is_alumni() ) {
 			}
 
 			// start the output of this person's information
-			$counselors_dropdown .= "<div class='counselor" . ( in_array( 'WI', $cstates ) ? ' wi' : '' ) . "' data-states='" . ( !empty( $states ) ? implode( $cstates, ',' ) : '' ) . "' data-counties='" . ( !empty( get_cmb_value( 'person_counties', $a_counselor->ID ) ) ? get_cmb_value( 'person_counties', $a_counselor->ID ) : '' ) . "'><div class='counselor-photo'><a href='/bio/" . $a_counselor->post_name . "'>" . get_the_post_thumbnail( $a_counselor->ID ) . "</a></div><div class='counselor-info'><h3><a href='/bio/" . $a_counselor->post_name . "'>" . $a_counselor->post_title . "</a></h3><p>" . get_cmb_value( 'person_phone', $a_counselor->ID ) . "</p><p><a href='mailto:" . get_cmb_value( 'person_email', $a_counselor->ID ) . "'>" . get_cmb_value( 'person_email', $a_counselor->ID ) . "</a></p><p class='states'><strong>States/Regions Served:</strong> " . ( !empty( $state_names ) ? implode( $state_names, ', ' ) : '' ) . "</p>" . ( !empty( get_cmb_value( 'person_counties', $a_counselor->ID ) ) ? "<p class='counties'><strong>Counties (WI) Served:</strong> " . get_cmb_value( 'person_counties', $a_counselor->ID ) . "</p>" : '' ) . "</div></div>";
+			$counselors_dropdown .= "<div class='counselor" . ( in_array( 'WI', $cstates ) ? ' wi' : '' ) . "' data-states='" . ( !empty( $cstates ) ? implode( ',', $cstates ) : '' ) . "' data-counties='" . ( !empty( get_cmb_value( 'person_counties', $a_counselor->ID ) ) ? get_cmb_value( 'person_counties', $a_counselor->ID ) : '' ) . "'><div class='counselor-photo'><a href='/bio/" . $a_counselor->post_name . "'>" . get_the_post_thumbnail( $a_counselor->ID ) . "</a></div><div class='counselor-info'><h3><a href='/bio/" . $a_counselor->post_name . "'>" . $a_counselor->post_title . "</a></h3><p>" . get_cmb_value( 'person_phone', $a_counselor->ID ) . "</p><p><a href='mailto:" . get_cmb_value( 'person_email', $a_counselor->ID ) . "'>" . get_cmb_value( 'person_email', $a_counselor->ID ) . "</a></p><p class='states'><strong>States/Regions Served:</strong> " . ( !empty( $state_names ) ? implode( ', ', $state_names ) : '' ) . "</p>" . ( !empty( get_cmb_value( 'person_counties', $a_counselor->ID ) ) ? "<p class='counties'><strong>Counties (WI) Served:</strong> " . get_cmb_value( 'person_counties', $a_counselor->ID ) . "</p>" : '' ) . "</div></div>";
 		}
 
 		// end the admission-counselors content area
