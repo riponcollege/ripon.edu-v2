@@ -36,7 +36,7 @@ function is_events() {
 	$host = str_replace( ".jpederson.io", "", str_replace( ".edu", "", $_SERVER['HTTP_HOST'] ) );
 
 	// check for events domain
-	if ( $host == 'events.ripon' ) {
+	if ( $host == 'events.ripon' ||  $host == 'events-new.ripon' ) {
 		return true;
 	}
 
