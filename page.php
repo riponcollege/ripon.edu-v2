@@ -7,9 +7,13 @@ page_header();
 $menu_position = get_menu_position();
 
 if ( $menu_position == 'left' ) {
+
+	// get the menu bg if there is one
+	$menu_bg = get_cmb_value( 'menu_background' );
+	
 	?>
 <div class="two-column">
-	<div class="sidebar">
+	<div class="sidebar"<?php print ( !empty( $menu_bg ) ? ' style="background-image: url(' . $menu_bg . ');"' : '' ) ?>>
 		<?php section_menu(); ?>
 	</div>
 	<div class="right-column">

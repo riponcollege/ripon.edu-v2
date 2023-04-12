@@ -356,7 +356,9 @@ ol {
 
 .two-column .sidebar {
   padding: 20px;
-  background: #434039; }
+  background: #434039;
+  background-size: cover;
+  background-position: center center; }
   @media only screen and (min-width: 768px) {
     .two-column .sidebar {
       flex: 1;

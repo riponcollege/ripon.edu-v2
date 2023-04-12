@@ -49,6 +49,12 @@ function menu_metaboxes() {
         'options' => $all_menus,
     ) );
 
+    $menu_box->add_field( array(
+        'name'    => 'Section Background',
+        'id'      => CMB_PREFIX . 'menu_background',
+        'type'    => 'file'
+    ) );
+
 }
 
 
