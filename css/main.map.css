@@ -1161,12 +1161,12 @@ header {
     text-align: center;
     background-position: center center;
     background-size: cover;
-    padding: 40px; }
+    padding: 80px 40px; }
     @media only screen and (min-width: 768px) {
       .phototiles .phototile {
         flex: 1;
         flex-basis: 50%;
-        padding: 60px 50px; } }
+        padding: 80px 50px; } }
     @media only screen and (min-width: 1024px) {
       .phototiles .phototile {
         flex-basis: 33.3333%;
@@ -1176,7 +1176,7 @@ header {
         flex-basis: 25%; } }
     @media only screen and (min-width: 1920px) {
       .phototiles .phototile {
-        padding: 130px 130px; } }
+        padding: 130px 100px; } }
     .phototiles .phototile:before {
       position: absolute;
       top: 0;
