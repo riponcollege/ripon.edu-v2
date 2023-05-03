@@ -1,16 +1,42 @@
 <?php
 
 
+// store the domain in a defined constant
+function set_domain() {
+
+	// make sure we don't already have a DOMAIN constant
+	if ( !defined( 'DOMAIN' ) ) {
+
+		// if there's a host set in server constants
+		if ( isset( $_SERVER['HTTP_HOST'] ) ) {
+
+			// store the domain temporarily after stripping some common stuff out
+			define( 'DOMAIN', str_replace( ".jpederson.io", "", str_replace( ".edu", "", $_SERVER['HTTP_HOST'] ) ) );
+			
+		} else {
+
+			// set a default this will be what gets set during wpcli commands.
+			define( 'DOMAIN', 'ripon' );
+
+		}
+	}
+	
+}
+
+
 // boolean function to determine if we're on ripon proper
 function is_ripon() {
 
-	// get the host name
-	$host = str_replace( ".jpederson.io", "", str_replace( ".edu", "", $_SERVER['HTTP_HOST'] ) );
+	// set the domain if we don't already have it
+	set_domain();
 
 	// check if we're on ripon proper
-	if ( $host == 'test.ripon' || $host == 'www.ripon' || $host == 'ripon' ) {
+	if ( DOMAIN == 'www.ripon' || DOMAIN == 'ripon' ) {
 		return true;
 	}
+
+	// false if not
+	return false;
 
 }
 
@@ -18,13 +44,16 @@ function is_ripon() {
 // a boolean function to determine if we're on the alumni site
 function is_alumni() {
 
-	// get the host name
-	$host = str_replace( ".jpederson.io", "", str_replace( ".edu", "", $_SERVER['HTTP_HOST'] ) );
+	// set the domain if we don't already have it
+	set_domain();
 
 	// check for alumni domain
-	if ( $host == 'alumni.ripon' ) {
+	if ( DOMAIN == 'alumni.ripon' || DOMAIN == 'ripon-alumni' ) {
 		return true;
 	}
+
+	// false if not
+	return false;
 
 }
 
@@ -32,13 +61,16 @@ function is_alumni() {
 // a boolean function to determine if we're on the alumni site
 function is_events() {
 
-	// get the host name
-	$host = str_replace( ".jpederson.io", "", str_replace( ".edu", "", $_SERVER['HTTP_HOST'] ) );
+	// set the domain if we don't already have it
+	set_domain();
 
 	// check for events domain
-	if ( $host == 'events.ripon' ||  $host == 'events-new.ripon' ) {
+	if ( DOMAIN == 'events.ripon' ||  DOMAIN == 'ripon-events' ) {
 		return true;
 	}
+
+	// false if not
+	return false;
 
 }
 
@@ -46,13 +78,16 @@ function is_events() {
 // a boolean function to determine if we're on the employee site
 function is_employees() {
 
-	// get the host name
-	$host = str_replace( ".jpederson.io", "", str_replace( ".edu", "", $_SERVER['HTTP_HOST'] ) );
+	// set the domain if we don't already have it
+	set_domain();
 
 	// check for events domain
-	if ( $host == 'employees.ripon' ) {
+	if ( DOMAIN == 'employees.ripon' || DOMAIN == 'ripon-employees' ) {
 		return true;
 	}
+
+	// false if not
+	return false;
 
 }
 
