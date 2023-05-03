@@ -441,9 +441,6 @@ body {
       .menu-pane.open .info-for, .menu-pane.open .buttons {
         opacity: 1;
         left: 50px; } }
-  @media only screen and (min-width: 1024px) and (min-height: 500px) {
-    .menu-pane {
-      overflow-y: visible; } }
   .menu-pane .close {
     position: absolute;
     top: 30px;
