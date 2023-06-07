@@ -1958,7 +1958,7 @@ section.content {
       line-height: 1.2em;
       padding: 7px; }
 
-.academics span.ma, .academics span.mi, .academics span.tc, .academics span.dd, .academics span.pa, .area-header span.ma, .area-header span.mi, .area-header span.tc, .area-header span.dd, .area-header span.pa {
+.academics span.ma, .academics span.mi, .academics span.tc, .academics span.dd, .academics span.pa, .academics span.grad, .area-header span.ma, .area-header span.mi, .area-header span.tc, .area-header span.dd, .area-header span.pa, .area-header span.grad {
   line-height: 1em;
   padding: 7px;
   text-align: center;
@@ -1983,6 +1983,10 @@ section.content {
   color: white; }
 
 .academics span.dd, .area-header span.dd {
+  background-color: #0094E3;
+  color: white; }
+
+.academics span.grad, .area-header span.grad {
   background-color: #0094E3;
   color: white; }
 

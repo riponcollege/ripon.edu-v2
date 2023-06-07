@@ -21,7 +21,7 @@
 
 
 .academics, .area-header {
-	span.ma, span.mi, span.tc, span.dd, span.pa {
+	span.ma, span.mi, span.tc, span.dd, span.pa, span.grad {
 		line-height: 1em;
 		padding: 7px;
 		text-align: center;
@@ -45,6 +45,10 @@
 		color: white;
 	}
 	span.dd {
+		background-color: $teal;
+		color: white;
+	}
+	span.grad {
 		background-color: $teal;
 		color: white;
 	}

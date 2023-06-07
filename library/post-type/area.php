@@ -224,6 +224,56 @@ if ( is_ripon() ) {
 	}
 
 
+	function list_graduate_programs() {
+
+		$args = array(
+			'post_type' => 'area',
+			'posts_per_page' => -1,
+			'tax_query' => array(
+		        array(
+		            'taxonomy' => 'area_cat',
+		            'field'    => 'slug',
+		            'terms'    => 'graduate-programs'
+		        )
+			)
+		);
+
+		// select the areas of interest in the category
+		$areas = get_posts( $args );
+
+		// loop through the post results
+		$num = 1;
+		?>
+		<ul>
+		<?php
+		if ( !empty( $areas ) ) {
+		  
+		    // Start looping over the query results.
+			foreach ( $areas as $area ) {
+			?>
+			<li onClick="location.href='/area/<?php print $area->post_name ?>';">
+				<div class="area-columns">
+					<div class="area-title">
+						<h4><a href="/area/<?php print $area->post_name ?>"><?php print $area->post_title ?></a></h4>
+					</div>
+					<div class="area-categories"><span class="grad">Graduate Program</span></div>
+				</div>
+				<p><?php print $area->post_excerpt; ?></p>
+			</li>
+			<?php 
+			}
+		}
+		?>
+		</ul>
+		<?php
+		
+		// reset the post data
+		wp_reset_postdata();
+
+	}
+
+
+
 
 	function get_areas() {
 		global $wpdb;
