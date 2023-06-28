@@ -100,11 +100,18 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 
 				<?php the_quote_showcase() ?>
 
-				<?php the_statistics(); ?>
+				<?php if ( is_page( 204474 ) ) { ?>
+				<div class="statistics-container">
+					<h2>Achieve More</h2>
+				<?php } ?>
+					<?php the_statistics(); ?>
+				<?php if ( is_page( 204474 ) ) { ?>
+				</div>
+				<?php } ?>
 
 				<?php if ( has_cmb_value( "area_mission" ) ) { ?>
 				<div class="area-mission">
-					<?php if ( is_post( 204474 ) ) { ?>
+					<?php if ( is_page( 204474 ) ) { ?>
 					<h3>Create a Career with Endurance</h3>
 					<?php } else { ?>
 					<h3>Department Mission Statement</h3>
