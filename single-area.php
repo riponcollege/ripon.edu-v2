@@ -131,6 +131,11 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 			<?php if ( !empty( $people ) ) { ?>
 			<div class="tab-content area-faculty">
 				<h2>Faculty</h2>
+				<?php 
+				if ( $post->ID == 204474 ) {
+					print get_snippet( 'exs-faculty-text' );
+				}
+				?>
 				<div class="area-faculty">
 					<?php print do_shortcode( '[people category="' . get_cmb_value( 'area_people_list' ) . '" /]' ); ?>
 				</div>
