@@ -1,18 +1,14 @@
 
 
 .statistics {
-	margin-top: 3%;
-
 	@include respond-to( 768px ) {
 		display: flex;
-		margin-right: -3%;
 	}
 
 	.statistic {
 		border: 1px solid #ccc;
 		padding: 20px;
 		text-align: center;
-		margin-top: 20px;
 
 		h3.stat-number {
 			@include font-bold;
