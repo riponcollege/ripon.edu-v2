@@ -1706,30 +1706,30 @@ section.content {
     background: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); }
 
-.content-style ol:not(.gform_fields), .two-column .right-column ol:not(.gform_fields), .content-wide ol:not(.gform_fields), .area .tab-content ol:not(.gform_fields), .bio .bio-content ol:not(.gform_fields), .content-style ul:not(.gform_fields), .two-column .right-column ul:not(.gform_fields), .content-wide ul:not(.gform_fields), .area .tab-content ul:not(.gform_fields), .bio .bio-content ul:not(.gform_fields) {
+.content-style ol:not(.gform_fields), .two-column .right-column ol:not(.gform_fields), .content-wide ol:not(.gform_fields), .area .tab-content ol:not(.gform_fields), .area .area-mission ol:not(.gform_fields), .bio .bio-content ol:not(.gform_fields), .content-style ul:not(.gform_fields), .two-column .right-column ul:not(.gform_fields), .content-wide ul:not(.gform_fields), .area .tab-content ul:not(.gform_fields), .area .area-mission ul:not(.gform_fields), .bio .bio-content ul:not(.gform_fields) {
   padding: 7px 0 7px 30px; }
 
-.content-style ul, .two-column .right-column ul, .content-wide ul, .area .tab-content ul, .bio .bio-content ul {
+.content-style ul, .two-column .right-column ul, .content-wide ul, .area .tab-content ul, .area .area-mission ul, .bio .bio-content ul {
   list-style-type: disc; }
 
-.content-style ol, .two-column .right-column ol, .content-wide ol, .area .tab-content ol, .bio .bio-content ol {
+.content-style ol, .two-column .right-column ol, .content-wide ol, .area .tab-content ol, .area .area-mission ol, .bio .bio-content ol {
   list-style-type: decimal; }
 
 @media only screen and (min-width: 600px) {
-  .content-style img.alignleft, .two-column .right-column img.alignleft, .content-wide img.alignleft, .area .tab-content img.alignleft, .bio .bio-content img.alignleft {
+  .content-style img.alignleft, .two-column .right-column img.alignleft, .content-wide img.alignleft, .area .tab-content img.alignleft, .area .area-mission img.alignleft, .bio .bio-content img.alignleft {
     float: left;
     margin: 0 15px 15px 0; } }
 
-.content-style .buttons, .two-column .right-column .buttons, .content-wide .buttons, .area .tab-content .buttons, .bio .bio-content .buttons {
+.content-style .buttons, .two-column .right-column .buttons, .content-wide .buttons, .area .tab-content .buttons, .area .area-mission .buttons, .bio .bio-content .buttons {
   padding: 20px 0; }
 
-.content-style table, .two-column .right-column table, .content-wide table, .area .tab-content table, .bio .bio-content table {
+.content-style table, .two-column .right-column table, .content-wide table, .area .tab-content table, .area .area-mission table, .bio .bio-content table {
   border: 1px solid #ccc; }
-  .content-style table thead tr th, .two-column .right-column table thead tr th, .content-wide table thead tr th, .area .tab-content table thead tr th, .bio .bio-content table thead tr th {
+  .content-style table thead tr th, .two-column .right-column table thead tr th, .content-wide table thead tr th, .area .tab-content table thead tr th, .area .area-mission table thead tr th, .bio .bio-content table thead tr th {
     background: #6A0A1B;
     color: white; }
 
-.content-style .notice, .two-column .right-column .notice, .content-wide .notice, .area .tab-content .notice, .bio .bio-content .notice {
+.content-style .notice, .two-column .right-column .notice, .content-wide .notice, .area .tab-content .notice, .area .area-mission .notice, .bio .bio-content .notice {
   border-left: 5px solid #00a0df;
   background-color: #f8f8f8;
   padding: 15px; }

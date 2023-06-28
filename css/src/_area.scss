@@ -194,7 +194,8 @@
 		padding: 20px;
 		color: white;
 		margin: 20px -20px 0 -20px;
-		@include clearfix;		
+		@include clearfix;
+		@extend .content-style;
 
 		img.alignright, img.alignleft {
 			display: block;
