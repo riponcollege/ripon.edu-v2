@@ -105,7 +105,7 @@ $categories = wp_get_object_terms( get_the_ID(), 'area_cat' );
 				<?php if ( has_cmb_value( "area_mission" ) ) { ?>
 				<div class="area-mission">
 					<h3>Department Mission Statement</h3>
-					<?php show_cmb_value( "area_mission" ); ?>
+					<?php print apply_filters( 'the_content', get_cmb_value( "area_mission" ) ); ?>
 				</div>
 				<?php } ?>
 
