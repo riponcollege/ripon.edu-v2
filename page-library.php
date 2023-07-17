@@ -13,10 +13,6 @@ $lib = get_library_hours();
 function display_times( $day = 'monday' ) {
 	// get library stuff
 	global $lib;
-
-	if ( $lib['hours'][$day]['open'] == '12am' && $lib['hours'][$day]['close'] == '12am' ) {
-		return '24hrs';
-	}
 	if ( $lib['hours'][$day]['open'] != $lib['hours'][$day]['close'] ) {
 		return $lib['hours'][$day]['open'] . " - " . $lib['hours'][$day]['close'];
 	}
