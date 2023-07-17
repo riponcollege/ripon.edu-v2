@@ -6,9 +6,22 @@ Template Name: Library
 
 get_header();
 
-
 // get today's date
+global $lib;
 $lib = get_library_hours();
+
+function display_times( $day = 'monday' ) {
+	// get library stuff
+	global $lib;
+
+	if ( $lib['hours'][$day]['open'] == '12am' && $lib['hours'][$day]['close'] == '12am' ) {
+		return '24hrs';
+	}
+	if ( $lib['hours'][$day]['open'] != $lib['hours'][$day]['close'] ) {
+		return $lib['hours'][$day]['open'] . " - " . $lib['hours'][$day]['close'];
+	}
+	return 'Closed';
+}
 
 page_header();
 
@@ -43,13 +56,13 @@ if ( $menu_position == 'left' ) {
 		<div class="hours">
 			<div class="hours-inner">
 				<div class="status"><?php print $lib['status'] ?></div>
-				<div class="day monday"><span>Monday</span> <span><?php print ( $lib['hours']['monday']['open'] != $lib['hours']['monday']['close'] ? $lib['hours']['monday']['open'] . " - " . $lib['hours']['monday']['close'] : 'Closed' ); ?></span></div>
-				<div class="day tuesday"><span>Tuesday</span> <span><?php print ( $lib['hours']['tuesday']['open'] != $lib['hours']['tuesday']['close'] ? $lib['hours']['tuesday']['open'] . " - " . $lib['hours']['tuesday']['close'] : 'Closed' ); ?></span></div>
-				<div class="day wednesday"><span>Wednesday</span> <span><?php print ( $lib['hours']['wednesday']['open'] != $lib['hours']['wednesday']['close'] ? $lib['hours']['wednesday']['open'] . " - " . $lib['hours']['wednesday']['close'] : 'Closed' ); ?></span></div>
-				<div class="day thursday"><span>Thursday</span> <span><?php print ( $lib['hours']['thursday']['open'] != $lib['hours']['thursday']['close'] ? $lib['hours']['thursday']['open'] . " - " . $lib['hours']['thursday']['close'] : 'Closed' ); ?></span></div>
-				<div class="day friday"><span>Friday</span> <span><?php print ( $lib['hours']['friday']['open'] != $lib['hours']['friday']['close'] ? $lib['hours']['friday']['open'] . " - " . $lib['hours']['friday']['close'] : 'Closed' ); ?></span></div>
-				<div class="day saturday"><span>Saturday</span> <span><?php print ( $lib['hours']['saturday']['open'] != $lib['hours']['saturday']['close'] ? $lib['hours']['saturday']['open'] . " - " . $lib['hours']['saturday']['close'] : 'Closed' ); ?></span></div>
-				<div class="day sunday"><span>Sunday</span> <span><?php print ( $lib['hours']['sunday']['open'] != $lib['hours']['sunday']['close'] ? $lib['hours']['sunday']['open'] . " - " . $lib['hours']['sunday']['close'] : 'Closed' ); ?></span></div>
+				<div class="day monday"><span>Monday</span> <span><?php print display_times( 'monday' ); ?></span></div>
+				<div class="day tuesday"><span>Tuesday</span> <span><?php print display_times( 'tuesday' ); ?></span></div>
+				<div class="day wednesday"><span>Wednesday</span> <span><?php print display_times( 'wednesday' ); ?></span></div>
+				<div class="day thursday"><span>Thursday</span> <span><?php print display_times( 'thursday' ); ?></span></div>
+				<div class="day friday"><span>Friday</span> <span><?php print display_times( 'friday' ); ?></span></div>
+				<div class="day saturday"><span>Saturday</span> <span><?php print display_times( 'saturday' ); ?></span></div>
+				<div class="day sunday"><span>Sunday</span> <span><?php print display_times( 'sunday' ); ?></span></div>
 				<div class="contact"><strong>Email:</strong> <a href="mailto:library@ripon.edu">library@ripon.edu</a><br><strong>Phone:</strong> <a href="tel:9207488175">(920)-748-8175</a></div>
 			</div>
 
