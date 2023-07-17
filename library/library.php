@@ -37,9 +37,7 @@ function get_library_hours() {
 	);
 
 	// get current day and a timestamp
-	$date = new DateTime( date_default_timezone_get() );
-
-	$current_timestamp = $date->getTimestamp();
+	$current_timestamp = current_time( 'timestamp' );
 	$current_day = strtolower( date( 'l' ) );
 
 	// get the open datetime as a strong and convert to timestamp
