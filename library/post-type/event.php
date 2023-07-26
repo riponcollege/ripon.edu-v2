@@ -396,8 +396,8 @@ function show_month_events( $month, $year, $category = 0 ) {
 	$next_ts = mktime( 0, 0, 0, $next['month'], 1, $next['year'] );
 
 	// add the prev and next buttons to switch months
-	$calendar .= '<a data-month="' . $prev['month'] . '" data-year="' . $prev['year'] . '" class="month-nav previous">&laquo; ' . date( "F", $prev_ts ) . '</a>';
-	$calendar .= '<a data-month="' . $next['month'] . '" data-year="' . $next['year'] . '" class="month-nav next">' . date( "F", $next_ts ) . ' &raquo;</a>';
+	$calendar .= '<a href="' . $event_list_url . '/?moyr=' . $prev['month'] . '-' . $prev['year'] . '" class="month-nav previous">&laquo; ' . date( "F", $prev_ts ) . '</a>';
+	$calendar .= '<a href="' . $event_list_url . '/?moyr=' . $next['month'] . '-' . $next['year'] . '" class="month-nav next">' . date( "F", $next_ts ) . ' &raquo;</a>';
 
 	// add month title
 	$calendar .= '<h2 class="calendar-month-title">' . date( 'F Y', mktime( 0, 0, 0, $month, 1, $year ) ) . "</h2>";
