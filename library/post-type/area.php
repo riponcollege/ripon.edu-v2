@@ -162,6 +162,7 @@ if ( is_ripon() ) {
 			*/
 			$cats = array();
 			$classes = array();
+			$masters = false;
 			foreach ( $categories as $cat ) {
 	 			switch ( $cat->slug ) {
 	 				case "major":
@@ -181,11 +182,15 @@ if ( is_ripon() ) {
 	 					$classes[] = 'tc';
 	 				break;
 	 				case "dual-degree":
-	 					$cats[] = '<span class="dd">Dual Degree</span>';
-	 					$classes[] = 'dd';
-	 				break;
-	 			}
+						$cats[] = '<span class="dd">Dual Degree</span>';
+						$classes[] = 'dd';
+					break;
+					case "graduate-programs":
+						$masters = true;
+					break;
+			   }
 			}
+			if ( !$masters ) {
 			?>
 			<li onClick="location.href='/area/<?php print $area->post_name ?>';" class="<?php print implode( ' ', $classes ); ?>">
 				<div class="area-columns">
@@ -204,7 +209,8 @@ if ( is_ripon() ) {
 				</div>
 				<p><?php print $area->post_excerpt; ?></p>
 			</li>
-			<?php 
+			<?php
+			}
 			/*
 			if ( $num == $quarter || $num == ( $quarter * 2 ) || $num == ( $quarter * 3 ) || $num == $area_count ) {
 				?>
