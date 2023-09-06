@@ -49,6 +49,9 @@
 				<a href="http://www.youtube.com/riponcollegevideo"><img src="<?php bloginfo('template_url') ?>/img/social-youtube.webp"></a>
 				<a href="http://instagram.com/riponcollege"><img src="<?php bloginfo('template_url') ?>/img/social-instagram.webp"></a>
 				<?php } ?>
+				<?php if ( !is_alumni() && !is_events() ) { ?>
+				<a href="https://zeemee.app.link/ripon"><img src="<?php bloginfo('template_url') ?>/img/social-zeemee.webp"></a>
+				<?php } ?>
 				<div style="clear:both"></div>
 			</div>
 
