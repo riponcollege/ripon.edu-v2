@@ -977,9 +977,10 @@ header {
           display: block;
           text-align: center;
           border: 2px solid white;
-          transition: 400ms all ease-in-out; }
+          transition: 400ms all ease-in-out;
+          background: rgba(67, 64, 57, 0.7); }
           .video-showcase-container header.video > .buttons li a:hover {
-            background: rgba(255, 255, 255, 0.2); }
+            background: #434039; }
           @media only screen and (min-width: 1220px) {
             .video-showcase-container header.video > .buttons li a {
               font-size: 1.2em;

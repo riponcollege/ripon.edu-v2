@@ -187,9 +187,10 @@
 					text-align: center;
 					border: 2px solid white;
 					transition: 400ms all ease-in-out;
+					background: rgba( $grey, .7 );
 
 					&:hover {
-						background: rgba( white, .2 );
+						background: rgba( $grey, 1 );
 					}
 
 					@include respond-to( 1220px ) {
