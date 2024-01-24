@@ -3,12 +3,19 @@
  * The template for displaying Archive pages
  */
 
-get_header(); 
-
 $request = parse_query_string();
 
+// check if we have a month and year passed
+if ( !isset( $request['moyr'] ) ) {
+	wp_redirect( '/events/?moyr=' . date( 'n' ) . '-' . date( 'Y' ) );
+	exit;
+}
+
+get_header(); 
+
+page_header( "Events Calendar", get_bloginfo( 'template_url' ) . '/img/bg-header-events.webp', get_snippet( 'header-events' ) );
+
 ?>
-	<?php page_header( "Events Calendar", get_bloginfo( 'template_url' ) . '/img/bg-header-events.webp', get_snippet( 'header-events' ) ); ?>
 	
 	<?php if ( !is_search() ) { ?>
 	<div class="event-filter content-wide bg-grey">
