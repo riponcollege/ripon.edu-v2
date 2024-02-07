@@ -11,7 +11,7 @@ function quote_shortcode( $atts, $content = null ) {
 	$return = '';
 
 	// if we have content and an attribution
-	if ( !empty( $a['by'] ) && !empty( $content ) ) {
+	if ( !empty( $content ) ) {
 		
 		// start the quote block	
 		$return .= '<div class="quote ' . $a['style'] . '">';
@@ -22,7 +22,7 @@ function quote_shortcode( $atts, $content = null ) {
 		}
 
 		// add the quote content and by line
-		$return .= '<div class="quote-content"><div class="quote-content-inner">' . $content . '</div><div class="quote-attribution">' . $a['by'] . '</div></div>';
+		$return .= '<div class="quote-content"><div class="quote-content-inner">' . $content . '</div>' . ( !empty( $a['by'] ) ? '<div class="quote-attribution">' . $a['by'] . '</div>' : '' ) . '</div>';
 		
 		// close the quote
 		$return .= '</div>';
