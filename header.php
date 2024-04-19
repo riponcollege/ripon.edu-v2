@@ -41,6 +41,7 @@ src="https://www.facebook.com/tr?id=737054459766387&ev=PageView
 <!-- End Facebook Pixel Code -->
 
 <?php if ( is_ripon() ) { ?>
+
 <!-- Start Google Analytics Universal Tracking Code -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-37190446-2"></script>
 <script>
@@ -59,6 +60,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5Q9X26');</script>
 <!-- End Google Tag Manager -->
+
+<!-- start digioh -->
+<script async type='text/javascript' src='https://www.lightboxcdn.com/vendor/a3ad4b0e-726d-4af9-8680-67f1800a7cc4/lightbox_speed.js'></script>
+<!--end digioh -->
+
 <?php } ?>
 
 <?php if ( is_alumni() ) { ?>
@@ -70,10 +76,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-5Q9X26');</script>
 <!-- End Google Tag Manager -->
 <?php } ?>
-
-<!-- start digioh -->
-<script async type='text/javascript' src='https://www.lightboxcdn.com/vendor/a3ad4b0e-726d-4af9-8680-67f1800a7cc4/lightbox_speed.js'></script>
-<!--end digioh -->
 
 <!-- simpli.fi pixel -->
 <script async src='https://tag.simpli.fi/sifitag/cc2c15f0-40d8-013a-4f92-06abc14c0bc6'></script>
