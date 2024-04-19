@@ -71,6 +71,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <?php } ?>
 
+<!-- start digioh -->
+<script async type='text/javascript' src='https://www.lightboxcdn.com/vendor/a3ad4b0e-726d-4af9-8680-67f1800a7cc4/lightbox_speed.js'></script>
+<!--end digioh -->
+
 <!-- simpli.fi pixel -->
 <script async src='https://tag.simpli.fi/sifitag/cc2c15f0-40d8-013a-4f92-06abc14c0bc6'></script>
 <!-- end simpli.fi pixel -->
