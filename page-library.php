@@ -65,12 +65,10 @@ if ( $menu_position == 'left' ) {
 			<div class="library-search">
 		
 				<div class="everything">
-					Search Everything:
 					<?php print do_shortcode( '[snippet slug="library-search-everything" /]' ) ?>
 				</div>
 
 				<div class="books">
-					Search Books:
 					<?php print do_shortcode( '[snippet slug="library-search-books" /]' ) ?>
 				</div>
 
