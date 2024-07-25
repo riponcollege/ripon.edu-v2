@@ -18,6 +18,10 @@ function page_header( $title_override = '', $image_override = '', $subtitle_over
 	$subtitle = strip_tags( !empty( $subtitle_override ) ? $subtitle_override : ( !empty( $metabox_subtitle ) ? $metabox_subtitle : '' ) );
 
 
+	// image only
+	$image_only = get_cmb_value( 'page_header_image_only' );
+	$image_only = ( $image_only == 'on' ? true : false );
+
 	if ( is_search() ) $subtitle = 'Use our advanced search to help you find anything you need on our site.';
 
 
@@ -49,6 +53,7 @@ function page_header( $title_override = '', $image_override = '', $subtitle_over
 
 	?>
 	<div class="page-header"<?php print ( !empty( $background ) ? ' style="background-image: url(' . $background . ')"' : '' ); ?>>
+		<?php if ( !$image_only ) { ?>
 		<div class="page-header-overlay"></div>
 		<div class="page-header-content">
 			<?php if ( !is_search() ) { ?>
@@ -60,6 +65,7 @@ function page_header( $title_override = '', $image_override = '', $subtitle_over
 			<?php if ( !empty( $subtitle ) ) { ?><h3 class="page-subtitle"><?php print $subtitle ?></h3><?php } ?>
 		</div>
 		<?php the_call_to_action() ?>
+		<?php } ?>
 	</div>
 	<?php
 }
@@ -126,6 +132,12 @@ function page_header_metabox() {
         'id' => CMB_PREFIX . 'page_header_background',
         'type' => 'file',
         'desc' => 'Upload a background photo that will override the default image used for the section in which this page/content is.'
+    ) );
+    $page_header_metabox->add_field( array(
+        'name' => 'Image Only',
+        'id'   => CMB_PREFIX . 'page_header_image_only',
+        'desc' => 'Only display the image (no treatment or text over top).',
+        'type' => 'checkbox'
     ) );
 
 }
