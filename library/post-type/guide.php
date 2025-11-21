@@ -2,7 +2,7 @@
 
 
 // only show guide tab on ripon proper
-if ( is_ripon() ) {
+//if ( is_ripon() ) {
 
 
 	// let's create the function for the custom type
@@ -104,5 +104,5 @@ if ( is_ripon() ) {
 	}
 
 
-}
+//}
 
